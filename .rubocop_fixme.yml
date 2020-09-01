@@ -1,0 +1,8 @@
+RSpec/ExpectInHook:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
