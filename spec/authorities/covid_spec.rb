@@ -1,106 +1,158 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Qa::Authorities::Covid do
   let(:authority) { described_class.new }
 
-  let(:term_controller) { instance_double(Qa::TermsController) }
-
   describe "#build_query_url" do
-    before do
-      allow(term_controller).to receive(:params).and_return({ country_iso: 'USA' })
-      allow(authority).to receive(:date).and_return('2020-05-31')
-      allow(authority).to receive(:country_iso).and_return('USA')
-      allow(authority).to receive(:province_state).and_return(nil)
-      allow(authority).to receive(:admin2_county).and_return(nil)
+    context "when country is specified" do
+      context "and no other params" do
+        before do
+          # need to set return values for instance variable since they aren't set by this method
+          allow(authority).to receive(:date).and_return('2020-05-31')
+          allow(authority).to receive(:country_iso).and_return('USA')
+          allow(authority).to receive(:province_state).and_return(nil)
+          allow(authority).to receive(:admin2_county).and_return(nil)
+        end
+        subject { authority.build_query_url }
+        it { is_expected.to eq "https://covid-api.com/api/reports?date=2020-05-31&iso=USA" }
+      end
+
+      context "and state is specified" do
+        context "and county is NOT specified" do
+          before do
+            # need to set return values for instance variable since they aren't set by this method
+            allow(authority).to receive(:date).and_return('2020-05-31')
+            allow(authority).to receive(:country_iso).and_return('USA')
+            allow(authority).to receive(:province_state).and_return('Texas')
+            allow(authority).to receive(:admin2_county).and_return(nil)
+          end
+          subject { authority.build_query_url }
+          it { is_expected.to eq "https://covid-api.com/api/reports?date=2020-05-31&iso=USA&region_province=Texas" }
+        end
+
+        context "and county is specified" do
+          before do
+            # need to set return values for instance variable since they aren't set by this method
+            allow(authority).to receive(:date).and_return('2020-05-31')
+            allow(authority).to receive(:country_iso).and_return('USA')
+            allow(authority).to receive(:province_state).and_return('Texas')
+            allow(authority).to receive(:admin2_county).and_return('Clay')
+          end
+          subject { authority.build_query_url }
+          it { is_expected.to eq "https://covid-api.com/api/reports?date=2020-05-31&iso=USA&region_province=Texas&city_name=Clay" }
+        end
+      end
     end
-
-    subject { authority.build_query_url("foo") }
-    it { is_expected.to eq "https://covid-api.com/api/reports?date=2020-05-31&iso=USA" }
-  end
-
-  describe "#find_url" do
-    subject { authority.find_url("300053264") }
-    it { is_expected.to eq "http://vocab.getty.edu/download/json?uri=http://vocab.getty.edu/aat/300053264.json" }
   end
 
   describe "#search" do
-    context "authorities" do
-      before do
-        stub_request(:get, /vocab\.getty\.edu.*/)
-            .to_return(body: webmock_fixture("aat-response.txt"), status: 200)
-      end
-
-      subject { authority.search('whatever') }
-
-      it "has id and label keys" do
-        expect(subject.first).to eq("id" => 'http://vocab.getty.edu/aat/300053264', "label" => "photocopying")
-        expect(subject.last).to eq("id" => 'http://vocab.getty.edu/aat/300265560', "label" => "photoscreenprints")
-        expect(subject.size).to eq(10)
-      end
-
-      context 'when Getty returns an error,' do
+    let(:term_controller) { instance_double(Qa::TermsController) }
+    let(:date) { '2020-05-31' }
+    context "when country is specified" do
+      context "and no other params" do
+        let(:expected_request) do
+          {
+            date: date,
+            country_iso: 'USA'
+          }
+        end
+        let(:expected_results) do
+          {
+            id: "#{date}:USA",
+            label: "US (#{date})",
+            date: date,
+            cumulative_confirmed: 50,
+            cumulative_death: 7
+          }
+        end
         before do
-          stub_request(:get, /vocab\.getty\.edu.*/)
-              .to_return(body: webmock_fixture("getty-error-response.txt"), status: 500)
+          allow(term_controller).to receive(:params).and_return('country_iso' => 'USA')
+          allow(authority).to receive(:date).and_return(date)
+          stub_request(:get, "https://covid-api.com/api/reports?date=2020-05-31&iso=USA")
+            .to_return(body: webmock_fixture("covid-api/country.json"), status: 200)
+        end
+        subject { authority.search('', term_controller) }
+
+        it 'has expected request values' do
+          expect(subject[:request]).to include expected_request
         end
 
-        it 'logs error and returns empty results' do
-          expect(Rails.logger).to receive(:warn).with("  ERROR fetching Getty response: undefined method `[]' for nil:NilClass; cause: UNKNOWN")
-          expect(subject).to be {}
+        it 'has expected results' do
+          # counts come from the values in the fixture
+          expect(subject[:results]).to include expected_results
+        end
+      end
+
+      context "and state is specified" do
+        context "and county is NOT specified" do
+          let(:expected_request) do
+            {
+              date: date,
+              country_iso: 'USA',
+              province_state: 'Iowa'
+            }
+          end
+          let(:expected_results) do
+            # counts come from the values in the fixture
+            {
+              id: "#{date}:USA:Iowa",
+              label: "Iowa, US (#{date})",
+              date: date,
+              cumulative_confirmed: 43,
+              cumulative_death: 6
+            }
+          end
+          before do
+            allow(term_controller).to receive(:params).and_return('country_iso' => 'USA', 'province_state' => 'Iowa')
+            allow(authority).to receive(:date).and_return(date)
+            stub_request(:get, "https://covid-api.com/api/reports?date=2020-05-31&iso=USA&region_province=Iowa")
+              .to_return(body: webmock_fixture("covid-api/country_state.json"), status: 200)
+          end
+          subject { authority.search('', term_controller) }
+
+          it 'has expected request and results' do
+            expect(subject[:request]).to include expected_request
+            expect(subject[:results]).to include expected_results
+          end
+        end
+
+        context "and county is specified" do
+          let(:expected_request) do
+            {
+              date: date,
+              country_iso: 'USA',
+              province_state: 'Texas',
+              admin2_county: 'Denton'
+            }
+          end
+          let(:expected_results) do
+            # counts come from the values in the fixture
+            {
+              id: "#{date}:USA:Texas:Denton",
+              label: "Denton, Texas, US (#{date})",
+              date: date,
+              cumulative_confirmed: 10,
+              cumulative_death: 3
+            }
+          end
+          before do
+            allow(term_controller).to receive(:params).and_return('country_iso' => 'USA', 'province_state' => 'Texas', 'admin2_county' => 'Denton')
+            allow(authority).to receive(:date).and_return(date)
+            stub_request(:get, "https://covid-api.com/api/reports?date=2020-05-31&iso=USA&region_province=Texas&city_name=Denton")
+              .to_return(body: webmock_fixture("covid-api/country_state_county.json"), status: 200)
+          end
+          subject { authority.search('', term_controller) }
+
+          it 'has expected request and results' do
+            expect(subject[:request]).to include expected_request
+            expect(subject[:results]).to include expected_results
+          end
         end
       end
     end
   end
 
-  describe "#untaint" do
-    subject { authority.untaint(value) }
-
-    context "with a good string" do
-      let(:value) { 'Water-color paint' }
-      it { is_expected.to eq 'Water-color paint' }
-    end
-
-    context "bad stuff" do
-      let(:value) { './"' }
-      it { is_expected.to eq '' }
-    end
-  end
-
-  describe "#find" do
-    context "using a subject id" do
-      before do
-        stub_request(:get, "http://vocab.getty.edu/download/json?uri=http://vocab.getty.edu/aat/300265560.json")
-            .to_return(status: 200, body: webmock_fixture("getty-aat-find-response.json"))
-      end
-      subject { authority.find("300265560") }
-
-      it "returns the complete record for a given subject" do
-        expect(subject['results']['bindings'].size).to eq 189
-        expect(subject['results']['bindings']).to all(have_key('Subject'))
-        expect(subject['results']['bindings']).to all(have_key('Predicate'))
-        expect(subject['results']['bindings']).to all(have_key('Object'))
-      end
-    end
-  end
-
-  describe "#request_options" do
-    subject { authority.request_options }
-    it { is_expected.to eq(accept: "application/sparql-results+json") }
-  end
-  # rubocop:disable Layout/LineLength
-  describe "#sparql" do
-    context "using a single subject term" do
-      subject { authority.sparql('search_term') }
-      it {
-        is_expected.to eq %(SELECT ?s ?name { ?s a skos:Concept; luc:term "search_term"; skos:inScheme <http://vocab.getty.edu/aat/> ; gvp:prefLabelGVP [skosxl:literalForm ?name]. FILTER regex(?name, "search_term", "i") . } ORDER BY ?name)
-      }
-    end
-    context "using a two subject terms" do
-      subject { authority.sparql('search term') }
-      it {
-        is_expected.to eq %(SELECT ?s ?name { ?s a skos:Concept; luc:term "search term"; skos:inScheme <http://vocab.getty.edu/aat/> ; gvp:prefLabelGVP [skosxl:literalForm ?name]. FILTER ((regex(?name, "search", "i")) && (regex(?name, "term", "i"))) . } ORDER BY ?name)
-      }
-    end
-  end
   # rubocop:enable Layout/LineLength
 end

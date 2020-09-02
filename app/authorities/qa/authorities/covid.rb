@@ -26,7 +26,7 @@ module Qa::Authorities
     # @return json results with response_header and results
     def search(_query, terms_controller)
       unpack_params(terms_controller)
-      url = build_query_url(terms_controller)
+      url = build_query_url
       begin
         @raw_response = json(url)
       rescue JSON::ParserError
@@ -36,11 +36,9 @@ module Qa::Authorities
       parse_authority_response
     end
 
-    # Build a Covid url
-    #
-    # @param _query [String] the query
+    # Build a Covid-API url
     # @return [String] the url
-    def build_query_url(_query)
+    def build_query_url
       base_url = "https://covid-api.com/api/reports?"
       base_url = append_param(base_url, 'date', date)
       base_url = append_param(base_url, 'iso', country_iso)
@@ -118,27 +116,9 @@ module Qa::Authorities
       end
 
       def parse_country
-        data = raw_response['data']
-        data.size > 1 ? parse_multiple_data_entries_for_country(data) : parse_one_data_entry_for_country(data)
-      end
-
-      def parse_one_data_entry_for_country(data)
         cumulative_confirmed = 0
         cumulative_death = 0
-        data.first['region']['cities'].each do |region|
-          cumulative_confirmed += region["confirmed"]
-          cumulative_death += region["deaths"]
-        end
-        format_results(id: id,
-                       label: label,
-                       confirmed: cumulative_confirmed,
-                       deaths: cumulative_death)
-      end
-
-      def parse_multiple_data_entries_for_country(data)
-        cumulative_confirmed = 0
-        cumulative_death = 0
-        data.each do |datum|
+        raw_response['data'].each do |datum|
           cumulative_confirmed += datum["confirmed"]
           cumulative_death += datum["deaths"]
         end

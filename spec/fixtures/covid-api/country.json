@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "date": "2020-08-31",
+      "confirmed": 20,
+      "deaths": 5,
+      "recovered": 0,
+      "confirmed_diff": 823,
+      "deaths_diff": 20,
+      "recovered_diff": 0,
+      "last_update": "2020-09-01 04:28:31",
+      "active": 123876,
+      "active_diff": 803,
+      "fatality_rate": 0.0173,
+      "region": {
+        "iso": "USA",
+        "name": "US",
+        "province": "Alabama",
+        "lat": "32.3182",
+        "long": "-86.9023",
+        "cities": [
+          {
+            "name": "Autauga",
+            "date": "2020-08-31",
+            "fips": 1001,
+            "lat": "32.53952745",
+            "long": "-86.64408227",
+            "confirmed": 5,
+            "deaths": 22,
+            "confirmed_diff": 3,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          },
+          {
+            "name": "Baldwin",
+            "date": "2020-08-31",
+            "fips": 1003,
+            "lat": "30.72774991",
+            "long": "-87.72207058",
+            "confirmed": 4,
+            "deaths": 38,
+            "confirmed_diff": 20,
+            "deaths_diff": 2,
+            "last_update": "2020-09-01 04:28:31"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2020-08-31",
+      "confirmed": 30,
+      "deaths": 2,
+      "recovered": 0,
+      "confirmed_diff": 1885,
+      "deaths_diff": 68,
+      "recovered_diff": 0,
+      "last_update": "2020-09-01 04:28:31",
+      "active": 612284,
+      "active_diff": 1817,
+      "fatality_rate": 0.0179,
+      "region": {
+        "iso": "USA",
+        "name": "US",
+        "province": "Florida",
+        "lat": "27.7663",
+        "long": "-81.6868",
+        "cities": [
+          {
+            "name": "Alachua",
+            "date": "2020-08-31",
+            "fips": 3,
+            "lat": "29.67866525",
+            "long": "-82.35928158",
+            "confirmed": 2,
+            "deaths": 33,
+            "confirmed_diff": 3,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          },
+          {
+            "name": "Baker",
+            "date": "2020-08-31",
+            "fips": 12003,
+            "lat": "30.33060121",
+            "long": "-82.28467476",
+            "confirmed": 1153,
+            "deaths": 5,
+            "confirmed_diff": 2,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          },
+          {
+            "name": "Bay",
+            "date": "2020-08-31",
+            "fips": 12005,
+            "lat": "30.26548745",
+            "long": "-85.62122584",
+            "confirmed": 5363,
+            "deaths": 78,
+            "confirmed_diff": 8,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          }
+        ]
+      }
+    }
+  ]
+}

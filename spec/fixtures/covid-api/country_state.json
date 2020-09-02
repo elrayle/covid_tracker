@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "date": "2020-08-31",
+      "confirmed": 43,
+      "deaths": 6,
+      "recovered": 0,
+      "confirmed_diff": 540,
+      "deaths_diff": 7,
+      "recovered_diff": 0,
+      "last_update": "2020-09-01 04:28:31",
+      "active": 64019,
+      "active_diff": 533,
+      "fatality_rate": 0.0172,
+      "region": {
+        "iso": "USA",
+        "name": "US",
+        "province": "Iowa",
+        "lat": "42.0115",
+        "long": "-93.2105",
+        "cities": [
+          {
+            "name": "Adair",
+            "date": "2020-08-31",
+            "fips": 19001,
+            "lat": "41.33075609",
+            "long": "-94.47105874",
+            "confirmed": 6,
+            "deaths": 2,
+            "confirmed_diff": -2,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          },
+          {
+            "name": "Adams",
+            "date": "2020-08-31",
+            "fips": 19003,
+            "lat": "41.02903567",
+            "long": "-94.69932645",
+            "confirmed": 4,
+            "deaths": 1,
+            "confirmed_diff": 0,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          },
+          {
+            "name": "Allamakee",
+            "date": "2020-08-31",
+            "fips": 19005,
+            "lat": "43.28383218",
+            "long": "-91.37860922",
+            "confirmed": 3,
+            "deaths": 0,
+            "confirmed_diff": 4,
+            "deaths_diff": 0,
+            "last_update": "2020-09-01 04:28:31"
+          }
+        ]
+      }
+    }
+  ]
+}

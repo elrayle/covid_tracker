@@ -45,6 +45,11 @@ group :development, :test do
   gem 'better_errors' # provide debugging command line in
   gem 'binding_of_caller' # provides deep stack info used by better_errors
   gem 'bixby', '~> 1.0.0' # rubocop styleguide
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 4.4', require: false
+  gem 'faker'
+  gem 'webmock'
 end
 
 group :development do

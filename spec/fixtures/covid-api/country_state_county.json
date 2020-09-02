@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "date": "2020-05-31",
+      "confirmed": 100,
+      "deaths": 50,
+      "recovered": 0,
+      "confirmed_diff": 1977,
+      "deaths_diff": 23,
+      "recovered_diff": 0,
+      "last_update": "2020-06-01 02:32:46",
+      "active": 62977,
+      "active_diff": 1954,
+      "fatality_rate": 0.0259,
+      "region": {
+        "iso": "USA",
+        "name": "US",
+        "province": "Texas",
+        "lat": "31.0545",
+        "long": "-97.5635",
+        "cities": [
+          {
+            "name": "Denton",
+            "date": "2020-05-31",
+            "fips": 48113,
+            "lat": "32.76670599",
+            "long": "-96.7779605",
+            "confirmed": 10,
+            "deaths": 3,
+            "confirmed_diff": 447,
+            "deaths_diff": 6,
+            "last_update": "2020-06-01 02:32:46"
+          }
+        ]
+      }
+    }
+  ]
+}
