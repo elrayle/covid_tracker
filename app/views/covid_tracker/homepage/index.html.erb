@@ -21,11 +21,11 @@
           row_class = idx.odd? ? "pure-table-even" : "pure-table-odd"
         %>
       <tr class="<%= row_class %>">
-        <td><%= results[:date] %></td>
-        <td><%= results[:cumulative_confirmed] %></td>
-        <td><%= results[:delta_confirmed].zero? ? "-" : results[:delta_confirmed] %></td>
-        <td><%= results[:cumulative_deaths] %></td>
-        <td><%= results[:delta_deaths].zero? ? "-" : results[:delta_deaths] %></td>
+        <td><%= results[CovidTracker::ResultKeys::DATE] %></td>
+        <td><%= results[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED] %></td>
+        <td><%= results[CovidTracker::ResultKeys::DELTA_CONFIRMED].zero? ? "-" : results[CovidTracker::ResultKeys::DELTA_CONFIRMED] %></td>
+        <td><%= results[CovidTracker::ResultKeys::CUMULATIVE_DEATHS] %></td>
+        <td><%= results[CovidTracker::ResultKeys::DELTA_DEATHS].zero? ? "-" : results[CovidTracker::ResultKeys::DELTA_DEATHS] %></td>
       </tr>
       <% end %>
     </table>

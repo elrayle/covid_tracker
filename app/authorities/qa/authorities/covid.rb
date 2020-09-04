@@ -69,23 +69,23 @@ module Qa::Authorities
       end
 
       def format_request
-        request = { date: date }
-        request[:country_iso] = country_iso if country_iso
-        request[:province_state] = province_state if province_state
-        request[:admin2_county] = admin2_county if admin2_county
+        request = { CovidTracker::RequestKeys::DATE => date }
+        request[CovidTracker::RequestKeys::COUNTRY_ISO] = country_iso if country_iso
+        request[CovidTracker::RequestKeys::PROVINCE_STATE] = province_state if province_state
+        request[CovidTracker::RequestKeys::ADMIN2_COUNTY] = admin2_county if admin2_county
         request
       end
 
       def format_results(confirmed:, delta_confirmed:, deaths:, delta_deaths:)
         {
-          id: id,
-          region_id: region_id,
-          label: label,
-          date: date,
-          cumulative_confirmed: confirmed,
-          delta_confirmed: delta_confirmed,
-          cumulative_deaths: deaths,
-          delta_deaths: delta_deaths
+          CovidTracker::ResultKeys::ID => id,
+          CovidTracker::ResultKeys::REGION_ID => region_id,
+          CovidTracker::ResultKeys::LABEL => label,
+          CovidTracker::ResultKeys::DATE => date,
+          CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED => confirmed,
+          CovidTracker::ResultKeys::DELTA_CONFIRMED => delta_confirmed,
+          CovidTracker::ResultKeys::CUMULATIVE_DEATHS => deaths,
+          CovidTracker::ResultKeys::DELTA_DEATHS => delta_deaths
         }
       end
 
