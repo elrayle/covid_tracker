@@ -65,7 +65,7 @@ module CovidTracker
     end
 
     def register(country_iso:, province_state: nil, admin2_county: nil)
-      region = {}
+      region = {}.with_indifferent_access
       region[:country_iso] = country_iso
       region[:province_state] = province_state if province_state
       region[:admin2_county] = admin2_county if province_state && admin2_county # must specify province to use admin2; otherwise, ignored

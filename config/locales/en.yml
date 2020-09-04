@@ -30,4 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  covid_tracker:
+    application_name: 'Covid Region Tracker'
+    tag_line: 'Visualizations for the Regions You Want to Track'
+    homepage:
+      title: Covid Tracker for Cortland, NY and Surrounding Counties
+      date: Date
+      cumulative_confirmed: Cumulative Confirmed Cases
+      delta_confirmed: Change in Confirmed Cases
+      cumulative_deaths: Cumulative Confirmed Deaths
+      delta_deaths: Change in Confirmed Deaths
+

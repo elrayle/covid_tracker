@@ -19,13 +19,9 @@ module Qa::Authorities
       end
     end
 
-    # Search the FAST api
-    #
-    # @param _query [String] the query
-    # @param terms_controller [QA::TermsController] controller with params
-    # @return json results with response_header and results
-    def search(_query, terms_controller)
-      unpack_params(terms_controller)
+    # Find data for a specific region using the covid-api
+    def find(region)
+      unpack_params(region)
       url = build_query_url
       begin
         @raw_response = json(url)
@@ -34,6 +30,15 @@ module Qa::Authorities
         return []
       end
       parse_authority_response
+    end
+
+    # Search the covid-api based on params from terms_controller
+    #
+    # @param _query [String] the query
+    # @param terms_controller [QA::TermsController] controller with params
+    # @return json results with response_header and results
+    def search(_query, terms_controller)
+      find(terms_controller.params)
     end
 
     # Build a Covid-API url
@@ -54,13 +59,13 @@ module Qa::Authorities
         base_url + "#{connector}#{name}=#{value}"
       end
 
-      # @param terms_controller [QA::TermsController] controller with params
-      def unpack_params(terms_controller)
+      # @param params [Hash|ActiveRecord::Params] controller with params
+      def unpack_params(params)
         @error_msg = ""
-        @date = terms_controller.params.fetch('date', (DateTime.now.in_time_zone(DATA_TIME_ZONE) - 1.day).strftime("%F"))
-        @country_iso = terms_controller.params.fetch('country_iso', "USA")
-        @province_state = terms_controller.params.fetch('province_state', nil)
-        @admin2_county = terms_controller.params.fetch('admin2_county', nil)
+        @date = params.fetch('date', (DateTime.now.in_time_zone(DATA_TIME_ZONE) - 1.day).strftime("%F"))
+        @country_iso = params.fetch('country_iso', "USA")
+        @province_state = params.fetch('province_state', nil)
+        @admin2_county = params.fetch('admin2_county', nil)
       end
 
       def format_request
@@ -71,13 +76,16 @@ module Qa::Authorities
         request
       end
 
-      def format_results(id:, label:, confirmed:, deaths:)
+      def format_results(confirmed:, delta_confirmed:, deaths:, delta_deaths:)
         {
           id: id,
+          region_id: region_id,
           label: label,
           date: date,
           cumulative_confirmed: confirmed,
-          cumulative_death: deaths
+          delta_confirmed: delta_confirmed,
+          cumulative_deaths: deaths,
+          delta_deaths: delta_deaths
         }
       end
 
@@ -99,37 +107,49 @@ module Qa::Authorities
 
       def parse_admin2_county
         cumulative_confirmed = raw_response['data'].first['region']['cities'].first['confirmed']
+        delta_confirmed = raw_response['data'].first['region']['cities'].first['confirmed_diff']
         cumulative_death = raw_response['data'].first['region']['cities'].first['deaths']
-        format_results(id: id,
-                       label: label,
-                       confirmed: cumulative_confirmed,
-                       deaths: cumulative_death)
+        delta_deaths = raw_response['data'].first['region']['cities'].first['deaths_diff']
+        format_results(confirmed: cumulative_confirmed,
+                       delta_confirmed: delta_confirmed,
+                       deaths: cumulative_death,
+                       delta_deaths: delta_deaths)
       end
 
       def parse_province_state
         cumulative_confirmed = raw_response['data'].first['confirmed']
+        delta_confirmed = raw_response['data'].first['confirmed_diff']
         cumulative_death = raw_response['data'].first['deaths']
-        format_results(id: id,
-                       label: label,
-                       confirmed: cumulative_confirmed,
-                       deaths: cumulative_death)
+        delta_deaths = raw_response['data'].first['deaths_diff']
+        format_results(confirmed: cumulative_confirmed,
+                       delta_confirmed: delta_confirmed,
+                       deaths: cumulative_death,
+                       delta_deaths: delta_deaths)
       end
 
       def parse_country
         cumulative_confirmed = 0
-        cumulative_death = 0
+        delta_confirmed = 0
+        cumulative_deaths = 0
+        delta_deaths = 0
         raw_response['data'].each do |datum|
           cumulative_confirmed += datum["confirmed"]
-          cumulative_death += datum["deaths"]
+          delta_confirmed += datum["confirmed_diff"]
+          cumulative_deaths += datum["deaths"]
+          delta_deaths += datum["deaths_diff"]
         end
-        format_results(id: id,
-                       label: label,
-                       confirmed: cumulative_confirmed,
-                       deaths: cumulative_death)
+        format_results(confirmed: cumulative_confirmed,
+                       delta_confirmed: delta_confirmed,
+                       deaths: cumulative_deaths,
+                       delta_deaths: delta_deaths)
       end
 
       def id
-        id = date
+        date + region_id
+      end
+
+      def region_id
+        id = ""
         id += ":#{country_iso}" if country_iso
         id += ":#{province_state}" if province_state
         id += ":#{admin2_county}" if admin2_county

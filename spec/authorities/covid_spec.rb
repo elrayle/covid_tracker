@@ -2,6 +2,14 @@
 
 require 'spec_helper'
 
+# URLs for testing in the browser
+#   PASS: http://localhost:3000/api/search/covid?country_iso=USA
+#   PASS: http://localhost:3000/api/search/covid?country_iso=USA&province_state=New%20York
+#   PASS: http://localhost:3000/api/search/covid?country_iso=USA&province_state=New%20York&admin2_county=Cortland
+#   PASS: http://localhost:3000/api/search/covid?province_state=New%20York
+#   PASS: http://localhost:3000/api/search/covid?province_state=New%20York&admin2_county=Cortland
+#   FAIL: http://localhost:3000/api/search/covid?country_iso=USA&admin2_county=Cortland
+#   FAIL: http://localhost:3000/api/search/covid?admin2_county=Cortland
 describe Qa::Authorities::Covid do
   let(:authority) { described_class.new }
 
@@ -64,7 +72,7 @@ describe Qa::Authorities::Covid do
             label: "US (#{date})",
             date: date,
             cumulative_confirmed: 50,
-            cumulative_death: 7
+            cumulative_deaths: 7
           }
         end
         before do
@@ -98,10 +106,13 @@ describe Qa::Authorities::Covid do
             # counts come from the values in the fixture
             {
               id: "#{date}:USA:Iowa",
+              region_id: ":USA:Iowa",
               label: "Iowa, US (#{date})",
               date: date,
               cumulative_confirmed: 43,
-              cumulative_death: 6
+              delta_confirmed: 540,
+              cumulative_deaths: 6,
+              delta_deaths: 7
             }
           end
           before do
@@ -131,10 +142,13 @@ describe Qa::Authorities::Covid do
             # counts come from the values in the fixture
             {
               id: "#{date}:USA:Texas:Denton",
+              region_id: ":USA:Texas:Denton",
               label: "Denton, Texas, US (#{date})",
               date: date,
               cumulative_confirmed: 10,
-              cumulative_death: 3
+              delta_confirmed: 447,
+              cumulative_deaths: 3,
+              delta_deaths: 6
             }
           end
           before do

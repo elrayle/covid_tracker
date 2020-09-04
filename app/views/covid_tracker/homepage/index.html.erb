@@ -1,0 +1,33 @@
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
+<div class="page-description">
+
+  <h2><%= t('covid_tracker.homepage.title') %></h2>
+
+  <% @presenter.all_results.each do |region_label, region_data| %>
+    <h3><%= region_label %></h3>
+
+    <table class="pure-table">
+      <tr>
+        <th><%= t('covid_tracker.homepage.date') %></th>
+        <th><%= t('covid_tracker.homepage.cumulative_confirmed') %></th>
+        <th><%= t('covid_tracker.homepage.delta_confirmed') %></th>
+        <th><%= t('covid_tracker.homepage.cumulative_deaths') %></th>
+        <th><%= t('covid_tracker.homepage.delta_deaths') %></th>
+      </tr>
+      <% region_data.each_with_index do |datum, idx| %>
+        <%
+          results = datum[:results]
+          row_class = idx.odd? ? "pure-table-even" : "pure-table-odd"
+        %>
+      <tr class="<%= row_class %>">
+        <td><%= results[:date] %></td>
+        <td><%= results[:cumulative_confirmed] %></td>
+        <td><%= results[:delta_confirmed].zero? ? "-" : results[:delta_confirmed] %></td>
+        <td><%= results[:cumulative_deaths] %></td>
+        <td><%= results[:delta_deaths].zero? ? "-" : results[:delta_deaths] %></td>
+      </tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>
