@@ -4,8 +4,9 @@
 
   <h2><%= t('covid_tracker.homepage.title') %></h2>
 
-  <% @presenter.all_results.each do |region_label, region_data| %>
-    <h3><%= region_label %></h3>
+  <% @presenter.all_results.each do |_region_id, region_results| %>
+    <h3><%= @presenter.region_label(region_results) %></h3>
+    <% region_data = @presenter.region_data(region_results) %>
 
     <table class="pure-table">
       <tr>
@@ -16,16 +17,12 @@
         <th><%= t('covid_tracker.homepage.delta_deaths') %></th>
       </tr>
       <% region_data.each_with_index do |datum, idx| %>
-        <%
-          results = datum[:results]
-          row_class = idx.odd? ? "pure-table-even" : "pure-table-odd"
-        %>
-      <tr class="<%= row_class %>">
-        <td><%= results[CovidTracker::ResultKeys::DATE] %></td>
-        <td><%= results[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED] %></td>
-        <td><%= results[CovidTracker::ResultKeys::DELTA_CONFIRMED].zero? ? "-" : results[CovidTracker::ResultKeys::DELTA_CONFIRMED] %></td>
-        <td><%= results[CovidTracker::ResultKeys::CUMULATIVE_DEATHS] %></td>
-        <td><%= results[CovidTracker::ResultKeys::DELTA_DEATHS].zero? ? "-" : results[CovidTracker::ResultKeys::DELTA_DEATHS] %></td>
+      <tr class="<%= @presenter.row_class(idx) %>">
+        <td class="<%= @presenter.date_class(datum) %>"><%= @presenter.date(datum) %></td>
+        <td class="<%= @presenter.cumulative_confirmed_class(datum) %>"><%= @presenter.cumulative_confirmed(datum) %></td>
+        <td class="<%= @presenter.delta_confirmed_class(datum) %>"><%= @presenter.delta_confirmed(datum) %></td>
+        <td class="<%= @presenter.cumulative_deaths_class(datum) %>"><%= @presenter.cumulative_deaths(datum) %></td>
+        <td class="<%= @presenter.delta_deaths_class(datum) %>"><%= @presenter.delta_deaths(datum) %></td>
       </tr>
       <% end %>
     </table>

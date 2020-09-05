@@ -66,7 +66,7 @@ describe Qa::Authorities::Covid do
             country_iso: 'USA'
           }
         end
-        let(:expected_results) do
+        let(:expected_result) do
           {
             id: "#{date}:USA",
             label: "US (#{date})",
@@ -87,9 +87,9 @@ describe Qa::Authorities::Covid do
           expect(subject[:request]).to include expected_request
         end
 
-        it 'has expected results' do
+        it 'has expected result' do
           # counts come from the values in the fixture
-          expect(subject[:results]).to include expected_results
+          expect(subject[:result]).to include expected_result
         end
       end
 
@@ -102,7 +102,7 @@ describe Qa::Authorities::Covid do
               province_state: 'Iowa'
             }
           end
-          let(:expected_results) do
+          let(:expected_result) do
             # counts come from the values in the fixture
             {
               id: "#{date}:USA:Iowa",
@@ -123,9 +123,9 @@ describe Qa::Authorities::Covid do
           end
           subject { authority.search('', term_controller) }
 
-          it 'has expected request and results' do
+          it 'has expected request and result' do
             expect(subject[:request]).to include expected_request
-            expect(subject[:results]).to include expected_results
+            expect(subject[:result]).to include expected_result
           end
         end
 
@@ -138,7 +138,7 @@ describe Qa::Authorities::Covid do
               admin2_county: 'Denton'
             }
           end
-          let(:expected_results) do
+          let(:expected_result) do
             # counts come from the values in the fixture
             {
               id: "#{date}:USA:Texas:Denton",
@@ -159,9 +159,9 @@ describe Qa::Authorities::Covid do
           end
           subject { authority.search('', term_controller) }
 
-          it 'has expected request and results' do
+          it 'has expected request and result' do
             expect(subject[:request]).to include expected_request
-            expect(subject[:results]).to include expected_results
+            expect(subject[:result]).to include expected_result
           end
         end
       end

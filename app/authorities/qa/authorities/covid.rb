@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'covid_tracker/keys'
+
 module Qa::Authorities
   # A wrapper around the Covid api for use with questioning_authority
   # API documentation: https://documenter.getpostman.com/view/10724784/SzYXWz3x?version=latest
@@ -11,6 +13,12 @@ module Qa::Authorities
     attr_reader :country_iso, :province_state, :admin2_county, :date, :error_msg, :raw_response
 
     DATA_TIME_ZONE = 'Eastern Time (US & Canada)'
+
+    def self.most_recent_day_with_data
+      (DateTime.now.in_time_zone(DATA_TIME_ZONE) - 1.day).strftime("%F")
+    end
+
+    delegate :most_recent_day_with_data, to: Qa::Authorities::Covid
 
     # Covid returns json
     def response(url)
@@ -62,7 +70,7 @@ module Qa::Authorities
       # @param params [Hash|ActiveRecord::Params] controller with params
       def unpack_params(params)
         @error_msg = ""
-        @date = params.fetch('date', (DateTime.now.in_time_zone(DATA_TIME_ZONE) - 1.day).strftime("%F"))
+        @date = params.fetch('date', most_recent_day_with_data)
         @country_iso = params.fetch('country_iso', "USA")
         @province_state = params.fetch('province_state', nil)
         @admin2_county = params.fetch('admin2_county', nil)
@@ -79,8 +87,9 @@ module Qa::Authorities
       def format_results(confirmed:, delta_confirmed:, deaths:, delta_deaths:)
         {
           CovidTracker::ResultKeys::ID => id,
-          CovidTracker::ResultKeys::REGION_ID => region_id,
           CovidTracker::ResultKeys::LABEL => label,
+          CovidTracker::ResultKeys::REGION_ID => region_id,
+          CovidTracker::ResultKeys::REGION_LABEL => region_label,
           CovidTracker::ResultKeys::DATE => date,
           CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED => confirmed,
           CovidTracker::ResultKeys::DELTA_CONFIRMED => delta_confirmed,
@@ -100,8 +109,8 @@ module Qa::Authorities
                               parse_country
                             end
         {
-          request: format_request,
-          results: formatted_results
+          CovidTracker::RequestKeys::REQUEST_SECTION => format_request,
+          CovidTracker::ResultKeys::RESULT_SECTION => formatted_results
         }
       end
 
@@ -157,11 +166,15 @@ module Qa::Authorities
       end
 
       def label
+        label = region_label + "(#{date})"
+      end
+
+      def region_label
         label = ""
         label += "#{raw_response['data'].first['region']['cities'].first['name']}, " if admin2_county
         label += "#{raw_response['data'].first['region']['province']}, " if province_state
         label += "#{raw_response['data'].first['region']['name']} " if country_iso
-        label += "(#{date})"
+        label
       end
 
       def error_check

@@ -1,35 +1,22 @@
 # frozen_string_literal: true
+
+require 'covid_tracker/keys'
+
 # Controller for Monitor Status header menu item
 module CovidTracker
   class HomepageController < ApplicationController
     layout 'covid_tracker/covid_tracker'
 
-    DAYS_TO_TRACK = 30
+    DAYS_TO_TRACK = CovidTracker::DataService::DEFAULT_DAYS_TO_TRACK
 
-    class_attribute :presenter_class
+    class_attribute :presenter_class, :data_service_class
     self.presenter_class = CovidTracker::HomepagePresenter
+    self.data_service_class = CovidTracker::DataService
 
     # Sets up presenter with data to display in the UI
     def index
-      all_results = {}
-      regions = CovidTracker::RegionRegistry.registry
-      dt_today = DateTime.now
-      regions.each do |region|
-        region_results = []
-        1.upto(DAYS_TO_TRACK) do |dti|
-          date_str = (dt_today - dti.days).strftime("%F")
-          # Ex. region = { country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome' }
-          region[:date] = date_str
-          region_results << Qa::Authorities::Covid.new.find(region)
-        end
-        all_results[region_results.first[:results][:label]] = region_results
-      end
-      # log_header
-      # perform_updates
-      # commit_cache if commit_cache?
+      all_results = data_service_class.data_for_all_regions(days: DAYS_TO_TRACK)
       @presenter = presenter_class.new(all_results: all_results)
-      # QaServer.config.monitor_logger.debug("~~~~~~~~ DONE rendering monitor status")
-      # render 'index', status: :internal_server_error if latest_summary.failing_authority_count.positive?
     end
 
     # private

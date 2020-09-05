@@ -4,3 +4,22 @@ body {
     margin-bottom: 0;
     margin-left: 20px;
 }
+
+td.neutral {
+    text-align: center;
+}
+
+td.low {
+    background: #efe9ab;
+    text-align: center;
+}
+
+td.moderate {
+    background: #d7b27d;
+    text-align: center;
+}
+
+td.critical {
+    background: #d77d7d;
+    text-align: center;
+}
