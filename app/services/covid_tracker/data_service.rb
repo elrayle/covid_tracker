@@ -42,7 +42,7 @@ require 'covid_tracker/keys'
 module CovidTracker
   class DataService
 
-    DEFAULT_DAYS_TO_TRACK = 7
+    DEFAULT_DAYS_TO_TRACK = 30
 
     class_attribute :registry_class
     self.registry_class = CovidTracker::RegionRegistry

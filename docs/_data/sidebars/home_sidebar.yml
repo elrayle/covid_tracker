@@ -1,0 +1,53 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar Menu
+  folders:
+
+  - title: This Week
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: /all_regions-7-days.html
+      output: web, pdf
+
+    - title: Cortland, New York, USA
+      url: /usa-new_york-cortland-7-days.html
+      output: web, pdf
+
+    - title: Tompkins, New York, USA
+      url: /usa-new_york-tompkins-7-days.html
+      output: web, pdf
+
+  - title: This Month
+    output: web, pdf
+    folderitems:
+
+      - title: All Regions
+        url: /all_regions-30-days.html
+        output: web, pdf
+
+      - title: Cortland, New York, USA
+        url: /usa-new_york-cortland-30-days.html
+        output: web, pdf
+
+      - title: Tompkins, New York, USA
+        url: /usa-new_york-tompkins-30-days.html
+        output: web, pdf
+
+  - title: Since March
+    output: web, pdf
+    folderitems:
+
+      - title: All Regions
+        url: /all_regions-since_march.html
+        output: web, pdf
+
+      - title: Cortland, New York, USA
+        url: /usa-new_york-cortland-since_march.html
+        output: web, pdf
+
+      - title: Tompkins, New York, USA
+        url: /usa-new_york-tompkins-since_march.html
+        output: web, pdf

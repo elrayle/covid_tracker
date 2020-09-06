@@ -1,0 +1,11 @@
+---
+title: Cortland, New York, USA
+permalink: usa-new_york-cortland-7-days.html
+last_updated: Sept 6, 2020
+keywords: ["Cortland, New York, USA", "This Week"]
+tags: ["usa-new_york-cortland", "this_week"]
+sidebar: home_sidebar
+folder: covid_tracker/this_week/
+---
+
+![This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_7_days_graph.png)

@@ -1,9 +1,16 @@
 # Covid Tracker
 
-This is a Rails app that generates graphs of cumulative confirmed cases and cumulative confirmed deaths for registered regions.
+This is a Rails app that generates graphs tracking COVID-19 in registered regions.  The graphs generated include the following based on data from  - the last 7 days, the last 30 days.  Coming soon, it will also include all data since March 2020.
+ 
+* cumulative confirmed cases 
+* daily change in confirmed cases
+* cumulative confirmed deaths
+* daily change in confirmed deaths
 
 ## Prerequisites:
 
+* ruby 2.5
+* rails 5.2
 * imagemagick - used for graph generation
 
 ## Registering Regions
@@ -31,11 +38,15 @@ List of country province names (substitute country's ISO code for `:iso`): https
 
 ## Generate graphs
 
-TBD
+```
+$ bundle exec rails c
+>> CovidTracker::GraphingService.update_all_graphs(days: 7)
+>> CovidTracker::GraphingService.update_all_graphs(days: 30)
+```
 
-## View graphs
+This fetches the data for each day.  Eventually, the data will be cached in a local database to make data extraction performant.  At this time, it is not recommended generating graphs for all data since March 2020 as it will not perform well and could crash due to the quantity of data.
 
-TBD
+At this time, the graphs are stored in /public/covid_tracker/charts.  The graphs have to be manually copied into the Jekyll site.  They also have to be renamed to the names expected in the pages in the Jekyll site.  The plan is to generate them directly into the Jekyll site.
 
 ## Acknowlegements
 

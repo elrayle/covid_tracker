@@ -43,7 +43,7 @@ module CovidTracker
           # generate_graph_for_stat(region_data: region_data, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED)
           generate_graph_for_stat(region_data: region_data, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED)
           # generate_graph_for_stat(region_data: region_data, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS)
-          # generate_graph_for_stat(region_data: region_data, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS)
+          generate_graph_for_stat(region_data: region_data, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS)
         end
         all_regions_data.empty? ? puts("Unable to retrieve data for graphs") : puts("Graph Generation Complete!")
       end
