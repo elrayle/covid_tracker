@@ -4,6 +4,8 @@ require 'fileutils'
 require 'gruff'
 
 # This module include provides graph methods for generating graphs with Gruff
+# @see https://github.com/topfunky/gruff
+# @see CovidTracker::GraphingService
 module CovidTracker
   module GruffGraph
     private

@@ -4,9 +4,9 @@
 
   <h2><%= t('covid_tracker.homepage.title') %></h2>
 
-  <% @presenter.all_results.each do |_region_id, region_results| %>
-    <h3><%= @presenter.region_label(region_results) %></h3>
-    <% region_data = @presenter.region_data(region_results) %>
+  <% @presenter.all_regions_data.each do |_region_id, region_results| %>
+    <h3><%= @presenter.region_label(region_results: region_results) %></h3>
+    <% region_data = @presenter.region_data(region_results: region_results) %>
 
     <table class="pure-table">
       <tr>

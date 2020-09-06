@@ -9,16 +9,19 @@ module CovidTracker
 
     DAYS_TO_TRACK = CovidTracker::DataService::DEFAULT_DAYS_TO_TRACK
 
-    class_attribute :presenter_class, :data_service_class
+    class_attribute :presenter_class, :data_service_class, :graphing_service_class
     self.presenter_class = CovidTracker::HomepagePresenter
     self.data_service_class = CovidTracker::DataService
+    self.graphing_service_class = CovidTracker::GraphingService
 
     # Sets up presenter with data to display in the UI
     def index
-      all_results = data_service_class.data_for_all_regions(days: DAYS_TO_TRACK)
-      @presenter = presenter_class.new(all_results: all_results)
+      all_regions_data = data_service_class.all_regions_data(days: DAYS_TO_TRACK)
+      @presenter = presenter_class.new(all_regions_data: all_regions_data)
     end
 
+    def update_graphs
+    end
     # private
     #
     #   def perform_updates

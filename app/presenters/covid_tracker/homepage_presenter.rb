@@ -5,21 +5,17 @@ require 'covid_tracker/keys'
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class HomepagePresenter
-    # extend Forwardable
 
-    attr_reader :all_results
+    class_attribute :data_service_class
+    self.data_service_class = CovidTracker::DataService
+
+    attr_reader :all_regions_data
+
+    delegate :region_label, :region_data, to: data_service_class
 
     # @param all_results [Hash] results for all registered regions
-    def initialize(all_results:)
-      @all_results = all_results
-    end
-
-    def region_label(region_results)
-      region_results[CovidTracker::RegionKeys::REGION_LABEL]
-    end
-
-    def region_data(region_results)
-      region_results[CovidTracker::RegionKeys::REGION_DATA]
+    def initialize(all_regions_data:)
+      @all_regions_data = all_regions_data
     end
 
     def result(datum)
