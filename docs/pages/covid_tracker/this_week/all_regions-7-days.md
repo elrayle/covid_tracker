@@ -10,8 +10,12 @@ folder: covid_tracker/this_week/
 
 <h3>Cortland, New York, USA</h3>
 
-![This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_7_days_graph.png)
+![Change in Confirmed Cases This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_7_days_graph.png)
+
+![Change in Confirmed Deaths This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_deaths_7_days_graph.png)
 
 <h3>Tompkins, New York, USA</h3>
 
-![This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_confirmed_7_days_graph.png)
+![Change in Confirmed Cases This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_confirmed_7_days_graph.png)
+
+![Change in Confirmed Deaths This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_deaths_7_days_graph.png)

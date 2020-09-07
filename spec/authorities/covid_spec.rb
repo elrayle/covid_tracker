@@ -68,11 +68,15 @@ describe Qa::Authorities::Covid do
         end
         let(:expected_result) do
           {
-            id: "#{date}:USA",
+            id: "#{date}USA",
             label: "US (#{date})",
+            region_id: "USA",
+            region_label: "US ",
             date: date,
             cumulative_confirmed: 50,
-            cumulative_deaths: 7
+            delta_confirmed: 2708,
+            cumulative_deaths: 7,
+            delta_deaths: 88
           }
         end
         before do
@@ -105,9 +109,10 @@ describe Qa::Authorities::Covid do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}:USA:Iowa",
-              region_id: ":USA:Iowa",
+              id: "#{date}USA:Iowa",
               label: "Iowa, US (#{date})",
+              region_id: "USA:Iowa",
+              region_label: "Iowa, US ",
               date: date,
               cumulative_confirmed: 43,
               delta_confirmed: 540,
@@ -141,9 +146,10 @@ describe Qa::Authorities::Covid do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}:USA:Texas:Denton",
-              region_id: ":USA:Texas:Denton",
+              id: "#{date}USA:Texas:Denton",
               label: "Denton, Texas, US (#{date})",
+              region_id: "USA:Texas:Denton",
+              region_label: "Denton, Texas, US ",
               date: date,
               cumulative_confirmed: 10,
               delta_confirmed: 447,

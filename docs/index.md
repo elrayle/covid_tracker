@@ -17,7 +17,7 @@ toc: false
            <div class="panel-body">
                <h4>This Week</h4>
                <p>Graphs for each region including data from the past 7 days.</p>
-               <a href="tag_this_week.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-7-days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -32,7 +32,7 @@ toc: false
            <div class="panel-body">
                <h4>This Month</h4>
                <p>Graphs for each region including data from the past 30 days.</p>
-               <a href="tag_this_month.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-30-days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -47,7 +47,7 @@ toc: false
            <div class="panel-body">
                <h4>Since March</h4>
                <p>Graphs for each region including data since March 2020.</p>
-               <a href="tag_since_march.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>

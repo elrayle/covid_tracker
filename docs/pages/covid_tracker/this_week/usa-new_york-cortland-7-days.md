@@ -8,4 +8,6 @@ sidebar: home_sidebar
 folder: covid_tracker/this_week/
 ---
 
-![This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_7_days_graph.png)
+![Change in Confirmed Cases This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_7_days_graph.png)
+
+![Change in Confirmed Deaths This Week for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_deaths_7_days_graph.png)

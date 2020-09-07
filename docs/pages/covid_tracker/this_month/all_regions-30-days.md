@@ -10,8 +10,12 @@ folder: covid_tracker/this_month/
 
 <h3>Cortland, New York, USA</h3>
 
-![This Month for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_30_days_graph.png)
+![Change in Confirmed Cases This Month for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_confirmed_30_days_graph.png)
+
+![Change in Confirmed Deaths This Month for Cortland, New York, USA](images/graphs/usa-new_york-cortland_delta_deaths_30_days_graph.png)
 
 <h3>Tompkins, New York, USA</h3>
 
-![This Month for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_confirmed_30_days_graph.png)
+![Change in Confirmed Cases This Month for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_confirmed_30_days_graph.png)
+
+![Change in Confirmed Deaths This Month for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_deaths_30_days_graph.png)

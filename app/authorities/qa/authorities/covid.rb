@@ -159,7 +159,7 @@ module Qa::Authorities
 
       def region_id
         id = ""
-        id += ":#{country_iso}" if country_iso
+        id += "#{country_iso}"
         id += ":#{province_state}" if province_state
         id += ":#{admin2_county}" if admin2_county
         id.gsub(' ', '_')

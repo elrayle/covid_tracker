@@ -40,4 +40,10 @@ en:
       delta_confirmed: Change in Confirmed Cases
       cumulative_deaths: Cumulative Confirmed Deaths
       delta_deaths: Change in Confirmed Deaths
+    graphing_service:
+      cumulative_confirmed_graph_title: Cumulative Confirmed Cases for %{region_label}
+      delta_confirmed_graph_title: Change in Confirmed Cases for %{region_label}
+      cumulative_deaths_graph_title: Cumulative Confirmed Deaths for %{region_label}
+      delta_deaths_graph_title: Change in Confirmed Deaths for %{region_label}
+      last_updated: Last updated on %{data}
 
