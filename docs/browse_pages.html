@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://elrayle.github.io/covid_tracker/css/modern-business.css">
 <link rel="stylesheet" href="https://elrayle.github.io/covid_tracker/css/lavish-bootstrap.css">
 <link rel="stylesheet" href="https://elrayle.github.io/covid_tracker/css/customstyles.css">
-<link rel="stylesheet" href="https://elrayle.github.io/covid_tracker/css/theme-spotlight.css">
+<link rel="stylesheet" href="https://elrayle.github.io/covid_tracker/css/theme-covid_tracker.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -26,7 +26,7 @@
 <script src="https://elrayle.github.io/covid_tracker/js/toc.js"></script>
 <script src="https://elrayle.github.io/covid_tracker/js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="https://elrayle.github.io/covid_tracker/images/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="https://elrayle.github.io/covid_tracker/images/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,15 +76,10 @@
 </head>
 <body>
   <!-- Navigation -->
+<!-- substantially changed - see https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/_includes/topnav.html -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container topnavlinks">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" href="https://elrayle.github.io/covid_tracker/index.html" title="Covid Region Tracker">
               <img class="company-logo" alt="Covid Region Tracker" src="https://elrayle.github.io/covid_tracker/images/covid_tracker_logo.png" />
             </a>
@@ -95,29 +90,7 @@
                 <p class="navbar-tagline">Visualizations for the Regions You Want to Track</p>
           </div>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- entries without drop-downs appear here -->
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-              <li>
-                <div id="search-demo-container">
-  <form role="search" method="get" action="https://elrayle.github.io/covid_tracker/search/" id="search-input">
-      <input id="searchString" name="searchString"
-       placeholder="Search..." type="text">
-    <button type="submit" title="Search for keywords"><i class="fa fa-search" name="googleSearchName"value="Search"></i></button>
-  </form>
-</div>
-
-              </li>
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
+    </div>
 </nav>
 
 
@@ -529,15 +502,33 @@ $('document').ready(function() {
 
 
 <footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2020 elrayle. All rights reserved. <br />
+    <div class="row">
+        <div class="col-lg-12 footer">
+       &copy;2020 elrayle. All rights reserved. <br />
  Site last generated: Sep 7, 2020 <br />
 <a href="http://github.com/elrayle/covid_tracker/">github.com/elrayle/covid_tracker</a><br />
 <a href=""></a></a><br />
 <p><img class="company-logo" src="https://elrayle.github.io/covid_tracker/images/covid_tracker_logo.png" alt="Covid Region Tracker" /></p>
-                </div>
-            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 acknowledgements">
+            <p></p>
+            <p>Data from:
+            <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a>
+                (<em>Terms of Use - scroll to bottom</em>)</p>
+
+            <p>The API to access the COVID-19 data is
+                <a href="https://documenter.getpostman.com/view/10724784/SzYXWz3x?version=latest#8b133941-d8b3-4055-8047-46171581cac4">COVID API</a></p>
+
+            <p>The mechanism used in the app to access the API is a custom module written to work with the
+                <a href="https://github.com/samvera/questioning_authority">Questioning Authority</a> from the <a href="https://samvera.org">Samvera Community</a>.</p>
+
+            <p>The GitHub Pages site uses <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll">Documentation Theme for Jekyll</a> developed by <a href="https://github.com/tomjohnson1492">Tom Johnson</a>.</p>
+        </div>
+    </div>
+
 </footer>
 
 

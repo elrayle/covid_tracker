@@ -109,3 +109,23 @@ li.sidebarTitle {
     margin-bottom:10px;
     margin-left: 5px;
 }
+
+/*!* Small devices *!*/
+/*@media (min-width: 554px) {*/
+/*    .navbar-sitetitle, .navbar-tagline { font-size: 5px; }*/
+/*}*/
+
+/*!* Medium devices *!*/
+/*@media (min-width: 768px) {*/
+/*    .navbar-sitetitle, .navbar-tagline { font-size: 10px; }*/
+/*}*/
+
+/*!* Large devices *!*/
+/*@media (min-width: 992px) {*/
+/*    .navbar-sitetitle, .navbar-tagline { font-size: 15px; }*/
+/*}*/
+
+/*!* Extra large devices *!*/
+/*@media (min-width: 1200px) {*/
+/*    .navbar-sitetitle, .navbar-tagline { font-size: 20px; }*/
+/*}*/

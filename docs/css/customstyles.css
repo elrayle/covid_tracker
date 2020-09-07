@@ -1204,7 +1204,7 @@ ul.info {
   margin: 20px 0px;
 }
 
-/* Added for spotlight color scheme and logo */
+/* Added color scheme and logo */
 .text-primary {
     color: #999290;
 }
@@ -1229,7 +1229,6 @@ body {
 
 .navbar-tagline {
   font-size: small;
-  margin-left: 85px;
 }
 
 .nav.navbar-nav.navbar-right {
