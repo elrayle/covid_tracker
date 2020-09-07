@@ -1,11 +1,29 @@
 <footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
+    <div class="row">
+        <div class="col-lg-12 footer">
+       &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
 {% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
 <a href="{{site.organization_link}}">{{site.organization_link_name}}</a><br />
 <a href="{{site.community_link}}">{{site.community_link_name}}</a></a><br />
 <p><img class="company-logo" src="{{ site.url }}/images/covid_tracker_logo.png" alt="Covid Region Tracker" /></p>
-                </div>
-            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 acknowledgements">
+            <p></p>
+            <p>Data from:
+            <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a>
+                (<em>Terms of Use - scroll to bottom</em>)</p>
+
+            <p>The API to access the COVID-19 data is
+                <a href="https://documenter.getpostman.com/view/10724784/SzYXWz3x?version=latest#8b133941-d8b3-4055-8047-46171581cac4">COVID API</a></p>
+
+            <p>The mechanism used in the app to access the API is a custom module written to work with the
+                <a href="https://github.com/samvera/questioning_authority">Questioning Authority</a> from the <a href="https://samvera.org">Samvera Community</a>.</p>
+
+            <p>The GitHub Pages site uses <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll">Documentation Theme for Jekyll</a> developed by <a href="https://github.com/tomjohnson1492">Tom Johnson</a>.</p>
+        </div>
+    </div>
+
 </footer>
