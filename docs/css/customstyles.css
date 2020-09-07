@@ -1203,21 +1203,27 @@ ul.info {
     color: #999290;
 }
 
+body {
+  /* This is to accomodate the taller logo in the header */
+  padding-top: 85px;
+}
+
 .navbar-brand img {
   height: 67px;
 }
 
 .navbar-header {
-  width: 50%;
+  /*width: 370px;*/
+  width: 100%;
+}
+
+.navbar-sitetitle {
+  padding-top: 5px;
 }
 
 .navbar-tagline {
-  font-size: x-small;
-}
-
-body {
-  /* This is to accomodate the taller logo in the header */
-  padding-top: 85px;
+  font-size: small;
+  padding-left: 85px;
 }
 
 .nav.navbar-nav.navbar-right {
