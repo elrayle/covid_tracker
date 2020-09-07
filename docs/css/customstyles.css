@@ -1229,7 +1229,7 @@ body {
 
 .navbar-tagline {
   font-size: small;
-  padding-left: 85px;
+  margin-left: 85px;
 }
 
 .nav.navbar-nav.navbar-right {
