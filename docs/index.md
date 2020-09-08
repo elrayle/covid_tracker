@@ -47,7 +47,7 @@ toc: false
            <div class="panel-body">
                <h4>Since March</h4>
                <p>Graphs for each region including data since March 2020.</p>
-               <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-since_march.html" class="btn btn-primary" disabled>Coming Soon</a>
            </div>
        </div>
    </div>
