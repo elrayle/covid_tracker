@@ -42,7 +42,7 @@ require 'covid_tracker/keys'
 module CovidTracker
   class DataService
 
-    DEFAULT_DAYS_TO_TRACK = 30
+    DEFAULT_DAYS_TO_TRACK = 2
 
     class_attribute :registry_class
     self.registry_class = CovidTracker::RegionRegistry
@@ -55,7 +55,7 @@ module CovidTracker
         registered_regions = registry_class.registry
         registered_regions.each do |region_registration|
           region_results = region_results(region_registration: region_registration, days: days, last_day: default_last_day)
-          region_id = region_id_from_region_results(region_results)
+          region_id = region_registration.id
           all_results[region_id] = region_results
         end
         all_results
@@ -79,7 +79,7 @@ module CovidTracker
             region_data << result
           end
         end
-        { CovidTracker::RegionKeys::REGION_LABEL => region_label_from_region_data(region_data: region_data),
+        { CovidTracker::RegionKeys::REGION_LABEL => region_registration.label,
           CovidTracker::RegionKeys::REGION_DATA => region_data }
       end
 
@@ -103,21 +103,11 @@ module CovidTracker
 
         def fetch_for_date(last_day, day_idx, region_registration)
           date_str = str_date_from_idx(last_day, day_idx)
-          region_registration[:date] = date_str
-          Qa::Authorities::Covid.new.find(region_registration)
-        end
-
-        def region_label_from_region_data(region_data:)
-          region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_LABEL]
+          Qa::Authorities::Covid.new.find_for(region_registration: region_registration, date: date_str)
         end
 
         def region_data_from_region_results(region_results)
           region_results[CovidTracker::RegionKeys::REGION_DATA]
-        end
-
-        def region_id_from_region_results(region_results)
-          region_data = region_data_from_region_results(region_results)
-          region_id_from_region_data(region_data: region_data)
         end
 
         def default_last_day

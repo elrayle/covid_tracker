@@ -7,10 +7,15 @@ module Qa::Authorities
   # API documentation: https://documenter.getpostman.com/view/10724784/SzYXWz3x?version=latest
   # QA URL: _YOUR_HOST_/api/search?date=2020-05-31&country_iso=USA&province_state=New York&county=Broome
   #
+  # List of country ISO codes: https://covid-api.com/api/regions
+  # List of US state names:    https://covid-api.com/api/provinces/usa
+  # List of country province names (substitute country's ISO code for `:iso`):
+  #                            https://covid-api.com/api/provinces/:iso
+  #
   class Covid < Qa::Authorities::Base
     include WebServiceBase
 
-    attr_reader :country_iso, :province_state, :admin2_county, :date, :error_msg, :raw_response
+    attr_reader :region_registration, :date, :error_msg, :raw_response
 
     DATA_TIME_ZONE = 'Eastern Time (US & Canada)'
 
@@ -20,6 +25,13 @@ module Qa::Authorities
 
     delegate :most_recent_day_with_data, to: Qa::Authorities::Covid
 
+    # used to test build_url
+    # @param region_registration [CovidTracker::RegionRegistration] identifies country_iso, province_state, and admin2_county
+    # @param date [String] date string in the format %F (e.g. "2020-05-31")
+    def initialize(region_registration: nil, date: nil)
+      unpack_registration(region_registration, date) if region_registration && date
+    end
+
     # Covid returns json
     def response(url)
       Faraday.get(url) do |req|
@@ -28,20 +40,27 @@ module Qa::Authorities
     end
 
     # Find data for a specific region using the covid-api
+    # @param region_registration [CovidTracker::RegionRegistration] identifies country_iso, province_state, and admin2_county
+    # @param date [String] date string in the format %F (e.g. "2020-05-31")
+    # @return json results with response_header and results
+    def find_for(region_registration:, date:)
+      unpack_registration(region_registration, date)
+      query_api
+    end
+
+    # Find data for a specific region using the covid-api
+    # @param region [Hash|ActiveRecord::Params] params from controller or passed in hash
+    # @option region [String] :country_iso ISO code for country (e.g. "USA") (optional default="USA")
+    # @option region [String] :province_state province or state name (e.g. "Georgia") (optional)
+    # @option region [String] :admin2_county admin2 or county name (e.g. "Richmond") (optional)
+    # @option region [String] :date date string in the format %F (e.g. "2020-05-31") (optional default=latest date with data)
+    # @return json results with response_header and results
     def find(region)
       unpack_params(region)
-      url = build_query_url
-      begin
-        @raw_response = json(url)
-      rescue JSON::ParserError
-        Rails.logger.info "Could not parse response as JSON. Request url: #{url}"
-        return []
-      end
-      parse_authority_response
+      query_api
     end
 
     # Search the covid-api based on params from terms_controller
-    #
     # @param _query [String] the query
     # @param terms_controller [QA::TermsController] controller with params
     # @return json results with response_header and results
@@ -61,19 +80,37 @@ module Qa::Authorities
 
     private
 
+      def query_api
+        url = build_query_url
+        begin
+          @raw_response = json(url)
+        rescue JSON::ParserError
+          Rails.logger.info "Could not parse response as JSON. Request url: #{url}"
+          return []
+        end
+        parse_authority_response
+      end
+
       def append_param(base_url, name, value)
         return base_url unless value
         connector = base_url.end_with?('?') ? '' : '&'
         base_url + "#{connector}#{name}=#{value}"
       end
 
-      # @param params [Hash|ActiveRecord::Params] controller with params
+      # @param region_registration [CovidTracker::RegionRegistration] controller with params
+      def unpack_registration(region_registration, date)
+        @error_msg = ""
+        @date = date
+        @region_registration = region_registration
+      end
+
+      # @param params [Hash|ActiveRecord::Params] params from controller or passed in hash
       def unpack_params(params)
         @error_msg = ""
         @date = params.fetch('date', most_recent_day_with_data)
-        @country_iso = params.fetch('country_iso', "USA")
-        @province_state = params.fetch('province_state', nil)
-        @admin2_county = params.fetch('admin2_county', nil)
+        @region_registration = CovidTracker::RegionRegistration.new(country_iso: params.fetch('country_iso', "USA"),
+                                                                    province_state: params.fetch('province_state', nil),
+                                                                    admin2_county: params.fetch('admin2_county', nil))
       end
 
       def format_request
@@ -158,11 +195,7 @@ module Qa::Authorities
       end
 
       def region_id
-        id = ""
-        id += "#{country_iso}"
-        id += ":#{province_state}" if province_state
-        id += ":#{admin2_county}" if admin2_county
-        id.gsub(' ', '_')
+        region_registration.id
       end
 
       def label
@@ -170,11 +203,19 @@ module Qa::Authorities
       end
 
       def region_label
-        label = ""
-        label += "#{raw_response['data'].first['region']['cities'].first['name']}, " if admin2_county
-        label += "#{raw_response['data'].first['region']['province']}, " if province_state
-        label += "#{raw_response['data'].first['region']['name']} " if country_iso
-        label
+        region_registration.label
+      end
+
+      def country_iso
+        region_registration.country_iso
+      end
+
+      def province_state
+        region_registration.province_state
+      end
+
+      def admin2_county
+        region_registration.admin2_county
       end
 
       def error_check
