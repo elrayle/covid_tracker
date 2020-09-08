@@ -15,16 +15,16 @@ module CovidTracker
     def id
       id = ""
       id += "#{country_iso}" if country_iso
-      id += ":#{province_state}" if province_state
-      id += ":#{admin2_county}" if admin2_county
-      id.gsub(' ', '_')
+      id += "-#{province_state}" if province_state
+      id += "-#{admin2_county}" if admin2_county
+      id.gsub(' ', '_').downcase
     end
 
     def label
       label = ""
       label += "#{admin2_county}, " if admin2_county
       label += "#{province_state}, " if province_state
-      label += "#{country_iso} " if country_iso
+      label += "#{country_iso}" if country_iso
       label
     end
 

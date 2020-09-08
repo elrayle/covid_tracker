@@ -34,14 +34,14 @@ RSpec.describe CovidTracker::RegionRegistration do
       context 'and state is not specified' do
         let(:registration) { described_class.new(country_iso: 'USA') }
         it 'only includes USA' do
-          expect(registration.id).to eq 'USA'
+          expect(registration.id).to eq 'usa'
         end
       end
 
       context 'and state is specified' do
         let(:registration) { described_class.new(country_iso: 'USA', province_state: 'Virginia') }
         it 'includes USA and state' do
-          expect(registration.id).to eq 'USA:Virginia'
+          expect(registration.id).to eq 'usa-virginia'
         end
       end
     end
@@ -49,7 +49,7 @@ RSpec.describe CovidTracker::RegionRegistration do
     context 'when state and county are specified' do
       let(:registration) { described_class.new(country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome') }
       it 'includes USA, state, and county' do
-        expect(registration.id).to eq 'USA:New_York:Broome'
+        expect(registration.id).to eq 'usa-new_york-broome'
       end
     end
   end
@@ -59,14 +59,14 @@ RSpec.describe CovidTracker::RegionRegistration do
       context 'and state is not specified' do
         let(:registration) { described_class.new(country_iso: 'USA') }
         it 'only includes USA' do
-          expect(registration.label).to eq 'USA '
+          expect(registration.label).to eq 'USA'
         end
       end
 
       context 'and state is specified' do
         let(:registration) { described_class.new(country_iso: 'USA', province_state: 'Virginia') }
         it 'includes USA and state' do
-          expect(registration.label).to eq 'Virginia, USA '
+          expect(registration.label).to eq 'Virginia, USA'
         end
       end
     end
@@ -74,7 +74,7 @@ RSpec.describe CovidTracker::RegionRegistration do
     context 'when state and county are specified' do
       let(:registration) { described_class.new(country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome') }
       it 'includes USA, state, and county' do
-        expect(registration.label).to eq 'Broome, New York, USA '
+        expect(registration.label).to eq 'Broome, New York, USA'
       end
     end
   end

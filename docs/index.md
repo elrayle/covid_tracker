@@ -1,5 +1,5 @@
 ---
-title: Covid Region Tracker
+title: Cortland, NY and Surrounding Counties
 keywords: ["Guide", "Community"]
 sidebar: home_sidebar
 permalink: index.html
@@ -17,7 +17,7 @@ toc: false
            <div class="panel-body">
                <h4>This Week</h4>
                <p>Graphs for each region including data from the past 7 days.</p>
-               <a href="all_regions-7-days.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -32,7 +32,7 @@ toc: false
            <div class="panel-body">
                <h4>This Month</h4>
                <p>Graphs for each region including data from the past 30 days.</p>
-               <a href="all_regions-30-days.html" class="btn btn-primary">See Graphs</a>
+               <a href="all_regions-30_days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>

@@ -1,13 +1,13 @@
 ---
 title: Tompkins, New York, USA
 permalink: usa-new_york-tompkins-since_march.html
-last_updated: Sept 6, 2020
+last_updated: Sep 8, 2020
 keywords: ["Tompkins, New York, USA", "Since March"]
-tags: ["since_march", "usa-new_york-tompkins"]
+tags: ["usa-new_york-tompkins", "since_march"]
 sidebar: home_sidebar
-folder: covid_tracker/this_month/
+folder: covid_tracker/since_march/
 ---
 
-![Change in Confirmed Cases - All data since March 2020 for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_confirmed_since_march_graph.png)
+![Change in Confirmed Cases Since March for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_confirmed-since_march_graph.png)
 
-![Change in Confirmed Deaths - All data since March 2020 for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins_delta_deaths_since_march_graph.png)
+![Change in Confirmed Deaths Since March for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_deaths-since_march_graph.png)

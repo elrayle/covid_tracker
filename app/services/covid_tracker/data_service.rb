@@ -87,6 +87,7 @@ module CovidTracker
       #   all_results[region_id]
       # end
 
+      # TODO: Potential refactor in callers to use registration instead of results
       def region_label(region_results:)
         region_results[CovidTracker::RegionKeys::REGION_LABEL]
       end
@@ -95,6 +96,7 @@ module CovidTracker
         region_results[CovidTracker::RegionKeys::REGION_DATA]
       end
 
+      # TODO: Potential refactor in callers to use registration instead of results
       def region_id_from_region_data(region_data:)
         region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
       end
