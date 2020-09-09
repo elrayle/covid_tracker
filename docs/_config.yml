@@ -12,6 +12,8 @@ topnav_tagline: Visualizations for the Regions You Want to Track
 site_title: Covid Region Tracker
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
+tz: America/New_York
+
 company_name: elrayle
 # this appears in the footer
 
