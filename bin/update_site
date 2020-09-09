@@ -1,8 +1,18 @@
 #! /bin/bash
+
+SHOW_HELP=false
+
+if [ $COVID_TRACKER_HOME ]; then
+    cd $COVID_TRACKER_HOME
+else
+    echo 'Set environment variable COVID_TRACKER_HOME to the root directory of the CovidTracker Rails app'
+    SHOW_HELP=true
+fi
+
 GEN_PAGES=false
 GEN_GRAPHS=false
 GEN_SIDEBAR=false
-SHOW_HELP=false
+
 for switch in "$@"
 do
     case $switch in
@@ -41,11 +51,18 @@ if [ "$SHOW_HELP" = true ]; then
     echo ' '
     echo '     -p      Generate pages that show graphs for each region (run nightly).'
     echo '     -g      Generate graphs that are displayed on the region pages (run nightly).'
-    echo '     -s      Generate sidebar (run the first time and then only if regions are added/removed from the registry.'
+    echo '     -s      Generate sidebar (run the first time and then only if regions are '
+    echo '             added/removed from the registry.'
     echo '     -h      Show these help instructions.'
     echo ' '
+    echo 'ERROR'
+    echo '     Set environment variable COVID_TRACKER_HOME to the root directory of the '
+    echo '     CovidTracker Rails app.  This gives the script access to your Rails app in'
+    echo '     order to run the Rails methods that execute the generation process.'
     exit
 fi
+
+touch config/initializers/covid_regions.rb
 
 if [ "$GEN_PAGES" = true ]; then
     echo '------------------------------------------------------'
