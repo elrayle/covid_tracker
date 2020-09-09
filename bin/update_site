@@ -1,0 +1,66 @@
+#! /bin/bash
+GEN_PAGES=false
+GEN_GRAPHS=false
+GEN_SIDEBAR=false
+SHOW_HELP=false
+for switch in "$@"
+do
+    case $switch in
+        -p )
+                GEN_PAGES=true
+                ;;
+        -g )
+                GEN_GRAPHS=true
+                ;;
+        -s )
+                GEN_SIDEBAR=true
+                ;;
+        -h )
+                SHOW_HELP=true
+    esac
+done
+
+if [ "$SHOW_HELP" = true ]; then
+    echo ' '
+    echo 'NAME'
+    echo '     update_site -- generate external facing site files'
+    echo ' '
+    echo 'SYNOPSIS'
+    echo '     update_site [-pgsh]'
+    echo ' '
+    echo 'DESCRIPTION'
+    echo '     This script updates files in the Jekyll site under the docs directory.'
+    echo '     The options control which parts are generated.'
+    echo ' '
+    echo '     The comment in parentheses after each option indicates the recommended'
+    echo '     times for running each option to keep the site up to date.  Creating a'
+    echo '     nightly cron job running `update_site -p -g` will automate updating pages'
+    echo '     and graphs to the latest available data.'
+    echo ' '
+    echo '     The following options are available:'
+    echo ' '
+    echo '     -p      Generate pages that show graphs for each region (run nightly).'
+    echo '     -g      Generate graphs that are displayed on the region pages (run nightly).'
+    echo '     -s      Generate sidebar (run the first time and then only if regions are added/removed from the registry.'
+    echo '     -h      Show these help instructions.'
+    echo ' '
+    exit
+fi
+
+if [ "$GEN_PAGES" = true ]; then
+    echo '------------------------------------------------------'
+    echo 'Generating pages...'
+    rails runner "CovidTracker::SiteGeneratorService.update_pages"
+fi
+
+if [ "$GEN_GRAPHS" = true ]; then
+    echo '------------------------------------------------------'
+    echo 'Generating graphs...'
+    rails runner "CovidTracker::SiteGeneratorService.update_graphs"
+fi
+
+if [ "$GEN_SIDEBAR" = true ]; then
+    echo '------------------------------------------------------'
+    echo 'Generating sidebar...'
+    rails runner "CovidTracker::SiteGeneratorService.update_sidebar"
+fi
