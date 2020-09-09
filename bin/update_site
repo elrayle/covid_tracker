@@ -2,10 +2,18 @@
 
 SHOW_HELP=false
 
-if [ $COVID_TRACKER_HOME ]; then
-    cd $COVID_TRACKER_HOME
+if [ -z "$COVID_TRACKER_HOME" ]; then
+    cd "$COVID_TRACKER_HOME"
+    pwd
 else
-    echo 'Set environment variable COVID_TRACKER_HOME to the root directory of the CovidTracker Rails app'
+    echo ' '
+    echo '------------------------------------------------------------'
+    echo ' '
+    echo 'ERROR...  Set environment variable COVID_TRACKER_HOME to the'
+    echo '          root directory of the CovidTracker Rails app.'
+    echo ' '
+    echo '------------------------------------------------------------'
+    echo ' '
     SHOW_HELP=true
 fi
 
@@ -59,6 +67,19 @@ if [ "$SHOW_HELP" = true ]; then
     echo '     Set environment variable COVID_TRACKER_HOME to the root directory of the '
     echo '     CovidTracker Rails app.  This gives the script access to your Rails app in'
     echo '     order to run the Rails methods that execute the generation process.'
+    echo ' '
+    echo '     Create a symbolic link from RAILS_ROOT/bin/update_site the location where'
+    echo '     you keep executable scripts.  Run the `ln` command in the terminal.'
+    echo ' '
+    echo '        ## ln -s <source> <target> ##'
+    echo '        ln -s ~/path/to/covid_tracker/rails/app/root/bin/update_site ${HOME}/path/to/directory/for/symlink/of/update_site'
+    echo ' '
+    echo '     Add the following in ~/.bash_profile or similar script that runs at startup.'
+    echo ' '
+    echo '        # setup CovidTracker'
+    echo '        export COVID_TRACKER=~/path/to/covid_tracker/rails/app/root'
+    echo '        export PATH="${HOME}/path/to/directory/with/symlink/of/update_site:{$PATH}"'
+    echo ' '
     exit
 fi
 
