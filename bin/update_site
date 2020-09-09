@@ -3,9 +3,6 @@
 SHOW_HELP=false
 
 if [ -z "$COVID_TRACKER_HOME" ]; then
-    cd "$COVID_TRACKER_HOME"
-    pwd
-else
     echo ' '
     echo '------------------------------------------------------------'
     echo ' '
@@ -15,6 +12,9 @@ else
     echo '------------------------------------------------------------'
     echo ' '
     SHOW_HELP=true
+else
+    cd "$COVID_TRACKER_HOME"
+    pwd
 fi
 
 GEN_PAGES=false
@@ -63,22 +63,44 @@ if [ "$SHOW_HELP" = true ]; then
     echo '             added/removed from the registry.'
     echo '     -h      Show these help instructions.'
     echo ' '
-    echo 'ERROR'
-    echo '     Set environment variable COVID_TRACKER_HOME to the root directory of the '
-    echo '     CovidTracker Rails app.  This gives the script access to your Rails app in'
-    echo '     order to run the Rails methods that execute the generation process.'
+    echo 'SETUP'
+    echo '     REQUIRED'
+    echo '         Set environment variable COVID_TRACKER_HOME to the root directory of the '
+    echo '         CovidTracker Rails app.  This gives the script access to your Rails app in'
+    echo '         order to run the Rails methods that execute the generation process.'
     echo ' '
-    echo '     Create a symbolic link from RAILS_ROOT/bin/update_site the location where'
-    echo '     you keep executable scripts.  Run the `ln` command in the terminal.'
+    echo '     OPTIONAL'
+    echo '         Create a symbolic link from RAILS_ROOT/bin/update_site the location where'
+    echo '         you keep executable scripts.  Run the `ln` command in the terminal.'
     echo ' '
-    echo '        ## ln -s <source> <target> ##'
-    echo '        ln -s ~/path/to/covid_tracker/rails/app/root/bin/update_site ${HOME}/path/to/directory/for/symlink/of/update_site'
+    echo '            ## ln -s <source> <target> ##'
+    echo '            ln -s ~/path/to/covid_tracker/rails/app/root/bin/update_site ${HOME}/path/to/directory/for/symlink/of/update_site'
     echo ' '
-    echo '     Add the following in ~/.bash_profile or similar script that runs at startup.'
+    echo '         Add the following in ~/.bash_profile or similar script that runs at startup.'
     echo ' '
-    echo '        # setup CovidTracker'
-    echo '        export COVID_TRACKER=~/path/to/covid_tracker/rails/app/root'
-    echo '        export PATH="${HOME}/path/to/directory/with/symlink/of/update_site:{$PATH}"'
+    echo '            # setup CovidTracker'
+    echo '            export COVID_TRACKER=~/path/to/covid_tracker/rails/app/root'
+    echo '            export PATH="${HOME}/path/to/directory/with/symlink/of/update_site:{$PATH}"'
+    echo ' '
+    echo '     OPTIONAL'
+    echo '         To run the script nightly, setup a cron job.'
+    echo ' '
+    echo '         NOTE: At this writing, Covid data is updated nightly around 00:50 ET'
+    echo ' '
+    echo '           1) Set the timezone for when you want cron jobs to execute by adding the '
+    echo '              following to ~/.bash_profile or similar script that runs at startup'
+    echo ' '
+    echo '                # Set cron timezone.  This controls when cron jobs will be executed.'
+    echo '                export CRON_TZ="America/New_York"'
+    echo ' '
+    echo '           2) Add cron job to run the script by executing the following in the terminal'
+    echo ' '
+    echo '                ## Opens vim editor for adding/editing cron jobs'
+    echo '                crontab -e'
+    echo ' '
+    echo '                ## Add a line following cronjob pattern - reference: https://crontab.guru/crontab.5.html'
+    echo '                ## This example will generate pages and graphs at 3:00am in the context of Eastern Time zone'
+    echo '                0 3 * * * TZ="America/New_York" update_site -p -g'
     echo ' '
     exit
 fi
