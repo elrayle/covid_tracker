@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: all_regions-since_march.html
-last_updated: Sep 9, 2020
+last_updated: Sep 10, 2020
 keywords: ["All Regions", "Since March"]
 tags: ["all_regions", "since_march"]
 sidebar: home_sidebar
