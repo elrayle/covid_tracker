@@ -2,6 +2,7 @@
 
 SHOW_HELP=false
 
+# check if required environment variable is missing
 if [ -z "$COVID_TRACKER_HOME" ]; then
     echo ' '
     echo '------------------------------------------------------------'
@@ -100,7 +101,7 @@ if [ "$SHOW_HELP" = true ]; then
     echo ' '
     echo '                ## Add a line following cronjob pattern - reference: https://crontab.guru/crontab.5.html'
     echo '                ## This example will generate pages and graphs at 3:00am in the context of Eastern Time zone'
-    echo '                0 3 * * * TZ="America/New_York" update_site -p -g'
+    echo '                0 3 * * * TZ="America/New_York" bash -lc "update_site -p -g"'
     echo ' '
     exit
 fi
