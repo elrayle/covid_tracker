@@ -83,8 +83,8 @@ module CovidTracker
           30
         when SINCE_MARCH
           latest_dt = DateTime.now.in_time_zone("Eastern Time (US & Canada)") - 1.day
-          march_01 = DateTime.strptime("03-01-2020 22:00:00 Eastern Time (US & Canada)", '%m-%d-%Y %H:%M:%S %Z')
-          (latest_dt.to_date - march_01.to_date).to_i
+          march01 = DateTime.strptime("03-01-2020 22:00:00 Eastern Time (US & Canada)", '%m-%d-%Y %H:%M:%S %Z')
+          (latest_dt.to_date - march01.to_date).to_i
         end
       end
     end

@@ -9,4 +9,3 @@ CovidTracker::RegionRegistry.register_usa(state: 'New York', county: 'Cayuga')
 CovidTracker::RegionRegistry.register_usa(state: 'New York', county: 'Madison')
 CovidTracker::RegionRegistry.register_usa(state: 'New York', county: 'Chenango')
 CovidTracker::RegionRegistry.register_usa(state: 'New York', county: 'Tioga')
-
