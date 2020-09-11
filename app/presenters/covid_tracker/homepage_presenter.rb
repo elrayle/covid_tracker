@@ -5,7 +5,6 @@ require 'covid_tracker/keys'
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class HomepagePresenter
-
     class_attribute :data_service_class
     self.data_service_class = CovidTracker::DataService
 

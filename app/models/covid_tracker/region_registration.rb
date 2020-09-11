@@ -2,7 +2,6 @@
 
 module CovidTracker
   class RegionRegistration
-
     attr_accessor :country_iso, :province_state, :admin2_county
 
     def initialize(country_iso: nil, province_state: nil, admin2_county: nil)

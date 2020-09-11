@@ -15,7 +15,7 @@ module CovidTracker
     # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
     def update_sidebar(registered_regions: registry_class.registry)
       write_sidebar(registered_regions)
-      puts("Sidebar Generation Complete for #{registered_regions.count} regions!")
+      puts("Sidebar Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
   private

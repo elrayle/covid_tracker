@@ -2,7 +2,6 @@
 
 module CovidTracker
   class SiteGeneratorService
-
     class_attribute :registry_class, :data_service
     self.registry_class = CovidTracker::RegionRegistry
     self.data_service = CovidTracker::DataService

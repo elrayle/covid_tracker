@@ -38,7 +38,7 @@ module CovidTracker
         # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS)
         generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS)
       end
-      all_regions_data.empty? ? puts("Unable to retrieve data for graphs") : puts("Graph Generation Complete for #{all_regions_data.count} regions!")
+      all_regions_data.empty? ? puts("Unable to retrieve data for graphs") : puts("#{days}-days Graph Generation Complete for #{all_regions_data.count} regions!") # rubocop:disable Rails/Output
     end
 
     def generate_graph_for_stat(region_results:, days:, stat_key:)
@@ -84,27 +84,27 @@ module CovidTracker
     def title(region_results:, stat_key:)
       region_label = data_service.region_label(region_results: region_results)
       case stat_key
-        when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
-          I18n.t('covid_tracker.graphing_service.cumulative_confirmed_graph_title', region_label: region_label)
-        when CovidTracker::ResultKeys::DELTA_CONFIRMED
-          I18n.t('covid_tracker.graphing_service.delta_confirmed_graph_title', region_label: region_label)
-        when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
-          I18n.t('covid_tracker.graphing_service.cumulative_deaths_graph_title', region_label: region_label)
-        when CovidTracker::ResultKeys::DELTA_DEATHS
-          I18n.t('covid_tracker.graphing_service.delta_deaths_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
+        I18n.t('covid_tracker.graphing_service.cumulative_confirmed_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::DELTA_CONFIRMED
+        I18n.t('covid_tracker.graphing_service.delta_confirmed_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
+        I18n.t('covid_tracker.graphing_service.cumulative_deaths_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::DELTA_DEATHS
+        I18n.t('covid_tracker.graphing_service.delta_deaths_graph_title', region_label: region_label)
       end
     end
 
     def bar_color(stat_key:)
       case stat_key
-        when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
-          DEFAULT_CASES_BAR_COLOR
-        when CovidTracker::ResultKeys::DELTA_CONFIRMED
-          DEFAULT_CASES_BAR_COLOR
-        when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
-          DEFAULT_DEATHS_BAR_COLOR
-        when CovidTracker::ResultKeys::DELTA_DEATHS
-          DEFAULT_DEATHS_BAR_COLOR
+      when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
+        DEFAULT_CASES_BAR_COLOR
+      when CovidTracker::ResultKeys::DELTA_CONFIRMED
+        DEFAULT_CASES_BAR_COLOR
+      when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
+        DEFAULT_DEATHS_BAR_COLOR
+      when CovidTracker::ResultKeys::DELTA_DEATHS
+        DEFAULT_DEATHS_BAR_COLOR
       end
     end
 

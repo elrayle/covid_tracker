@@ -16,7 +16,7 @@ module CovidTracker
     def update_pages(registered_regions: registry_class.registry)
       update_region_pages(registered_regions)
       update_all_regions_pages(registered_regions)
-      puts("Page Generation Complete for #{registered_regions.count} regions!")
+      puts("Page Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
   private

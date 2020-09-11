@@ -41,11 +41,10 @@ require 'covid_tracker/keys'
 #
 module CovidTracker
   class DataService
-
-    DEFAULT_DAYS_TO_TRACK = 2
-
     class_attribute :registry_class
     self.registry_class = CovidTracker::RegionRegistry
+
+    DEFAULT_DAYS_TO_TRACK = 2
 
     # @param days [Integer] number of days of data to fetch
     # @return [Hash] full set of data for all configured regions - see example in class documentation
