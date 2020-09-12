@@ -10,7 +10,7 @@ require 'spec_helper'
 #   PASS: http://localhost:3000/api/search/covid?province_state=New%20York&admin2_county=Cortland
 #   FAIL: http://localhost:3000/api/search/covid?country_iso=USA&admin2_county=Cortland
 #   FAIL: http://localhost:3000/api/search/covid?admin2_county=Cortland
-describe Qa::Authorities::Covid do
+describe CovidTracker::CovidApi do
   let(:authority) { described_class.new }
 
   describe "#build_query_url" do

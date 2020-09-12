@@ -2,19 +2,19 @@
 
 require 'covid_tracker/keys'
 
-module Qa::Authorities
+module CovidTracker
   # A wrapper around the Covid api for use with questioning_authority
   # API documentation: https://documenter.getpostman.com/view/10724784/SzYXWz3x?version=latest
-  # QA URL: _YOUR_HOST_/api/search?date=2020-05-31&country_iso=USA&province_state=New York&county=Broome
+  # QA URL: _YOUR_HOST_/api/search/covid?date=2020-05-31&country_iso=USA&province_state=New York&county=Broome
   #
   # List of country ISO codes: https://covid-api.com/api/regions
   # List of US state names:    https://covid-api.com/api/provinces/usa
   # List of country province names (substitute country's ISO code for `:iso`):
   #                            https://covid-api.com/api/provinces/:iso
   #
-  class Covid < Qa::Authorities::Base
-    include WebServiceBase
-    include Qa::Authoritites::CovidApi::Parser
+  class CovidApi < Qa::Authorities::Base
+    include Qa::Authorities::WebServiceBase
+    include CovidTracker::CovidApiParser
 
     attr_reader :region_registration, :date, :error_msg, :raw_response
 
@@ -24,7 +24,7 @@ module Qa::Authorities
       (DateTime.now.in_time_zone(DATA_TIME_ZONE) - 1.day).strftime("%F")
     end
 
-    delegate :most_recent_day_with_data, to: Qa::Authorities::Covid
+    delegate :most_recent_day_with_data, to: CovidTracker::CovidApi
 
     # used to test build_url
     # @param region_registration [CovidTracker::RegionRegistration] identifies country_iso, province_state, and admin2_county
@@ -152,7 +152,7 @@ module Qa::Authorities
 
     def error?
       error_check
-      !error_msg.blank?
+      error_msg.present?
     end
   end
 end

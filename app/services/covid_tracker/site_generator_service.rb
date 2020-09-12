@@ -30,7 +30,7 @@ module CovidTracker
     private
 
       def last_updated
-        dt = Time.now.in_time_zone(Qa::Authorities::Covid::DATA_TIME_ZONE)
+        dt = Time.now.in_time_zone(data_service.data_time_zone)
         dt.strftime("%b %-d, %Y")
       end
 

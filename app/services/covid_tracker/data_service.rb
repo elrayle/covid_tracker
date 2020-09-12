@@ -41,8 +41,9 @@ require 'covid_tracker/keys'
 #
 module CovidTracker
   class DataService
-    class_attribute :registry_class
+    class_attribute :registry_class, :authority_class
     self.registry_class = CovidTracker::RegionRegistry
+    self.authority_class = CovidTracker::CovidApi
 
     DEFAULT_DAYS_TO_TRACK = 2
 
@@ -100,11 +101,15 @@ module CovidTracker
         region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
       end
 
+      def data_time_zone
+        authority_class::DATA_TIME_ZONE
+      end
+
     private
 
       def fetch_for_date(last_day, day_idx, region_registration)
         date_str = str_date_from_idx(last_day, day_idx)
-        Qa::Authorities::Covid.new.find_for(region_registration: region_registration, date: date_str)
+        authority_class.new.find_for(region_registration: region_registration, date: date_str)
       end
 
       def region_data_from_region_results(region_results)
@@ -112,12 +117,12 @@ module CovidTracker
       end
 
       def default_last_day
-        @default_last_day ||= Qa::Authorities::Covid.most_recent_day_with_data
+        @default_last_day ||= authority_class.most_recent_day_with_data
       end
 
       def default_one_day_earlier
         # don't want to continue adjusting if there are errors for other reasons
-        return false unless default_last_day == Qa::Authorities::Covid.most_recent_day_with_data
+        return false unless default_last_day == authority_class.most_recent_day_with_data
         @default_last_day = date_to_str(str_to_date(default_last_day) - 1.day)
       end
 

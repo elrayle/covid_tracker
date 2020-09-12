@@ -108,6 +108,12 @@ fi
 
 touch config/initializers/covid_regions.rb
 
+if [ "$GEN_SIDEBAR" = true ]; then
+    echo '------------------------------------------------------'
+    echo 'Generating sidebar...'
+    rails runner "CovidTracker::SiteGeneratorService.update_sidebar"
+fi
+
 if [ "$GEN_PAGES" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating pages...'
@@ -118,10 +124,4 @@ if [ "$GEN_GRAPHS" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating graphs...'
     rails runner "CovidTracker::SiteGeneratorService.update_graphs"
-fi
-
-if [ "$GEN_SIDEBAR" = true ]; then
-    echo '------------------------------------------------------'
-    echo 'Generating sidebar...'
-    rails runner "CovidTracker::SiteGeneratorService.update_sidebar"
 fi
