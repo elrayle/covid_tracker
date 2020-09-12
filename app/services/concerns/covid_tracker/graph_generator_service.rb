@@ -4,7 +4,7 @@ require 'covid_tracker/keys'
 
 # This class generates graphs for each stat tracked.
 module CovidTracker
-  module GraphGeneratorService
+  module GraphGeneratorService # rubocop:disable Metrics/ModuleLength
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
 
     THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
@@ -20,7 +20,7 @@ module CovidTracker
     def update_graphs(registered_regions: registry_class.registry)
       update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_WEEK)
       update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_MONTH)
-      # update_time_period_graphs(registered_regions: registered_regions, time_period: SINCE_MARCH)
+      # update_time_period_graphs(registered_regions: registered_regions, time_period: SINCE_MARCH) # TODO: when db cache is implemented, calculate these graphs
     end
 
   private
@@ -29,16 +29,17 @@ module CovidTracker
     # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
     # @param time_period [Symbol] how much time should the graph cover
     # @see CovidTracker::DataService
-    def update_time_period_graphs(registered_regions: registry_class.registry, time_period:)
+    def update_time_period_graphs(registered_regions:, time_period:)
       days = time_period_days(time_period)
-      all_regions_data = data_service.all_regions_data(days: days)
-      all_regions_data.each do |region_id, region_results|
+      registered_regions.each do |region_registration|
+        region_results = data_service.region_results(region_registration: region_registration, days: days)
+
         # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED)
         generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED)
         # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS)
         generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS)
       end
-      all_regions_data.empty? ? puts("Unable to retrieve data for graphs") : puts("#{days}-days Graph Generation Complete for #{all_regions_data.count} regions!") # rubocop:disable Rails/Output
+      registered_regions.empty? ? puts("Unable to retrieve data for graphs") : puts("#{days}-days Graph Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
     def generate_graph_for_stat(region_results:, days:, stat_key:)
@@ -47,16 +48,15 @@ module CovidTracker
       characteristics = graph_characteristics(graph_data: graph_data, region_results: region_results, stat_key: stat_key, days: days)
       graph_path = stat_graph_full_path(region_id: region_id(region_data: region_data),
                                         stat_key: stat_key,
-                                        days: days,
-                                        last_day: last_day(region_data: region_data))
+                                        days: days)
       create_gruff_graph(data: graph_data,
                          full_path: graph_path,
                          characteristics: characteristics)
     end
 
     # passed to create_gruff_graph
-    def stat_graph_full_path(region_id:, stat_key:, days:, last_day:)
-      graph_full_path(graph_filename(region_id: region_id, stat_key: stat_key, days: days, last_day: last_day))
+    def stat_graph_full_path(region_id:, stat_key:, days:)
+      graph_full_path(graph_filename(region_id: region_id, stat_key: stat_key, days: days))
     end
 
     # used to create path passed to create_gruff_graph
@@ -66,7 +66,7 @@ module CovidTracker
       File.join(path, graph_filename)
     end
 
-    def graph_filename(region_id:, stat_key:, days:, last_day:)
+    def graph_filename(region_id:, stat_key:, days:)
       "#{region_id}-#{stat_key}-#{days}_days_graph.png"
     end
 

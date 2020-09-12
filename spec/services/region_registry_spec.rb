@@ -95,11 +95,11 @@ RSpec.describe CovidTracker::RegionRegistry do
       end
 
       it 'has a registration for each country registered' do
-        countries = subject.map { |r| r.country_iso }
+        countries = subject.map(&:country_iso)
         expect(countries).to contain_exactly('USA', 'AUS', 'ALB')
       end
 
-      it 'registers multiple regions' do # rubocop:disable Rspec/ExampleLength
+      it 'registers multiple regions' do # rubocop:disable RSpec/ExampleLength
         subject.each do |registration|
           case registration.country_iso
           when 'USA'
