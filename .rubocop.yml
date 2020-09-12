@@ -11,6 +11,8 @@ AllCops:
     - 'db/**/*'
     - 'script/**/*'
     - 'vendor/**/*'
+    - 'docs/**/*'
+    - 'tmp/**/*'
 
 Metrics/BlockLength:
   ExcludedMethods: ['included']

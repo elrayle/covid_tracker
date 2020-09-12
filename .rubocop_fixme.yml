@@ -6,3 +6,12 @@ RSpec/NamedSubject:
 
 RSpec/VerifiedDoubles:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Bundler/OrderedGems:
+  Enabled: false

@@ -101,38 +101,38 @@ module CovidTracker
         region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
       end
 
-      private
+    private
 
-        def fetch_for_date(last_day, day_idx, region_registration)
-          date_str = str_date_from_idx(last_day, day_idx)
-          Qa::Authorities::Covid.new.find_for(region_registration: region_registration, date: date_str)
-        end
+      def fetch_for_date(last_day, day_idx, region_registration)
+        date_str = str_date_from_idx(last_day, day_idx)
+        Qa::Authorities::Covid.new.find_for(region_registration: region_registration, date: date_str)
+      end
 
-        def region_data_from_region_results(region_results)
-          region_results[CovidTracker::RegionKeys::REGION_DATA]
-        end
+      def region_data_from_region_results(region_results)
+        region_results[CovidTracker::RegionKeys::REGION_DATA]
+      end
 
-        def default_last_day
-          @default_last_day ||= Qa::Authorities::Covid.most_recent_day_with_data
-        end
+      def default_last_day
+        @default_last_day ||= Qa::Authorities::Covid.most_recent_day_with_data
+      end
 
-        def default_one_day_earlier
-          # don't want to continue adjusting if there are errors for other reasons
-          return false unless default_last_day == Qa::Authorities::Covid.most_recent_day_with_data
-          @default_last_day = date_to_str(str_to_date(default_last_day) - 1.day)
-        end
+      def default_one_day_earlier
+        # don't want to continue adjusting if there are errors for other reasons
+        return false unless default_last_day == Qa::Authorities::Covid.most_recent_day_with_data
+        @default_last_day = date_to_str(str_to_date(default_last_day) - 1.day)
+      end
 
-        def str_date_from_idx(date_str, idx)
-          date_to_str(str_to_date(date_str) - idx.days)
-        end
+      def str_date_from_idx(date_str, idx)
+        date_to_str(str_to_date(date_str) - idx.days)
+      end
 
-        def str_to_date(date_str)
-          Date.strptime(date_str, "%F")
-        end
+      def str_to_date(date_str)
+        Date.strptime(date_str, "%F")
+      end
 
-        def date_to_str(date)
-          date.strftime("%F")
-        end
+      def date_to_str(date)
+        date.strftime("%F")
+      end
     end
   end
 end

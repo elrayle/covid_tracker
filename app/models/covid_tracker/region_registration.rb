@@ -28,12 +28,12 @@ module CovidTracker
       label
     end
 
-    private
+  private
 
-      def validate(country_iso, province_state, admin2_county)
-        raise ArgumentError, "province_state must be defined to include admin2_county" if admin2_county && !province_state
-        # raise ArgumentError, "country_iso must be defined to include province_state" if province_state && !country_iso
-        raise ArgumentError, "country_iso is required" unless country_iso
-      end
+    def validate(country_iso, province_state, admin2_county)
+      raise ArgumentError, "province_state must be defined to include admin2_county" if admin2_county && !province_state
+      # raise ArgumentError, "country_iso must be defined to include province_state" if province_state && !country_iso
+      raise ArgumentError, "country_iso is required" unless country_iso
+    end
   end
 end
