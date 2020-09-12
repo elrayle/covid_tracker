@@ -10,7 +10,7 @@ require 'spec_helper'
 #   PASS: http://localhost:3000/api/search/covid?province_state=New%20York&admin2_county=Cortland
 #   FAIL: http://localhost:3000/api/search/covid?country_iso=USA&admin2_county=Cortland
 #   FAIL: http://localhost:3000/api/search/covid?admin2_county=Cortland
-describe Qa::Authorities::Covid do
+describe CovidTracker::CovidApi do
   let(:authority) { described_class.new }
 
   describe "#build_query_url" do
@@ -69,7 +69,7 @@ describe Qa::Authorities::Covid do
         let(:expected_result) do
           {
             id: "#{date}usa",
-            label: "USA(#{date})",
+            label: "USA (#{date})",
             region_id: "usa",
             region_label: "USA",
             date: date,
@@ -110,7 +110,7 @@ describe Qa::Authorities::Covid do
             # counts come from the values in the fixture
             {
               id: "#{date}usa-iowa",
-              label: "Iowa, USA(#{date})",
+              label: "Iowa, USA (#{date})",
               region_id: "usa-iowa",
               region_label: "Iowa, USA",
               date: date,
@@ -147,7 +147,7 @@ describe Qa::Authorities::Covid do
             # counts come from the values in the fixture
             {
               id: "#{date}usa-texas-denton",
-              label: "Denton, Texas, USA(#{date})",
+              label: "Denton, Texas, USA (#{date})",
               region_id: "usa-texas-denton",
               region_label: "Denton, Texas, USA",
               date: date,

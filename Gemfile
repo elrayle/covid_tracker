@@ -42,9 +42,7 @@ end
 group :development do
   gem 'better_errors' # provide debugging command line in
   gem 'binding_of_caller' # provides deep stack info used by better_errors
-  gem 'bixby', '~> 1.0.0' # rubocop styleguide
-  gem 'rubocop'
-  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'bixby', '~> 1.0.0' # rubocop styleguide; brings in needed rubocop gems
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring' # Spring speeds up development by keeping your application running in the background.
   # gem 'spring-watcher-listen', '~> 2.0.0'

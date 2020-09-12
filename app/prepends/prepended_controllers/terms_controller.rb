@@ -12,4 +12,14 @@ module PrependedControllers::TermsController
     # allow for missing query
     params[:q].gsub("*", "%2A") if params.key? :q
   end
+
+private
+
+  def authority_class
+    authority_name == "Covid" ? "CovidTracker::CovidApi" : "Qa::Authorities::" + authority_name
+  end
+
+  def authority_name
+    params[:vocab].capitalize
+  end
 end

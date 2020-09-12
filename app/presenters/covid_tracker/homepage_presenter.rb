@@ -5,7 +5,6 @@ require 'covid_tracker/keys'
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class HomepagePresenter
-
     class_attribute :data_service_class
     self.data_service_class = CovidTracker::DataService
 
@@ -30,7 +29,7 @@ module CovidTracker
       result(datum)[CovidTracker::ResultKeys::DATE]
     end
 
-    def date_class(datum)
+    def date_class(_datum)
       "neutral"
     end
 
@@ -38,7 +37,7 @@ module CovidTracker
       result(datum)[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED]
     end
 
-    def cumulative_confirmed_class(datum)
+    def cumulative_confirmed_class(_datum)
       "neutral"
     end
 
@@ -55,7 +54,7 @@ module CovidTracker
       result(datum)[CovidTracker::ResultKeys::CUMULATIVE_DEATHS]
     end
 
-    def cumulative_deaths_class(datum)
+    def cumulative_deaths_class(_datum)
       "neutral"
     end
 
