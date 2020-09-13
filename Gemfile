@@ -10,8 +10,8 @@ gem 'dotenv-rails'
 
 # App required gems
 gem 'qa'
-# gem 'gruff', github: 'elrayle/gruff', branch: 'hide_labels_separate_from_lines'
-gem 'gruff'
+gem 'gruff', github: 'topfunky/gruff', branch: 'master'
+# gem 'gruff'
 
 # Other gems
 gem 'coffee-rails', '~> 4.2'
