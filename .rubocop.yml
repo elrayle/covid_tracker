@@ -47,9 +47,6 @@ Rails/ApplicationJob:
 Rails/ApplicationRecord:
   Enabled: false
 
-Rails/RakeEnvironment:
-  Enabled: false
-
 RSpec/DescribeClass:
   Exclude:
     - 'spec/features/**/*'
