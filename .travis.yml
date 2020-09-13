@@ -3,18 +3,19 @@ sudo: false
 cache: bundler
 
 rvm:
-  - 2.5.8
-  - 2.6.3
+  - 2.5
+  - 2.6
+  - 2.7
 
 jobs:
   include:
     - name: 'Lint'
-      rvm: 2.3
+      rvm: 2.7
       script: bundle exec rubocop
 
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   matrix:
-    - "RAILS_VERSION=5.1.7"
-    - "RAILS_VERSION=5.2.3"
+    - "RAILS_VERSION=5.2"
+    - "RAILS_VERSION=6.0"
