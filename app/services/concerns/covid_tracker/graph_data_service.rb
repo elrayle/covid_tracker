@@ -33,7 +33,7 @@ module CovidTracker
       graph_service.bar_info(options: options)
     end
 
-    def extract_graph_data(region_data:, days:, stat_key:)
+    def extract_graph_data(region_data:, days:, stat_key:) # rubocop:disable Metrics/MethodLength
       labels = {}
       bar_data = []
       max_value = 0
