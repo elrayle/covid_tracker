@@ -2,9 +2,10 @@
 
 module CovidTracker
   class SiteGeneratorService
-    class_attribute :registry_class, :data_service
+    class_attribute :registry_class, :data_service, :graph_service
     self.registry_class = CovidTracker::RegionRegistry
     self.data_service = CovidTracker::DataService
+    self.graph_service = CovidTracker::GruffGraphService
 
     THIS_WEEK = :this_week
     THIS_MONTH = :this_month
@@ -18,6 +19,7 @@ module CovidTracker
     class << self
       include CovidTracker::PageGeneratorService
       include CovidTracker::SidebarGeneratorService
+      include CovidTracker::GraphDataService
       include CovidTracker::GraphGeneratorService
 
       def update_site
