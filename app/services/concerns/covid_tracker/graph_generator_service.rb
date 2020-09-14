@@ -4,16 +4,12 @@ require 'covid_tracker/keys'
 
 # This class generates graphs for each stat tracked.
 module CovidTracker
-  module GraphGeneratorService # rubocop:disable Metrics/ModuleLength
+  module GraphGeneratorService
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
 
     THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
     THIS_MONTH = CovidTracker::SiteGeneratorService::THIS_MONTH
     SINCE_MARCH = CovidTracker::SiteGeneratorService::SINCE_MARCH
-
-    DEFAULT_MAX_VALUE = 10
-    DEFAULT_CASES_BAR_COLOR = "#cc8b0e"
-    DEFAULT_DEATHS_BAR_COLOR = "#cc4d0e"
 
     # Update all graphs for all time periods.
     # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
@@ -44,14 +40,15 @@ module CovidTracker
 
     def generate_graph_for_stat(region_results:, days:, stat_key:)
       region_data = data_service.region_data(region_results: region_results)
-      graph_data = extract_graph_data(region_data: region_data, days: days, stat_key: stat_key)
-      characteristics = graph_characteristics(graph_data: graph_data, region_results: region_results, stat_key: stat_key, days: days)
+      extracted_data = extract_graph_data(region_data: region_data, days: days, stat_key: stat_key)
+      graph_info = graph_info(extracted_data: extracted_data, region_results: region_results, stat_key: stat_key, days: days)
+      bar_info = extracted_data[:bar_info]
       graph_path = stat_graph_full_path(region_id: region_id(region_data: region_data),
                                         stat_key: stat_key,
                                         days: days)
-      create_gruff_graph(data: graph_data,
-                         full_path: graph_path,
-                         characteristics: characteristics)
+      graph_service.create_gruff_graph(full_path: graph_path,
+                                       graph_info: graph_info,
+                                       bar_info: [bar_info])
     end
 
     # passed to create_gruff_graph
@@ -70,101 +67,8 @@ module CovidTracker
       "#{region_id}-#{stat_key}-#{days}_days_graph.png"
     end
 
-    def graph_characteristics(graph_data:, region_results:, stat_key:, days:)
-      {
-        title: title(region_results: region_results, stat_key: stat_key),
-        legend_key: stat_key,
-        max: graph_data[2],
-        bar_color: bar_color(stat_key: stat_key),
-        hide_labels: hide_labels?(days: days),
-        hide_legend: true
-      }
-    end
-
-    def title(region_results:, stat_key:)
-      region_label = data_service.region_label(region_results: region_results)
-      case stat_key
-      when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
-        I18n.t('covid_tracker.graphing_service.cumulative_confirmed_graph_title', region_label: region_label)
-      when CovidTracker::ResultKeys::DELTA_CONFIRMED
-        I18n.t('covid_tracker.graphing_service.delta_confirmed_graph_title', region_label: region_label)
-      when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
-        I18n.t('covid_tracker.graphing_service.cumulative_deaths_graph_title', region_label: region_label)
-      when CovidTracker::ResultKeys::DELTA_DEATHS
-        I18n.t('covid_tracker.graphing_service.delta_deaths_graph_title', region_label: region_label)
-      end
-    end
-
-    def bar_color(stat_key:)
-      case stat_key
-      when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
-        DEFAULT_CASES_BAR_COLOR
-      when CovidTracker::ResultKeys::DELTA_CONFIRMED
-        DEFAULT_CASES_BAR_COLOR
-      when CovidTracker::ResultKeys::CUMULATIVE_DEATHS
-        DEFAULT_DEATHS_BAR_COLOR
-      when CovidTracker::ResultKeys::DELTA_DEATHS
-        DEFAULT_DEATHS_BAR_COLOR
-      end
-    end
-
-    def hide_labels?(days:)
-      days > 10 ? true : false
-    end
-
     def region_id(region_data:)
       data_service.region_id_from_region_data(region_data: region_data)
     end
-
-    def last_day(region_data:)
-      region_data.last[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::DATE]
-    end
-
-    def date_to_label(date)
-      Date.strptime(date, "%F").strftime("%b-%e").gsub(/\s+/, "")
-    end
-
-    def extract_graph_data(region_data:, days:, stat_key:)
-      labels = {}
-      values = []
-      max_value = 0
-      region_data.each_with_index do |datum, idx|
-        result = datum[CovidTracker::ResultKeys::RESULT_SECTION]
-        labels[idx] = date_to_label(result[CovidTracker::ResultKeys::DATE])
-        values << result[stat_key]
-        max_value = result[stat_key] if result[stat_key] > max_value
-        break if idx > days
-      end
-      max_value = max_value > DEFAULT_MAX_VALUE ? max_value : DEFAULT_MAX_VALUE
-      [labels, values, max_value]
-    end
-
-    def graph_theme(g, characteristics)
-      # g.theme_pastel
-      g.colors = [characteristics.fetch(:bar_color, "#cc4d0e")]
-      g.marker_font_size = 20
-      g.minimum_value = 0
-      g.maximum_value = characteristics.fetch(:max, DEFAULT_MAX_VALUE)
-      g.hide_line_markers = characteristics.fetch(:hide_line_markers, true)
-      g.hide_labels = characteristics.fetch(:hide_labels, false)
-      g.hide_legend = characteristics.fetch(:hide_legend, true)
-      g.show_labels_for_bar_values = true
-      g.label_formatting = "%d"
-    end
-
-    def create_gruff_graph(data:, full_path:, characteristics:)
-      g = Gruff::Bar.new('800x400')
-      graph_theme(g, characteristics)
-      g.title = characteristics.fetch(:title, "")
-      g.labels = data[0]
-      g.data(characteristics.fetch(:legend_key, ""), data[1])
-      g.write full_path
-    end
-
-    # def log_failure(authority_name, action, time_period)
-    #   relative_path = performance_graph_image_path(authority_name: authority_name, action: action, time_period: time_period)
-    #   exists = performance_graph_image_exists?(authority_name: authority_name, action: action, time_period: time_period)
-    #   QaServer.config.monitor_logger.warn("FAILED to write performance graph at #{relative_path}") unless exists
-    # end
   end
 end
