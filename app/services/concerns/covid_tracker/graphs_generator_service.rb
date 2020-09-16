@@ -58,9 +58,7 @@ module CovidTracker
 
     # used to create path passed to create_gruff_graph
     def graph_full_path(graph_filename)
-      path = Rails.root.join(IMAGE_DIRECTORY)
-      FileUtils.mkdir_p path
-      File.join(path, graph_filename)
+      Rails.root.join(IMAGE_DIRECTORY, graph_filename)
     end
 
     def graph_filename(region_id:, stat_key:, days:)

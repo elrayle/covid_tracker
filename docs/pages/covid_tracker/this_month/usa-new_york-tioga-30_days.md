@@ -1,7 +1,7 @@
 ---
 title: Tioga, New York, USA
 permalink: usa-new_york-tioga-30_days.html
-last_updated: Sep 15, 2020
+last_updated: Sep 16, 2020
 keywords: ["Tioga, New York, USA", "This Month"]
 tags: ["usa-new_york-tioga", "this_month"]
 sidebar: home_sidebar
