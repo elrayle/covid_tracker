@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module CovidTracker
-  module PageGeneratorService
+  module PagesGeneratorService
     PAGE_DIRECTORY = File.join("docs", "pages", "covid_tracker")
 
     THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
@@ -21,6 +21,14 @@ module CovidTracker
 
   private
 
+    def page_file_name(id, time_period)
+      "#{id}-#{time_period_service.short_form(time_period)}"
+    end
+
+    def all_regions_file_name(time_period)
+      "all_regions-#{time_period_service.short_form(time_period)}"
+    end
+
     def update_region_pages(registered_regions)
       registered_regions.each do |region_registration|
         write_page(region_registration, THIS_WEEK)
@@ -38,7 +46,9 @@ module CovidTracker
     def write_page(region_registration, time_period)
       id = region_registration.id
       page = generate_page(region_registration, time_period)
-      full_file_name = File.join(full_page_file_path(time_period), "#{page_file_name(id, time_period)}.md")
+      page_file_name = "#{page_file_name(id, time_period)}.md"
+      full_file_name = File.join(full_page_file_path(time_period), page_file_name)
+      puts "  --  Writing page to #{page_file_name}"
       file = File.new(full_file_name, 'w')
       file << page
       file.close
@@ -53,7 +63,7 @@ module CovidTracker
     end
 
     def full_page_file_path(time_period)
-      File.join(PAGE_DIRECTORY, time_period_long_form(time_period))
+      Rails.root.join(PAGE_DIRECTORY, time_period_service.long_form(time_period))
     end
 
     def generate_page(region_registration, time_period)
@@ -80,20 +90,20 @@ module CovidTracker
       "---
 title: #{label}
 permalink: #{page_file_name(id, time_period)}.html
-last_updated: #{last_updated}
-keywords: [\"#{label}\", \"#{time_period_text(time_period)}\"]
-tags: [\"#{id}\", \"#{time_period_long_form(time_period)}\"]
+last_updated: #{time_period_service.today_str}
+keywords: [\"#{label}\", \"#{time_period_service.text_form(time_period)}\"]
+tags: [\"#{id}\", \"#{time_period_service.long_form(time_period)}\"]
 sidebar: home_sidebar
-folder: covid_tracker/#{time_period_long_form(time_period)}/
+folder: covid_tracker/#{time_period_service.long_form(time_period)}/
 ---
 "
     end
 
     def generate_body(label, id, time_period)
       "
-![Change in Confirmed Cases #{time_period_text(time_period)} for #{label}](images/graphs/#{id}-delta_confirmed-#{time_period_short_form(time_period)}_graph.png)
+![Change in Confirmed Cases #{time_period_service.text_form(time_period)} for #{label}](images/graphs/#{id}-delta_confirmed-#{time_period_service.short_form(time_period)}_graph.png)
 
-![Change in Confirmed Deaths #{time_period_text(time_period)} for #{label}](images/graphs/#{id}-delta_deaths-#{time_period_short_form(time_period)}_graph.png)
+![Change in Confirmed Deaths #{time_period_service.text_form(time_period)} for #{label}](images/graphs/#{id}-delta_deaths-#{time_period_service.short_form(time_period)}_graph.png)
 "
     end
   end

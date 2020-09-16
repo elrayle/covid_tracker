@@ -55,7 +55,7 @@ module CovidTracker
     end
 
     def generate_time_period_header(time_period)
-      "  - title: #{time_period_text(time_period)}
+      "  - title: #{time_period_service.text_form(time_period)}
     output: web, pdf
     folderitems:
 

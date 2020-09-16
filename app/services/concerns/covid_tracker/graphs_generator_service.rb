@@ -4,7 +4,7 @@ require 'covid_tracker/keys'
 
 # This class generates graphs for each stat tracked.
 module CovidTracker
-  module GraphGeneratorService
+  module GraphsGeneratorService
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
 
     THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
@@ -26,7 +26,7 @@ module CovidTracker
     # @param time_period [Symbol] how much time should the graph cover
     # @see CovidTracker::DataService
     def update_time_period_graphs(registered_regions:, time_period:)
-      days = time_period_days(time_period)
+      days = time_period_service.days(time_period)
       registered_regions.each do |region_registration|
         region_results = data_service.region_results(region_registration: region_registration, days: days)
 

@@ -83,13 +83,9 @@ module CovidTracker
       days > 10 ? 15 : 20
     end
 
-    def date_to_label(date)
-      Date.strptime(date, "%F").strftime("%b-%e").gsub(/\s+/, "")
-    end
-
     def graph_label(result, days, idx)
       return " " if days > 10 && idx.positive? && idx < days - 1
-      date_to_label(result[CovidTracker::ResultKeys::DATE])
+      time_period_service.date_to_label(result[CovidTracker::ResultKeys::DATE])
     end
   end
 end

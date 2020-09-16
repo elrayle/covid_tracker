@@ -41,9 +41,10 @@ require 'covid_tracker/keys'
 #
 module CovidTracker
   class DataService
-    class_attribute :registry_class, :authority_class
+    class_attribute :registry_class, :authority_class, :time_period_service
     self.registry_class = CovidTracker::RegionRegistry
     self.authority_class = CovidTracker::CovidApi
+    self.time_period_service = CovidTracker::TimePeriodService
 
     DEFAULT_DAYS_TO_TRACK = 2
 
@@ -108,7 +109,7 @@ module CovidTracker
     private
 
       def fetch_for_date(last_day, day_idx, region_registration)
-        date_str = str_date_from_idx(last_day, day_idx)
+        date_str = time_period_service.str_date_from_idx(last_day, day_idx)
         authority_class.new.find_for(region_registration: region_registration, date: date_str)
       end
 
@@ -123,19 +124,7 @@ module CovidTracker
       def default_one_day_earlier
         # don't want to continue adjusting if there are errors for other reasons
         return false unless default_last_day == authority_class.most_recent_day_with_data
-        @default_last_day = date_to_str(str_to_date(default_last_day) - 1.day)
-      end
-
-      def str_date_from_idx(date_str, idx)
-        date_to_str(str_to_date(date_str) - idx.days)
-      end
-
-      def str_to_date(date_str)
-        Date.strptime(date_str, "%F")
-      end
-
-      def date_to_str(date)
-        date.strftime("%F")
+        @default_last_day = time_period_service.date_to_str(time_period_servicestr_to_date(default_last_day) - 1.day)
       end
     end
   end
