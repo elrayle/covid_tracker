@@ -74,7 +74,7 @@ module CovidTracker
     def self.date_to_label(date_str)
       str_to_date(date_str).strftime("%b-%e").gsub(/\s+/, "")
     end
-  
+
     # @param date_str [String] starting date (e.g. "2020-03-22")
     # @param idx [Integer] number of days earlier for the return date (e.g. 2)
     # @return [String] date string that is idx days earlier (e.g. "2020-03-20")
