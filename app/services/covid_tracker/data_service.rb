@@ -124,7 +124,7 @@ module CovidTracker
       def default_one_day_earlier
         # don't want to continue adjusting if there are errors for other reasons
         return false unless default_last_day == authority_class.most_recent_day_with_data
-        @default_last_day = time_period_service.date_to_str(time_period_servicestr_to_date(default_last_day) - 1.day)
+        @default_last_day = time_period_service.date_to_str(time_period_service.str_to_date(default_last_day) - 1.day)
       end
     end
   end
