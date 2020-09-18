@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: usa-new_york-tompkins-since_march.html
-last_updated: Sep 17, 2020
+last_updated: Sep 18, 2020
 keywords: ["Tompkins, New York, USA", "Since March"]
 tags: ["usa-new_york-tompkins", "since_march"]
 sidebar: home_sidebar
