@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: all_regions-30_days.html
-last_updated: Sep 18, 2020
+last_updated: Sep 19, 2020
 keywords: ["All Regions", "This Month"]
 tags: ["all_regions", "this_month"]
 sidebar: home_sidebar
