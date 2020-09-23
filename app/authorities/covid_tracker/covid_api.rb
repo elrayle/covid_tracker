@@ -15,6 +15,7 @@ module CovidTracker
   class CovidApi < Qa::Authorities::Base
     include Qa::Authorities::WebServiceBase
     include CovidTracker::CovidApiParser
+    include CovidTracker::CovidApiFormatter
 
     attr_reader :region_registration, :date, :error_msg, :raw_response
 
