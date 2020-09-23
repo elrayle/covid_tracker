@@ -93,5 +93,11 @@ module CovidTracker
     def self.date_to_str(date)
       date.strftime("%F")
     end
+
+    def self.days_in_range(oldest_date:, newest_date:)
+      oldest_dt = str_to_date(oldest_date)
+      newest_dt = str_to_date(newest_date)
+      days = (newest_dt - oldest_dt).to_i + 1
+    end
   end
 end
