@@ -21,6 +21,7 @@ require 'rspec/autorun'
 #
 # Coveralls.wear!
 
+require 'factory_bot_rails'
 require 'rspec/rails'
 require 'rspec/its'
 require 'rspec/matchers'
@@ -52,6 +53,8 @@ RSpec.configure do |config|
   WebMock.disable! if ENV["WEBMOCK"] == "disabled"
 
   config.infer_spec_type_from_file_location!
+
+  config.include FactoryBot::Syntax::Methods
 end
 
 def webmock_fixture(fixture)
