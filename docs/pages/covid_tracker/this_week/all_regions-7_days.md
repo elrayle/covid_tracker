@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: all_regions-7_days.html
-last_updated: Sep 22, 2020
+last_updated: Sep 23, 2020
 keywords: ["All Regions", "This Week"]
 tags: ["all_regions", "this_week"]
 sidebar: home_sidebar
