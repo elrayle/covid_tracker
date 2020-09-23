@@ -48,7 +48,7 @@ module CovidTracker
       page = generate_page(region_registration, time_period)
       page_file_name = "#{page_file_name(id, time_period)}.md"
       full_file_name = File.join(full_page_file_path(time_period), page_file_name)
-      puts "  --  Writing page to #{page_file_name}" # rubocop:disable Rails/Output
+      puts "  --  Writing page to #{full_file_name}" # rubocop:disable Rails/Output
       file = File.new(full_file_name, 'w')
       file << page
       file.close

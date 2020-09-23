@@ -46,6 +46,7 @@ module CovidTracker
       graph_path = stat_graph_full_path(region_id: region_id(region_data: region_data),
                                         stat_key: stat_key,
                                         days: days)
+      puts "  --  Writing graph to #{graph_path}" # rubocop:disable Rails/Output
       graph_service.create_gruff_graph(full_path: graph_path,
                                        graph_info: graph_info,
                                        bar_info: [bar_info])
