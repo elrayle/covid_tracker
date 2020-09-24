@@ -53,7 +53,7 @@ module CovidTracker
     end
 
     def title(region_results:, stat_key:)
-      region_label = data_service.region_label(region_results: region_results)
+      region_label = data_retrieval_service.region_label(region_results: region_results)
       case stat_key
       when CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED
         I18n.t('covid_tracker.graphing_service.cumulative_confirmed_graph_title', region_label: region_label)

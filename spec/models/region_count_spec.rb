@@ -3,6 +3,30 @@
 require 'spec_helper'
 
 RSpec.describe CovidTracker::RegionCount do
+  let(:datum) do
+    {
+      CovidTracker::RequestKeys::REQUEST_SECTION => 
+        {
+          CovidTracker::RequestKeys::DATE => "2020-04-01",
+          CovidTracker::RequestKeys::COUNTRY_ISO => "USA",
+          CovidTracker::RequestKeys::PROVINCE_STATE => "Alabama",
+          CovidTracker::RequestKeys::ADMIN2_COUNTY => "Butler"
+        },
+      CovidTracker::ResultKeys::RESULT_SECTION =>
+        {
+          CovidTracker::ResultKeys::ID => "2020-04-01_usa-alabama-butler",
+          CovidTracker::ResultKeys::LABEL => "Butler, Alabama, USA (2020-04-01)",
+          CovidTracker::ResultKeys::REGION_ID => "usa-alabama-butler",
+          CovidTracker::ResultKeys::REGION_LABEL => "Butler, Alabama, USA",
+          CovidTracker::ResultKeys::DATE => "2020-04-01",
+          CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED => 20,
+          CovidTracker::ResultKeys::DELTA_CONFIRMED => 2,
+          CovidTracker::ResultKeys::CUMULATIVE_DEATHS => 5,
+          CovidTracker::ResultKeys::DELTA_DEATHS => 1        
+        }
+    }    
+  end
+  subject { described_class.new(region_code: 'usa-alabama-butler', response: datum) }
   it { is_expected.to respond_to(:id) }
   it { is_expected.to respond_to(:region_id) }
   it { is_expected.to respond_to(:date) }

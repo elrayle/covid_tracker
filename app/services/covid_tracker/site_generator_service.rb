@@ -2,9 +2,10 @@
 
 module CovidTracker
   class SiteGeneratorService
-    class_attribute :registry_class, :data_service, :graph_service, :time_period_service
+    class_attribute :registry_class, :data_service, :data_retrieval_service, :graph_service, :time_period_service
     self.registry_class = CovidTracker::RegionRegistry
     self.data_service = CovidTracker::DataService
+    self.data_retrieval_service = CovidTracker::DataService
     self.graph_service = CovidTracker::GruffGraphService
     self.time_period_service = CovidTracker::TimePeriodService
 

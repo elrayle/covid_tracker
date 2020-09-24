@@ -4,35 +4,7 @@ require 'covid_tracker/keys'
 
 # This class creates the data structure holding the requested results for each stat tracked.
 #
-# Expected structure of data returned by homepage_controller.rb
-# {
-#   ":USA:New_York:Cortland" => {
-#     region_label: "Cortland, New York, USA",
-#     region_data: [
-#       {
-#         result: {
-#           id: "2020-05-31:USA:New_York:Cortland",
-#           label: "Cortland, New York, USA (2020-05-31)",
-#           region_id: ":USA:New_York:Cortland",
-#           region_label: "Cortland, New York, USA",
-#           date: "2020-05-31",
-#           cumulative_confirmed: 203,
-#           delta_confirmed: 3,
-#           cumulative_deaths: 5,
-#           delta_deaths: 0
-#         }
-#         request: {
-#           date: "2020-05-31",
-#           country_iso: "USA",
-#           province_state: "New York",
-#           admin2_county: "Cortland"
-#         }
-#       },
-#       ...     # more data for same region
-#     ]
-#   },
-#   ...    # next region
-# }
+
 #
 # Interpret this as...
 # all_regions_data = { region_id => region_results, ... }
@@ -40,7 +12,7 @@ require 'covid_tracker/keys'
 # region_data = [ { result_for_day, request_with_date }, ... ] # sorted oldest to newest
 #
 module CovidTracker
-  class DataService
+  class DataRetrievalService
     class_attribute :registry_class, :authority_class, :time_period_service
     self.registry_class = CovidTracker::RegionRegistry
     self.authority_class = CovidTracker::CovidApi
@@ -100,7 +72,13 @@ module CovidTracker
       #   all_results[region_id]
       # end
 
-      # TODO: Potential refactor in callers to use registration instead of results
+      def first_result(region_results:)
+
+      end
+      
+
+      # @param region_results [Hash] full set of data for a single region - see example in class documentation
+      # @returns [String] label for the region (e.g. "Knox, Maine, USA")
       def region_label(region_results:)
         region_results[CovidTracker::RegionKeys::REGION_LABEL]
       end
@@ -109,11 +87,13 @@ module CovidTracker
         region_results[CovidTracker::RegionKeys::REGION_DATA]
       end
 
-      # TODO: Potential refactor in callers to use registration instead of results
+      # @param region_results [Hash] full set of data for a single region - see example in class documentation
+      # @returns [Array<Hash>] data for multiple days within a region - see region_data: in example in class documentation
       def region_id_from_region_data(region_data:)
         region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
       end
 
+      # TODO: Add configurations and set preferred timezone and data timezone there
       def data_time_zone
         authority_class::DATA_TIME_ZONE
       end
@@ -122,7 +102,7 @@ module CovidTracker
 
       def fetch_for_date(last_day, day_idx, region_registration)
         date_str = time_period_service.str_date_from_idx(last_day, day_idx)
-        authority_class.new.find_for(region_registration: region_registration, date: date_str)
+        regions_results_for(authority_class.new.find_for(region_registration: region_registration, date: date_str))
       end
 
       def region_data_from_region_results(region_results)
@@ -137,6 +117,10 @@ module CovidTracker
         # don't want to continue adjusting if there are errors for other reasons
         return false unless default_last_day == authority_class.most_recent_day_with_data
         @default_last_day = time_period_service.date_to_str(time_period_service.str_to_date(default_last_day) - 1.day)
+      end
+
+      def parse()
+        
       end
     end
   end

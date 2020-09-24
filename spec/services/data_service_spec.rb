@@ -2,6 +2,7 @@
 
 require 'spec_helper'
 
+# TODO: Turn this into a model class for easier access to data
 RSpec.describe CovidTracker::DataService do
   let(:datum) do
     {

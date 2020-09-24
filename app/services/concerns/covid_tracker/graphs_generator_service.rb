@@ -28,7 +28,7 @@ module CovidTracker
     def update_time_period_graphs(registered_regions:, time_period:)
       days = time_period_service.days(time_period)
       registered_regions.each do |region_registration|
-        region_results = data_service.region_results(region_registration: region_registration, days: days)
+        region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
 
         # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED)
         generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED)
@@ -39,7 +39,7 @@ module CovidTracker
     end
 
     def generate_graph_for_stat(region_results:, days:, stat_key:)
-      region_data = data_service.region_data(region_results: region_results)
+      region_data = data_retrieval_service.region_data(region_results: region_results)
       extracted_data = extract_graph_data(region_data: region_data, days: days, stat_key: stat_key)
       graph_info = graph_info(extracted_data: extracted_data, region_results: region_results, stat_key: stat_key, days: days)
       bar_info = extracted_data[:bar_info]
@@ -67,7 +67,7 @@ module CovidTracker
     end
 
     def region_id(region_data:)
-      data_service.region_id_from_region_data(region_data: region_data)
+      data_retrieval_service.region_id_from_region_data(region_data: region_data)
     end
   end
 end
