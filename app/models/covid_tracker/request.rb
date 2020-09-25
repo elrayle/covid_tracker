@@ -29,10 +29,12 @@ module CovidTracker
     #     admin2_county: "Cortland"
     #   }
     def self.for(raw_request)
-      @date = raw_request[DATE]
-      @country_iso = raw_request[COUNTRY_ISO] if raw_request.key? COUNTRY_ISO
-      @province_state = raw_request[PROVINCE_STATE] if raw_request.key? PROVINCE_STATE
-      @admin2_county = raw_request[ADMIN2_COUNTY] if raw_request.key? ADMIN2_COUNTY
+      request = CovidTracker::Request.new
+      request.date = raw_request[DATE]
+      request.country_iso = raw_request[COUNTRY_ISO] if raw_request.key? COUNTRY_ISO
+      request.province_state = raw_request[PROVINCE_STATE] if raw_request.key? PROVINCE_STATE
+      request.admin2_county = raw_request[ADMIN2_COUNTY] if raw_request.key? ADMIN2_COUNTY
+      request
     end
   end
 end

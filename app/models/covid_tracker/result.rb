@@ -9,7 +9,7 @@ module CovidTracker
     CUMULATIVE_DEATHS = CovidTracker::ResultKeys::CUMULATIVE_DEATHS
     DELTA_DEATHS = CovidTracker::ResultKeys::DELTA_DEATHS
 
-    attr_accessor :id, :label, :date, :cumulative_confirmed, :delta_confirmed, :cumulative_deaths, :delta_deaths
+    attr_accessor :id, :label, :date, :cumulative_confirmed, :delta_confirmed, :cumulative_deaths, :delta_deaths, :error
 
     # @param raw_result [Hash] raw result to convert into a model for easy access
     # @see CovidTracker::CovidApi#find_for for full example of returned json hash
@@ -26,18 +26,22 @@ module CovidTracker
     #     delta_deaths: 0
     #   }
     def self.for(raw_result)
-      return @error = raw_result[ERROR] if raw_result.key? ERROR
-      @id = raw_result[ID]
-      @label = raw_result[LABEL]
-      @date = raw_result[DATE]
-      @cumulative_confirmed = raw_result[CUMULATIVE_CONFIRMED]
-      @delta_confirmed = raw_result[DELTA_CONFIRMED]
-      @cumulative_deaths = raw_result[CUMULATIVE_DEATHS]
-      @delta_deaths = raw_result[DELTA_DEATHS]
+      result = new
+      result.error = raw_result[ERROR] if raw_result.key? ERROR
+      return result if result.error?
+
+      result.id = raw_result[ID]
+      result.label = raw_result[LABEL]
+      result.date = raw_result[DATE]
+      result.cumulative_confirmed = raw_result[CUMULATIVE_CONFIRMED]
+      result.delta_confirmed = raw_result[DELTA_CONFIRMED]
+      result.cumulative_deaths = raw_result[CUMULATIVE_DEATHS]
+      result.delta_deaths = raw_result[DELTA_DEATHS]
+      result
     end
 
     def error?
-      @error.present?
+      error.present?
     end
   end
 end
