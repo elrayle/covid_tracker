@@ -13,9 +13,11 @@ module CovidTracker
   module ResultKeys
     RESULT_SECTION = :result
 
+    ERROR = :error
+
     ID = :id
     LABEL = :label
-    REGION_ID = :region_id
+    REGION_CODE = :region_code
     REGION_LABEL = :region_label
     DATE = :date
     CUMULATIVE_CONFIRMED = :cumulative_confirmed

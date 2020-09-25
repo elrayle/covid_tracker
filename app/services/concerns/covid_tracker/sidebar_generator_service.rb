@@ -9,7 +9,7 @@ module CovidTracker
     SINCE_MARCH = CovidTracker::SiteGeneratorService::SINCE_MARCH
 
     ALL_REGIONS_LABEL = CovidTracker::SiteGeneratorService::ALL_REGIONS_LABEL
-    ALL_REGIONS_ID = CovidTracker::SiteGeneratorService::ALL_REGIONS_ID
+    ALL_REGIONS_CODE = CovidTracker::SiteGeneratorService::ALL_REGIONS_CODE
 
     # Update sidebar for all time periods.
     # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
@@ -45,11 +45,11 @@ module CovidTracker
 
     def generate_time_period_section(registered_regions, time_period)
       body = generate_time_period_header(time_period)
-      body += generate_time_period_page(ALL_REGIONS_LABEL, ALL_REGIONS_ID, time_period)
+      body += generate_time_period_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE, time_period)
       registered_regions.each do |registration|
         label = registration.label
-        id = registration.id
-        body += generate_time_period_page(label, id, time_period)
+        code = registration.code
+        body += generate_time_period_page(label, code, time_period)
       end
       body
     end
@@ -62,9 +62,9 @@ module CovidTracker
 "
     end
 
-    def generate_time_period_page(label, id, time_period)
+    def generate_time_period_page(label, code, time_period)
       "    - title: #{label}
-      url: /#{page_file_name(id, time_period)}.html
+      url: /#{page_file_name(code, time_period)}.html
       output: web, pdf
 
 "

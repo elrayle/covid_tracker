@@ -68,9 +68,9 @@ describe CovidTracker::CovidApi do
         end
         let(:expected_result) do
           {
-            id: "#{date}usa",
+            id: "#{date}_usa",
             label: "USA (#{date})",
-            region_id: "usa",
+            region_code: "usa",
             region_label: "USA",
             date: date,
             cumulative_confirmed: 50,
@@ -109,9 +109,9 @@ describe CovidTracker::CovidApi do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}usa-iowa",
+              id: "#{date}_usa-iowa",
               label: "Iowa, USA (#{date})",
-              region_id: "usa-iowa",
+              region_code: "usa-iowa",
               region_label: "Iowa, USA",
               date: date,
               cumulative_confirmed: 43,
@@ -146,9 +146,9 @@ describe CovidTracker::CovidApi do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}usa-texas-denton",
+              id: "#{date}_usa-texas-denton",
               label: "Denton, Texas, USA (#{date})",
-              region_id: "usa-texas-denton",
+              region_code: "usa-texas-denton",
               region_label: "Denton, Texas, USA",
               date: date,
               cumulative_confirmed: 10,
@@ -173,6 +173,4 @@ describe CovidTracker::CovidApi do
       end
     end
   end
-
-  # rubocop:enable Layout/LineLength
 end

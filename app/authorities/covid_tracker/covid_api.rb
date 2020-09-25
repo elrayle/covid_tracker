@@ -15,6 +15,7 @@ module CovidTracker
   class CovidApi < Qa::Authorities::Base
     include Qa::Authorities::WebServiceBase
     include CovidTracker::CovidApiParser
+    include CovidTracker::CovidApiFormatter
 
     attr_reader :region_registration, :date, :error_msg, :raw_response
 
@@ -43,7 +44,27 @@ module CovidTracker
     # Find data for a specific region using the covid-api
     # @param region_registration [CovidTracker::RegionRegistration] identifies country_iso, province_state, and admin2_county
     # @param date [String] date string in the format %F (e.g. "2020-05-31")
-    # @return json results with response_header and results
+    # @return [Hash] json results with result and request
+    # @example returned json hash
+    #   {
+    #     result: {
+    #       id: "2020-05-31_usa-new_york-cortland",
+    #       label: "Cortland, New York, USA (2020-05-31)",
+    #       region_code: "usa-new_york-cortland",
+    #       region_label: "Cortland, New York, USA",
+    #       date: "2020-05-31",
+    #       cumulative_confirmed: 203,
+    #       delta_confirmed: 3,
+    #       cumulative_deaths: 5,
+    #       delta_deaths: 0
+    #     }
+    #     request: {
+    #       date: "2020-05-31",
+    #       country_iso: "USA",
+    #       province_state: "New York",
+    #       admin2_county: "Cortland"
+    #     }
+    #   }
     def find_for(region_registration:, date:)
       unpack_registration(region_registration, date)
       query_api
@@ -55,16 +76,18 @@ module CovidTracker
     # @option region [String] :province_state province or state name (e.g. "Georgia") (optional)
     # @option region [String] :admin2_county admin2 or county name (e.g. "Richmond") (optional)
     # @option region [String] :date date string in the format %F (e.g. "2020-05-31") (optional default=latest date with data)
-    # @return json results with response_header and results
+    # @return [Hash] json results with result and request
+    # @see #find_for for example of returned json hash
     def find(region)
       unpack_params(region)
       query_api
     end
 
     # Search the covid-api based on params from terms_controller
-    # @param _query [String] the query
-    # @param terms_controller [QA::TermsController] controller with params
-    # @return json results with response_header and results
+    # @param _query [String] the query (ignored)
+    # @param terms_controller [QA::TermsController] controller with params (e.g. country_iso, province_state, admin2_county, date)
+    # @return [Hash] json results with result and request
+    # @see #find_for for example of returned json hash
     def search(_query, terms_controller)
       find(terms_controller.params)
     end
@@ -115,11 +138,11 @@ module CovidTracker
     end
 
     def id
-      date + region_id
+      date + '_' + region_code
     end
 
-    def region_id
-      region_registration.id
+    def region_code
+      region_registration.code
     end
 
     def label

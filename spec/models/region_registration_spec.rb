@@ -5,6 +5,8 @@ require 'spec_helper'
 RSpec.describe CovidTracker::RegionRegistration do
   describe 'attr_readers' do
     let(:subject) { described_class.new(country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome') }
+    it { is_expected.to respond_to(:code) }
+    it { is_expected.to respond_to(:label) }
     it { is_expected.to respond_to(:country_iso) }
     it { is_expected.to respond_to(:province_state) }
     it { is_expected.to respond_to(:admin2_county) }
@@ -29,19 +31,19 @@ RSpec.describe CovidTracker::RegionRegistration do
     end
   end
 
-  describe '#id' do
+  describe '#code' do
     context 'when county is not specified' do
       context 'and state is not specified' do
         let(:registration) { described_class.new(country_iso: 'USA') }
         it 'only includes USA' do
-          expect(registration.id).to eq 'usa'
+          expect(registration.code).to eq 'usa'
         end
       end
 
       context 'and state is specified' do
         let(:registration) { described_class.new(country_iso: 'USA', province_state: 'Virginia') }
         it 'includes USA and state' do
-          expect(registration.id).to eq 'usa-virginia'
+          expect(registration.code).to eq 'usa-virginia'
         end
       end
     end
@@ -49,7 +51,7 @@ RSpec.describe CovidTracker::RegionRegistration do
     context 'when state and county are specified' do
       let(:registration) { described_class.new(country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome') }
       it 'includes USA, state, and county' do
-        expect(registration.id).to eq 'usa-new_york-broome'
+        expect(registration.code).to eq 'usa-new_york-broome'
       end
     end
   end
