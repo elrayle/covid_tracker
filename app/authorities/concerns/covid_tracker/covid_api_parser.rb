@@ -8,23 +8,23 @@ module CovidTracker
 
     # Data is returned differently depending on the region levels requested.  Parses data based on region parameters.
     def parse_authority_response
-      return { error: error_msg } if error?
-      formatted_results = if admin2_county
-                            parse_admin2_county
-                          elsif province_state
-                            parse_province_state
-                          else
-                            parse_country
-                          end
+      return { CovidTracker::ResultKeys::ERROR => error_msg } if error?
+      formatted_result = if admin2_county
+                           parse_admin2_county
+                         elsif province_state
+                           parse_province_state
+                         else
+                           parse_country
+                         end
       formatted_request = format_request(date, country_iso, province_state, admin2_county)
-      format_response(request: formatted_request, results: formatted_results)
+      format_response(request: formatted_request, result: formatted_result)
     end
 
     def parse_admin2_county
-      format_results(confirmed: admin2_county_data['confirmed'],
-                     delta_confirmed: admin2_county_data['confirmed_diff'],
-                     deaths: admin2_county_data['deaths'],
-                     delta_deaths: admin2_county_data['deaths_diff'])
+      format_result(confirmed: admin2_county_data['confirmed'],
+                    delta_confirmed: admin2_county_data['confirmed_diff'],
+                    deaths: admin2_county_data['deaths'],
+                    delta_deaths: admin2_county_data['deaths_diff'])
     end
 
     def admin2_county_data
@@ -32,10 +32,10 @@ module CovidTracker
     end
 
     def parse_province_state
-      format_results(confirmed: province_state_data['confirmed'],
-                     delta_confirmed: province_state_data['confirmed_diff'],
-                     deaths: province_state_data['deaths'],
-                     delta_deaths: province_state_data['deaths_diff'])
+      format_result(confirmed: province_state_data['confirmed'],
+                    delta_confirmed: province_state_data['confirmed_diff'],
+                    deaths: province_state_data['deaths'],
+                    delta_deaths: province_state_data['deaths_diff'])
     end
 
     def province_state_data
@@ -53,10 +53,10 @@ module CovidTracker
         cumulative_deaths += datum["deaths"]
         delta_deaths += datum["deaths_diff"]
       end
-      format_results(confirmed: cumulative_confirmed,
-                     delta_confirmed: delta_confirmed,
-                     deaths: cumulative_deaths,
-                     delta_deaths: delta_deaths)
+      format_result(confirmed: cumulative_confirmed,
+                    delta_confirmed: delta_confirmed,
+                    deaths: cumulative_deaths,
+                    delta_deaths: delta_deaths)
     end
   end
 end

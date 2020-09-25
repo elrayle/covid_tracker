@@ -20,6 +20,7 @@ module CovidTracker
     end
 
     # @param raw_request [Hash] raw request to convert into a model for easy access
+    # @see CovidTracker::CovidApi#find_for for full example of returned json hash
     # @example raw_request
     #   {
     #     date: "2020-05-31",
@@ -27,7 +28,7 @@ module CovidTracker
     #     province_state: "New York",
     #     admin2_county: "Cortland"
     #   }
-    def request_for(raw_request)
+    def self.for(raw_request)
       @date = raw_request[DATE]
       @country_iso = raw_request[COUNTRY_ISO] if raw_request.key? COUNTRY_ISO
       @province_state = raw_request[PROVINCE_STATE] if raw_request.key? PROVINCE_STATE

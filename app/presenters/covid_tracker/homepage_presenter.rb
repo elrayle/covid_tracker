@@ -10,6 +10,7 @@ module CovidTracker
 
     attr_reader :all_regions_data
 
+    # TODO datum is not an instance of CovidTracker::RegionDatum
     delegate :result, :date, :cumulative_confirmed, :cumulative_death, :region_label, :region_data, to: data_service
 
     # @param all_results [Hash] results for all registered regions

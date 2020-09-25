@@ -2,15 +2,7 @@
 
 require 'covid_tracker/keys'
 
-# This class creates the data structure holding the requested results for each stat tracked.
-#
-
-#
-# Interpret this as...
-# all_regions_data = { region_id => region_results, ... }
-# region_results = { region_label, region_data }
-# region_data = [ { result_for_day, request_with_date }, ... ] # sorted oldest to newest
-#
+# This class creates fetches the data from the cache if available, otherwise from through the API
 module CovidTracker
   class DataRetrievalService
     class_attribute :registry_class, :authority_class, :time_period_service
@@ -21,16 +13,17 @@ module CovidTracker
     DEFAULT_DAYS_TO_TRACK = 2
 
     class << self
+      # TODO: Perhaps this should return an Array instead of a Hash
       # @param days [Integer] number of days of data to fetch
       # @param last_day [String] most recent day for which to collect data (e.g. "2020-09-22"); defaults to default_last_day (typically yesterday)
-      # @return [Hash] full set of data for all configured regions - see example in class documentation
-      def all_regions_data(days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day, use_cache: true)
+      # @return [Hash<String, CovidTracker::RegionResults] results for all registered regions across a range of dates
+      def all_regions_data(days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day)
         all_results = {}
         registered_regions = registry_class.registry
         registered_regions.each do |region_registration|
           region_results = region_results(region_registration: region_registration, days: days, last_day: last_day)
-          region_id = region_registration.id
-          all_results[region_id] = region_results
+          region_code = region_results.region_code
+          all_results[region_code] = region_results
         end
         all_results
       end
@@ -40,8 +33,8 @@ module CovidTracker
       #   registered_regions = registry_class.registry
       #   registered_regions.each do |region_registration|
       #     region_results = region_results(region_registration: region_registration, days: 1, last_day: date)
-      #     region_id = region_registration.id
-      #     all_results[region_id] = region_results
+      #     region_code = region_registration.id
+      #     all_results[region_code] = region_results
       #   end
       #   all_results
       # end
@@ -49,33 +42,29 @@ module CovidTracker
       # @param region_registration [Hash] info identifying the region (e.g. { country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome' })
       # @param days [Integer] number of days of data to fetch
       # @param last_day [String] most recent day that will be the last day of data gathered (e.g. "2020-05-31")
-      # @return [Hash] full set of data for a single region - see example in class documentation
+      # @return [CovidTracker::RegionResults] results for a region across a range of dates
       def region_results(region_registration:, days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day)
         region_data = []
         (days - 1).downto(0) do |day_idx|
-          result = fetch_for_date(last_day, day_idx, region_registration)
-          if result.key?(:error) && day_idx.zero? && last_day == default_last_day
-            # latest day's data not available yet, so need to get another day farther back
-            result = fetch_for_date(last_day, days, region_registration)
-            region_data.unshift(result) # get one more day back and insert it at the beginning
-            # reset default last day to avoid having to make this fix for every region
-            default_one_day_earlier
-          else
-            region_data << result
-          end
+          region_datum = fetch_for_date(last_day, day_idx, region_registration)
+          region_datum.error? && can_shift(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
         end
-        { CovidTracker::RegionKeys::REGION_LABEL => region_registration.label,
-          CovidTracker::RegionKeys::REGION_DATA => region_data }
+        CovidTracker::RegionResults.new(region_registration: region_registration, region_data: region_data)
       end
 
-      # def region_results(all_results, region_id)
-      #   all_results[region_id]
-      # end
-
-      def first_result(region_results:)
-
+      # Only shift an error if the error happens on the most recent day AND the most recent day (last_day) is the latest possible day
+      def can_shift?(day_idx, last_day)
+        day_idx.zero? && last_day == default_last_day
       end
-      
+
+      # This need to shift happens when the latest days data is not yet available.
+      def shift(region_data, last_day, days, region_registration)
+        # latest day's data not available yet, so need to get another day farther back
+        region_datum = fetch_for_date(last_day, days, region_registration)
+        region_data.unshift(region_datum) # get one more day back and insert it at the beginning
+        # reset default last day to avoid having to make this fix for every region
+        default_one_day_earlier
+      end
 
       # @param region_results [Hash] full set of data for a single region - see example in class documentation
       # @returns [String] label for the region (e.g. "Knox, Maine, USA")
@@ -89,8 +78,8 @@ module CovidTracker
 
       # @param region_results [Hash] full set of data for a single region - see example in class documentation
       # @returns [Array<Hash>] data for multiple days within a region - see region_data: in example in class documentation
-      def region_id_from_region_data(region_data:)
-        region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
+      def region_code_from_region_data(region_data:)
+        region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_CODE]
       end
 
       # TODO: Add configurations and set preferred timezone and data timezone there
@@ -102,8 +91,12 @@ module CovidTracker
 
       def fetch_for_date(last_day, day_idx, region_registration)
         date_str = time_period_service.str_date_from_idx(last_day, day_idx)
-        regions_results_for(authority_class.new.find_for(region_registration: region_registration, date: date_str))
+        datum = fetch_from_cache(region_registration: region_registration, date: date_str)
+        return datum unless datum.blank?
+        CovidTracker::RegionDatum.for(authority_class.new.find_for(region_registration: region_registration, date: date_str))
       end
+
+      def fetch_from_cache()
 
       def region_data_from_region_results(region_results)
         region_results[CovidTracker::RegionKeys::REGION_DATA]

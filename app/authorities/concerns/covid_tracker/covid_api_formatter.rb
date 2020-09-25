@@ -15,11 +15,11 @@ module CovidTracker
 
     def format_results(confirmed:, delta_confirmed:, deaths:, delta_deaths:)
       {
-        CovidTracker::ResultKeys::ID => id,
-        CovidTracker::ResultKeys::LABEL => label,
-        CovidTracker::ResultKeys::REGION_ID => region_id,
-        CovidTracker::ResultKeys::REGION_LABEL => region_label,
-        CovidTracker::ResultKeys::DATE => date,
+        CovidTracker::ResultKeys::ID => id, # e.g. '2020-04-04_usa-alabama-butler'
+        CovidTracker::ResultKeys::LABEL => label, # e.g. 'Butler, Alabama, USA (2020-04-04)'
+        CovidTracker::ResultKeys::REGION_CODE => region_code, # e.g. 'usa-alabama-butler'
+        CovidTracker::ResultKeys::REGION_LABEL => region_label, # e.g. 'Butler, Alabama, USA'
+        CovidTracker::ResultKeys::DATE => date, # 'e.g. '2020-04-04'
         CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED => confirmed,
         CovidTracker::ResultKeys::DELTA_CONFIRMED => delta_confirmed,
         CovidTracker::ResultKeys::CUMULATIVE_DEATHS => deaths,
@@ -29,9 +29,9 @@ module CovidTracker
 
     def format_request(date, country_iso, province_state, admin2_county)
       request = { CovidTracker::RequestKeys::DATE => date }
-      request[CovidTracker::RequestKeys::COUNTRY_ISO] = country_iso if country_iso
-      request[CovidTracker::RequestKeys::PROVINCE_STATE] = province_state if province_state
-      request[CovidTracker::RequestKeys::ADMIN2_COUNTY] = admin2_county if admin2_county
+      request[CovidTracker::RequestKeys::COUNTRY_ISO] = country_iso if country_iso # e.g. 'USA'
+      request[CovidTracker::RequestKeys::PROVINCE_STATE] = province_state if province_state # e.g. 'Alabama'
+      request[CovidTracker::RequestKeys::ADMIN2_COUNTY] = admin2_county if admin2_county # e.g. 'Butler'
       request
     end
   end

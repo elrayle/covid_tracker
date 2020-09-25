@@ -1,67 +1,87 @@
 # frozen_string_literal: true
 
-require 'covid_tracker/keys'
-
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class DataService
     class << self
-      # @param region_data [Hash] structured data for a single date in a single region
-      # @returns [Hash] the result section within region_data structure
-      def result(region_data)
-        region_data[CovidTracker::ResultKeys::RESULT_SECTION]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [CovidTracker::Result] the result section within region_datum
+      def result(region_datum)
+        region_datum.result
       end
 
-      def result_id(region_data)
-        result(region_data)[CovidTracker::ResultKeys::ID]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the result id (e.g. "2020-04-04_usa-alabama-butler")
+      def result_id(region_datum)
+        result(region_datum).id
       end
 
-      def result_label(region_data)
-        result(region_data)[CovidTracker::ResultKeys::LABEL]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the result label (e.g. "Butler, Alabama, USA (2020-04-04)")
+      def result_label(region_datum)
+        result(region_datum).label
       end
 
-      def region_id(region_data)
-        result(region_data)[CovidTracker::ResultKeys::REGION_ID]
+      # def region_code(region_datum)
+      #   result(region_datum)[CovidTracker::ResultKeys::REGION_CODE]
+      # end
+
+      # def region_label(region_datum)
+      #   result(region_datum)[CovidTracker::ResultKeys::REGION_LABEL]
+      # end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the date of the result (e.g. "2020-04-04")
+      def date(region_datum)
+        result(region_datum).date
       end
 
-      def region_label(region_data)
-        result(region_data)[CovidTracker::ResultKeys::REGION_LABEL]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [Integer] the cumulative count of confirmed cases
+      def cumulative_confirmed(region_datum)
+        result(region_datum).cumulative_confirmed
       end
 
-      def date(region_data)
-        result(region_data)[CovidTracker::ResultKeys::DATE]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [Integer] the change in the count of confirmed cases
+      def delta_confirmed(region_datum)
+        result(region_datum).delta_confirmed
       end
 
-      def cumulative_confirmed(region_data)
-        result(region_data)[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [Integer] the cumulative count of confirmed deaths
+      def cumulative_deaths(region_datum)
+        result(region_datum).cumulative_deaths
       end
 
-      def delta_confirmed(region_data)
-        delta_confirmed_count = result(region_data)[CovidTracker::ResultKeys::DELTA_CONFIRMED]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [Integer] the change in the count of confirmed deaths
+      def delta_deaths(region_datum)
+        delta_deaths_count = result(region_datum).delta_deaths
       end
 
-      def cumulative_deaths(region_data)
-        result(region_data)[CovidTracker::ResultKeys::CUMULATIVE_DEATHS]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [CovidTracker::Request] the request section within region_datum
+      def request(region_datum)
+        region_datum.request
       end
 
-      def delta_deaths(region_data)
-        delta_deaths_count = result(region_data)[CovidTracker::ResultKeys::DELTA_DEATHS]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the country_iso from the request
+      def country_iso(region_datum)
+        request(region_datum).country_iso
       end
 
-      def request(region_data)
-        region_data[CovidTracker::RequestKeys::REQUEST_SECTION]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the province_state from the request
+      def province_state(region_datum)
+        request(region_datum).province_state
       end
 
-      def country_iso(region_data)
-        request(region_data)[CovidTracker::RequestKeys::COUNTRY_ISO]
-      end
-
-      def province_state(region_data)
-        request(region_data)[CovidTracker::RequestKeys::PROVINCE_STATE]
-      end
-
-      def admin2_county(region_data)
-        request(region_data)[CovidTracker::RequestKeys::ADMIN2_COUNTY]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date 
+      # @returns [String] the admin2_county from the request
+      def admin2_county(region_datum)
+        request(region_datum).admin2_county
       end
     end
   end

@@ -1,5 +1,6 @@
 module CovidTracker
   class Result
+    ERROR = CovidTracker::ResultKeys::ERROR
     ID = CovidTracker::ResultKeys::ID
     LABEL = CovidTracker::ResultKeys::LABEL
     DATE = CovidTracker::ResultKeys::DATE
@@ -10,13 +11,13 @@ module CovidTracker
 
     attr_accessor :id, :label, :date, :cumulative_confirmed, :delta_confirmed, :cumulative_deaths, :delta_deaths
 
-
     # @param raw_result [Hash] raw result to convert into a model for easy access
+    # @see CovidTracker::CovidApi#find_for for full example of returned json hash
     # @example raw_result
     #   {
     #     id: "2020-05-31_usa-new_york-cortland",
     #     label: "Cortland, New York, USA (2020-05-31)",
-    #     region_id: "usa-new_york-cortland",
+    #     region_code: "usa-new_york-cortland",
     #     region_label: "Cortland, New York, USA",
     #     date: "2020-05-31",
     #     cumulative_confirmed: 203,
@@ -24,7 +25,8 @@ module CovidTracker
     #     cumulative_deaths: 5,
     #     delta_deaths: 0
     #   }
-    def result_for(raw_result)
+    def self.for(raw_result)
+      return @error = raw_result[ERROR] if raw_result.key? ERROR
       @id = raw_result[ID]
       @label = raw_result[LABEL]
       @date = raw_result[DATE]
@@ -32,6 +34,10 @@ module CovidTracker
       @delta_confirmed = raw_result[DELTA_CONFIRMED]
       @cumulative_deaths = raw_result[CUMULATIVE_DEATHS]
       @delta_deaths = raw_result[DELTA_DEATHS]
-    end  
+    end
+
+    def error?
+      @error.present?
+    end
   end
 end
