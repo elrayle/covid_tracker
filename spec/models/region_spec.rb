@@ -11,11 +11,11 @@ RSpec.describe CovidTracker::Region do
     let(:existing_region_code) { 'usa-new_york-cortland' }
     let(:existing_region_id) { 1 }
     context 'when code exists' do
-      it 'returns the id' do        
+      it 'returns the id' do
         expect(described_class.find_or_create_region_code_for(region_code: existing_region_code)).to eq existing_region_id
       end
     end
-    
+
     context 'when code does not exist' do
       let(:non_existent_region_code) { 'usa-colorado-broomfield' }
       let(:new_region_id) { 2 }

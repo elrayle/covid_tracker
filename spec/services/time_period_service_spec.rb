@@ -78,7 +78,7 @@ RSpec.describe CovidTracker::TimePeriodService do
       expect(described_class.date_to_str(date)).to eq "2020-08-30"
     end
   end
-  
+
   describe '.days_in_range' do
     let(:oldest_date) { "2020-03-01" }
     let(:newest_date) { "2020-03-10" }

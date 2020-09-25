@@ -94,10 +94,13 @@ module CovidTracker
       date.strftime("%F")
     end
 
+    # @param oldest_date [Date] oldest date in the range (e.g. "2020-03-22")
+    # @param newest_date [Date] newest date in the range (e.g. "2020-03-25")
+    # @return [Integer] number of days in the range inclusive (e.g. 4)
     def self.days_in_range(oldest_date:, newest_date:)
       oldest_dt = str_to_date(oldest_date)
       newest_dt = str_to_date(newest_date)
-      days = (newest_dt - oldest_dt).to_i + 1
+      (newest_dt - oldest_dt).to_i + 1
     end
   end
 end

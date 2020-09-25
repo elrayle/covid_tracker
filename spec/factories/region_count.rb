@@ -4,7 +4,7 @@ FactoryBot.define do
     date { "2020-03-01" }
 
     transient do
-      counts { [3,3,3,3] }
+      counts { [5, 4, 3, 2] }
     end
 
     after(:build) do |region_count, evaluator|

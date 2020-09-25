@@ -11,6 +11,5 @@ module CovidTracker
       new_region.save
       new_region.id
     end
-
   end
 end
