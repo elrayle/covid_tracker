@@ -13,7 +13,7 @@ module CovidTracker
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
     ALL_REGIONS_LABEL = "All Regions"
-    ALL_REGIONS_ID = "all_regions"
+    ALL_REGIONS_CODE = "all_regions"
 
     # @param days [Integer] number of days of data to fetch
     # @return [Hash] full set of data for all configured regions - see example in class documentation

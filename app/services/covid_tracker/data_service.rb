@@ -13,7 +13,7 @@ require 'covid_tracker/keys'
 #         result: {
 #           id: "2020-05-31:USA:New_York:Cortland",
 #           label: "Cortland, New York, USA (2020-05-31)",
-#           region_id: ":USA:New_York:Cortland",
+#           region_code: ":USA:New_York:Cortland",
 #           region_label: "Cortland, New York, USA",
 #           date: "2020-05-31",
 #           cumulative_confirmed: 203,
@@ -35,7 +35,7 @@ require 'covid_tracker/keys'
 # }
 #
 # Interpret this as...
-# all_regions_data = { region_id => region_results, ... }
+# all_regions_data = { region_code => region_results, ... }
 # region_results = { region_label, region_data }
 # region_data = [ { result_for_day, request_with_date }, ... ] # sorted oldest to newest
 #
@@ -56,8 +56,8 @@ module CovidTracker
         registered_regions = registry_class.registry
         registered_regions.each do |region_registration|
           region_results = region_results(region_registration: region_registration, days: days, last_day: default_last_day)
-          region_id = region_registration.id
-          all_results[region_id] = region_results
+          region_code = region_registration.code
+          all_results[region_code] = region_results
         end
         all_results
       end
@@ -84,8 +84,8 @@ module CovidTracker
           CovidTracker::RegionKeys::REGION_DATA => region_data }
       end
 
-      # def region_results(all_results, region_id)
-      #   all_results[region_id]
+      # def region_results(all_results, region_code)
+      #   all_results[region_code]
       # end
 
       # TODO: Potential refactor in callers to use registration instead of results
@@ -98,8 +98,8 @@ module CovidTracker
       end
 
       # TODO: Potential refactor in callers to use registration instead of results
-      def region_id_from_region_data(region_data:)
-        region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_ID]
+      def region_code_from_region_data(region_data:)
+        region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_CODE]
       end
 
       def data_time_zone

@@ -43,7 +43,7 @@ module CovidTracker
       extracted_data = extract_graph_data(region_data: region_data, days: days, stat_key: stat_key)
       graph_info = graph_info(extracted_data: extracted_data, region_results: region_results, stat_key: stat_key, days: days)
       bar_info = extracted_data[:bar_info]
-      graph_path = stat_graph_full_path(region_id: region_id(region_data: region_data),
+      graph_path = stat_graph_full_path(region_code: region_code(region_data: region_data),
                                         stat_key: stat_key,
                                         days: days)
       puts "  --  Writing graph to #{graph_path}" # rubocop:disable Rails/Output
@@ -53,8 +53,8 @@ module CovidTracker
     end
 
     # passed to create_gruff_graph
-    def stat_graph_full_path(region_id:, stat_key:, days:)
-      graph_full_path(graph_filename(region_id: region_id, stat_key: stat_key, days: days))
+    def stat_graph_full_path(region_code:, stat_key:, days:)
+      graph_full_path(graph_filename(region_code: region_code, stat_key: stat_key, days: days))
     end
 
     # used to create path passed to create_gruff_graph
@@ -62,12 +62,12 @@ module CovidTracker
       Rails.root.join(IMAGE_DIRECTORY, graph_filename)
     end
 
-    def graph_filename(region_id:, stat_key:, days:)
-      "#{region_id}-#{stat_key}-#{days}_days_graph.png"
+    def graph_filename(region_code:, stat_key:, days:)
+      "#{region_code}-#{stat_key}-#{days}_days_graph.png"
     end
 
-    def region_id(region_data:)
-      data_service.region_id_from_region_data(region_data: region_data)
+    def region_code(region_data:)
+      data_service.region_code_from_region_data(region_data: region_data)
     end
   end
 end

@@ -11,12 +11,12 @@ module CovidTracker
       @admin2_county = admin2_county
     end
 
-    def id
-      id = ""
-      id += country_iso.to_s if country_iso
-      id += "-#{province_state}" if province_state
-      id += "-#{admin2_county}" if admin2_county
-      id.tr(' ', '_').downcase
+    def code
+      code = ""
+      code += country_iso.to_s if country_iso
+      code += "-#{province_state}" if province_state
+      code += "-#{admin2_county}" if admin2_county
+      code.tr(' ', '_').downcase
     end
 
     def label
