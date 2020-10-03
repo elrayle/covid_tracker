@@ -7,7 +7,7 @@ module CovidTracker
   class HomepageController < ApplicationController
     layout 'covid_tracker/covid_tracker'
 
-    DAYS_TO_TRACK = CovidTracker::DataService::DEFAULT_DAYS_TO_TRACK
+    DEFAULT_DAYS_TO_TRACK = CovidTracker::DataService::DEFAULT_DAYS_TO_TRACK
 
     class_attribute :presenter_class, :data_service_class
     self.presenter_class = CovidTracker::HomepagePresenter
@@ -15,7 +15,7 @@ module CovidTracker
 
     # Sets up presenter with data to display in the UI
     def index
-      all_regions_data = data_service_class.all_regions_data(days: DAYS_TO_TRACK)
+      all_regions_data = data_service_class.all_regions_data(days: days_to_track)
       @presenter = presenter_class.new(all_regions_data: all_regions_data)
     end
 
@@ -126,5 +126,11 @@ module CovidTracker
     #     QaServer.config.monitor_logger.debug("refresh_performance? #{refresh_performance?}, refresh_performance_table? #{refresh_performance_table?}, " \
     #                                            "refresh_performance_graphs? #{refresh_performance_graphs?})")
     #   end
+
+  private
+
+    def days_to_track
+      (params[:days] || DEFAULT_DAYS_TO_TRACK).to_i
+    end
   end
 end

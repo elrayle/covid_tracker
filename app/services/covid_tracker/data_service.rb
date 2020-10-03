@@ -46,7 +46,7 @@ module CovidTracker
     self.authority_class = CovidTracker::CovidApi
     self.time_period_service = CovidTracker::TimePeriodService
 
-    DEFAULT_DAYS_TO_TRACK = 2
+    DEFAULT_DAYS_TO_TRACK = 7
 
     # @param days [Integer] number of days of data to fetch
     # @return [Hash] full set of data for all configured regions - see example in class documentation
