@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: usa-new_york-cayuga-7_days.html
-last_updated: Oct 2, 2020
+last_updated: Oct 3, 2020
 keywords: ["Cayuga, New York, USA", "This Week"]
 tags: ["usa-new_york-cayuga", "this_week"]
 sidebar: home_sidebar

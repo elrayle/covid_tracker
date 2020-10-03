@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: usa-new_york-madison-7_days.html
-last_updated: Oct 2, 2020
+last_updated: Oct 3, 2020
 keywords: ["Madison, New York, USA", "This Week"]
 tags: ["usa-new_york-madison", "this_week"]
 sidebar: home_sidebar
