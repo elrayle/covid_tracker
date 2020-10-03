@@ -56,4 +56,25 @@ RSpec.shared_context "shared raw results", shared_context: :metadata do
       request: raw_request_upto_county
     }
   end
+
+  let(:raw_result_2) do
+    {
+      id: "2020-06-01_usa-new_york-cortland",
+      label: "Cortland, New York, USA (2020-06-01)",
+      region_code: "usa-new_york-cortland",
+      region_label: "Cortland, New York, USA",
+      date: "2020-06-01",
+      cumulative_confirmed: 207,
+      delta_confirmed: 4,
+      cumulative_deaths: 6,
+      delta_deaths: 1
+    }
+  end
+
+  let(:raw_datum_2) do
+    {
+      result: raw_result_2,
+      request: raw_request_upto_county
+    }
+  end
 end
