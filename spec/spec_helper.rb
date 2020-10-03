@@ -28,6 +28,7 @@ require 'rspec/matchers'
 require 'rspec/active_model/mocks'
 require 'webmock/rspec'
 require 'database_cleaner'
+require 'covid_tracker/keys'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -66,4 +67,8 @@ def load_fixture_file(fname)
   File.open(Rails.root.join('spec', 'fixtures', fname)) do |f|
     return f.read
   end
+end
+
+RSpec.configure do |rspec|
+  rspec.shared_context_metadata_behavior = :apply_to_host_groups
 end

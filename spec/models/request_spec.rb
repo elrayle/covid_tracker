@@ -13,14 +13,8 @@ RSpec.describe CovidTracker::Request do
 
   describe '.for' do
     context 'when request includes all parts' do
-      let(:raw_request) do
-        {
-          date: "2020-05-31",
-          country_iso: "USA",
-          province_state: "New York",
-          admin2_county: "Cortland"
-        }
-      end
+      include_context "shared raw results"
+      let(:raw_request) { raw_request_upto_county }
       let(:request) { described_class.for(raw_request) }
 
       it 'creates an instance with the values set' do
@@ -32,13 +26,8 @@ RSpec.describe CovidTracker::Request do
     end
 
     context 'when request includes country and state' do
-      let(:raw_request) do
-        {
-          date: "2020-05-31",
-          country_iso: "USA",
-          province_state: "New York"
-        }
-      end
+      include_context "shared raw results"
+      let(:raw_request) { raw_request_upto_state }
       let(:request) { described_class.for(raw_request) }
 
       it 'creates an instance with the country and state values set' do
@@ -53,12 +42,8 @@ RSpec.describe CovidTracker::Request do
     end
 
     context 'when request includes only country' do
-      let(:raw_request) do
-        {
-          date: "2020-05-31",
-          country_iso: "USA"
-        }
-      end
+      include_context "shared raw results"
+      let(:raw_request) { raw_request_upto_country }
       let(:request) { described_class.for(raw_request) }
 
       it 'creates an instance with the country and state values set' do
