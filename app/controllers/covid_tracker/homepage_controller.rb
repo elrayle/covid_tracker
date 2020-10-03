@@ -9,10 +9,9 @@ module CovidTracker
 
     DAYS_TO_TRACK = CovidTracker::DataService::DEFAULT_DAYS_TO_TRACK
 
-    class_attribute :presenter_class, :data_service_class, :graphing_service_class
+    class_attribute :presenter_class, :data_service_class
     self.presenter_class = CovidTracker::HomepagePresenter
     self.data_service_class = CovidTracker::DataService
-    self.graphing_service_class = CovidTracker::GraphingService
 
     # Sets up presenter with data to display in the UI
     def index
