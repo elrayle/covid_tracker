@@ -28,6 +28,7 @@ require 'rspec/matchers'
 require 'rspec/active_model/mocks'
 require 'webmock/rspec'
 require 'database_cleaner'
+require 'covid_tracker/keys'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

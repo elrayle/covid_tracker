@@ -58,7 +58,7 @@ RSpec.describe CovidTracker::Result do
       end
       let(:result) { described_class.for(raw_result) }
 
-      it 'creates an instance only error set' do
+      it 'creates an instance with only error set' do
         expect(result.error).to eq raw_result[:error]
       end
 
