@@ -20,7 +20,7 @@ module CovidTracker
     # @param idx [Integer] row number
     # @returns [String] css for table row
     def row_class(idx)
-      idx.odd? ? "pure-table-even" : "pure-table-odd"
+      idx.odd? ? "pure-table-odd" : "pure-table-even"
     end
 
     # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
