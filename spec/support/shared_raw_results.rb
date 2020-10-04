@@ -10,7 +10,7 @@ RSpec.shared_context "shared raw results", shared_context: :metadata do
     {
       date: "2020-05-31",
       country_iso: "USA",
-      province_state: "New York"
+      province_state: "Alabama"
     }
   end
 
@@ -18,17 +18,17 @@ RSpec.shared_context "shared raw results", shared_context: :metadata do
     {
       date: "2020-05-31",
       country_iso: "USA",
-      province_state: "New York",
-      admin2_county: "Broome"
+      province_state: "Alabama",
+      admin2_county: "Butler"
     }
   end
 
   let(:raw_result_without_error) do
     {
-      id: "2020-05-31_usa-new_york-cortland",
-      label: "Cortland, New York, USA (2020-05-31)",
-      region_code: "usa-new_york-cortland",
-      region_label: "Cortland, New York, USA",
+      id: "2020-05-31_usa-alabama-butler",
+      label: "Butler, Alabama, USA (2020-05-31)",
+      region_code: "alabama-butler",
+      region_label: "Butler, Alabama, USA",
       date: "2020-05-31",
       cumulative_confirmed: 203,
       delta_confirmed: 3,
@@ -59,10 +59,10 @@ RSpec.shared_context "shared raw results", shared_context: :metadata do
 
   let(:raw_result_2) do
     {
-      id: "2020-06-01_usa-new_york-cortland",
-      label: "Cortland, New York, USA (2020-06-01)",
-      region_code: "usa-new_york-cortland",
-      region_label: "Cortland, New York, USA",
+      id: "2020-06-01_usa-alabama-butler",
+      label: "Butler, Alabama, USA (2020-06-01)",
+      region_code: "alabama-butler",
+      region_label: "Butler, Alabama, USA",
       date: "2020-06-01",
       cumulative_confirmed: 207,
       delta_confirmed: 4,

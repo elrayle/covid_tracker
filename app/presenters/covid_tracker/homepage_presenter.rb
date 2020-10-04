@@ -5,36 +5,25 @@ require 'covid_tracker/keys'
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class HomepagePresenter
-    class_attribute :data_service_class
-    self.data_service_class = CovidTracker::DataService
+    class_attribute :data_service
+    self.data_service = CovidTracker::DataService
 
     attr_reader :all_regions_data
 
-    delegate :region_label, :region_data, to: data_service_class
+    # TODO: datum is not an instance of CovidTracker::RegionDatum
+    delegate :result, :date, :cumulative_confirmed, :cumulative_deaths, :region_label, :region_code, :region_data, to: data_service
 
     # @param all_results [Hash] results for all registered regions
     def initialize(all_regions_data:)
       @all_regions_data = all_regions_data
     end
 
-    def result(datum)
-      datum[CovidTracker::ResultKeys::RESULT_SECTION]
-    end
-
     def row_class(idx)
       idx.odd? ? "pure-table-even" : "pure-table-odd"
     end
 
-    def date(datum)
-      result(datum)[CovidTracker::ResultKeys::DATE]
-    end
-
     def date_class(_datum)
       "neutral"
-    end
-
-    def cumulative_confirmed(datum)
-      result(datum)[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED]
     end
 
     def cumulative_confirmed_class(_datum)
@@ -42,7 +31,7 @@ module CovidTracker
     end
 
     def delta_confirmed(datum)
-      delta_confirmed_count = result(datum)[CovidTracker::ResultKeys::DELTA_CONFIRMED]
+      delta_confirmed_count = data_service.delta_confirmed(datum)
       delta_confirmed_count.zero? ? "-" : delta_confirmed_count
     end
 
@@ -50,16 +39,12 @@ module CovidTracker
       datum_class(value: delta_confirmed(datum), low_threshold: 0, moderate_threshold: 5, critical_threshold: 10)
     end
 
-    def cumulative_deaths(datum)
-      result(datum)[CovidTracker::ResultKeys::CUMULATIVE_DEATHS]
-    end
-
     def cumulative_deaths_class(_datum)
       "neutral"
     end
 
     def delta_deaths(datum)
-      delta_deaths_count = result(datum)[CovidTracker::ResultKeys::DELTA_DEATHS]
+      delta_deaths_count = data_service.delta_deaths(datum)
       delta_deaths_count.zero? ? "-" : delta_deaths_count
     end
 

@@ -9,7 +9,7 @@ rvm:
 
 before_script:
   - "bundle exec rake db:migrate RAILS_ENV=test"
-  
+
 jobs:
   include:
     - name: 'Lint'
