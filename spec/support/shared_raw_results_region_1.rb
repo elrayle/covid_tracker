@@ -8,7 +8,6 @@ RSpec.shared_context "shared raw results in region 1", shared_context: :metadata
   end
 
   let(:region_1_data) do
-    [CovidTracker::RegionDatum.for(raw_datum_region_1_day_1),
-     CovidTracker::RegionDatum.for(raw_datum_region_1_day_2)]
+    [datum_for_region_1_day_1, datum_for_region_1_day_2]
   end
 end

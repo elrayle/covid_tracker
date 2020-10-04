@@ -4,32 +4,28 @@ require 'spec_helper'
 
 # TODO: Turn this into a model class for easier access to data
 RSpec.describe CovidTracker::DataService do
-  include_context "shared raw results"
-  let(:raw_datum) { raw_datum_without_error }
-  let(:datum) { CovidTracker::RegionDatum.for(raw_datum) }
+  include_context "shared raw results in region 1"
+
+  let(:registration) { region_registration_1 }
+  let(:region_data) { region_1_data }
+  let(:datum) { datum_for_region_1_day_1 }
 
   describe '.region_code' do
-    include_context "shared raw results"
-    let(:registration) { CovidTracker::RegionRegistration.new(country_iso: 'USA', province_state: 'Alabama', admin2_county: 'Butler') }
-    let(:region_data) { [CovidTracker::RegionDatum.for(raw_datum_without_error), CovidTracker::RegionDatum.for(raw_datum_2)] }
+    include_context "shared region registration 1"
     let(:region_results) { CovidTracker::RegionResults.new(region_registration: registration, region_data: region_data) }
     it 'returns region code' do
-      expect(described_class.region_code(region_results: region_results)).to eq "usa-alabama-butler"
+      expect(described_class.region_code(region_results: region_results)).to eq region_1_code
     end
   end
 
   describe '.region_label' do
-    let(:registration) { CovidTracker::RegionRegistration.new(country_iso: 'USA', province_state: 'Alabama', admin2_county: 'Butler') }
-    let(:region_data) { [CovidTracker::RegionDatum.for(raw_datum_without_error), CovidTracker::RegionDatum.for(raw_datum_2)] }
     let(:region_results) { CovidTracker::RegionResults.new(region_registration: registration, region_data: region_data) }
     it 'returns region label' do
-      expect(described_class.region_label(region_results: region_results)).to eq "Butler, Alabama, USA"
+      expect(described_class.region_label(region_results: region_results)).to eq region_1_label
     end
   end
 
   describe '.region_data' do
-    let(:registration) { CovidTracker::RegionRegistration.new(country_iso: 'USA', province_state: 'New York', admin2_county: 'Butler') }
-    let(:region_data) { [CovidTracker::RegionDatum.for(raw_datum_without_error), CovidTracker::RegionDatum.for(raw_datum_2)] }
     let(:region_results) { CovidTracker::RegionResults.new(region_registration: registration, region_data: region_data) }
     it 'returns region label' do
       data = described_class.region_data(region_results: region_results)
@@ -47,43 +43,43 @@ RSpec.describe CovidTracker::DataService do
 
   describe '.result_id' do
     it 'returns result id' do
-      expect(described_class.result_id(datum)).to eq "2020-05-31_usa-alabama-butler"
+      expect(described_class.result_id(datum)).to eq raw_result_region_1_day_1_id
     end
   end
 
   describe '.result_label' do
     it 'returns result label' do
-      expect(described_class.result_label(datum)).to eq "Butler, Alabama, USA (2020-05-31)"
+      expect(described_class.result_label(datum)).to eq raw_result_region_1_day_1_label
     end
   end
 
   describe '.date' do
     it 'returns result id' do
-      expect(described_class.date(datum)).to eq "2020-05-31"
+      expect(described_class.date(datum)).to eq raw_request_date_1
     end
   end
 
   describe '.cumulative_confirmed' do
     it 'returns result id' do
-      expect(described_class.cumulative_confirmed(datum)).to eq 203
+      expect(described_class.cumulative_confirmed(datum)).to eq raw_result_region_1_day_1_cum_confirmed
     end
   end
 
   describe '.delta_confirmed' do
     it 'returns result id' do
-      expect(described_class.delta_confirmed(datum)).to eq 3
+      expect(described_class.delta_confirmed(datum)).to eq raw_result_region_1_day_1_delta_confirmed
     end
   end
 
   describe '.cumulative_deaths' do
     it 'returns result id' do
-      expect(described_class.cumulative_deaths(datum)).to eq 5
+      expect(described_class.cumulative_deaths(datum)).to eq raw_result_region_1_day_1_cum_deaths
     end
   end
 
   describe '.delta_deaths' do
     it 'returns result id' do
-      expect(described_class.delta_deaths(datum)).to eq 0
+      expect(described_class.delta_deaths(datum)).to eq raw_result_region_1_day_1_delta_deaths
     end
   end
 
@@ -95,19 +91,19 @@ RSpec.describe CovidTracker::DataService do
 
   describe '.country_iso' do
     it 'returns result id' do
-      expect(described_class.country_iso(datum)).to eq "USA"
+      expect(described_class.country_iso(datum)).to eq country_iso_label_region_1
     end
   end
 
   describe '.province_state' do
     it 'returns result id' do
-      expect(described_class.province_state(datum)).to eq "Alabama"
+      expect(described_class.province_state(datum)).to eq province_state_label_region_1
     end
   end
 
   describe '.admin2_county' do
     it 'returns result id' do
-      expect(described_class.admin2_county(datum)).to eq "Butler"
+      expect(described_class.admin2_county(datum)).to eq admin2_county_label_region_1
     end
   end
 end
