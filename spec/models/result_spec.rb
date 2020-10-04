@@ -3,6 +3,8 @@
 require 'spec_helper'
 
 RSpec.describe CovidTracker::Result do
+  include_context "shared raw result region 1"
+
   describe 'attr_readers' do
     let(:subject) { described_class.new }
     it { is_expected.to respond_to(:id) }
@@ -16,8 +18,7 @@ RSpec.describe CovidTracker::Result do
 
   describe '.for and #error?' do
     context 'when no error' do
-      include_context "shared raw results"
-      let(:raw_result) { raw_result_without_error }
+      let(:raw_result) { raw_result_region_1_day_1 }
       let(:result) { described_class.for(raw_result) }
 
       it 'creates an instance with the values set' do # rubocop:disable RSpec/ExampleLength
@@ -40,8 +41,7 @@ RSpec.describe CovidTracker::Result do
     end
 
     context 'when there is an error' do
-      include_context "shared raw results"
-      let(:raw_result) { raw_result_with_error }
+      let(:raw_result) { raw_result_region_1_day_1_with_error }
       let(:result) { described_class.for(raw_result) }
 
       it 'creates an instance with only error set' do
