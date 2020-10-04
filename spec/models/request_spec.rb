@@ -3,6 +3,8 @@
 require 'spec_helper'
 
 RSpec.describe CovidTracker::Request do
+  include_context "shared raw request levels"
+
   describe 'attr_readers' do
     let(:subject) { described_class.new }
     it { is_expected.to respond_to(:date) }
@@ -13,7 +15,6 @@ RSpec.describe CovidTracker::Request do
 
   describe '.for' do
     context 'when request includes all parts' do
-      include_context "shared raw results"
       let(:raw_request) { raw_request_upto_county }
       let(:request) { described_class.for(raw_request) }
 
@@ -26,7 +27,6 @@ RSpec.describe CovidTracker::Request do
     end
 
     context 'when request includes country and state' do
-      include_context "shared raw results"
       let(:raw_request) { raw_request_upto_state }
       let(:request) { described_class.for(raw_request) }
 
@@ -42,7 +42,6 @@ RSpec.describe CovidTracker::Request do
     end
 
     context 'when request includes only country' do
-      include_context "shared raw results"
       let(:raw_request) { raw_request_upto_country }
       let(:request) { described_class.for(raw_request) }
 
