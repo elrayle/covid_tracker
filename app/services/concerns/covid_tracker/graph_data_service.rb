@@ -38,10 +38,10 @@ module CovidTracker
       bar_data = []
       max_value = 0
       region_data.each_with_index do |datum, idx|
-        result = datum[CovidTracker::ResultKeys::RESULT_SECTION]
+        result = datum.result
         labels[idx] = graph_label(result, days, idx)
-        bar_data << result[stat_key]
-        max_value = result[stat_key] if result[stat_key] > max_value
+        bar_data << result.send(stat_key)
+        max_value = result.send(stat_key) if result.send(stat_key) > max_value
         break if idx > days
       end
       max_value = max_value > DEFAULT_MAX_VALUE ? max_value : DEFAULT_MAX_VALUE
@@ -85,7 +85,7 @@ module CovidTracker
 
     def graph_label(result, days, idx)
       return " " if days > 10 && idx.positive? && idx < days - 1
-      time_period_service.date_to_label(result[CovidTracker::ResultKeys::DATE])
+      time_period_service.date_to_label(result.date)
     end
   end
 end

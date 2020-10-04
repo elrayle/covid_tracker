@@ -5,67 +5,69 @@ require 'covid_tracker/keys'
 # This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class HomepagePresenter
-    class_attribute :data_service_class
-    self.data_service_class = CovidTracker::DataService
+    class_attribute :data_service
+    self.data_service = CovidTracker::DataService
 
     attr_reader :all_regions_data
 
-    delegate :region_label, :region_data, to: data_service_class
+    delegate :result, :date, :cumulative_confirmed, :cumulative_deaths, :region_label, :region_code, :region_data, to: data_service
 
-    # @param all_results [Hash] results for all registered regions
+    # @param all_regions_data [Hash<String, CovidTracker::RegionResults] results for all registered regions across a range of dates
     def initialize(all_regions_data:)
       @all_regions_data = all_regions_data
     end
 
-    def result(datum)
-      datum[CovidTracker::ResultKeys::RESULT_SECTION]
-    end
-
+    # @param idx [Integer] row number
+    # @returns [String] css for table row
     def row_class(idx)
-      idx.odd? ? "pure-table-even" : "pure-table-odd"
+      idx.odd? ? "pure-table-odd" : "pure-table-even"
     end
 
-    def date(datum)
-      result(datum)[CovidTracker::ResultKeys::DATE]
-    end
-
+    # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
     def date_class(_datum)
       "neutral"
     end
 
-    def cumulative_confirmed(datum)
-      result(datum)[CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED]
-    end
-
+    # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
     def cumulative_confirmed_class(_datum)
       "neutral"
     end
 
+    # @param datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [Integer] the change in the count of confirmed cases or a dash if change is 0
     def delta_confirmed(datum)
-      delta_confirmed_count = result(datum)[CovidTracker::ResultKeys::DELTA_CONFIRMED]
+      delta_confirmed_count = data_service.delta_confirmed(datum)
       delta_confirmed_count.zero? ? "-" : delta_confirmed_count
     end
 
+    # @param datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
     def delta_confirmed_class(datum)
       datum_class(value: delta_confirmed(datum), low_threshold: 0, moderate_threshold: 5, critical_threshold: 10)
     end
 
-    def cumulative_deaths(datum)
-      result(datum)[CovidTracker::ResultKeys::CUMULATIVE_DEATHS]
-    end
-
+    # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
     def cumulative_deaths_class(_datum)
       "neutral"
     end
 
+    # @param datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [Integer] the change in the count of confirmed deaths or a dash if change is 0
     def delta_deaths(datum)
-      delta_deaths_count = result(datum)[CovidTracker::ResultKeys::DELTA_DEATHS]
+      delta_deaths_count = data_service.delta_deaths(datum)
       delta_deaths_count.zero? ? "-" : delta_deaths_count
     end
 
+    # @param datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
     def delta_deaths_class(datum)
       datum_class(value: delta_deaths(datum), low_threshold: 0, moderate_threshold: 5, critical_threshold: 10)
     end
+
+  private
 
     def datum_class(value:, low_threshold: 0, moderate_threshold: 5, critical_threshold: 10)
       return "neutral" unless value.is_a? Integer

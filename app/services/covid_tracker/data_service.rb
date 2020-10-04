@@ -1,130 +1,97 @@
 # frozen_string_literal: true
 
-require 'covid_tracker/keys'
-
-# This class creates the data structure holding the requested results for each stat tracked.
-#
-# Expected structure of data returned by homepage_controller.rb
-# {
-#   ":USA:New_York:Cortland" => {
-#     region_label: "Cortland, New York, USA",
-#     region_data: [
-#       {
-#         result: {
-#           id: "2020-05-31:USA:New_York:Cortland",
-#           label: "Cortland, New York, USA (2020-05-31)",
-#           region_code: ":USA:New_York:Cortland",
-#           region_label: "Cortland, New York, USA",
-#           date: "2020-05-31",
-#           cumulative_confirmed: 203,
-#           delta_confirmed: 3,
-#           cumulative_deaths: 5,
-#           delta_deaths: 0
-#         }
-#         request: {
-#           date: "2020-05-31",
-#           country_iso: "USA",
-#           province_state: "New York",
-#           admin2_county: "Cortland"
-#         }
-#       },
-#       ...     # more data for same region
-#     ]
-#   },
-#   ...    # next region
-# }
-#
-# Interpret this as...
-# all_regions_data = { region_code => region_results, ... }
-# region_results = { region_label, region_data }
-# region_data = [ { result_for_day, request_with_date }, ... ] # sorted oldest to newest
-#
+# This presenter class provides all data needed by the view that monitors status of authorities.
 module CovidTracker
   class DataService
-    class_attribute :registry_class, :authority_class, :time_period_service
-    self.registry_class = CovidTracker::RegionRegistry
-    self.authority_class = CovidTracker::CovidApi
-    self.time_period_service = CovidTracker::TimePeriodService
-
-    DEFAULT_DAYS_TO_TRACK = 7
-
-    # @param days [Integer] number of days of data to fetch
-    # @return [Hash] full set of data for all configured regions - see example in class documentation
     class << self
-      def all_regions_data(days: DEFAULT_DAYS_TO_TRACK)
-        all_results = {}
-        registered_regions = registry_class.registry
-        registered_regions.each do |region_registration|
-          region_results = region_results(region_registration: region_registration, days: days, last_day: default_last_day)
-          region_code = region_registration.code
-          all_results[region_code] = region_results
-        end
-        all_results
-      end
-
-      # @param region_registration [Hash] info identifying the region (e.g. { country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome' })
-      # @param days [Integer] number of days of data to fetch
-      # @param last_day [String] most recent day that will be the last day of data gathered (e.g. "2020-05-31")
-      # @return [Hash] full set of data for a single region - see example in class documentation
-      def region_results(region_registration:, days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day)
-        region_data = []
-        (days - 1).downto(0) do |day_idx|
-          result = fetch_for_date(last_day, day_idx, region_registration)
-          if result.key?(:error) && day_idx.zero? && last_day == default_last_day
-            # latest day's data not available yet, so need to get another day farther back
-            result = fetch_for_date(last_day, days, region_registration)
-            region_data.unshift(result) # get one more day back and insert it at the beginning
-            # reset default last day to avoid having to make this fix for every region
-            default_one_day_earlier
-          else
-            region_data << result
-          end
-        end
-        { CovidTracker::RegionKeys::REGION_LABEL => region_registration.label,
-          CovidTracker::RegionKeys::REGION_DATA => region_data }
-      end
-
-      # def region_results(all_results, region_code)
-      #   all_results[region_code]
-      # end
-
-      # TODO: Potential refactor in callers to use registration instead of results
+      # @param region_results [CovidTracker::RegionResults] results for a region
+      # @returns [String] label for the region (e.g. "Butler, Alabama, USA")
       def region_label(region_results:)
-        region_results[CovidTracker::RegionKeys::REGION_LABEL]
+        region_results.region_label
       end
 
+      # @param region_results [CovidTracker::RegionResults] results for a region
+      # @returns [String] code for the region (e.g. "usa-alabama-butler")
+      def region_code(region_results:)
+        region_results.region_code
+      end
+
+      # @param region_results [CovidTracker::RegionResults] results for a region
+      # @returns [Array<CovidTracker::RegionDatum>] data for the region for a range of dates
       def region_data(region_results:)
-        region_results[CovidTracker::RegionKeys::REGION_DATA]
+        region_results.region_data
       end
 
-      # TODO: Potential refactor in callers to use registration instead of results
-      def region_code_from_region_data(region_data:)
-        region_data.first[CovidTracker::ResultKeys::RESULT_SECTION][CovidTracker::ResultKeys::REGION_CODE]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [CovidTracker::Result] the result section within region_datum
+      def result(region_datum)
+        region_datum.result
       end
 
-      def data_time_zone
-        authority_class::DATA_TIME_ZONE
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the result id (e.g. "2020-04-04_usa-alabama-butler")
+      def result_id(region_datum)
+        result(region_datum).id
       end
 
-    private
-
-      def fetch_for_date(last_day, day_idx, region_registration)
-        date_str = time_period_service.str_date_from_idx(last_day, day_idx)
-        authority_class.new.find_for(region_registration: region_registration, date: date_str)
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the result label (e.g. "Butler, Alabama, USA (2020-04-04)")
+      def result_label(region_datum)
+        result(region_datum).label
       end
 
-      def region_data_from_region_results(region_results)
-        region_results[CovidTracker::RegionKeys::REGION_DATA]
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the date of the result (e.g. "2020-04-04")
+      def date(region_datum)
+        result(region_datum).date
       end
 
-      def default_last_day
-        @default_last_day ||= authority_class.most_recent_day_with_data
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [Integer] the cumulative count of confirmed cases
+      def cumulative_confirmed(region_datum)
+        result(region_datum).cumulative_confirmed
       end
 
-      def default_one_day_earlier
-        # don't want to continue adjusting if there are errors for other reasons
-        return false unless default_last_day == authority_class.most_recent_day_with_data
-        @default_last_day = time_period_service.date_to_str(time_period_service.str_to_date(default_last_day) - 1.day)
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [Integer] the change in the count of confirmed cases
+      def delta_confirmed(region_datum)
+        result(region_datum).delta_confirmed
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [Integer] the cumulative count of confirmed deaths
+      def cumulative_deaths(region_datum)
+        result(region_datum).cumulative_deaths
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [Integer] the change in the count of confirmed deaths
+      def delta_deaths(region_datum)
+        result(region_datum).delta_deaths
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [CovidTracker::Request] the request section within region_datum
+      def request(region_datum)
+        region_datum.request
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the country_iso from the request
+      def country_iso(region_datum)
+        request(region_datum).country_iso
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the province_state from the request
+      def province_state(region_datum)
+        request(region_datum).province_state
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [String] the admin2_county from the request
+      def admin2_county(region_datum)
+        request(region_datum).admin2_county
       end
     end
   end

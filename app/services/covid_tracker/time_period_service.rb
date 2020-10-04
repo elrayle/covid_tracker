@@ -2,8 +2,9 @@
 
 module CovidTracker
   class TimePeriodService
-    class_attribute :data_service
-    self.data_service = CovidTracker::DataService
+    # TODO: Remove this class_attribute when data_time_zone is moved to a configuration
+    class_attribute :data_retrieval_service
+    self.data_retrieval_service = CovidTracker::DataRetrievalService
 
     THIS_WEEK = :this_week
     THIS_MONTH = :this_month
@@ -65,7 +66,7 @@ module CovidTracker
 
     # @return [String] today's date as a string (used by Jekyll for page dates) (e.g. "Sep 15, 2020")
     def self.today_str
-      dt = DateTime.now.in_time_zone(data_service.data_time_zone)
+      dt = DateTime.now.in_time_zone(data_retrieval_service.data_time_zone) # TODO: move data_time_zone to configuration
       dt.strftime("%b %-d, %Y")
     end
 
