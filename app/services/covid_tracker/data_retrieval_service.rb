@@ -93,14 +93,20 @@ module CovidTracker
         date_str = time_period_service.str_date_from_idx(last_day, day_idx)
         datum = fetch_from_cache(region_registration: region_registration, date: date_str)
         return datum unless datum.blank?
-        raw_datum = authority_class.new.find_for(region_registration: region_registration, date: date_str)
-        CovidTracker::RegionDatum.for(raw_datum)
+        fetch_via_api(region_registration: region_registration, date: date_str)
       end
 
       def fetch_from_cache(region_registration:, date:)
         count_data = CovidTracker::RegionCount.find_by(region_code: region_registration.code, date: date)
         return if count_data.empty?
-        CovidTracker::RegionDatum.parse_datum(region_registration: region_registration, count_data: count_data)
+        CovidTracker::RegionDatum.parse_datum(region_registration: region_registration, count_data: count_data.first)
+      end
+
+      def fetch_via_api(region_registration:, date:)
+        raw_datum = authority_class.new.find_for(region_registration: region_registration, date: date)
+        datum = CovidTracker::RegionDatum.for(raw_datum)
+        CovidTracker::RegionCount.for(region_code: region_registration.code, region_datum: datum)
+        datum
       end
 
       def region_data_from_region_results(region_results)

@@ -9,7 +9,7 @@ module CovidTracker
 
     def self.for(region_code:, region_datum:)
       region_count = new
-      region_count.region_id = CovidTracker::Region.find_or_create_region_code_for(region_code: region_code)
+      region_count.region_id = CovidTracker::Region.find_or_create_region_code_for(region_code: region_code).id
       region_count.result_code = data_service.result_code(region_datum)
       region_count.result_label = data_service.result_label(region_datum)
       region_count.date = data_service.date(region_datum)
