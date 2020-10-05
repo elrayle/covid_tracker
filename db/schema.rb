@@ -14,10 +14,12 @@ ActiveRecord::Schema.define(version: 2020_09_19_184739) do
 
   create_table "covid_tracker_region_counts", force: :cascade do |t|
     t.integer "region_id"
+    t.string "result_code"
+    t.string "result_label"
     t.string "date"
-    t.integer "confirmed_cases"
-    t.integer "delta_cases"
-    t.integer "confirmed_deaths"
+    t.integer "cumulative_confirmed"
+    t.integer "delta_confirmed"
+    t.integer "cumulative_deaths"
     t.integer "delta_deaths"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

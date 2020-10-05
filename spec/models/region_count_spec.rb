@@ -10,10 +10,12 @@ RSpec.describe CovidTracker::RegionCount do
 
   it { is_expected.to respond_to(:id) }
   it { is_expected.to respond_to(:region_id) }
+  it { is_expected.to respond_to(:result_code) }
+  it { is_expected.to respond_to(:result_label) }
   it { is_expected.to respond_to(:date) }
-  it { is_expected.to respond_to(:confirmed_cases) }
-  it { is_expected.to respond_to(:delta_cases) }
-  it { is_expected.to respond_to(:confirmed_deaths) }
+  it { is_expected.to respond_to(:cumulative_confirmed) }
+  it { is_expected.to respond_to(:delta_confirmed) }
+  it { is_expected.to respond_to(:cumulative_deaths) }
   it { is_expected.to respond_to(:delta_deaths) }
 
   describe '.find_by' do

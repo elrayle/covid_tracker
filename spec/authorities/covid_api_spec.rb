@@ -68,8 +68,8 @@ describe CovidTracker::CovidApi do
         end
         let(:expected_result) do
           {
-            id: "#{date}_usa",
-            label: "USA (#{date})",
+            result_code: "#{date}_usa",
+            result_label: "USA (#{date})",
             region_code: "usa",
             region_label: "USA",
             date: date,
@@ -109,8 +109,8 @@ describe CovidTracker::CovidApi do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}_usa-iowa",
-              label: "Iowa, USA (#{date})",
+              result_code: "#{date}_usa-iowa",
+              result_label: "Iowa, USA (#{date})",
               region_code: "usa-iowa",
               region_label: "Iowa, USA",
               date: date,
@@ -146,8 +146,8 @@ describe CovidTracker::CovidApi do
           let(:expected_result) do
             # counts come from the values in the fixture
             {
-              id: "#{date}_usa-texas-denton",
-              label: "Denton, Texas, USA (#{date})",
+              result_code: "#{date}_usa-texas-denton",
+              result_label: "Denton, Texas, USA (#{date})",
               region_code: "usa-texas-denton",
               region_label: "Denton, Texas, USA",
               date: date,

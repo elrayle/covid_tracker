@@ -97,10 +97,9 @@ module CovidTracker
         CovidTracker::RegionDatum.for(raw_datum)
       end
 
-      def fetch_from_cache(region_registration:, date:) # rubocop:disable Lint/UnusedMethodArgument
-        # TODO: add code to fetch from db cache
-        #       STUBBED to never find in cache
-        nil
+      def fetch_from_cache(region_registration:, date:)
+        count_data = CovidTracker::RegionCount.find_by(region_code: region_registration.code, date: date)
+        CovidTracker::RegionDatum.parse_counts(region_registration: region_registration, date: date, count_data: count_data)
       end
 
       def region_data_from_region_results(region_results)

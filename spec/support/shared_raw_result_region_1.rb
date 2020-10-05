@@ -2,7 +2,7 @@ RSpec.shared_context "shared raw result region 1", shared_context: :metadata do
   include_context "shared raw request dates"
   include_context "shared region registration 1"
 
-  let(:raw_result_region_1_day_1_id) { "#{raw_request_date_1}_#{region_1_code}" }
+  let(:raw_result_region_1_day_1_code) { "#{raw_request_date_1}_#{region_1_code}" }
   let(:raw_result_region_1_day_1_label) { "#{region_1_label} (#{raw_request_date_1})" }
   let(:raw_result_region_1_day_1_cum_confirmed) { 402 }
   let(:raw_result_region_1_day_1_delta_confirmed) { 6 }
@@ -11,8 +11,8 @@ RSpec.shared_context "shared raw result region 1", shared_context: :metadata do
 
   let(:raw_result_region_1_day_1) do
     {
-      id: raw_result_region_1_day_1_id,
-      label: raw_result_region_1_day_1_label,
+      result_code: raw_result_region_1_day_1_code,
+      result_label: raw_result_region_1_day_1_label,
       region_code: region_1_code,
       region_label: region_1_label,
       date: raw_request_date_1,
@@ -23,7 +23,7 @@ RSpec.shared_context "shared raw result region 1", shared_context: :metadata do
     }
   end
 
-  let(:raw_result_region_1_day_2_id) { "#{raw_request_date_2}_#{region_1_code}" }
+  let(:raw_result_region_1_day_2_code) { "#{raw_request_date_2}_#{region_1_code}" }
   let(:raw_result_region_1_day_2_label) { "#{region_1_label} (#{raw_request_date_2})" }
   let(:raw_result_region_1_day_2_cum_confirmed) { 411 }
   let(:raw_result_region_1_day_2_delta_confirmed) { 9 }
@@ -32,8 +32,8 @@ RSpec.shared_context "shared raw result region 1", shared_context: :metadata do
 
   let(:raw_result_region_1_day_2) do
     {
-      id: "#{raw_request_date_2}_#{region_1_code}",
-      label: "#{region_1_label} #{raw_request_date_2}",
+      result_code: "#{raw_request_date_2}_#{region_1_code}",
+      result_label: "#{region_1_label} #{raw_request_date_2}",
       region_code: region_1_code,
       region_label: region_1_label,
       date: raw_request_date_2,

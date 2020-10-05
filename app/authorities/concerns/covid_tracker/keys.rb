@@ -15,8 +15,8 @@ module CovidTracker
 
     ERROR = :error
 
-    ID = :id
-    LABEL = :label
+    RESULT_CODE = :result_code
+    RESULT_LABEL = :result_label
     REGION_CODE = :region_code
     REGION_LABEL = :region_label
     DATE = :date

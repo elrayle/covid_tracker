@@ -15,8 +15,8 @@ module CovidTracker
 
     def format_result(confirmed:, delta_confirmed:, deaths:, delta_deaths:)
       {
-        CovidTracker::ResultKeys::ID => id, # e.g. '2020-04-04_usa-alabama-butler'
-        CovidTracker::ResultKeys::LABEL => label, # e.g. 'Butler, Alabama, USA (2020-04-04)'
+        CovidTracker::ResultKeys::RESULT_CODE => result_code, # e.g. '2020-04-04_usa-alabama-butler'
+        CovidTracker::ResultKeys::RESULT_LABEL => result_label, # e.g. 'Butler, Alabama, USA (2020-04-04)'
         CovidTracker::ResultKeys::REGION_CODE => region_code, # e.g. 'usa-alabama-butler'
         CovidTracker::ResultKeys::REGION_LABEL => region_label, # e.g. 'Butler, Alabama, USA'
         CovidTracker::ResultKeys::DATE => date, # 'e.g. '2020-04-04'
