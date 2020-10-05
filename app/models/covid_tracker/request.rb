@@ -36,5 +36,14 @@ module CovidTracker
       request.admin2_county = raw_request[ADMIN2_COUNTY] if raw_request.key? ADMIN2_COUNTY
       request
     end
+
+    def self.parse_request(region_registration:, date:)
+      request = CovidTracker::Request.new
+      request.date = date
+      request.country_iso = region_registration.country_iso
+      request.province_state = region_registration.province_state
+      request.admin2_county = region_registration.admin2_county
+      request
+    end
   end
 end
