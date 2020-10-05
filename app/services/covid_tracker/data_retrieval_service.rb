@@ -47,7 +47,7 @@ module CovidTracker
         region_data = []
         (days - 1).downto(0) do |day_idx|
           region_datum = fetch_for_date(last_day, day_idx, region_registration)
-          region_datum.error? && can_shift(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
+          region_datum.error? && can_shift?(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
         end
         CovidTracker::RegionResults.new(region_registration: region_registration, region_data: region_data)
       end
@@ -99,7 +99,8 @@ module CovidTracker
 
       def fetch_from_cache(region_registration:, date:)
         count_data = CovidTracker::RegionCount.find_by(region_code: region_registration.code, date: date)
-        CovidTracker::RegionDatum.parse_counts(region_registration: region_registration, date: date, count_data: count_data)
+        return if count_data.empty?
+        CovidTracker::RegionDatum.parse_datum(region_registration: region_registration, count_data: count_data)
       end
 
       def region_data_from_region_results(region_results)

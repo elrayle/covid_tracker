@@ -8,7 +8,8 @@ module CovidTracker
 
     # Data is returned differently depending on the region levels requested.  Parses data based on region parameters.
     def parse_authority_response
-      return { CovidTracker::ResultKeys::ERROR => error_msg } if error?
+      formatted_request = format_request(date, country_iso, province_state, admin2_county)
+      return format_response(request: formatted_request, result: { CovidTracker::ResultKeys::ERROR => error_msg }) if error?
       formatted_result = if admin2_county
                            parse_admin2_county
                          elsif province_state
@@ -16,7 +17,6 @@ module CovidTracker
                          else
                            parse_country
                          end
-      formatted_request = format_request(date, country_iso, province_state, admin2_county)
       format_response(request: formatted_request, result: formatted_result)
     end
 

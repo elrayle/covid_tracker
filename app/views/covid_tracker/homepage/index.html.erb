@@ -20,6 +20,7 @@
       </thead>
       <tbody>
       <% region_data.each_with_index do |datum, idx| %>
+        <% next if datum.error? %>
         <tr class="<%= @presenter.row_class(idx) %>">
           <td class="<%= @presenter.date_class(datum) %>"><%= @presenter.date(datum) %></td>
           <td class="<%= @presenter.cumulative_confirmed_class(datum) %>"><%= @presenter.cumulative_confirmed(datum) %></td>
