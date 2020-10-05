@@ -29,15 +29,15 @@ module CovidTracker
       end
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
-      # @returns [String] the result id (e.g. "2020-04-04_usa-alabama-butler")
-      def result_id(region_datum)
-        result(region_datum).id
+      # @returns [String] the result code (e.g. "2020-04-04_usa-alabama-butler")
+      def result_code(region_datum)
+        result(region_datum).result_code
       end
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
       # @returns [String] the result label (e.g. "Butler, Alabama, USA (2020-04-04)")
       def result_label(region_datum)
-        result(region_datum).label
+        result(region_datum).result_label
       end
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date

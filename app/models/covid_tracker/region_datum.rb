@@ -20,5 +20,12 @@ module CovidTracker
       datum.request = CovidTracker::Request.for(raw_datum[REQUEST_SECTION])
       datum
     end
+
+    def self.parse_datum(region_registration:, count_data:)
+      datum = new
+      datum.result = CovidTracker::Result.parse_result(count_data: count_data)
+      datum.request = CovidTracker::Request.parse_request(region_registration: region_registration, date: count_data.date)
+      datum
+    end
   end
 end

@@ -11,8 +11,11 @@ RSpec.describe CovidTracker::Region do
     let(:existing_region_code) { 'usa-new_york-cortland' }
     let(:existing_region_id) { 1 }
     context 'when code exists' do
-      it 'returns the id' do
-        expect(described_class.find_or_create_region_code_for(region_code: existing_region_code)).to eq existing_region_id
+      it 'returns the an instance of the described_class' do
+        result = described_class.find_or_create_region_code_for(region_code: existing_region_code)
+        expect(result).to be_kind_of described_class
+        expect(result.id).to eq existing_region_id
+        expect(result.region_code).to eq existing_region_code
       end
     end
 
@@ -20,7 +23,10 @@ RSpec.describe CovidTracker::Region do
       let(:non_existent_region_code) { 'usa-colorado-broomfield' }
       let(:new_region_id) { 2 }
       it 'creates a record for the code and returns the id' do
-        expect(described_class.find_or_create_region_code_for(region_code: non_existent_region_code)).to eq new_region_id
+        result = described_class.find_or_create_region_code_for(region_code: non_existent_region_code)
+        expect(result).to be_kind_of described_class
+        expect(result.id).to eq new_region_id
+        expect(result.region_code).to eq non_existent_region_code
       end
     end
   end

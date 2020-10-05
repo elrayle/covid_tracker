@@ -47,7 +47,7 @@ module CovidTracker
         region_data = []
         (days - 1).downto(0) do |day_idx|
           region_datum = fetch_for_date(last_day, day_idx, region_registration)
-          region_datum.error? && can_shift(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
+          region_datum.error? && can_shift?(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
         end
         CovidTracker::RegionResults.new(region_registration: region_registration, region_data: region_data)
       end
@@ -93,14 +93,20 @@ module CovidTracker
         date_str = time_period_service.str_date_from_idx(last_day, day_idx)
         datum = fetch_from_cache(region_registration: region_registration, date: date_str)
         return datum unless datum.blank?
-        raw_datum = authority_class.new.find_for(region_registration: region_registration, date: date_str)
-        CovidTracker::RegionDatum.for(raw_datum)
+        fetch_via_api(region_registration: region_registration, date: date_str)
       end
 
-      def fetch_from_cache(region_registration:, date:) # rubocop:disable Lint/UnusedMethodArgument
-        # TODO: add code to fetch from db cache
-        #       STUBBED to never find in cache
-        nil
+      def fetch_from_cache(region_registration:, date:)
+        count_data = CovidTracker::RegionCount.find_by(region_code: region_registration.code, date: date)
+        return if count_data.empty?
+        CovidTracker::RegionDatum.parse_datum(region_registration: region_registration, count_data: count_data.first)
+      end
+
+      def fetch_via_api(region_registration:, date:)
+        raw_datum = authority_class.new.find_for(region_registration: region_registration, date: date)
+        datum = CovidTracker::RegionDatum.for(raw_datum)
+        CovidTracker::RegionCount.for(region_code: region_registration.code, region_datum: datum)
+        datum
       end
 
       def region_data_from_region_results(region_results)

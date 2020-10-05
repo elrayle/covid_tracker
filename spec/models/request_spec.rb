@@ -56,4 +56,18 @@ RSpec.describe CovidTracker::Request do
       end
     end
   end
+
+  describe '.parse_request' do
+    include_context "shared raw request dates"
+    include_context "shared region registration 1"
+
+    let(:request) { described_class.parse_request(region_registration: region_registration_1, date: raw_request_date_1) }
+
+    it 'returns populated request' do
+      expect(request.date).to eq raw_request_date_1
+      expect(request.country_iso).to eq region_registration_1.country_iso
+      expect(request.province_state).to eq region_registration_1.province_state
+      expect(request.admin2_county).to eq region_registration_1.admin2_county
+    end
+  end
 end

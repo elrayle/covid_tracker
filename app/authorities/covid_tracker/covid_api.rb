@@ -48,8 +48,8 @@ module CovidTracker
     # @example returned json hash
     #   {
     #     result: {
-    #       id: "2020-05-31_usa-new_york-cortland",
-    #       label: "Cortland, New York, USA (2020-05-31)",
+    #       result_code: "2020-05-31_usa-new_york-cortland",
+    #       result_label: "Cortland, New York, USA (2020-05-31)",
     #       region_code: "usa-new_york-cortland",
     #       region_label: "Cortland, New York, USA",
     #       date: "2020-05-31",
@@ -137,16 +137,16 @@ module CovidTracker
                                                                   admin2_county: params.fetch('admin2_county', nil))
     end
 
-    def id
+    def result_code
       date + '_' + region_code
+    end
+
+    def result_label
+      region_label + " (#{date})"
     end
 
     def region_code
       region_registration.code
-    end
-
-    def label
-      region_label + " (#{date})"
     end
 
     def region_label
