@@ -47,7 +47,13 @@ module CovidTracker
         region_data = []
         (days - 1).downto(0) do |day_idx|
           region_datum = fetch_for_date(last_day, day_idx, region_registration)
-          region_datum.error? && can_shift?(day_idx, last_day) ? shift(region_data, last_day, days, region_registration) : region_data << region_datum
+          if region_datum.error?
+            # Ignore errors that happen at the beginning of the series.
+            # Try to get one day earlier if can't get the latest date because the data may not be available yet.
+            shift(region_data, last_day, days, region_registration) if can_shift?(day_idx, last_day)
+          else
+            region_data << region_datum
+          end
         end
         CovidTracker::RegionResults.new(region_registration: region_registration, region_data: region_data)
       end
@@ -105,7 +111,7 @@ module CovidTracker
       def fetch_via_api(region_registration:, date:)
         raw_datum = authority_class.new.find_for(region_registration: region_registration, date: date)
         datum = CovidTracker::RegionDatum.for(raw_datum)
-        CovidTracker::RegionCount.for(region_code: region_registration.code, region_datum: datum)
+        CovidTracker::RegionCount.for(region_code: region_registration.code, region_datum: datum) unless datum.error?
         datum
       end
 

@@ -16,7 +16,7 @@ module CovidTracker
     def update_graphs(registered_regions: registry_class.registry)
       update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_WEEK)
       update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_MONTH)
-      # update_time_period_graphs(registered_regions: registered_regions, time_period: SINCE_MARCH) # TODO: when db cache is implemented, calculate these graphs
+      update_time_period_graphs(registered_regions: registered_regions, time_period: SINCE_MARCH)
     end
 
   private
