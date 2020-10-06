@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: usa-new_york-onondaga-30_days.html
-last_updated: Oct 5, 2020
+last_updated: Oct 6, 2020
 keywords: ["Onondaga, New York, USA", "This Month"]
 tags: ["usa-new_york-onondaga", "this_month"]
 sidebar: home_sidebar
