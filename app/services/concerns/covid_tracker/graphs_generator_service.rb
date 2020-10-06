@@ -30,22 +30,22 @@ module CovidTracker
       registered_regions.each do |region_registration|
         region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
 
-        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED)
-        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED)
-        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS)
-        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS)
+        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED, time_period: time_period)
+        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED, time_period: time_period)
+        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS, time_period: time_period)
+        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS, time_period: time_period)
       end
       registered_regions.empty? ? puts("Unable to retrieve data for graphs") : puts("#{days}-days Graph Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
-    def generate_graph_for_stat(region_results:, days:, stat_key:)
+    def generate_graph_for_stat(region_results:, days:, stat_key:, time_period:)
       region_data = region_results.region_data
       extracted_data = extract_graph_data(region_data: region_data, days: days, stat_key: stat_key)
       graph_info = graph_info(extracted_data: extracted_data, region_results: region_results, stat_key: stat_key, days: days)
       bar_info = extracted_data[:bar_info]
       graph_path = stat_graph_full_path(region_code: region_results.region_code,
                                         stat_key: stat_key,
-                                        days: days)
+                                        time_period: time_period)
       puts "  --  Writing graph to #{graph_path}" # rubocop:disable Rails/Output
       graph_service.create_gruff_graph(full_path: graph_path,
                                        graph_info: graph_info,
@@ -53,8 +53,8 @@ module CovidTracker
     end
 
     # passed to create_gruff_graph
-    def stat_graph_full_path(region_code:, stat_key:, days:)
-      graph_full_path(graph_filename(region_code: region_code, stat_key: stat_key, days: days))
+    def stat_graph_full_path(region_code:, stat_key:, time_period:)
+      graph_full_path(graph_filename(region_code: region_code, stat_key: stat_key, time_period: time_period))
     end
 
     # used to create path passed to create_gruff_graph
@@ -62,8 +62,8 @@ module CovidTracker
       Rails.root.join(IMAGE_DIRECTORY, graph_filename)
     end
 
-    def graph_filename(region_code:, stat_key:, days:)
-      "#{region_code}-#{stat_key}-#{days}_days_graph.png"
+    def graph_filename(region_code:, stat_key:, time_period:)
+      "#{region_code}-#{stat_key}-#{time_period_service.short_form(time_period)}_graph.png"
     end
   end
 end
