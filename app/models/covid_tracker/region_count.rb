@@ -65,7 +65,7 @@ module CovidTracker
       # @param count_datum [CovidTracker::RegionCounts] the instance getting cumulative_7_days updated
       # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
       def update_cumulative_7_days(count_datum, region_code)
-        return count_datum if count_datum.cumulative_7_days&.positive? || count_datum.cumulative_7_days.zero?
+        return count_datum if count_datum.cumulative_7_days&.positive? || count_datum.cumulative_7_days&.zero?
         count_datum.cumulative_7_days = calculate_cumulative_7_days(count_datum.delta_confirmed, region_code, count_datum.date)
         count_datum.save
         count_datum

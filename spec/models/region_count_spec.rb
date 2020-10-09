@@ -17,6 +17,7 @@ RSpec.describe CovidTracker::RegionCount do
   it { is_expected.to respond_to(:delta_confirmed) }
   it { is_expected.to respond_to(:cumulative_deaths) }
   it { is_expected.to respond_to(:delta_deaths) }
+  it { is_expected.to respond_to(:cumulative_7_days) }
 
   describe '.find_by' do
     let(:existing_region_code) { 'usa-georgia-evans' }

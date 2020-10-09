@@ -123,5 +123,6 @@ fi
 if [ "$GEN_GRAPHS" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating graphs...'
-    rails runner "CovidTracker::SiteGeneratorService.update_graphs"
+    rails runner "CovidTracker::SiteGeneratorService.update_daily_graphs"
+    rails runner "CovidTracker::SiteGeneratorService.update_weekly_graphs"
 fi

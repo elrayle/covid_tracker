@@ -22,13 +22,15 @@ module CovidTracker
       include CovidTracker::PagesGeneratorService
       include CovidTracker::SidebarGeneratorService
       include CovidTracker::GraphDataService
-      include CovidTracker::GraphsGeneratorService
+      include CovidTracker::DailyGraphsGeneratorService
+      include CovidTracker::WeeklyGraphsGeneratorService
 
       def update_site
         registered_regions = registry_class.registry
         update_pages(registered_regions: registered_regions)
         update_sidebar(registered_regions: registered_regions)
-        update_graphs(registered_regions: registered_regions)
+        update_daily_graphs(registered_regions: registered_regions)
+        update_weekly_graphs(registered_regions: registered_regions)
       end
     end
   end
