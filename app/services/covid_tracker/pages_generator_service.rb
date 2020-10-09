@@ -8,9 +8,9 @@ module CovidTracker
 
     PAGE_DIRECTORY = File.join("docs", "pages", "covid_tracker")
 
-    THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
-    THIS_MONTH = CovidTracker::SiteGeneratorService::THIS_MONTH
-    SINCE_MARCH = CovidTracker::SiteGeneratorService::SINCE_MARCH
+    THIS_WEEK = time_period_service::THIS_WEEK
+    THIS_MONTH = time_period_service::THIS_MONTH
+    SINCE_MARCH = time_period_service::SINCE_MARCH
 
     ALL_REGIONS_LABEL = CovidTracker::SiteGeneratorService::ALL_REGIONS_LABEL
     ALL_REGIONS_CODE = CovidTracker::SiteGeneratorService::ALL_REGIONS_CODE

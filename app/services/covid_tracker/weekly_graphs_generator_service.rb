@@ -4,23 +4,29 @@ require 'covid_tracker/keys'
 
 # This class generates graphs for each stat tracked.
 module CovidTracker
-  module WeeklyGraphsGeneratorService
+  class WeeklyGraphsGeneratorService
+    class_attribute :registry_class, :data_service, :data_retrieval_service, :graph_service, :time_period_service
+    self.registry_class = CovidTracker::RegionRegistry
+    self.data_service = CovidTracker::DataService
+    self.data_retrieval_service = CovidTracker::DataRetrievalService
+    self.graph_service = CovidTracker::GruffGraphService
+    self.time_period_service = CovidTracker::TimePeriodService
+
+    include CovidTracker::GraphDataService
+
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
 
-    SINCE_MARCH = CovidTracker::SiteGeneratorService::SINCE_MARCH
+    SINCE_MARCH = time_period_service::SINCE_MARCH
 
-    # Update all graphs for all time periods.
+    attr_reader :registered_regions
+
     # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
-    def update_weekly_graphs(registered_regions: registry_class.registry)
-      update_7_days_graph(registered_regions: registered_regions)
+    def initialize(registered_regions: registry_class.registry)
+      @registered_regions = registered_regions
     end
 
-  private
-
     # Generate weekly graphs for all regions
-    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
-    # @see CovidTracker::DataService
-    def update_7_days_graph(registered_regions:)
+    def update_cumulative_weekly_totals_graphs
       days = time_period_service.days(SINCE_MARCH)
       registered_regions.each do |region_registration|
         region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
@@ -28,6 +34,8 @@ module CovidTracker
       end
       registered_regions.empty? ? puts("Unable to retrieve data for weekly graphs") : puts("Weekly Graph Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output, Metrics/LineLength
     end
+
+  private
 
     def generate_weekly_graph(region_results:)
       stat_key = CovidTracker::ResultKeys::CUMULATIVE_7_DAYS_CONFIRMED

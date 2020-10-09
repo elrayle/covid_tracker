@@ -8,7 +8,6 @@ module CovidTracker
       # @param full_path [String] full path + file name for graph write location
       # @param graph_info [String] settings that impact the entire graph (see graph_info method)
       # @param bar_info [Array<Hash>] settings that impact each bar in the graph (see bar_info method)
-      # @see CovidTracker::DataService
       def create_gruff_graph(full_path:, graph_info:, bar_info:)
         g = Gruff::Bar.new('800x400')
         graph_theme(g, graph_info, color(bar_info))

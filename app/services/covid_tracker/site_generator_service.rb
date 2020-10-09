@@ -2,16 +2,8 @@
 
 module CovidTracker
   class SiteGeneratorService
-    class_attribute :registry_class, :data_service, :data_retrieval_service, :graph_service, :time_period_service
+    class_attribute :registry_class
     self.registry_class = CovidTracker::RegionRegistry
-    self.data_service = CovidTracker::DataService
-    self.data_retrieval_service = CovidTracker::DataRetrievalService
-    self.graph_service = CovidTracker::GruffGraphService
-    self.time_period_service = CovidTracker::TimePeriodService
-
-    THIS_WEEK = time_period_service::THIS_WEEK
-    THIS_MONTH = time_period_service::THIS_MONTH
-    SINCE_MARCH = time_period_service::SINCE_MARCH
 
     ALL_REGIONS_LABEL = "All Regions"
     ALL_REGIONS_CODE = "all_regions"
@@ -19,16 +11,22 @@ module CovidTracker
     # @param days [Integer] number of days of data to fetch
     # @return [Hash] full set of data for all configured regions - see example in class documentation
     class << self
-      include CovidTracker::GraphDataService
-      include CovidTracker::DailyGraphsGeneratorService
-      include CovidTracker::WeeklyGraphsGeneratorService
-
       def update_site
         registered_regions = registry_class.registry
         update_pages(registered_regions: registered_regions)
         update_sidebar(registered_regions: registered_regions)
         update_daily_graphs(registered_regions: registered_regions)
         update_weekly_graphs(registered_regions: registered_regions)
+      end
+
+      def update_weekly_graphs(registered_regions: registry_class.registry)
+        generator = CovidTracker::WeeklyGraphsGeneratorService.new(registered_regions: registered_regions)
+        generator.update_cumulative_weekly_totals_graphs
+      end
+
+      def update_daily_graphs(registered_regions: registry_class.registry)
+        generator = CovidTracker::DailyGraphsGeneratorService.new(registered_regions: registered_regions)
+        generator.update_daily_graphs
       end
 
       def update_pages(registered_regions: registry_class.registry)
