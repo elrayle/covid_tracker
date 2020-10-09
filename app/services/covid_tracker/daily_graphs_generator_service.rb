@@ -28,7 +28,7 @@ module CovidTracker
     end
 
     # Update all graphs for all time periods.
-    def update_daily_graphs
+    def update_graphs
       update_time_period_graphs(time_period: THIS_WEEK)
       update_time_period_graphs(time_period: THIS_MONTH)
       update_time_period_graphs(time_period: SINCE_MARCH)

@@ -15,6 +15,7 @@ module CovidTracker
     include CovidTracker::GraphDataService
 
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
+    FILE_POSTFIX = "-weekly_totals"
 
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
@@ -26,7 +27,7 @@ module CovidTracker
     end
 
     # Generate weekly graphs for all regions
-    def update_cumulative_weekly_totals_graphs
+    def update_graphs
       days = time_period_service.days(SINCE_MARCH)
       registered_regions.each do |region_registration|
         region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
@@ -51,8 +52,8 @@ module CovidTracker
     end
 
     # passed to create_gruff_graph
-    def weekly_graph_full_path(region_code:, stat_key:)
-      graph_full_path(weekly_graph_filename(region_code: region_code, stat_key: stat_key))
+    def weekly_graph_full_path(region_code:)
+      graph_full_path(weekly_graph_filename(region_code: region_code))
     end
 
     # used to create path passed to create_gruff_graph
@@ -60,8 +61,8 @@ module CovidTracker
       Rails.root.join(IMAGE_DIRECTORY, graph_filename)
     end
 
-    def weekly_graph_filename(region_code:, stat_key:)
-      "#{region_code}-#{stat_key}_graph.png"
+    def weekly_graph_filename(region_code:)
+      "#{region_code}#{FILE_POSTFIX}_graph.png"
     end
   end
 end
