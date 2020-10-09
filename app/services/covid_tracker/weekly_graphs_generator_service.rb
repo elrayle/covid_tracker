@@ -52,8 +52,8 @@ module CovidTracker
     end
 
     # passed to create_gruff_graph
-    def weekly_graph_full_path(region_code:, stat_key:)
-      graph_full_path(weekly_graph_filename(region_code: region_code,))
+    def weekly_graph_full_path(region_code:)
+      graph_full_path(weekly_graph_filename(region_code: region_code))
     end
 
     # used to create path passed to create_gruff_graph
