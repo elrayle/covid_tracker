@@ -19,7 +19,6 @@ module CovidTracker
     # @param days [Integer] number of days of data to fetch
     # @return [Hash] full set of data for all configured regions - see example in class documentation
     class << self
-      include CovidTracker::PagesGeneratorService
       include CovidTracker::GraphDataService
       include CovidTracker::DailyGraphsGeneratorService
       include CovidTracker::WeeklyGraphsGeneratorService
@@ -30,6 +29,11 @@ module CovidTracker
         update_sidebar(registered_regions: registered_regions)
         update_daily_graphs(registered_regions: registered_regions)
         update_weekly_graphs(registered_regions: registered_regions)
+      end
+
+      def update_pages(registered_regions: registry_class.registry)
+        generator = CovidTracker::PagesGeneratorService.new(registered_regions: registered_regions)
+        generator.update_pages
       end
 
       def update_sidebar(registered_regions: registry_class.registry)

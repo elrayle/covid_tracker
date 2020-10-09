@@ -74,7 +74,7 @@ module CovidTracker
 
     def generate_time_period_page(label, code, time_period)
       "    - title: #{label}
-      url: /#{CovidTracker::SiteGeneratorService.page_file_name(code, time_period)}.html
+      url: /#{CovidTracker::PagesGeneratorService.page_file_name(code, time_period)}.html
       output: web, pdf
 
 "
