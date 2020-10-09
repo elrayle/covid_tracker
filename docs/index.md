@@ -6,7 +6,7 @@ permalink: index.html
 toc: false
 ---
 <div class="row">
-   <div class="col-md-4 col-sm-6">
+   <div class="col-md-3 col-sm-6">
        <div class="panel panel-default text-center">
            <div class="panel-heading">
                <span class="fa-stack fa-5x">
@@ -21,7 +21,7 @@ toc: false
            </div>
        </div>
    </div>
-   <div class="col-md-4 col-sm-6">
+   <div class="col-md-3 col-sm-6">
        <div class="panel panel-default text-center">
            <div class="panel-heading">
                <span class="fa-stack fa-5x">
@@ -36,7 +36,7 @@ toc: false
            </div>
        </div>
    </div>
-   <div class="col-md-4 col-sm-6">
+   <div class="col-md-3 col-sm-6">
        <div class="panel panel-default text-center">
            <div class="panel-heading">
                <span class="fa-stack fa-5x">
@@ -48,6 +48,21 @@ toc: false
                <h4>Since March</h4>
                <p>Graphs for each region including data since March 2020.</p>
                <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
+           </div>
+       </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+       <div class="panel panel-default text-center">
+           <div class="panel-heading">
+               <span class="fa-stack fa-5x">
+                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
+               </span>
+           </div>
+           <div class="panel-body">
+               <h4>Weekly Totals</h4>
+               <p>Graphs for each region with all data totaled by week.</p>
+               <a href="all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>

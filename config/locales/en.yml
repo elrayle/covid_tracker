@@ -46,6 +46,6 @@ en:
       delta_confirmed_graph_title: Change in Confirmed Cases for %{region_label}
       cumulative_deaths_graph_title: Cumulative Confirmed Deaths for %{region_label}
       delta_deaths_graph_title: Change in Confirmed Deaths for %{region_label}
-      cumulative_7_days_confirmed_graph_title: Weekly Totals for %{region_label}
+      cumulative_7_days_confirmed_graph_title: Weekly Confirmed Cases Totals for %{region_label}
       last_updated: Last updated on %{data}
 

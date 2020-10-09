@@ -117,12 +117,13 @@ fi
 if [ "$GEN_PAGES" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating pages...'
-    rails runner "CovidTracker::SiteGeneratorService.update_pages"
+    rails runner "CovidTracker::SiteGeneratorService.update_daily_pages"
+    rails runner "CovidTracker::SiteGeneratorService.update_weekly_pages"
 fi
 
 if [ "$GEN_GRAPHS" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating graphs...'
-    rails runner "CovidTracker::SiteGeneratorService.update_daily_graphs"
     rails runner "CovidTracker::SiteGeneratorService.update_weekly_graphs"
+    rails runner "CovidTracker::SiteGeneratorService.update_daily_graphs"
 fi

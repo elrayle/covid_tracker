@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module CovidTracker
-  class PagesGeneratorService
+  class DailyPagesGeneratorService
     class_attribute :registry_class, :time_period_service
     self.registry_class = CovidTracker::RegionRegistry
     self.time_period_service = CovidTracker::TimePeriodService

@@ -42,6 +42,7 @@ module CovidTracker
       sidebar += generate_time_period_section(THIS_WEEK)
       sidebar += generate_time_period_section(THIS_MONTH)
       sidebar += generate_time_period_section(SINCE_MARCH)
+      sidebar += generate_weekly_totals_section
       sidebar
     end
 
@@ -74,7 +75,34 @@ module CovidTracker
 
     def generate_time_period_page(label, code, time_period)
       "    - title: #{label}
-      url: /#{CovidTracker::PagesGeneratorService.page_file_name(code, time_period)}.html
+      url: /#{CovidTracker::DailyPagesGeneratorService.page_file_name(code, time_period)}.html
+      output: web, pdf
+
+"
+    end
+
+    def generate_weekly_totals_section
+      body = generate_weekly_totals_header
+      body += generate_weekly_totals_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE)
+      registered_regions.each do |registration|
+        label = registration.label
+        code = registration.code
+        body += generate_weekly_totals_page(label, code)
+      end
+      body
+    end
+
+    def generate_weekly_totals_header
+      "  - title: Weekly Totals
+    output: web, pdf
+    folderitems:
+
+"
+    end
+
+    def generate_weekly_totals_page(label, code)
+      "    - title: #{label}
+      url: /#{CovidTracker::WeeklyPagesGeneratorService.page_file_name(code)}.html
       output: web, pdf
 
 "
