@@ -78,17 +78,16 @@ module CovidTracker
       bar_data = []
       max_value = 0
       graph_idx = 0
-      offset = region_data.count % 7
+      count = region_data.count
       region_data.each_with_index do |datum, idx|
-        adjusted_idx = idx + offset
-        next unless (adjusted_idx % 7).zero?
-        graph_idx += 1
+        next unless weekly_data_point?(count, idx)
         result = datum.result
-        labels[graph_idx] = weekly_graph_label(result, adjusted_idx)
+        labels[graph_idx] = weekly_graph_label(count, result, idx)
         stat_value = result.send(stat_key)
         next unless stat_value&.positive?
         bar_data << stat_value
         max_value = stat_value if stat_value > max_value
+        graph_idx += 1
       end
       max_value = max_value > DEFAULT_MAX_VALUE ? max_value : DEFAULT_MAX_VALUE
       {
@@ -96,6 +95,24 @@ module CovidTracker
         max_value: max_value,
         bar_info: bar_info(bar_data, stat_key, max_value)
       }
+    end
+
+    def at_interval?(count, idx, interval)
+      offset = interval - (count % interval)
+      ((idx + offset) % interval).zero?
+    end
+
+    def weekly_data_point?(count, idx)
+      at_interval?(count, idx + 1, 7)
+    end
+
+    def display_weekly_label?(count, idx)
+      at_interval?(count, idx + 1, 28)
+    end
+
+    def weekly_graph_label(count, result, idx)
+      return " " unless display_weekly_label?(count, idx)
+      time_period_service.date_to_label(result.date)
     end
 
     def title(region_results:, stat_key:)
@@ -135,11 +152,6 @@ module CovidTracker
 
     def daily_graph_label(result, days, idx)
       return " " if days > 10 && idx.positive? && idx < days - 1
-      time_period_service.date_to_label(result.date)
-    end
-
-    def weekly_graph_label(result, idx)
-      return " " unless (idx % 28).zero?
       time_period_service.date_to_label(result.date)
     end
   end
