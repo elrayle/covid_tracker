@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_184739) do
+ActiveRecord::Schema.define(version: 2020_10_08_184752) do
 
   create_table "covid_tracker_region_counts", force: :cascade do |t|
     t.integer "region_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_09_19_184739) do
     t.integer "delta_deaths"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cumulative_7_days"
     t.index ["region_id"], name: "index_covid_tracker_region_counts_on_region_id"
   end
 

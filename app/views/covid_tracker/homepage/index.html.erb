@@ -13,6 +13,7 @@
         <tr>
           <th><%= t('covid_tracker.homepage.date') %></th>
           <th><%= t('covid_tracker.homepage.cumulative_confirmed') %></th>
+          <th><%= t('covid_tracker.homepage.cumulative_7_days_confirmed') %></th>
           <th><%= t('covid_tracker.homepage.delta_confirmed') %></th>
           <th><%= t('covid_tracker.homepage.cumulative_deaths') %></th>
           <th><%= t('covid_tracker.homepage.delta_deaths') %></th>
@@ -24,6 +25,7 @@
         <tr class="<%= @presenter.row_class(idx) %>">
           <td class="<%= @presenter.date_class(datum) %>"><%= @presenter.date(datum) %></td>
           <td class="<%= @presenter.cumulative_confirmed_class(datum) %>"><%= @presenter.cumulative_confirmed(datum) %></td>
+          <td class="<%= @presenter.cumulative_7_days_confirmed_class(datum) %>"><%= @presenter.cumulative_7_days_confirmed(datum) %></td>
           <td class="<%= @presenter.delta_confirmed_class(datum) %>"><%= @presenter.delta_confirmed(datum) %></td>
           <td class="<%= @presenter.cumulative_deaths_class(datum) %>"><%= @presenter.cumulative_deaths(datum) %></td>
           <td class="<%= @presenter.delta_deaths_class(datum) %>"><%= @presenter.delta_deaths(datum) %></td>
