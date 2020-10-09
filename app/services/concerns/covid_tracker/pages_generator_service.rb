@@ -19,11 +19,11 @@ module CovidTracker
       puts("Page Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
-  private
-
     def page_file_name(code, time_period)
       "#{code}-#{time_period_service.short_form(time_period)}"
     end
+
+  private
 
     def all_regions_file_name(time_period)
       "all_regions-#{time_period_service.short_form(time_period)}"

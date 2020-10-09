@@ -20,7 +20,6 @@ module CovidTracker
     # @return [Hash] full set of data for all configured regions - see example in class documentation
     class << self
       include CovidTracker::PagesGeneratorService
-      include CovidTracker::SidebarGeneratorService
       include CovidTracker::GraphDataService
       include CovidTracker::DailyGraphsGeneratorService
       include CovidTracker::WeeklyGraphsGeneratorService
@@ -31,6 +30,11 @@ module CovidTracker
         update_sidebar(registered_regions: registered_regions)
         update_daily_graphs(registered_regions: registered_regions)
         update_weekly_graphs(registered_regions: registered_regions)
+      end
+
+      def update_sidebar(registered_regions: registry_class.registry)
+        generator = CovidTracker::SidebarGeneratorService.new(registered_regions: registered_regions)
+        generator.update_sidebar
       end
     end
   end
