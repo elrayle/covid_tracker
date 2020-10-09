@@ -4,28 +4,41 @@ require 'covid_tracker/keys'
 
 # This class generates graphs for each stat tracked.
 module CovidTracker
-  module DailyGraphsGeneratorService
+  class DailyGraphsGeneratorService
+    class_attribute :registry_class, :data_service, :data_retrieval_service, :graph_service, :time_period_service
+    self.registry_class = CovidTracker::RegionRegistry
+    self.data_service = CovidTracker::DataService
+    self.data_retrieval_service = CovidTracker::DataRetrievalService
+    self.graph_service = CovidTracker::GruffGraphService
+    self.time_period_service = CovidTracker::TimePeriodService
+
+    include CovidTracker::GraphDataService
+
     IMAGE_DIRECTORY = File.join("docs", "images", "graphs")
 
-    THIS_WEEK = CovidTracker::SiteGeneratorService::THIS_WEEK
-    THIS_MONTH = CovidTracker::SiteGeneratorService::THIS_MONTH
-    SINCE_MARCH = CovidTracker::SiteGeneratorService::SINCE_MARCH
+    THIS_WEEK = time_period_service::THIS_WEEK
+    THIS_MONTH = time_period_service::THIS_MONTH
+    SINCE_MARCH = time_period_service::SINCE_MARCH
+
+    attr_reader :registered_regions
+
+    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
+    def initialize(registered_regions: registry_class.registry)
+      @registered_regions = registered_regions
+    end
 
     # Update all graphs for all time periods.
-    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
-    def update_daily_graphs(registered_regions: registry_class.registry)
-      update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_WEEK)
-      update_time_period_graphs(registered_regions: registered_regions, time_period: THIS_MONTH)
-      update_time_period_graphs(registered_regions: registered_regions, time_period: SINCE_MARCH)
+    def update_daily_graphs
+      update_time_period_graphs(time_period: THIS_WEEK)
+      update_time_period_graphs(time_period: THIS_MONTH)
+      update_time_period_graphs(time_period: SINCE_MARCH)
     end
 
   private
 
     # Generate all graphs for all regions for the last X days
-    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
     # @param time_period [Symbol] how much time should the graph cover
-    # @see CovidTracker::DataService
-    def update_time_period_graphs(registered_regions:, time_period:)
+    def update_time_period_graphs(time_period:)
       days = time_period_service.days(time_period)
       registered_regions.each do |region_registration|
         region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
