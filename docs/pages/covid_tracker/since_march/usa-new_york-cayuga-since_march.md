@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: usa-new_york-cayuga-since_march.html
-last_updated: Oct 9, 2020
+last_updated: Oct 10, 2020
 keywords: ["Cayuga, New York, USA", "Since March"]
 tags: ["usa-new_york-cayuga", "since_march"]
 sidebar: home_sidebar

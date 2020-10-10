@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: all_regions-weekly_totals.html
-last_updated: Oct 9, 2020
+last_updated: Oct 10, 2020
 keywords: ["All Regions", "weekly totals"]
 tags: ["all_regions", "weekly totals"]
 sidebar: home_sidebar
