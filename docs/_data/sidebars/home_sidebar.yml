@@ -162,3 +162,39 @@ entries:
       url: /usa-new_york-tioga-weekly_totals.html
       output: web, pdf
 
+  - title: By Region
+    output: web, pdf
+    folderitems:
+
+    - title: Cortland, New York, USA
+      url: /usa-new_york-cortland-by_region.html
+      output: web, pdf
+
+    - title: Tompkins, New York, USA
+      url: /usa-new_york-tompkins-by_region.html
+      output: web, pdf
+
+    - title: Broome, New York, USA
+      url: /usa-new_york-broome-by_region.html
+      output: web, pdf
+
+    - title: Onondaga, New York, USA
+      url: /usa-new_york-onondaga-by_region.html
+      output: web, pdf
+
+    - title: Cayuga, New York, USA
+      url: /usa-new_york-cayuga-by_region.html
+      output: web, pdf
+
+    - title: Madison, New York, USA
+      url: /usa-new_york-madison-by_region.html
+      output: web, pdf
+
+    - title: Chenango, New York, USA
+      url: /usa-new_york-chenango-by_region.html
+      output: web, pdf
+
+    - title: Tioga, New York, USA
+      url: /usa-new_york-tioga-by_region.html
+      output: web, pdf
+

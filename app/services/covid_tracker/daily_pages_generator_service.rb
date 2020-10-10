@@ -26,7 +26,7 @@ module CovidTracker
     def update_pages
       update_region_pages
       update_all_regions_pages
-      puts("Page Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
+      puts("Daily Page Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
     def self.page_file_name(code, time_period)

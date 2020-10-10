@@ -43,6 +43,7 @@ module CovidTracker
       sidebar += generate_time_period_section(THIS_MONTH)
       sidebar += generate_time_period_section(SINCE_MARCH)
       sidebar += generate_weekly_totals_section
+      sidebar += generate_by_region_section
       sidebar
     end
 
@@ -103,6 +104,32 @@ module CovidTracker
     def generate_weekly_totals_page(label, code)
       "    - title: #{label}
       url: /#{CovidTracker::WeeklyPagesGeneratorService.page_file_name(code)}.html
+      output: web, pdf
+
+"
+    end
+
+    def generate_by_region_section
+      body = generate_by_region_header
+      registered_regions.each do |registration|
+        label = registration.label
+        code = registration.code
+        body += generate_by_region_page(label, code)
+      end
+      body
+    end
+
+    def generate_by_region_header
+      "  - title: By Region
+    output: web, pdf
+    folderitems:
+
+"
+    end
+
+    def generate_by_region_page(label, code)
+      "    - title: #{label}
+      url: /#{CovidTracker::ByRegionPagesGeneratorService.page_file_name(code)}.html
       output: web, pdf
 
 "

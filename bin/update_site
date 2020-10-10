@@ -119,6 +119,7 @@ if [ "$GEN_PAGES" = true ]; then
     echo 'Generating pages...'
     rails runner "CovidTracker::SiteGeneratorService.update_daily_pages"
     rails runner "CovidTracker::SiteGeneratorService.update_weekly_pages"
+    rails runner "CovidTracker::SiteGeneratorService.update_by_region_pages"
 fi
 
 if [ "$GEN_GRAPHS" = true ]; then

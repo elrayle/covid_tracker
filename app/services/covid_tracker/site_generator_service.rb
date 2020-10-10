@@ -16,6 +16,7 @@ module CovidTracker
         update_sidebar(registered_regions: registered_regions)
         update_daily_pages(registered_regions: registered_regions)
         update_weekly_pages(registered_regions: registered_regions)
+        update_by_region_pages(registered_regions: registered_regions)
         update_daily_graphs(registered_regions: registered_regions)
         update_weekly_graphs(registered_regions: registered_regions)
       end
@@ -32,6 +33,12 @@ module CovidTracker
 
       def update_weekly_pages(registered_regions: registry_class.registry)
         generator = CovidTracker::WeeklyPagesGeneratorService.new(registered_regions: registered_regions)
+        generator.update_pages
+      end
+
+
+      def update_by_region_pages(registered_regions: registry_class.registry)
+        generator = CovidTracker::ByRegionPagesGeneratorService.new(registered_regions: registered_regions)
         generator.update_pages
       end
 
