@@ -381,6 +381,22 @@ ul#mysidebar {
     border-radius:0px;
 }
 
+li.sidebarTitle a {
+    background-color: white;
+    text-decoration: none;
+    color: #248EC2;
+    cursor: pointer;
+}
+
+li.sidebarTitle a:hover {
+    text-decoration: underline;
+    color: #248EC2;
+}
+
+li.sidebarTitle {
+    background-color: white;
+}
+
 .nav ul li ul li a {
     padding-left:40px;
 }
