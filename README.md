@@ -50,7 +50,8 @@ $ update_site -s -p -g
 
 -s generates the sidebar menu in to `/docs/_data/sidebars` <br />
 -p generates the pages showing the graphs in to `/docs/pages` <br />
--g generates the graphs in to `/docs/images/graphs`
+-g generates the graphs in to `/docs/images/graphs` <br />
+-h show help instructions
 
 ## Acknowlegements
 
