@@ -78,11 +78,9 @@ folder: covid_tracker/#{TAIL_DIRECTORY}/
 
     def generate_body(label, code)
       "
-<h3>Last 7 Days</h3>
+<h3>Weekly Totals Since March</h3>
 
-![Change in Confirmed Cases #{time_period_service.text_form(THIS_WEEK)} for #{label}](images/graphs/#{code}-delta_confirmed-#{time_period_service.short_form(THIS_WEEK)}_graph.png)
-
-![Change in Confirmed Deaths #{time_period_service.text_form(THIS_WEEK)} for #{label}](images/graphs/#{code}-delta_deaths-#{time_period_service.short_form(THIS_WEEK)}_graph.png)
+![Weekly Totals of Confirmed Cases for #{label}](images/graphs/#{code}#{CovidTracker::WeeklyPagesGeneratorService::FILE_POSTFIX}_graph.png)
 
 <h3>Last 30 Days</h3>
 
@@ -90,15 +88,17 @@ folder: covid_tracker/#{TAIL_DIRECTORY}/
 
 ![Change in Confirmed Deaths #{time_period_service.text_form(THIS_MONTH)} for #{label}](images/graphs/#{code}-delta_deaths-#{time_period_service.short_form(THIS_MONTH)}_graph.png)
 
+<h3>Last 7 Days</h3>
+
+![Change in Confirmed Cases #{time_period_service.text_form(THIS_WEEK)} for #{label}](images/graphs/#{code}-delta_confirmed-#{time_period_service.short_form(THIS_WEEK)}_graph.png)
+
+![Change in Confirmed Deaths #{time_period_service.text_form(THIS_WEEK)} for #{label}](images/graphs/#{code}-delta_deaths-#{time_period_service.short_form(THIS_WEEK)}_graph.png)
+
 <h3>Since March</h3>
 
 ![Change in Confirmed Cases #{time_period_service.text_form(SINCE_MARCH)} for #{label}](images/graphs/#{code}-delta_confirmed-#{time_period_service.short_form(SINCE_MARCH)}_graph.png)
 
 ![Change in Confirmed Deaths #{time_period_service.text_form(SINCE_MARCH)} for #{label}](images/graphs/#{code}-delta_deaths-#{time_period_service.short_form(SINCE_MARCH)}_graph.png)
-
-<h3>Weekly Totals Since March</h3>
-
-![Weekly Totals of Confirmed Cases for #{label}](images/graphs/#{code}#{CovidTracker::WeeklyPagesGeneratorService::FILE_POSTFIX}_graph.png)
 "
     end
   end

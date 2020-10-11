@@ -12,6 +12,9 @@ topnav_url: https://elrayle.github.io/covid_tracker_central_areas
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 site_title: Cortland County, NY Covid Tracker
 
+# this appears as the content title on the homepage for the area
+homepage_title: Cortland County, NY and Surround Counties
+
 # this appears at the top of the sidebar
 area_title: Cortland County, NY Area
 url: https://elrayle.github.io/covid_tracker

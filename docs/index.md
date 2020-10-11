@@ -1,23 +1,23 @@
 ---
-title: Cortland, NY and Surrounding Counties
 keywords: ["Guide", "Community"]
 sidebar: home_sidebar
 permalink: index.html
 toc: false
 ---
+<h2 class="homepage">{{site.homepage_title}}</h2>
 <div class="row">
    <div class="col-md-3 col-sm-6">
        <div class="panel panel-default text-center">
            <div class="panel-heading">
                <span class="fa-stack fa-5x">
                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-bar-chart-o fa-stack-1x fa-inverse"></i>
+                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
                </span>
            </div>
            <div class="panel-body">
-               <h4>This Week</h4>
-               <p>Graphs for each region including data from the past 7 days.</p>
-               <a href="all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
+               <h4>Weekly Totals</h4>
+               <p>Graphs for each region with all data totaled by week.</p>
+               <a href="all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -41,13 +41,13 @@ toc: false
            <div class="panel-heading">
                <span class="fa-stack fa-5x">
                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
+                     <i class="fa fa-bar-chart-o fa-stack-1x fa-inverse"></i>
                </span>
            </div>
            <div class="panel-body">
-               <h4>Since March</h4>
-               <p>Graphs for each region including data since March 2020.</p>
-               <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
+               <h4>This Week</h4>
+               <p>Graphs for each region including data from the past 7 days.</p>
+               <a href="all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -60,9 +60,9 @@ toc: false
                </span>
            </div>
            <div class="panel-body">
-               <h4>Weekly Totals</h4>
-               <p>Graphs for each region with all data totaled by week.</p>
-               <a href="all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
+               <h4>Since March</h4>
+               <p>Graphs for each region including data since March 2020.</p>
+               <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>

@@ -39,10 +39,10 @@ module CovidTracker
 
     def generate_sidebar
       sidebar = generate_sidebar_header
-      sidebar += generate_time_period_section(THIS_WEEK)
-      sidebar += generate_time_period_section(THIS_MONTH)
-      sidebar += generate_time_period_section(SINCE_MARCH)
       sidebar += generate_weekly_totals_section
+      sidebar += generate_time_period_section(THIS_MONTH)
+      sidebar += generate_time_period_section(THIS_WEEK)
+      sidebar += generate_time_period_section(SINCE_MARCH)
       sidebar += generate_by_region_section
       sidebar
     end
