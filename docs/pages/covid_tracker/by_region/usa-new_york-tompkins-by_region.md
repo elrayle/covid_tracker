@@ -8,11 +8,9 @@ sidebar: home_sidebar
 folder: covid_tracker/by_region/
 ---
 
-<h3>Last 7 Days</h3>
+<h3>Weekly Totals Since March</h3>
 
-![Change in Confirmed Cases This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_confirmed-7_days_graph.png)
-
-![Change in Confirmed Deaths This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_deaths-7_days_graph.png)
+![Weekly Totals of Confirmed Cases for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-weekly_totals_graph.png)
 
 <h3>Last 30 Days</h3>
 
@@ -20,12 +18,14 @@ folder: covid_tracker/by_region/
 
 ![Change in Confirmed Deaths This Month for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_deaths-30_days_graph.png)
 
+<h3>Last 7 Days</h3>
+
+![Change in Confirmed Cases This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_confirmed-7_days_graph.png)
+
+![Change in Confirmed Deaths This Week for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_deaths-7_days_graph.png)
+
 <h3>Since March</h3>
 
 ![Change in Confirmed Cases Since March for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_confirmed-since_march_graph.png)
 
 ![Change in Confirmed Deaths Since March for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-delta_deaths-since_march_graph.png)
-
-<h3>Weekly Totals Since March</h3>
-
-![Weekly Totals of Confirmed Cases for Tompkins, New York, USA](images/graphs/usa-new_york-tompkins-weekly_totals_graph.png)

@@ -34,7 +34,6 @@ en:
     application_name: 'Covid Region Tracker'
     tag_line: 'Visualizations for the Regions You Want to Track'
     homepage:
-      title: Covid Tracker for Cortland, NY and Surrounding Counties
       date: Date
       cumulative_confirmed: All Cumulative Confirmed Cases
       cumulative_7_days_confirmed: 7 Days of Cumulative Cases

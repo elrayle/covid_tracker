@@ -1,16 +1,20 @@
-# theme: documentation-theme-jekyll
-# repository: tomjohnson1492/documentation-theme-jekyll
+# theme: modified from documentation-theme-jekyll
+# original theme repository: tomjohnson1492/documentation-theme-jekyll
 
 # this property is useful for conditional filtering of content that is separate from the PDF.
 output: web
+
+# ----------------------------------------------------------------
+# Section of COMMON configs to change
+# ----------------------------------------------------------------
+
+# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
+site_title: Cortland County, NY Covid Tracker
 
 # this appears on the top navigation bar next to the home button
 topnav_title: Covid Tracker Central Areas
 topnav_tagline: Visualizations for the Regions You Want to Track
 topnav_url: https://elrayle.github.io/covid_tracker_central_areas
-
-# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-site_title: Cortland County, NY Covid Tracker
 
 # this appears as the content title on the homepage for the area
 homepage_title: Cortland County, NY and Surround Counties
@@ -19,15 +23,20 @@ homepage_title: Cortland County, NY and Surround Counties
 area_title: Cortland County, NY Area
 url: https://elrayle.github.io/covid_tracker
 
+# these appears in the footer
+company_name: elrayle
+organization_link: http://github.com/elrayle/
+organization_link_name: github.com/elrayle
+
+production_url : https://elrayle.github.io/covid_tracker
+BASE_PATH : https://elrayle.github.io/covid_tracker
+
 # Timezone
 tz: America/New_York
 
-# this appears in the footer
-company_name: elrayle
-
-# this appears in the footer
-organization_link: http://github.com/elrayle/
-organization_link_name: github.com/elrayle
+# ----------------------------------------------------------------
+# Uncommon to change remainder of configs
+# ----------------------------------------------------------------
 
 # this appears in the footer
 #community_link: https://github.com/elrayle
@@ -126,13 +135,10 @@ sidebars:
 # the description is used in the feed.xml file
 description: ""
 
-production_url : https://elrayle.github.io/covid_tracker
-BASE_PATH : https://elrayle.github.io/covid_tracker
-
 theme: jekyll-theme-minimal
 
 # needed for sitemap.xml file only
 plugins:
   - jekyll-sitemap
 
-github_pages_save_generated_files: ['browse_pages.html']
+#github_pages_save_generated_files: ['browse_pages.html']

@@ -1,11 +1,13 @@
 # Covid Tracker
 
-This is a Rails app that generates graphs tracking COVID-19 in registered regions.  The graphs generated include the following based on data from  - the last 7 days, the last 30 days.  Coming soon, it will also include all data since March 2020.
+This is a Rails app that generates graphs tracking COVID-19 in registered regions.  The graphs generated include the following based on data from  - the last 7 days, the last 30 days, and all data since March 2020.
  
 * cumulative confirmed cases 
 * daily change in confirmed cases
 * cumulative confirmed deaths
 * daily change in confirmed deaths
+
+It also generates graphs with weekly totals for each region.
 
 ## Prerequisites:
 
@@ -36,17 +38,19 @@ List of US state names: https://covid-api.com/api/provinces/usa
 
 List of country province names (substitute country's ISO code for `:iso`): https://covid-api.com/api/provinces/:iso 
 
+## Configuring the Jekyll theme for the area site
+
+Edit `/docs/_config.xml` and update the configs in Section of COMMON configs to change
+
 ## Generate graphs
 
 ```
-$ bundle exec rails c
->> CovidTracker::GraphingService.update_all_graphs(days: 7)
->> CovidTracker::GraphingService.update_all_graphs(days: 30)
+$ update_site -s -p -g
 ```
 
-This fetches the data for each day.  Eventually, the data will be cached in a local database to make data extraction performant.  At this time, it is not recommended generating graphs for all data since March 2020 as it will not perform well and could crash due to the quantity of data.
-
-At this time, the graphs are stored in /public/covid_tracker/charts.  The graphs have to be manually copied into the Jekyll site.  They also have to be renamed to the names expected in the pages in the Jekyll site.  The plan is to generate them directly into the Jekyll site.
+-s generates the sidebar menu in to `/docs/_data/sidebars` <br />
+-p generates the pages showing the graphs in to `/docs/pages` <br />
+-g generates the graphs in to `/docs/images/graphs`
 
 ## Acknowlegements
 
