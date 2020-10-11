@@ -381,16 +381,19 @@ ul#mysidebar {
     border-radius:0px;
 }
 
-li.sidebarTitle a {
+li.sidebarTitle a,
+li.sidebarTitle a:hover {
     background-color: white;
-    text-decoration: none;
     color: #248EC2;
     cursor: pointer;
 }
 
+li.sidebarTitle a {
+    text-decoration: none;
+}
+
 li.sidebarTitle a:hover {
     text-decoration: underline;
-    color: #248EC2;
 }
 
 li.sidebarTitle {
