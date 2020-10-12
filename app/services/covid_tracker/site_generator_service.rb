@@ -36,7 +36,6 @@ module CovidTracker
         generator.update_pages
       end
 
-
       def update_by_region_pages(registered_regions: registry_class.registry)
         generator = CovidTracker::ByRegionPagesGeneratorService.new(registered_regions: registered_regions)
         generator.update_pages
