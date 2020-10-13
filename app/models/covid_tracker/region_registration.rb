@@ -4,15 +4,30 @@ module CovidTracker
   class RegionRegistration
     attr_accessor :country_iso, :province_state, :admin2_county
 
-    # @param country_iso [String] country iso for the region at the center of this group of regions
-    # @param province_state [String] province or US state for the region at the center of this group of regions
-    # @param admin2_county [String] admin2 level or US county for the region at the center of this group of regions
+    # @param country_iso [String] country iso for the region
+    # @param province_state [String] province or US state for the region
+    # @param admin2_county [String] admin2 level or US county for the region
     # @returns [CovidTracker::RegionRegistration] new instance of this class
     def initialize(country_iso: nil, province_state: nil, admin2_county: nil)
       validate(country_iso, province_state, admin2_county)
       @country_iso = country_iso
       @province_state = province_state
       @admin2_county = admin2_county
+    end
+
+    # @param state [String] US state for the region
+    # @param county [String] US county for the region
+    # @returns [CovidTracker::RegionRegistration] new instance of this class
+    def self.for_usa(state: nil, county: nil)
+      self.for(country_iso: 'USA', province_state: state, admin2_county: county)
+    end
+
+    # @param country_iso [String] country iso for the region
+    # @param province_state [String] province or US state for the region
+    # @param admin2_county [String] admin2 level or US county for the region
+    # @returns [CovidTracker::RegionRegistration] new instance of this class
+    def self.for(country_iso: nil, province_state: nil, admin2_county: nil)
+      new(country_iso: country_iso, province_state: province_state, admin2_county: admin2_county)
     end
 
     # @returns [String] the code for the region (e.g. 'usa-alabama-wilcox')
