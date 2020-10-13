@@ -2,53 +2,59 @@
 
 module CovidTracker
   class SiteGeneratorService
-    class_attribute :registry_class
-    self.registry_class = CovidTracker::RegionRegistry
+    class_attribute :registry_class, :central_area_registry
+    self.registry_class = CovidTracker::CentralAreaRegistry
+    self.central_area_registry = CovidTracker::CentralAreaRegistry
 
     ALL_REGIONS_LABEL = "All Regions"
     ALL_REGIONS_CODE = "all_regions"
 
-    # @param days [Integer] number of days of data to fetch
-    # @return [Hash] full set of data for all configured regions - see example in class documentation
     class << self
       def update_site
-        registered_regions = registry_class.registry
-        update_sidebar(registered_regions: registered_regions)
-        update_daily_pages(registered_regions: registered_regions)
-        update_weekly_pages(registered_regions: registered_regions)
-        update_by_region_pages(registered_regions: registered_regions)
-        update_daily_graphs(registered_regions: registered_regions)
-        update_weekly_graphs(registered_regions: registered_regions)
+        update_sidebar
+        update_daily_pages
+        update_weekly_pages
+        update_by_region_pages
+        update_daily_graphs
+        update_weekly_graphs
       end
 
-      def update_sidebar(registered_regions: registry_class.registry)
-        generator = CovidTracker::SidebarGeneratorService.new(registered_regions: registered_regions)
-        generator.update_sidebar
+      # @param central_area_code [String] code for the area to generate; all areas if nil
+      def update_sidebar(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::SidebarGeneratorService.new(area: area).update_sidebar }
       end
 
-      def update_daily_pages(registered_regions: registry_class.registry)
-        generator = CovidTracker::DailyPagesGeneratorService.new(registered_regions: registered_regions)
-        generator.update_pages
+      def update_daily_pages(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::DailyPagesGeneratorService.new(area: area).update_pages }
       end
 
-      def update_weekly_pages(registered_regions: registry_class.registry)
-        generator = CovidTracker::WeeklyPagesGeneratorService.new(registered_regions: registered_regions)
-        generator.update_pages
+      def update_weekly_pages(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::WeeklyPagesGeneratorService.new(area: area).update_pages }
       end
 
-      def update_by_region_pages(registered_regions: registry_class.registry)
-        generator = CovidTracker::ByRegionPagesGeneratorService.new(registered_regions: registered_regions)
-        generator.update_pages
+      def update_by_region_pages(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::ByRegionPagesGeneratorService.new(area: area).update_pages }
       end
 
-      def update_daily_graphs(registered_regions: registry_class.registry)
-        generator = CovidTracker::DailyGraphsGeneratorService.new(registered_regions: registered_regions)
-        generator.update_graphs
+      def update_daily_graphs(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::DailyGraphsGeneratorService.new(area: area).update_graphs }
       end
 
-      def update_weekly_graphs(registered_regions: registry_class.registry)
-        generator = CovidTracker::WeeklyGraphsGeneratorService.new(registered_regions: registered_regions)
-        generator.update_graphs
+      def update_weekly_graphs(central_area_code: nil)
+        areas = areas(central_area_code)
+        areas.each { |area| CovidTracker::WeeklyGraphsGeneratorService.new(area: area).update_graphs }
+      end
+
+    private
+
+      def areas(central_area_code)
+        return central_area_registry.areas if central_area_code.blank?
+        [central_area_registry.find_by(code: central_area_code)]
       end
     end
   end
