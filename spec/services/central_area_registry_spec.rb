@@ -77,7 +77,7 @@ RSpec.describe CovidTracker::CentralAreaRegistry do
     context 'when regions is specified' do
       context 'and country iso is not specified' do
         it 'raises argument error exception' do
-          expect { described_class.register(regions: central_area_1_regions) }.to raise_error ArgumentError, 'missing keyword: country_iso'
+          expect { described_class.register(regions: central_area_1_regions) }.to raise_error ArgumentError
         end
       end
 
