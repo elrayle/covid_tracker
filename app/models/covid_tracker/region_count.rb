@@ -14,7 +14,7 @@ module CovidTracker
       # @returns [CovidTracker::RegionCount] saved instance of this class populated with the data
       def for(region_code:, region_datum:)
         region_count = new
-        region_count.region_id = CovidTracker::Region.find_or_create_region_code_for(region_code: region_code).id
+        region_count.region_id = CovidTracker::Region.find_or_create_region_for(region_code: region_code).id
         region_count.result_code = data_service.result_code(region_datum)
         region_count.result_label = data_service.result_label(region_datum)
         region_count.date = data_service.date(region_datum)
@@ -32,7 +32,7 @@ module CovidTracker
       # @param update [Boolean] if true, update 7 day cumulative count; otherwise, skip update if false
       # @returns [Array<CovidTracker::RegionCount>] instance of this class populated with the retrieved data
       def find_by(region_code:, date: nil, update: true)
-        region_id = CovidTracker::Region.find_or_create_region_code_for(region_code: region_code).id
+        region_id = CovidTracker::Region.find_or_create_region_for(region_code: region_code).id
         where_clause = { region_id: region_id }
         where_clause[:date] = date unless date.blank?
         count_data = where(where_clause)
