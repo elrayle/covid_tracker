@@ -5,8 +5,7 @@ require 'covid_tracker/keys'
 # This class generates graphs for each stat tracked.
 module CovidTracker
   class DailyGraphsGeneratorService
-    class_attribute :registry_class, :data_service, :data_retrieval_service, :graph_service, :time_period_service
-    self.registry_class = CovidTracker::RegionRegistry
+    class_attribute :data_service, :data_retrieval_service, :graph_service, :time_period_service
     self.data_service = CovidTracker::DataService
     self.data_retrieval_service = CovidTracker::DataRetrievalService
     self.graph_service = CovidTracker::GruffGraphService
@@ -20,11 +19,11 @@ module CovidTracker
     THIS_MONTH = time_period_service::THIS_MONTH
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
-    attr_reader :registered_regions
+    attr_reader :registered_regions # [Array<CovidTracker::RegionRegistration>]
 
-    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
-    def initialize(registered_regions: registry_class.registry)
-      @registered_regions = registered_regions
+    # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
+    def initialize(area:)
+      @registered_regions = area.regions
     end
 
     # Update all graphs for all time periods.

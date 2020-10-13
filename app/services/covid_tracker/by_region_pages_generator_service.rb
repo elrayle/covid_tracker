@@ -2,8 +2,7 @@
 
 module CovidTracker
   class ByRegionPagesGeneratorService
-    class_attribute :registry_class, :time_period_service
-    self.registry_class = CovidTracker::RegionRegistry
+    class_attribute :time_period_service
     self.time_period_service = CovidTracker::TimePeriodService
 
     TAIL_DIRECTORY = "by_region"
@@ -15,11 +14,11 @@ module CovidTracker
     THIS_MONTH = time_period_service::THIS_MONTH
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
-    attr_reader :registered_regions
+    attr_reader :registered_regions # [Array<CovidTracker::RegionRegistration>]
 
-    # @param registered_regions [Array<CovidTracker::RegionRegistration>] registered regions
-    def initialize(registered_regions: registry_class.registry)
-      @registered_regions = registered_regions
+    # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
+    def initialize(area:)
+      @registered_regions = area.regions
     end
 
     # Update all pages for all regions.

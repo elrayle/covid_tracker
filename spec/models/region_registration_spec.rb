@@ -13,18 +13,126 @@ RSpec.describe CovidTracker::RegionRegistration do
   end
 
   describe '.new' do
-    context 'when country is not specified' do
+    context 'when country_iso is not specified' do
       it 'raises Argument error' do
         expect { described_class.new }.to raise_error ArgumentError, 'country_iso is required'
       end
     end
 
-    context 'when country is specified' do
-      context 'and state is not specified' do
-        context 'and county is specified' do
+    context 'when country_iso is specified' do
+      context 'and province_state is not specified' do
+        context 'and admin2_county is not specified' do
+          let(:registration) { described_class.new(country_iso: 'DEU') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'deu'
+          end
+        end
+
+        context 'and admin2_county is specified' do
           it 'raises Argument error' do
             expect { described_class.new(country_iso: 'USA', admin2_county: 'Richmond') }
               .to raise_error ArgumentError, 'province_state must be defined to include admin2_county'
+          end
+        end
+      end
+
+      context 'and province_state is specified' do
+        context 'and admin2_county is not specified' do
+          let(:registration) { described_class.new(country_iso: 'USA', province_state: 'Georgia') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'usa-georgia'
+          end
+        end
+
+        context 'and admin2_county is specified' do
+          let(:registration) { described_class.new(country_iso: 'USA', province_state: 'Georgia', admin2_county: 'Richmond') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'usa-georgia-richmond'
+          end
+        end
+      end
+    end
+  end
+
+  describe '.for_usa' do
+    context 'when state is not specified' do
+      context 'and county is not specified' do
+        let(:registration) { described_class.for_usa }
+        it 'creates the registration' do
+          expect(registration).to be_kind_of described_class
+          expect(registration.code).to eq 'usa'
+        end
+      end
+
+      context 'and county is specified' do
+        it 'raises Argument error' do
+          expect { described_class.for_usa(county: 'Richmond') }
+            .to raise_error ArgumentError, 'province_state must be defined to include admin2_county'
+        end
+      end
+    end
+
+    context 'and state is specified' do
+      context 'and county is not specified' do
+        let(:registration) { described_class.for_usa(state: 'Georgia') }
+        it 'creates the registration' do
+          expect(registration).to be_kind_of described_class
+          expect(registration.code).to eq 'usa-georgia'
+        end
+      end
+
+      context 'and county is specified' do
+        let(:registration) { described_class.for_usa(state: 'Georgia', county: 'Richmond') }
+        it 'creates the registration' do
+          expect(registration).to be_kind_of described_class
+          expect(registration.code).to eq 'usa-georgia-richmond'
+        end
+      end
+    end
+  end
+
+  describe '.for' do
+    context 'when country_iso is not specified' do
+      it 'raises Argument error' do
+        expect { described_class.for }.to raise_error ArgumentError, 'country_iso is required'
+      end
+    end
+
+    context 'when country_iso is specified' do
+      context 'and province_state is not specified' do
+        context 'and admin2_county is not specified' do
+          let(:registration) { described_class.for(country_iso: 'DEU') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'deu'
+          end
+        end
+
+        context 'and admin2_county is specified' do
+          it 'raises Argument error' do
+            expect { described_class.for(country_iso: 'USA', admin2_county: 'Richmond') }
+              .to raise_error ArgumentError, 'province_state must be defined to include admin2_county'
+          end
+        end
+      end
+
+      context 'and province_state is specified' do
+        context 'and admin2_county is not specified' do
+          let(:registration) { described_class.for(country_iso: 'USA', province_state: 'Georgia') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'usa-georgia'
+          end
+        end
+
+        context 'and admin2_county is specified' do
+          let(:registration) { described_class.for(country_iso: 'USA', province_state: 'Georgia', admin2_county: 'Richmond') }
+          it 'creates the registration' do
+            expect(registration).to be_kind_of described_class
+            expect(registration.code).to eq 'usa-georgia-richmond'
           end
         end
       end
