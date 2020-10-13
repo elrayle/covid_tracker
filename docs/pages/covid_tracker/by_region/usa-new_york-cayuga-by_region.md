@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: usa-new_york-cayuga-by_region.html
-last_updated: Oct 12, 2020
+last_updated: Oct 13, 2020
 keywords: ["Cayuga, New York, USA", "by region"]
 tags: ["usa-new_york-cayuga", "by region"]
 sidebar: home_sidebar
