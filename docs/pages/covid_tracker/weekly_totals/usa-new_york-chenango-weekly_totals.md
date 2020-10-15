@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: usa-new_york-chenango-weekly_totals.html
-last_updated: Oct 14, 2020
+last_updated: Oct 15, 2020
 keywords: ["Chenango, New York, USA", "weekly totals"]
 tags: ["usa-new_york-chenango", "weekly totals"]
 sidebar: home_sidebar

@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: usa-new_york-chenango-since_march.html
-last_updated: Oct 14, 2020
+last_updated: Oct 15, 2020
 keywords: ["Chenango, New York, USA", "Since March"]
 tags: ["usa-new_york-chenango", "since_march"]
 sidebar: home_sidebar
