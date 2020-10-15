@@ -1,5 +1,5 @@
 ---
-keywords: ["Guide", "Community"]
+keywords: ["Cortland", "New York", "USA"]
 sidebar: home_sidebar
 permalink: index.html
 toc: false
@@ -17,7 +17,7 @@ toc: false
            <div class="panel-body">
                <h4>Weekly Totals</h4>
                <p>Graphs for each region with all data totaled by week.</p>
-               <a href="all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
+               <a href="/usa-new_york-cortland/weekly_totals/all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -32,7 +32,7 @@ toc: false
            <div class="panel-body">
                <h4>This Month</h4>
                <p>Graphs for each region including data from the past 30 days.</p>
-               <a href="all_regions-30_days.html" class="btn btn-primary">See Graphs</a>
+               <a href="/usa-new_york-cortland/this_month/all_regions-30_days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -47,7 +47,7 @@ toc: false
            <div class="panel-body">
                <h4>This Week</h4>
                <p>Graphs for each region including data from the past 7 days.</p>
-               <a href="all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
+               <a href="/usa-new_york-cortland/this_week/all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
@@ -62,7 +62,7 @@ toc: false
            <div class="panel-body">
                <h4>Since March</h4>
                <p>Graphs for each region including data since March 2020.</p>
-               <a href="all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
+               <a href="/usa-new_york-cortland/since_march/all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
            </div>
        </div>
    </div>
