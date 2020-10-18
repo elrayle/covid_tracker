@@ -15,17 +15,17 @@ module CovidTracker
     ALL_REGIONS_LABEL = CovidTracker::SiteGeneratorService::ALL_REGIONS_LABEL
     ALL_REGIONS_CODE = CovidTracker::SiteGeneratorService::ALL_REGIONS_CODE
 
-    attr_reader :central_area
+    attr_reader :registered_regions # [Array<CovidTracker::RegionRegistration>]
 
     # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
     def initialize(area:)
-      @central_area = area
+      @registered_regions = area.regions
     end
 
     # Update sidebar for all time periods.
     def update_sidebar
       write_sidebar
-      puts("Sidebar Generation Complete for #{central_area.regions.count} regions!") # rubocop:disable Rails/Output
+      puts("Sidebar Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output
     end
 
   private
@@ -58,10 +58,10 @@ module CovidTracker
     def generate_time_period_section(time_period)
       body = generate_time_period_header(time_period)
       body += generate_time_period_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE, time_period)
-      central_area.regions.each do |region|
-        region_label = region.label
-        region_code = region.code
-        body += generate_time_period_page(region_label, region_code, time_period)
+      registered_regions.each do |registration|
+        label = registration.label
+        code = registration.code
+        body += generate_time_period_page(label, code, time_period)
       end
       body
     end
@@ -74,9 +74,9 @@ module CovidTracker
 "
     end
 
-    def generate_time_period_page(region_label, region_code, time_period)
-      "    - title: #{region_label}
-      url: \"/#{CovidTracker::DailyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, time_period: time_period)}\"
+    def generate_time_period_page(label, code, time_period)
+      "    - title: #{label}
+      url: /#{CovidTracker::DailyPagesGeneratorService.page_file_name(code, time_period)}.html
       output: web, pdf
 
 "
@@ -85,10 +85,10 @@ module CovidTracker
     def generate_weekly_totals_section
       body = generate_weekly_totals_header
       body += generate_weekly_totals_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE)
-      central_area.regions.each do |region|
-        region_label = region.label
-        region_code = region.code
-        body += generate_weekly_totals_page(region_label, region_code)
+      registered_regions.each do |registration|
+        label = registration.label
+        code = registration.code
+        body += generate_weekly_totals_page(label, code)
       end
       body
     end
@@ -101,9 +101,9 @@ module CovidTracker
 "
     end
 
-    def generate_weekly_totals_page(region_label, region_code)
-      "    - title: #{region_label}
-      url: \"/#{CovidTracker::WeeklyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code)}\"
+    def generate_weekly_totals_page(label, code)
+      "    - title: #{label}
+      url: /#{CovidTracker::WeeklyPagesGeneratorService.page_file_name(code)}.html
       output: web, pdf
 
 "
@@ -111,10 +111,10 @@ module CovidTracker
 
     def generate_by_region_section
       body = generate_by_region_header
-      central_area.regions.each do |region|
-        region_label = region.label
-        region_code = region.code
-        body += generate_by_region_page(region_label, region_code)
+      registered_regions.each do |registration|
+        label = registration.label
+        code = registration.code
+        body += generate_by_region_page(label, code)
       end
       body
     end
@@ -127,9 +127,9 @@ module CovidTracker
 "
     end
 
-    def generate_by_region_page(region_label, region_code)
-      "    - title: #{region_label}
-      url: \"/#{CovidTracker::ByRegionPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code)}\"
+    def generate_by_region_page(label, code)
+      "    - title: #{label}
+      url: /#{CovidTracker::ByRegionPagesGeneratorService.page_file_name(code)}.html
       output: web, pdf
 
 "

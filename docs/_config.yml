@@ -38,8 +38,6 @@ tz: America/New_York
 # Uncommon to change remainder of configs
 # ----------------------------------------------------------------
 
-relative_permalinks: false
-
 # this appears in the footer
 #community_link: https://github.com/elrayle
 #community_link_name: Community Wiki
