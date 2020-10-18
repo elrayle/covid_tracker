@@ -4,7 +4,7 @@ permalink: /usa-new_york-cortland/by_region/usa-new_york-broome-by_region.html
 last_updated: Oct 18, 2020
 keywords: ["Broome, New York, USA", "by region"]
 sidebar: home_sidebar
-folder: usa-new_york-cortland/by_region/
+folder: /usa-new_york-cortland/by_region/
 ---
 
 <h3>Weekly Totals Since March</h3>
