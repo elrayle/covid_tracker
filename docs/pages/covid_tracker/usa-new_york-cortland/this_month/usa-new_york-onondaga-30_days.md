@@ -1,0 +1,12 @@
+---
+title: Onondaga, New York, USA
+permalink: /usa-new_york-cortland/this_month/usa-new_york-onondaga-30_days.html
+last_updated: Oct 18, 2020
+keywords: ["Onondaga, New York, USA", "This Month"]
+sidebar: home_sidebar
+folder: usa-new_york-cortland/this_month/
+---
+
+![Change in Confirmed Cases This Month for Onondaga, New York, USA](/images/graphs/usa-new_york-onondaga-delta_confirmed-30_days_graph.png)
+
+![Change in Confirmed Deaths This Month for Onondaga, New York, USA](/images/graphs/usa-new_york-onondaga-delta_deaths-30_days_graph.png)
