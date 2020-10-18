@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: usa-new_york-onondaga-weekly_totals.html
-last_updated: Oct 17, 2020
+last_updated: Oct 18, 2020
 keywords: ["Onondaga, New York, USA", "weekly totals"]
 tags: ["usa-new_york-onondaga", "weekly totals"]
 sidebar: home_sidebar

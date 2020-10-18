@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: usa-new_york-madison-since_march.html
-last_updated: Oct 17, 2020
+last_updated: Oct 18, 2020
 keywords: ["Madison, New York, USA", "Since March"]
 tags: ["usa-new_york-madison", "since_march"]
 sidebar: home_sidebar

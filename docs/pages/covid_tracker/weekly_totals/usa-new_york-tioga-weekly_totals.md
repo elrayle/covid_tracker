@@ -1,7 +1,7 @@
 ---
 title: Tioga, New York, USA
 permalink: usa-new_york-tioga-weekly_totals.html
-last_updated: Oct 17, 2020
+last_updated: Oct 18, 2020
 keywords: ["Tioga, New York, USA", "weekly totals"]
 tags: ["usa-new_york-tioga", "weekly totals"]
 sidebar: home_sidebar

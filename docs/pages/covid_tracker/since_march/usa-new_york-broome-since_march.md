@@ -1,7 +1,7 @@
 ---
 title: Broome, New York, USA
 permalink: usa-new_york-broome-since_march.html
-last_updated: Oct 17, 2020
+last_updated: Oct 18, 2020
 keywords: ["Broome, New York, USA", "Since March"]
 tags: ["usa-new_york-broome", "since_march"]
 sidebar: home_sidebar
