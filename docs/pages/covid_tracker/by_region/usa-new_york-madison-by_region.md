@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: usa-new_york-madison-by_region.html
-last_updated: Oct 18, 2020
+last_updated: Oct 19, 2020
 keywords: ["Madison, New York, USA", "by region"]
 tags: ["usa-new_york-madison", "by region"]
 sidebar: home_sidebar
