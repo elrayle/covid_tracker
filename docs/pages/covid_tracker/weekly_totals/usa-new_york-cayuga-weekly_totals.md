@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: usa-new_york-cayuga-weekly_totals.html
-last_updated: Oct 19, 2020
+last_updated: Oct 20, 2020
 keywords: ["Cayuga, New York, USA", "weekly totals"]
 tags: ["usa-new_york-cayuga", "weekly totals"]
 sidebar: home_sidebar
