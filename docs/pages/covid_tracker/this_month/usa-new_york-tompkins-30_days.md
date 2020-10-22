@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: usa-new_york-tompkins-30_days.html
-last_updated: Oct 21, 2020
+last_updated: Oct 22, 2020
 keywords: ["Tompkins, New York, USA", "This Month"]
 tags: ["usa-new_york-tompkins", "this_month"]
 sidebar: home_sidebar
