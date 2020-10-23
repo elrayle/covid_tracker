@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: usa-new_york-madison-weekly_totals.html
-last_updated: Oct 22, 2020
+last_updated: Oct 23, 2020
 keywords: ["Madison, New York, USA", "weekly totals"]
 tags: ["usa-new_york-madison", "weekly totals"]
 sidebar: home_sidebar

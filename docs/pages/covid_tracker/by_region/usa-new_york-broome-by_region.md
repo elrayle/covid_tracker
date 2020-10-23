@@ -1,7 +1,7 @@
 ---
 title: Broome, New York, USA
 permalink: usa-new_york-broome-by_region.html
-last_updated: Oct 22, 2020
+last_updated: Oct 23, 2020
 keywords: ["Broome, New York, USA", "by region"]
 tags: ["usa-new_york-broome", "by region"]
 sidebar: home_sidebar
