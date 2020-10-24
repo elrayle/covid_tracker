@@ -19,6 +19,15 @@ module CovidTracker
         update_weekly_graphs
       end
 
+      def local_testing?
+        ENV.fetch('LOCAL_TESTING', false) == 'true' ? true : false
+      end
+
+      # Get app directory
+      def app_dir
+        @app_dir ||= Dir.pwd.split(File::SEPARATOR)[-1]
+      end
+
       # @param central_area_code [String] code for the area to generate; all areas if nil
       def update_sidebar(central_area_code: nil)
         areas = areas(central_area_code)

@@ -11,7 +11,7 @@ RSpec.describe CovidTracker::CentralAreaRegistration do
                           province_state: province_state_label_central_area_1,
                           admin2_county: admin2_county_label_central_area_1,
                           regions: central_area_1_regions,
-                          tab_label: central_area_1_tab_label,
+                          sidebar_label: central_area_1_sidebar_label,
                           homepage_title: central_area_1_homepage_title)
     end
 
@@ -21,7 +21,7 @@ RSpec.describe CovidTracker::CentralAreaRegistration do
     it { is_expected.to respond_to(:province_state) }
     it { is_expected.to respond_to(:admin2_county) }
     it { is_expected.to respond_to(:regions) }
-    it { is_expected.to respond_to(:tab_label) }
+    it { is_expected.to respond_to(:sidebar_label) }
     it { is_expected.to respond_to(:homepage_title) }
   end
 
@@ -103,22 +103,22 @@ RSpec.describe CovidTracker::CentralAreaRegistration do
     end
   end
 
-  describe '#tab_label' do
+  describe '#sidebar_label' do
     context 'when not specified' do
       let(:registration) { described_class.new(regions: central_area_1_regions, country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome') }
       it "defaults to central area's label" do
-        expect(registration.tab_label).to eq 'Broome, New York, USA'
+        expect(registration.sidebar_label).to eq 'Broome, New York, USA'
       end
     end
 
     context 'when specified' do
-      let(:custom_tab_label) { 'Custom Tab Label' }
+      let(:custom_sidebar_label) { 'Custom Tab Label' }
       let(:registration) do
         described_class.new(regions: central_area_1_regions, country_iso: 'USA', province_state: 'New York',
-                            admin2_county: 'Broome', tab_label: custom_tab_label)
+                            admin2_county: 'Broome', sidebar_label: custom_sidebar_label)
       end
       it "returns passed in tab label" do
-        expect(registration.tab_label).to eq custom_tab_label
+        expect(registration.sidebar_label).to eq custom_sidebar_label
       end
     end
   end
