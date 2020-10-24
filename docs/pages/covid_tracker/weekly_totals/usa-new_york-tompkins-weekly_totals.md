@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: usa-new_york-tompkins-weekly_totals.html
-last_updated: Oct 23, 2020
+last_updated: Oct 24, 2020
 keywords: ["Tompkins, New York, USA", "weekly totals"]
 tags: ["usa-new_york-tompkins", "weekly totals"]
 sidebar: home_sidebar
