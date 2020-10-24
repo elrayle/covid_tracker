@@ -20,15 +20,13 @@ module CovidTracker
 
     class << self
       # @option central_area_code [String] code for the central area (e.g. 'usa-georgia-richmond')
-      # @param region_code [String] code for a region near the central area (e.g. 'all_regions', 'usa-georgia-columbia')
-      # @param time_period [Symbol] the time period covered by the page (e.g. THIS_WEEK, THIS_MONTH, SINCE_MARCH)
       # @returns [String] perma_link identifying path page in _site (e.g. 'usa-georgia-richmond/weekly_totals')
-      def perma_link(central_area_code:, region_code:, time_period:)
+      def perma_link(central_area_code:)
         file_parts = file_parts(central_area_code: central_area_code)
         file_service.perma_link(file_parts)
       end
 
-      private
+    private
 
       def file_parts(central_area_code:)
         parts = {}

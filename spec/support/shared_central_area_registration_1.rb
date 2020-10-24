@@ -10,7 +10,7 @@ RSpec.shared_context "shared central area registration 1", shared_context: :meta
   let(:central_area_1_region_2) { region_registration_2 }
   let(:central_area_1_regions) { [central_area_1_region_1, central_area_1_region_2] }
 
-  let(:central_area_1_tab_label) { "tab: #{region_registration_1.label}" }
+  let(:central_area_1_sidebar_label) { "tab: #{region_registration_1.label}" }
   let(:central_area_1_homepage_title) { "hpt: #{region_registration_1.label}" }
 
   let(:central_area_1_code) { region_1_code }
@@ -21,7 +21,7 @@ RSpec.shared_context "shared central area registration 1", shared_context: :meta
                                               province_state: province_state_label_central_area_1,
                                               admin2_county: admin2_county_label_central_area_1,
                                               regions: central_area_1_regions,
-                                              tab_label: central_area_1_tab_label,
+                                              sidebar_label: central_area_1_sidebar_label,
                                               homepage_title: central_area_1_homepage_title)
   end
 end
