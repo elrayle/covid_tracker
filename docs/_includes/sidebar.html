@@ -2,7 +2,7 @@
 
 <ul id="mysidebar" class="nav">
   {% for entry in sidebar %}
-  <li class="sidebarTitle"><a href="{{site}}{{entry.area_url}}">{{entry.title}}</a></li>
+  <li class="sidebarTitle"><a href="{{site.url}}/{{entry.area_url}}">{{entry.title}}</a></li>
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
   <li>
