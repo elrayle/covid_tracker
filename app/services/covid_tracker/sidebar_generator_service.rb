@@ -2,11 +2,12 @@
 
 module CovidTracker
   class SidebarGeneratorService # rubocop:disable Metrics/ClassLength
-    class_attribute :registry_class, :time_period_service
+    class_attribute :registry_class, :time_period_service, :file_service
     self.registry_class = CovidTracker::RegionRegistry
     self.time_period_service = CovidTracker::TimePeriodService
+    self.file_service = CovidTracker::FileService
 
-    SIDEBAR_FILE = File.join("docs", "_data", "sidebars", "home_sidebar.yml")
+    FILE_POSTFIX = "_sidebar"
 
     THIS_WEEK = time_period_service::THIS_WEEK
     THIS_MONTH = time_period_service::THIS_MONTH
@@ -17,6 +18,27 @@ module CovidTracker
 
     attr_reader :central_area
 
+    class << self
+      # @option central_area_code [String] code for the central area (e.g. 'usa-georgia-richmond')
+      # @param region_code [String] code for a region near the central area (e.g. 'all_regions', 'usa-georgia-columbia')
+      # @param time_period [Symbol] the time period covered by the page (e.g. THIS_WEEK, THIS_MONTH, SINCE_MARCH)
+      # @returns [String] perma_link identifying path page in _site (e.g. 'usa-georgia-richmond/weekly_totals')
+      def perma_link(central_area_code:, region_code:, time_period:)
+        file_parts = file_parts(central_area_code: central_area_code)
+        file_service.perma_link(file_parts)
+      end
+
+      private
+
+      def file_parts(central_area_code:)
+        parts = {}
+        parts[:file_type] = file_service::SIDEBAR_FILE_TYPE
+        parts[:central_area_code] = central_area_code
+        parts[:file_postfix] = FILE_POSTFIX
+        parts
+      end
+    end
+
     # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
     def initialize(area:)
       @central_area = area
@@ -25,16 +47,15 @@ module CovidTracker
     # Update sidebar for all time periods.
     def update_sidebar
       write_sidebar
-      puts("Sidebar Generation Complete for #{central_area.regions.count} regions!") # rubocop:disable Rails/Output
+      puts("Sidebar Generation Complete for #{central_area.regions.count} regions in area #{central_area.label}!") # rubocop:disable Rails/Output
     end
 
   private
 
     def write_sidebar
+      file_parts = self.class.send(:file_parts, central_area_code: central_area.code)
       sidebar = generate_sidebar
-      file = File.new(SIDEBAR_FILE, 'w')
-      file << sidebar
-      file.close
+      file_service.write_to_file(file_parts, sidebar)
     end
 
     def generate_sidebar
@@ -49,7 +70,8 @@ module CovidTracker
 
     def generate_sidebar_header
       "entries:
-- title: Sidebar Menu
+- title: #{central_area.sidebar_label}
+  area_url: \"#{central_area.code}\"
   folders:
 
 "
@@ -76,7 +98,7 @@ module CovidTracker
 
     def generate_time_period_page(region_label, region_code, time_period)
       "    - title: #{region_label}
-      url: \"/#{CovidTracker::DailyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, time_period: time_period)}\"
+      url: \"/#{CovidTracker::DailyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, time_period: time_period, include_app_dir: include_app_dir?)}\"
       output: web, pdf
 
 "
@@ -103,7 +125,7 @@ module CovidTracker
 
     def generate_weekly_totals_page(region_label, region_code)
       "    - title: #{region_label}
-      url: \"/#{CovidTracker::WeeklyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code)}\"
+      url: \"/#{CovidTracker::WeeklyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, include_app_dir: include_app_dir?)}\"
       output: web, pdf
 
 "
@@ -129,10 +151,14 @@ module CovidTracker
 
     def generate_by_region_page(region_label, region_code)
       "    - title: #{region_label}
-      url: \"/#{CovidTracker::ByRegionPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code)}\"
+      url: \"/#{CovidTracker::ByRegionPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, include_app_dir: include_app_dir?)}\"
       output: web, pdf
 
 "
+    end
+
+    def include_app_dir?
+      !CovidTracker::SiteGeneratorService.local_testing?
     end
   end
 end

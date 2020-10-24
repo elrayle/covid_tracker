@@ -1,8 +1,8 @@
 {% include custom/sidebarconfigs.html %}
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle"><a href="{{site.url}}">{{site.area_title}}</a></li>
   {% for entry in sidebar %}
+  <li class="sidebarTitle"><a href="{{site}}{{entry.area_url}}">{{entry.title}}</a></li>
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
   <li>
@@ -13,7 +13,7 @@
           {% if folderitem.external_url %}
           <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
           {% elsif page.url == folderitem.url %}
-          <li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+          <li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
           {% elsif folderitem.type == "empty" %}
           <li><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
 

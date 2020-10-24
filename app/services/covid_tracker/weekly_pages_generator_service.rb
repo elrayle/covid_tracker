@@ -23,27 +23,29 @@ module CovidTracker
       # @option central_area_code [String] code for the central area (e.g. 'usa-georgia-richmond')
       # @param region_code [String] code for a region near the central area (e.g. 'all_regions', 'usa-georgia-columbia')
       # @returns [String] perma_link identifying path page in _site (e.g. 'usa-georgia-richmond/weekly_totals')
-      def perma_link(central_area_code:, region_code:)
+      def perma_link(central_area_code:, region_code:, include_app_dir: false)
         target_file_parts ||= file_parts(central_area_code: central_area_code,
                                          region_code: region_code,
-                                         file_type: file_service::PAGE_TARGET_FILE_TYPE)
+                                         file_type: file_service::PAGE_TARGET_FILE_TYPE,
+                                         include_app_dir: include_app_dir)
         file_service.perma_link(target_file_parts)
       end
 
     private
 
-      def file_parts(central_area_code:, region_code:, file_type:)
+      def file_parts(central_area_code:, region_code:, file_type:, include_app_dir: false)
         parts = {}
         parts[:file_type] = file_type
         parts[:central_area_code] = central_area_code
         parts[:region_code] = region_code
         parts[:tail_directory] = TAIL_DIRECTORY
         parts[:file_postfix] = FILE_POSTFIX
+        parts[:include_app_dir] = include_app_dir
         parts
       end
     end
 
-    # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
+    # @param area [CovidTracker::CentralAreaRegistration] generate weekly pages for this area
     def initialize(area:)
       @central_area = area
     end
@@ -109,17 +111,9 @@ title: #{region_label}
 permalink: /#{self.class.perma_link(central_area_code: central_area.code, region_code: region_code)}
 last_updated: #{time_period_service.today_str}
 keywords: [\"#{region_label}\", \"#{KEYWORDS}\"]
-sidebar: home_sidebar
-folder: #{folder(region_code)}/
+sidebar: #{central_area.code}_sidebar
 ---
 "
-    end
-
-    def folder(region_code)
-      target_file_parts = self.class.send(:file_parts, central_area_code: central_area.code,
-                                                       region_code: region_code,
-                                                       file_type: file_service::PAGE_TARGET_FILE_TYPE)
-      file_service.area_relpath(target_file_parts)
     end
 
     def generate_body(region_label, region_code)
@@ -133,7 +127,12 @@ folder: #{folder(region_code)}/
     end
 
     def graph_path(region_code)
-      "/images/graphs/#{region_code}#{FILE_POSTFIX}_graph.png"
+      "#{app_dir}/images/graphs/#{region_code}#{FILE_POSTFIX}_graph.png"
+    end
+
+    def app_dir
+      return "" if CovidTracker::SiteGeneratorService.local_testing?
+      "/#{CovidTracker::SiteGeneratorService.app_dir}"
     end
   end
 end

@@ -21,10 +21,15 @@ fi
 GEN_PAGES=false
 GEN_GRAPHS=false
 GEN_SIDEBAR=false
+TEST_SITE=false
 
 for switch in "$@"
 do
     case $switch in
+        -t )
+                TEST_SITE=true
+                ;;
+
         -p )
                 GEN_PAGES=true
                 ;;
@@ -107,6 +112,8 @@ if [ "$SHOW_HELP" = true ]; then
 fi
 
 touch config/initializers/covid_regions.rb
+export LOCAL_TESTING=$TEST_SITE
+
 
 if [ "$GEN_SIDEBAR" = true ]; then
     echo '------------------------------------------------------'

@@ -14,7 +14,7 @@ site_title: Cortland County, NY Covid Tracker
 # this appears on the top navigation bar next to the home button
 topnav_title: Covid Tracker Central Areas
 topnav_tagline: Visualizations for the Regions You Want to Track
-topnav_url: https://elrayle.github.io/covid_tracker_central_areas
+topnav_url: https://elrayle.github.io/covid_tracker
 
 # this appears as the content title on the homepage for the area
 homepage_title: Cortland County, NY and Surround Counties

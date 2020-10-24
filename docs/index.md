@@ -1,71 +1,55 @@
 ---
-keywords: ["Cortland", "New York", "USA"]
-sidebar: home_sidebar
+title: Covid Tracker Central Areas
+layout: default_no_sidebar
 permalink: index.html
 toc: false
 ---
-<h2 class="homepage">{{site.homepage_title}}</h2>
-<div class="row">
-   <div class="col-md-3 col-sm-6">
-       <div class="panel panel-default text-center">
-           <div class="panel-heading">
-               <span class="fa-stack fa-5x">
-                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
-               </span>
-           </div>
-           <div class="panel-body">
-               <h4>Weekly Totals</h4>
-               <p>Graphs for each region with all data totaled by week.</p>
-               <a href="/usa-new_york-cortland/weekly_totals/all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
-           </div>
-       </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-       <div class="panel panel-default text-center">
-           <div class="panel-heading">
-               <span class="fa-stack fa-5x">
-                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
-               </span>
-           </div>
-           <div class="panel-body">
-               <h4>This Month</h4>
-               <p>Graphs for each region including data from the past 30 days.</p>
-               <a href="/usa-new_york-cortland/this_month/all_regions-30_days.html" class="btn btn-primary">See Graphs</a>
-           </div>
-       </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-       <div class="panel panel-default text-center">
-           <div class="panel-heading">
-               <span class="fa-stack fa-5x">
-                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-bar-chart-o fa-stack-1x fa-inverse"></i>
-               </span>
-           </div>
-           <div class="panel-body">
-               <h4>This Week</h4>
-               <p>Graphs for each region including data from the past 7 days.</p>
-               <a href="/usa-new_york-cortland/this_week/all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
-           </div>
-       </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-       <div class="panel panel-default text-center">
-           <div class="panel-heading">
-               <span class="fa-stack fa-5x">
-                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
-               </span>
-           </div>
-           <div class="panel-body">
-               <h4>Since March</h4>
-               <p>Graphs for each region including data since March 2020.</p>
-               <a href="/usa-new_york-cortland/since_march/all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
-           </div>
-       </div>
-   </div>
-</div>
 
-{% include links.html %}
+<!-- Navigation -->
+<!-- substantially changed - see https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/_includes/topnav.html -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://elrayle.github.io/covid_tracker/index.html" title="Covid Region Tracker">
+              <img class="company-logo" alt="Covid Region Tracker" src="https://elrayle.github.io/covid_tracker/images/covid_tracker_logo.png" />
+            </a>
+            <div class="navbar-sitetitle">
+              <a class="navbar-sitetitle" href="https://elrayle.github.io/covid_tracker/index.html" title="Covid Region Tracker">
+                Covid Region Tracker
+              </a>
+                <p class="navbar-tagline">Visualizations for the Regions You Want to Track</p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="col-lg-12">&nbsp;</div>
+  <!-- Content Row -->
+  <div class="row">
+    <!-- Content Column -->
+    <div class="col-lg-12">
+      <div class="post-header">
+        <h2 class="post-title-main">Covid Tracker Central Areas</h2>
+      </div>
+
+      <div class="post-content" style="margin: 30px 0 10px 50px">
+        <p><a href="usa-new_york-cortland.html">Cortland County, NY</a></p>
+        <p><a href="usa-georgia-columbia.html">Augusta, GA Metro</a></p>
+      </div>
+    </div>
+  </div>  
+  
+  <footer style="border-top: 1px solid">
+    <div class="row">
+      <div class="col-lg-12 footer">
+         &copy;2020 elrayle. All rights reserved. <br />
+         <a href="http://github.com/elrayle/covid_tracker/">github.com/elrayle/covid_tracker_areas</a><br />
+         <br />
+      </div>
+    </div>
+  </footer>
+
+<!-- /.container -->
+</div>

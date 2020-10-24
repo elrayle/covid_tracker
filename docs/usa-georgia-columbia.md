@@ -1,0 +1,71 @@
+---
+keywords: ["Augusta", "Georgia", "USA"]
+sidebar: usa-georgia-columbia_sidebar
+permalink: usa-georgia-columbia.html
+toc: false
+---
+<h2 class="homepage">Augusta, GA Metro Area</h2>
+<div class="row">
+   <div class="col-md-3 col-sm-6">
+       <div class="panel panel-default text-center">
+           <div class="panel-heading">
+               <span class="fa-stack fa-5x">
+                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
+               </span>
+           </div>
+           <div class="panel-body">
+               <h4>Weekly Totals</h4>
+               <p>Graphs for each region with all data totaled by week.</p>
+               <a href="/covid_tracker_augusta_ga/usa-georgia-columbia/weekly_totals/all_regions-weekly_totals.html" class="btn btn-primary">See Graphs</a>
+           </div>
+       </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+       <div class="panel panel-default text-center">
+           <div class="panel-heading">
+               <span class="fa-stack fa-5x">
+                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                     <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+               </span>
+           </div>
+           <div class="panel-body">
+               <h4>This Month</h4>
+               <p>Graphs for each region including data from the past 30 days.</p>
+               <a href="/covid_tracker_augusta_ga/usa-georgia-columbia/this_month/all_regions-30_days.html" class="btn btn-primary">See Graphs</a>
+           </div>
+       </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+       <div class="panel panel-default text-center">
+           <div class="panel-heading">
+               <span class="fa-stack fa-5x">
+                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                     <i class="fa fa-bar-chart-o fa-stack-1x fa-inverse"></i>
+               </span>
+           </div>
+           <div class="panel-body">
+               <h4>This Week</h4>
+               <p>Graphs for each region including data from the past 7 days.</p>
+               <a href="/covid_tracker_augusta_ga/usa-georgia-columbia/this_week/all_regions-7_days.html" class="btn btn-primary">See Graphs</a>
+           </div>
+       </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+       <div class="panel panel-default text-center">
+           <div class="panel-heading">
+               <span class="fa-stack fa-5x">
+                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                     <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
+               </span>
+           </div>
+           <div class="panel-body">
+               <h4>Since March</h4>
+               <p>Graphs for each region including data since March 2020.</p>
+               <a href="/covid_tracker_augusta_ga/usa-georgia-columbia/since_march/all_regions-since_march.html" class="btn btn-primary">See Graphs</a>
+           </div>
+       </div>
+   </div>
+</div>
+
+{% include links.html %}

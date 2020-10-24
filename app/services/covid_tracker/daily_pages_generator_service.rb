@@ -19,29 +19,31 @@ module CovidTracker
       # @option central_area_code [String] code for the central area (e.g. 'usa-georgia-richmond')
       # @param region_code [String] code for a region near the central area (e.g. 'all_regions', 'usa-georgia-columbia')
       # @param time_period [Symbol] the time period covered by the page (e.g. THIS_WEEK, THIS_MONTH, SINCE_MARCH)
-      # @returns [String] perma_link identifying path page in _site (e.g. 'usa-georgia-richmond/weekly_totals')
-      def perma_link(central_area_code:, region_code:, time_period:)
+      # @returns [String] perma_link identifying path page in _site (e.g. 'covid_tracker/usa-georgia-richmond/weekly_totals')
+      def perma_link(central_area_code:, region_code:, time_period:, include_app_dir: false)
         target_file_parts ||= file_parts(central_area_code: central_area_code,
                                          region_code: region_code,
                                          file_type: file_service::PAGE_TARGET_FILE_TYPE,
-                                         time_period: time_period)
+                                         time_period: time_period,
+                                         include_app_dir: include_app_dir)
         file_service.perma_link(target_file_parts)
       end
 
     private
 
-      def file_parts(central_area_code:, region_code:, file_type:, time_period:)
+      def file_parts(central_area_code:, region_code:, file_type:, time_period:, include_app_dir: false)
         parts = {}
         parts[:file_type] = file_type
         parts[:central_area_code] = central_area_code
         parts[:region_code] = region_code
         parts[:tail_directory] = time_period_service.long_form(time_period)
         parts[:file_postfix] = "-#{time_period_service.short_form(time_period)}"
+        parts[:include_app_dir] = include_app_dir
         parts
       end
     end
 
-    # @param area [CovidTracker::CentralAreaRegistration] generate sidebar for this area
+    # @param area [CovidTracker::CentralAreaRegistration] generate time period pages for this area
     def initialize(area:)
       @central_area = area
     end
@@ -113,18 +115,9 @@ title: #{region_label}
 permalink: /#{self.class.perma_link(central_area_code: central_area.code, region_code: region_code, time_period: time_period)}
 last_updated: #{time_period_service.today_str}
 keywords: [\"#{region_label}\", \"#{time_period_service.text_form(time_period)}\"]
-sidebar: home_sidebar
-folder: #{folder(region_code, time_period)}/
+sidebar: #{central_area.code}_sidebar
 ---
 "
-    end
-
-    def folder(region_code, time_period)
-      target_file_parts = self.class.send(:file_parts, central_area_code: central_area.code,
-                                                       region_code: region_code,
-                                                       time_period: time_period,
-                                                       file_type: file_service::PAGE_TARGET_FILE_TYPE)
-      file_service.area_relpath(target_file_parts)
     end
 
     def generate_body(region_label, region_code, time_period)
@@ -140,7 +133,12 @@ folder: #{folder(region_code, time_period)}/
     end
 
     def graph_path(region_code, time_period, stat_code)
-      "/images/graphs/#{region_code}-#{stat_code}-#{time_period_service.short_form(time_period)}_graph.png"
+      "#{app_dir}/images/graphs/#{region_code}-#{stat_code}-#{time_period_service.short_form(time_period)}_graph.png"
+    end
+
+    def app_dir
+      return "" if CovidTracker::SiteGeneratorService.local_testing?
+      "/#{CovidTracker::SiteGeneratorService.app_dir}"
     end
   end
 end
