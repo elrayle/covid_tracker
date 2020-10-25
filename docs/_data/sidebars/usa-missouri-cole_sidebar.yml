@@ -1,0 +1,161 @@
+entries:
+- title: Cole County, MO Area
+  area_url: "usa-missouri-cole"
+  folders:
+
+  - title: Weekly Totals
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/all_regions-weekly_totals.html"
+      output: web, pdf
+
+    - title: Cole, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-cole-weekly_totals.html"
+      output: web, pdf
+
+    - title: Boone, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-boone-weekly_totals.html"
+      output: web, pdf
+
+    - title: Callaway, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-callaway-weekly_totals.html"
+      output: web, pdf
+
+    - title: Osage, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-osage-weekly_totals.html"
+      output: web, pdf
+
+    - title: Miller, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-miller-weekly_totals.html"
+      output: web, pdf
+
+    - title: Moniteau, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-moniteau-weekly_totals.html"
+      output: web, pdf
+
+  - title: This Month
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-missouri-cole/this_month/all_regions-30_days.html"
+      output: web, pdf
+
+    - title: Cole, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-cole-30_days.html"
+      output: web, pdf
+
+    - title: Boone, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-boone-30_days.html"
+      output: web, pdf
+
+    - title: Callaway, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-callaway-30_days.html"
+      output: web, pdf
+
+    - title: Osage, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-osage-30_days.html"
+      output: web, pdf
+
+    - title: Miller, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-miller-30_days.html"
+      output: web, pdf
+
+    - title: Moniteau, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_month/usa-missouri-moniteau-30_days.html"
+      output: web, pdf
+
+  - title: This Week
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-missouri-cole/this_week/all_regions-7_days.html"
+      output: web, pdf
+
+    - title: Cole, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-cole-7_days.html"
+      output: web, pdf
+
+    - title: Boone, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-boone-7_days.html"
+      output: web, pdf
+
+    - title: Callaway, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-callaway-7_days.html"
+      output: web, pdf
+
+    - title: Osage, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-osage-7_days.html"
+      output: web, pdf
+
+    - title: Miller, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-miller-7_days.html"
+      output: web, pdf
+
+    - title: Moniteau, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-moniteau-7_days.html"
+      output: web, pdf
+
+  - title: Since March
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-missouri-cole/since_march/all_regions-since_march.html"
+      output: web, pdf
+
+    - title: Cole, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-cole-since_march.html"
+      output: web, pdf
+
+    - title: Boone, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-boone-since_march.html"
+      output: web, pdf
+
+    - title: Callaway, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-callaway-since_march.html"
+      output: web, pdf
+
+    - title: Osage, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-osage-since_march.html"
+      output: web, pdf
+
+    - title: Miller, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-miller-since_march.html"
+      output: web, pdf
+
+    - title: Moniteau, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-moniteau-since_march.html"
+      output: web, pdf
+
+  - title: By Region
+    output: web, pdf
+    folderitems:
+
+    - title: Cole, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-cole-by_region.html"
+      output: web, pdf
+
+    - title: Boone, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-boone-by_region.html"
+      output: web, pdf
+
+    - title: Callaway, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-callaway-by_region.html"
+      output: web, pdf
+
+    - title: Osage, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-osage-by_region.html"
+      output: web, pdf
+
+    - title: Miller, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-miller-by_region.html"
+      output: web, pdf
+
+    - title: Moniteau, Missouri, USA
+      url: "/covid_tracker/usa-missouri-cole/by_region/usa-missouri-moniteau-by_region.html"
+      output: web, pdf
+

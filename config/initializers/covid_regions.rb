@@ -30,3 +30,16 @@ CovidTracker::CentralAreaRegistry.register_usa(state: 'Georgia', county: 'Columb
     CovidTracker::RegionRegistration.for_usa(state: 'South Carolina', county: 'McCormick')
   ]
 end
+
+CovidTracker::CentralAreaRegistry.register_usa(state: 'Missouri', county: 'Cole',
+                                               sidebar_label: "Cole County, MO Area",
+                                               homepage_title: "Jefferson City, MO and Surrounding Counties") do
+  [
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Cole'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Boone'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Callaway'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Osage'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Miller'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Moniteau')
+  ]
+end
