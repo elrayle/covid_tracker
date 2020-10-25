@@ -2,8 +2,7 @@
 
 module CovidTracker
   class SidebarGeneratorService # rubocop:disable Metrics/ClassLength
-    class_attribute :registry_class, :time_period_service, :file_service
-    self.registry_class = CovidTracker::RegionRegistry
+    class_attribute :time_period_service, :file_service
     self.time_period_service = CovidTracker::TimePeriodService
     self.file_service = CovidTracker::FileService
 
