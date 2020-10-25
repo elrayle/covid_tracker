@@ -43,3 +43,18 @@ CovidTracker::CentralAreaRegistry.register_usa(state: 'Missouri', county: 'Cole'
     CovidTracker::RegionRegistration.for_usa(state: 'Missouri', county: 'Moniteau')
   ]
 end
+
+CovidTracker::CentralAreaRegistry.register_usa(state: 'Texas', county: 'Brazos',
+                                               sidebar_label: "Bryan, TX Area",
+                                               homepage_title: "Bryan, TX and Surrounding Counties") do
+  [
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Brazos'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Robertson'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Leon'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Madison'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Grimes'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Washington'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Burleson'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Texas', county: 'Milam')
+  ]
+end
