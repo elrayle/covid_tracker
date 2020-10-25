@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/since_march/usa-missouri-callaway-since_march.html
-last_updated: Oct 24, 2020
+last_updated: Oct 25, 2020
 keywords: ["Callaway, Missouri, USA", "Since March"]
 sidebar: usa-missouri-cole_sidebar
 ---

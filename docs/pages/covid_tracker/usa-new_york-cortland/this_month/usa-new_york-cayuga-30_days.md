@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-cayuga-30_days.html
-last_updated: Oct 24, 2020
+last_updated: Oct 25, 2020
 keywords: ["Cayuga, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---
