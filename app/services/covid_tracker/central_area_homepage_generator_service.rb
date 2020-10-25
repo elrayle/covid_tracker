@@ -22,7 +22,7 @@ module CovidTracker
 
     def file_parts(central_area)
       parts = {}
-      parts[:file_type] = file_service::HOMEPAGE_FILE_TYPE
+      parts[:file_type] = file_service::AREA_HOMEPAGE_FILE_TYPE
       parts[:central_area_code] = central_area.code
       parts
     end

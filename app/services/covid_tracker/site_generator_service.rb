@@ -38,6 +38,7 @@ module CovidTracker
 
       def update_homepages(central_area_code: nil)
         areas = areas(central_area_code)
+        CovidTracker::SiteHomepageGeneratorService.new(areas: areas).update_homepage
         CovidTracker::CentralAreaHomepageGeneratorService.new(areas: areas).update_homepages
       end
 

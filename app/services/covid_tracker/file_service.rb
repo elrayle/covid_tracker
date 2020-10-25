@@ -4,14 +4,16 @@ module CovidTracker
   class FileService
     # base directory contants
     GENERATOR_BASE_DIR = "docs"
-    HOMEPAGE_BASE_DIRECTORY = File.join(GENERATOR_BASE_DIR)
+    SITE_HOMEPAGE_BASE_DIRECTORY = GENERATOR_BASE_DIR
+    AREA_HOMEPAGE_BASE_DIRECTORY = GENERATOR_BASE_DIR
     PAGE_BASE_DIRECTORY = File.join(GENERATOR_BASE_DIR, "pages", "covid_tracker")
     GRAPH_BASE_DIRECTORY = File.join("images", "covid_tracker")
     SIDEBAR_BASE_DIRECTORY = File.join(GENERATOR_BASE_DIR, "_data", "sidebars")
     SIDEBARCONFIGS_BASE_DIRECTORY = File.join(GENERATOR_BASE_DIR, "_includes", "custom")
 
     # file_type constants
-    HOMEPAGE_FILE_TYPE = :homepage
+    SITE_HOMEPAGE_FILE_TYPE = :site_homepage
+    AREA_HOMEPAGE_FILE_TYPE = :area_homepage
     PAGE_SOURCE_FILE_TYPE = :page_source
     PAGE_TARGET_FILE_TYPE = :page_target
     GRAPH_FILE_TYPE = :graph
@@ -58,26 +60,24 @@ module CovidTracker
       # Used for writing out generated files
       def rootpath_for(parts)
         case parts[:file_type]
-        when HOMEPAGE_FILE_TYPE
+        when SITE_HOMEPAGE_FILE_TYPE, AREA_HOMEPAGE_FILE_TYPE, SIDEBARCONFIGS_FILE_TYPE
           Rails.root.join(base_directory_for(parts))
         when PAGE_SOURCE_FILE_TYPE
           # e.g. '/User/MyUser/.../RAILS_ROOT/docs/pages/covid_tracker/usa-georgia-richmond/this_week'
           Rails.root.join(base_directory_for(parts), relpath_for(parts))
         when PAGE_TARGET_FILE_TYPE
           ""
-        when GRAPH_FILE_TYPE
+        when GRAPH_FILE_TYPE, SIDEBAR_FILE_TYPE
           Rails.root.join(relpath_for(parts))
-        when SIDEBAR_FILE_TYPE
-          Rails.root.join(relpath_for(parts))
-        when SIDEBARCONFIGS_FILE_TYPE
-          Rails.root.join(base_directory_for(parts))
         end
       end
 
       def base_directory_for(parts)
         case parts[:file_type]
-        when HOMEPAGE_FILE_TYPE
-          HOMEPAGE_BASE_DIRECTORY
+        when SITE_HOMEPAGE_FILE_TYPE
+          SITE_HOMEPAGE_BASE_DIRECTORY
+        when AREA_HOMEPAGE_FILE_TYPE
+          AREA_HOMEPAGE_BASE_DIRECTORY
         when PAGE_SOURCE_FILE_TYPE, PAGE_TARGET_FILE_TYPE
           PAGE_BASE_DIRECTORY
         when GRAPH_FILE_TYPE
@@ -108,8 +108,10 @@ module CovidTracker
 
       def filename_for(parts)
         case parts[:file_type]
-        when HOMEPAGE_FILE_TYPE
-          # e.g. 'sidebarconfigs.html'
+        when SITE_HOMEPAGE_FILE_TYPE
+          "index.md"
+        when AREA_HOMEPAGE_FILE_TYPE
+          # e.g. 'usa-georgia-richmond.md'
           "#{parts[:central_area_code]}.md"
         when PAGE_SOURCE_FILE_TYPE
           # e.g. 'usa-georgia-richmond/this_week/usa-georgia-columbia-7_days.md'   for page_source
@@ -124,7 +126,6 @@ module CovidTracker
           # e.g. 'usa-georgia-richmond_sidebar.yml'
           "#{parts[:central_area_code]}#{parts[:file_postfix]}.yml"
         when SIDEBARCONFIGS_FILE_TYPE
-          # e.g. 'sidebarconfigs.html'
           "sidebarconfigs.html"
         end
       end
