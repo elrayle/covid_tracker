@@ -124,6 +124,7 @@ fi
 if [ "$GEN_PAGES" = true ]; then
     echo '------------------------------------------------------'
     echo 'Generating pages...'
+    rails runner "CovidTracker::SiteGeneratorService.update_homepages"
     rails runner "CovidTracker::SiteGeneratorService.update_daily_pages"
     rails runner "CovidTracker::SiteGeneratorService.update_weekly_pages"
     rails runner "CovidTracker::SiteGeneratorService.update_by_region_pages"

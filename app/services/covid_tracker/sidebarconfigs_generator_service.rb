@@ -2,7 +2,7 @@
 
 module CovidTracker
   class SidebarconfigsGeneratorService
-    class_attribute :time_period_service, :file_service
+    class_attribute :file_service
     self.file_service = CovidTracker::FileService
 
     attr_reader :central_areas
@@ -27,7 +27,6 @@ module CovidTracker
     end
 
     def write_sidebarconfigs
-      # TODO: Need to either write here or update file_service.write_to_file to work with this.
       sidebarconfigs = generate_sidebarconfigs
       file_service.write_to_file(file_parts, sidebarconfigs)
     end

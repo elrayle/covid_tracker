@@ -12,6 +12,7 @@ module CovidTracker
     class << self
       def update_site
         update_sidebar
+        update_homepages
         update_daily_pages
         update_weekly_pages
         update_by_region_pages
@@ -33,6 +34,11 @@ module CovidTracker
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::SidebarGeneratorService.new(area: area).update_sidebar }
         CovidTracker::SidebarconfigsGeneratorService.new(areas: areas).update_sidebarconfigs
+      end
+
+      def update_homepages(central_area_code: nil)
+        areas = areas(central_area_code)
+        CovidTracker::CentralAreaHomepageGeneratorService.new(areas: areas).update_homepages
       end
 
       def update_daily_pages(central_area_code: nil)
