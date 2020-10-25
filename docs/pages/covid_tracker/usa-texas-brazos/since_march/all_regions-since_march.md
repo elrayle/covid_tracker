@@ -6,6 +6,12 @@ keywords: ["All Regions", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---
 
+<h3>usa-texas-brazos</h3>
+
+![Change in Confirmed Cases Since March for Brazos, Texas, USA](/covid_tracker/images/graphs/usa-texas-brazos-delta_confirmed-since_march_graph.png)
+
+![Change in Confirmed Deaths Since March for Brazos, Texas, USA](/covid_tracker/images/graphs/usa-texas-brazos-delta_deaths-since_march_graph.png)
+
 <h3>usa-texas-robertson</h3>
 
 ![Change in Confirmed Cases Since March for Robertson, Texas, USA](/covid_tracker/images/graphs/usa-texas-robertson-delta_confirmed-since_march_graph.png)

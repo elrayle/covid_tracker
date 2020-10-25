@@ -1,0 +1,201 @@
+entries:
+- title: Oxford, TX Area
+  area_url: "usa-ohio-butler"
+  folders:
+
+  - title: Weekly Totals
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/all_regions-weekly_totals.html"
+      output: web, pdf
+
+    - title: Butler, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-ohio-butler-weekly_totals.html"
+      output: web, pdf
+
+    - title: Preble, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-ohio-preble-weekly_totals.html"
+      output: web, pdf
+
+    - title: Montgomery, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-ohio-montgomery-weekly_totals.html"
+      output: web, pdf
+
+    - title: Warren, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-ohio-warren-weekly_totals.html"
+      output: web, pdf
+
+    - title: Hamilton, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-ohio-hamilton-weekly_totals.html"
+      output: web, pdf
+
+    - title: Dearborn, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-indiana-dearborn-weekly_totals.html"
+      output: web, pdf
+
+    - title: Franklin, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-indiana-franklin-weekly_totals.html"
+      output: web, pdf
+
+    - title: Union, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/weekly_totals/usa-indiana-union-weekly_totals.html"
+      output: web, pdf
+
+  - title: This Month
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-ohio-butler/this_month/all_regions-30_days.html"
+      output: web, pdf
+
+    - title: Butler, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-ohio-butler-30_days.html"
+      output: web, pdf
+
+    - title: Preble, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-ohio-preble-30_days.html"
+      output: web, pdf
+
+    - title: Montgomery, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-ohio-montgomery-30_days.html"
+      output: web, pdf
+
+    - title: Warren, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-ohio-warren-30_days.html"
+      output: web, pdf
+
+    - title: Hamilton, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-ohio-hamilton-30_days.html"
+      output: web, pdf
+
+    - title: Dearborn, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-indiana-dearborn-30_days.html"
+      output: web, pdf
+
+    - title: Franklin, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-indiana-franklin-30_days.html"
+      output: web, pdf
+
+    - title: Union, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_month/usa-indiana-union-30_days.html"
+      output: web, pdf
+
+  - title: This Week
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-ohio-butler/this_week/all_regions-7_days.html"
+      output: web, pdf
+
+    - title: Butler, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-ohio-butler-7_days.html"
+      output: web, pdf
+
+    - title: Preble, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-ohio-preble-7_days.html"
+      output: web, pdf
+
+    - title: Montgomery, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-ohio-montgomery-7_days.html"
+      output: web, pdf
+
+    - title: Warren, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-ohio-warren-7_days.html"
+      output: web, pdf
+
+    - title: Hamilton, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-ohio-hamilton-7_days.html"
+      output: web, pdf
+
+    - title: Dearborn, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-indiana-dearborn-7_days.html"
+      output: web, pdf
+
+    - title: Franklin, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-indiana-franklin-7_days.html"
+      output: web, pdf
+
+    - title: Union, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/this_week/usa-indiana-union-7_days.html"
+      output: web, pdf
+
+  - title: Since March
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-ohio-butler/since_march/all_regions-since_march.html"
+      output: web, pdf
+
+    - title: Butler, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-ohio-butler-since_march.html"
+      output: web, pdf
+
+    - title: Preble, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-ohio-preble-since_march.html"
+      output: web, pdf
+
+    - title: Montgomery, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-ohio-montgomery-since_march.html"
+      output: web, pdf
+
+    - title: Warren, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-ohio-warren-since_march.html"
+      output: web, pdf
+
+    - title: Hamilton, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-ohio-hamilton-since_march.html"
+      output: web, pdf
+
+    - title: Dearborn, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-indiana-dearborn-since_march.html"
+      output: web, pdf
+
+    - title: Franklin, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-indiana-franklin-since_march.html"
+      output: web, pdf
+
+    - title: Union, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/since_march/usa-indiana-union-since_march.html"
+      output: web, pdf
+
+  - title: By Region
+    output: web, pdf
+    folderitems:
+
+    - title: Butler, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-ohio-butler-by_region.html"
+      output: web, pdf
+
+    - title: Preble, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-ohio-preble-by_region.html"
+      output: web, pdf
+
+    - title: Montgomery, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-ohio-montgomery-by_region.html"
+      output: web, pdf
+
+    - title: Warren, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-ohio-warren-by_region.html"
+      output: web, pdf
+
+    - title: Hamilton, Ohio, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-ohio-hamilton-by_region.html"
+      output: web, pdf
+
+    - title: Dearborn, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-indiana-dearborn-by_region.html"
+      output: web, pdf
+
+    - title: Franklin, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-indiana-franklin-by_region.html"
+      output: web, pdf
+
+    - title: Union, Indiana, USA
+      url: "/covid_tracker/usa-ohio-butler/by_region/usa-indiana-union-by_region.html"
+      output: web, pdf
+

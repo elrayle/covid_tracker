@@ -11,6 +11,10 @@ entries:
       url: "/covid_tracker/usa-texas-brazos/weekly_totals/all_regions-weekly_totals.html"
       output: web, pdf
 
+    - title: Brazos, Texas, USA
+      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-brazos-weekly_totals.html"
+      output: web, pdf
+
     - title: Robertson, Texas, USA
       url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-robertson-weekly_totals.html"
       output: web, pdf
@@ -45,6 +49,10 @@ entries:
 
     - title: All Regions
       url: "/covid_tracker/usa-texas-brazos/this_month/all_regions-30_days.html"
+      output: web, pdf
+
+    - title: Brazos, Texas, USA
+      url: "/covid_tracker/usa-texas-brazos/this_month/usa-texas-brazos-30_days.html"
       output: web, pdf
 
     - title: Robertson, Texas, USA
@@ -83,6 +91,10 @@ entries:
       url: "/covid_tracker/usa-texas-brazos/this_week/all_regions-7_days.html"
       output: web, pdf
 
+    - title: Brazos, Texas, USA
+      url: "/covid_tracker/usa-texas-brazos/this_week/usa-texas-brazos-7_days.html"
+      output: web, pdf
+
     - title: Robertson, Texas, USA
       url: "/covid_tracker/usa-texas-brazos/this_week/usa-texas-robertson-7_days.html"
       output: web, pdf
@@ -119,6 +131,10 @@ entries:
       url: "/covid_tracker/usa-texas-brazos/since_march/all_regions-since_march.html"
       output: web, pdf
 
+    - title: Brazos, Texas, USA
+      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-brazos-since_march.html"
+      output: web, pdf
+
     - title: Robertson, Texas, USA
       url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-robertson-since_march.html"
       output: web, pdf
@@ -150,6 +166,10 @@ entries:
   - title: By Region
     output: web, pdf
     folderitems:
+
+    - title: Brazos, Texas, USA
+      url: "/covid_tracker/usa-texas-brazos/by_region/usa-texas-brazos-by_region.html"
+      output: web, pdf
 
     - title: Robertson, Texas, USA
       url: "/covid_tracker/usa-texas-brazos/by_region/usa-texas-robertson-by_region.html"

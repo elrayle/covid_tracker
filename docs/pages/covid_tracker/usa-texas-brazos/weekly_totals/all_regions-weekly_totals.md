@@ -6,6 +6,10 @@ keywords: ["All Regions", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---
 
+<h3>Brazos, Texas, USA</h3>
+
+![Weekly Totals of Confirmed Cases for Brazos, Texas, USA](/covid_tracker/images/graphs/usa-texas-brazos-weekly_totals_graph.png)
+
 <h3>Robertson, Texas, USA</h3>
 
 ![Weekly Totals of Confirmed Cases for Robertson, Texas, USA](/covid_tracker/images/graphs/usa-texas-robertson-weekly_totals_graph.png)

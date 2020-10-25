@@ -1,0 +1,81 @@
+entries:
+- title: Sarasota, FL Area
+  area_url: "usa-florida-sarasota"
+  folders:
+
+  - title: Weekly Totals
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/all_regions-weekly_totals.html"
+      output: web, pdf
+
+    - title: Sarasota, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/usa-florida-sarasota-weekly_totals.html"
+      output: web, pdf
+
+    - title: Manatee, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/usa-florida-manatee-weekly_totals.html"
+      output: web, pdf
+
+  - title: This Month
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-florida-sarasota/this_month/all_regions-30_days.html"
+      output: web, pdf
+
+    - title: Sarasota, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/this_month/usa-florida-sarasota-30_days.html"
+      output: web, pdf
+
+    - title: Manatee, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/this_month/usa-florida-manatee-30_days.html"
+      output: web, pdf
+
+  - title: This Week
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-florida-sarasota/this_week/all_regions-7_days.html"
+      output: web, pdf
+
+    - title: Sarasota, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/this_week/usa-florida-sarasota-7_days.html"
+      output: web, pdf
+
+    - title: Manatee, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/this_week/usa-florida-manatee-7_days.html"
+      output: web, pdf
+
+  - title: Since March
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-florida-sarasota/since_march/all_regions-since_march.html"
+      output: web, pdf
+
+    - title: Sarasota, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/since_march/usa-florida-sarasota-since_march.html"
+      output: web, pdf
+
+    - title: Manatee, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/since_march/usa-florida-manatee-since_march.html"
+      output: web, pdf
+
+  - title: By Region
+    output: web, pdf
+    folderitems:
+
+    - title: Sarasota, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/by_region/usa-florida-sarasota-by_region.html"
+      output: web, pdf
+
+    - title: Manatee, Florida, USA
+      url: "/covid_tracker/usa-florida-sarasota/by_region/usa-florida-manatee-by_region.html"
+      output: web, pdf
+
