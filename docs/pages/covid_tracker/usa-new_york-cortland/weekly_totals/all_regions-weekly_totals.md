@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-new_york-cortland/weekly_totals/all_regions-weekly_totals.html
-last_updated: Oct 25, 2020
+last_updated: Oct 26, 2020
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---

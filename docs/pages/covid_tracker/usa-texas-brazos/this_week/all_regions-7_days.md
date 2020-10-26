@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-brazos/this_week/all_regions-7_days.html
-last_updated: Oct 25, 2020
+last_updated: Oct 26, 2020
 keywords: ["All Regions", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
