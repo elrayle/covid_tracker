@@ -15,7 +15,7 @@ It also generates graphs with weekly totals for each region.
 
 ## Registering Regions
 
-Create or edit `/config/initializers/covid_regions.rb` and register each region for which you would like to see a graph.
+Create or edit `/config/initializers/covid_regions.rb` and register each area and regions in the area for which you would like to see graphs.  Typically, the central area is the primary area of interest and the regions are other regions that are close to the primary area of interest (e.g. the county where you live and all counties adjacent to it).
 
 ### Examples:
 
@@ -37,11 +37,21 @@ CovidTracker::CentralAreaRegistry.register_usa(state: 'New York', county: 'Cortl
 end
 ```
 
+NOTE: That the list of regions include the central area as a region.
+
 List of country ISO codes: https://covid-api.com/api/regions
 
 List of US state names: https://covid-api.com/api/provinces/usa
 
 List of country province names (substitute country's ISO code for `:iso`): https://covid-api.com/api/provinces/:iso 
+
+You can define regions as US counties as seen above.  You can also define regions at the state level, at the country level, or at the province level for other countries.
+
+```
+    CovidTracker::RegionRegistration.for_usa(state: 'New York')
+    CovidTracker::RegionRegistration.for(country_iso: 'DEU')
+    CovidTracker::RegionRegistration.for(country_iso: 'DEU', province_state: 'Berlin')
+```
 
 ## Configuring the Jekyll theme for the area site
 
