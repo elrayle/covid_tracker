@@ -50,7 +50,7 @@ Edit `/docs/_config.xml` and update the configs in Section of COMMON configs to 
 ## Generate graphs
 
 ```
-$ update_site -s -p -g
+$ _RAILS_ROOT_/bin/update_site -s -p -g
 ```
 
 -s generates the sidebar menu in to `/docs/_data/sidebars` <br />
