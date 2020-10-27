@@ -1,7 +1,7 @@
 ---
 title: Lincoln, Georgia, USA
 permalink: /usa-georgia-columbia/this_month/usa-georgia-lincoln-30_days.html
-last_updated: Oct 26, 2020
+last_updated: Oct 27, 2020
 keywords: ["Lincoln, Georgia, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---
