@@ -84,3 +84,7 @@ The API to access the data is
 
 The mechanism used in the app to access the API is a custom module written to work with the
 [Questioning Authority](https://github.com/samvera/questioning_authority) from the [Samvera Community](https://samvera.org). 
+
+Graphs are generated using [Gruff Graph library](https://github.com/topfunky/gruff)
+
+The GitHub Pages site uses [Documentation Theme for Jekyll](https://github.com/tomjohnson1492/documentation-theme-jekyll) 
