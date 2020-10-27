@@ -74,8 +74,8 @@ CovidTracker::CentralAreaRegistry.register_usa(state: 'Texas', county: 'Montgome
 end
 
 CovidTracker::CentralAreaRegistry.register_usa(state: 'Ohio', county: 'Butler',
-                                               sidebar_label: "Oxford, TX Area",
-                                               homepage_title: "Oxford, TX and Surrounding Counties") do
+                                               sidebar_label: "Oxford, OH Area",
+                                               homepage_title: "Oxford, OH and Surrounding Counties") do
   [
     CovidTracker::RegionRegistration.for_usa(state: 'Ohio', county: 'Butler'),
     CovidTracker::RegionRegistration.for_usa(state: 'Ohio', county: 'Preble'),

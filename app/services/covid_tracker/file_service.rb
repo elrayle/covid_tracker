@@ -72,7 +72,7 @@ module CovidTracker
         end
       end
 
-      def base_directory_for(parts)
+      def base_directory_for(parts) # rubocop:disable Metrics/CyclomaticComplexity
         case parts[:file_type]
         when SITE_HOMEPAGE_FILE_TYPE
           SITE_HOMEPAGE_BASE_DIRECTORY
@@ -106,7 +106,7 @@ module CovidTracker
         end
       end
 
-      def filename_for(parts)
+      def filename_for(parts) # rubocop:disable Metrics/CyclomaticComplexity, Metrics/MethodLength
         case parts[:file_type]
         when SITE_HOMEPAGE_FILE_TYPE
           "index.md"
