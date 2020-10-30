@@ -1,7 +1,7 @@
 ---
 title: Boone, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-boone-by_region.html
-last_updated: Oct 29, 2020
+last_updated: Oct 30, 2020
 keywords: ["Boone, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---

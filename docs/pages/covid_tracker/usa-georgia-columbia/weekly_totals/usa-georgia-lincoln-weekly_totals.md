@@ -1,7 +1,7 @@
 ---
 title: Lincoln, Georgia, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-georgia-lincoln-weekly_totals.html
-last_updated: Oct 29, 2020
+last_updated: Oct 30, 2020
 keywords: ["Lincoln, Georgia, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---
