@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/since_march/usa-indiana-union-since_march.html
-last_updated: Oct 30, 2020
+last_updated: Oct 31, 2020
 keywords: ["Union, Indiana, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---

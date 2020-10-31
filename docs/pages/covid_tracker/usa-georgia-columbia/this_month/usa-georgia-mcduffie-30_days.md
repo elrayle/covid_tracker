@@ -1,7 +1,7 @@
 ---
 title: McDuffie, Georgia, USA
 permalink: /usa-georgia-columbia/this_month/usa-georgia-mcduffie-30_days.html
-last_updated: Oct 30, 2020
+last_updated: Oct 31, 2020
 keywords: ["McDuffie, Georgia, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---

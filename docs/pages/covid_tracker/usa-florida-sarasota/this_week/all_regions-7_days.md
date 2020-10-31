@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-florida-sarasota/this_week/all_regions-7_days.html
-last_updated: Oct 30, 2020
+last_updated: Oct 31, 2020
 keywords: ["All Regions", "This Week"]
 sidebar: usa-florida-sarasota_sidebar
 ---

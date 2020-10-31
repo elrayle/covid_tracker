@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/by_region/usa-indiana-dearborn-by_region.html
-last_updated: Oct 30, 2020
+last_updated: Oct 31, 2020
 keywords: ["Dearborn, Indiana, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---
