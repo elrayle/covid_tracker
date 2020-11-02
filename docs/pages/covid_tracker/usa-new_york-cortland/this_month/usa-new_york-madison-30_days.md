@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-madison-30_days.html
-last_updated: Oct 31, 2020
+last_updated: Nov 2, 2020
 keywords: ["Madison, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---

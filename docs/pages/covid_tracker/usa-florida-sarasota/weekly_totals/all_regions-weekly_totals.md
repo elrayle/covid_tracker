@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-florida-sarasota/weekly_totals/all_regions-weekly_totals.html
-last_updated: Oct 31, 2020
+last_updated: Nov 2, 2020
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-florida-sarasota_sidebar
 ---

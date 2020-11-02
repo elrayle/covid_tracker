@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/since_march/usa-georgia-columbia-since_march.html
-last_updated: Oct 31, 2020
+last_updated: Nov 2, 2020
 keywords: ["Columbia, Georgia, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---
