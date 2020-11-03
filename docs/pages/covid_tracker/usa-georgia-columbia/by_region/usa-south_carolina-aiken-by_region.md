@@ -1,7 +1,7 @@
 ---
 title: Aiken, South Carolina, USA
 permalink: /usa-georgia-columbia/by_region/usa-south_carolina-aiken-by_region.html
-last_updated: Nov 2, 2020
+last_updated: Nov 3, 2020
 keywords: ["Aiken, South Carolina, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---

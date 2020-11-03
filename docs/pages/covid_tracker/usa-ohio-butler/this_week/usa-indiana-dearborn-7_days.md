@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/this_week/usa-indiana-dearborn-7_days.html
-last_updated: Nov 2, 2020
+last_updated: Nov 3, 2020
 keywords: ["Dearborn, Indiana, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---

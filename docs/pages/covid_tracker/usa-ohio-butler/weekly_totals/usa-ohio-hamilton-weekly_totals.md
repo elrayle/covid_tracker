@@ -1,7 +1,7 @@
 ---
 title: Hamilton, Ohio, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-ohio-hamilton-weekly_totals.html
-last_updated: Nov 2, 2020
+last_updated: Nov 3, 2020
 keywords: ["Hamilton, Ohio, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---
