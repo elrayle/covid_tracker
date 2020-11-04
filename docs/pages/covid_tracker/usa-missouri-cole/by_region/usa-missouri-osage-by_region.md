@@ -1,7 +1,7 @@
 ---
 title: Osage, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-osage-by_region.html
-last_updated: Nov 3, 2020
+last_updated: Nov 4, 2020
 keywords: ["Osage, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Butler, Ohio, USA
 permalink: /usa-ohio-butler/this_week/usa-ohio-butler-7_days.html
-last_updated: Nov 3, 2020
+last_updated: Nov 4, 2020
 keywords: ["Butler, Ohio, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---

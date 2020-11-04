@@ -1,7 +1,7 @@
 ---
 title: Cole, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-cole-weekly_totals.html
-last_updated: Nov 3, 2020
+last_updated: Nov 4, 2020
 keywords: ["Cole, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---

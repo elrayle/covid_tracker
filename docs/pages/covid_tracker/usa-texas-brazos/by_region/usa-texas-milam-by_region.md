@@ -1,7 +1,7 @@
 ---
 title: Milam, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-milam-by_region.html
-last_updated: Nov 3, 2020
+last_updated: Nov 4, 2020
 keywords: ["Milam, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---

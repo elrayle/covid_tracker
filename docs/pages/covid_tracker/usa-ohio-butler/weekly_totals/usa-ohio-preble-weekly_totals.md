@@ -1,7 +1,7 @@
 ---
 title: Preble, Ohio, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-ohio-preble-weekly_totals.html
-last_updated: Nov 3, 2020
+last_updated: Nov 4, 2020
 keywords: ["Preble, Ohio, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---
