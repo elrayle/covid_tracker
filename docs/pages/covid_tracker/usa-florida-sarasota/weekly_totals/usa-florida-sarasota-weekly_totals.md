@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/weekly_totals/usa-florida-sarasota-weekly_totals.html
-last_updated: Nov 4, 2020
+last_updated: Nov 6, 2020
 keywords: ["Sarasota, Florida, USA", "weekly totals"]
 sidebar: usa-florida-sarasota_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: McCormick, South Carolina, USA
 permalink: /usa-georgia-columbia/this_week/usa-south_carolina-mccormick-7_days.html
-last_updated: Nov 4, 2020
+last_updated: Nov 6, 2020
 keywords: ["McCormick, South Carolina, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---

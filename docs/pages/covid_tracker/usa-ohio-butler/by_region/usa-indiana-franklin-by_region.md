@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/by_region/usa-indiana-franklin-by_region.html
-last_updated: Nov 4, 2020
+last_updated: Nov 6, 2020
 keywords: ["Franklin, Indiana, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---
