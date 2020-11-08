@@ -1,7 +1,7 @@
 ---
 title: Cortland, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-cortland-7_days.html
-last_updated: Nov 6, 2020
+last_updated: Nov 8, 2020
 keywords: ["Cortland, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---

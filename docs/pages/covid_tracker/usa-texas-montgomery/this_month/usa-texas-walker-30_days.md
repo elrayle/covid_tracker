@@ -1,7 +1,7 @@
 ---
 title: Walker, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-walker-30_days.html
-last_updated: Nov 6, 2020
+last_updated: Nov 8, 2020
 keywords: ["Walker, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/by_region/usa-florida-manatee-by_region.html
-last_updated: Nov 6, 2020
+last_updated: Nov 8, 2020
 keywords: ["Manatee, Florida, USA", "by region"]
 sidebar: usa-florida-sarasota_sidebar
 ---

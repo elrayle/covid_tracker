@@ -1,7 +1,7 @@
 ---
 title: Miller, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-miller-by_region.html
-last_updated: Nov 6, 2020
+last_updated: Nov 8, 2020
 keywords: ["Miller, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---
