@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/this_month/usa-indiana-franklin-30_days.html
-last_updated: Nov 8, 2020
+last_updated: Nov 9, 2020
 keywords: ["Franklin, Indiana, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

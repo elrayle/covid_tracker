@@ -1,7 +1,7 @@
 ---
 title: Hamilton, Ohio, USA
 permalink: /usa-ohio-butler/by_region/usa-ohio-hamilton-by_region.html
-last_updated: Nov 8, 2020
+last_updated: Nov 9, 2020
 keywords: ["Hamilton, Ohio, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---

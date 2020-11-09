@@ -1,7 +1,7 @@
 ---
 title: Miller, Missouri, USA
 permalink: /usa-missouri-cole/this_week/usa-missouri-miller-7_days.html
-last_updated: Nov 8, 2020
+last_updated: Nov 9, 2020
 keywords: ["Miller, Missouri, USA", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---
