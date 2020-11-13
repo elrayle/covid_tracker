@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-georgia-columbia/weekly_totals/all_regions-weekly_totals.html
-last_updated: Nov 9, 2020
+last_updated: Nov 13, 2020
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---

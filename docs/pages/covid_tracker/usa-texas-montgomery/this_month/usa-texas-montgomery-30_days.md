@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-montgomery-30_days.html
-last_updated: Nov 9, 2020
+last_updated: Nov 13, 2020
 keywords: ["Montgomery, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---
