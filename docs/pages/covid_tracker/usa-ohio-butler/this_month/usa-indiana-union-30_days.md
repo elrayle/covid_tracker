@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/this_month/usa-indiana-union-30_days.html
-last_updated: Nov 13, 2020
+last_updated: Nov 14, 2020
 keywords: ["Union, Indiana, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

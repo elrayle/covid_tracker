@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/this_month/usa-georgia-columbia-30_days.html
-last_updated: Nov 13, 2020
+last_updated: Nov 14, 2020
 keywords: ["Columbia, Georgia, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---
