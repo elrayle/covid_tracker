@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/since_march/usa-georgia-richmond-since_march.html
-last_updated: Nov 14, 2020
+last_updated: Nov 15, 2020
 keywords: ["Richmond, Georgia, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---

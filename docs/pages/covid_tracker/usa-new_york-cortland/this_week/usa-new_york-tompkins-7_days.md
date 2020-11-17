@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-tompkins-7_days.html
-last_updated: Nov 14, 2020
+last_updated: Nov 15, 2020
 keywords: ["Tompkins, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---

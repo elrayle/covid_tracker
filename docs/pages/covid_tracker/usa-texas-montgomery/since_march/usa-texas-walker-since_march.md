@@ -1,7 +1,7 @@
 ---
 title: Walker, Texas, USA
 permalink: /usa-texas-montgomery/since_march/usa-texas-walker-since_march.html
-last_updated: Nov 14, 2020
+last_updated: Nov 15, 2020
 keywords: ["Walker, Texas, USA", "Since March"]
 sidebar: usa-texas-montgomery_sidebar
 ---

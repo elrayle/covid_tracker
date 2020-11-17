@@ -1,7 +1,7 @@
 ---
 title: Preble, Ohio, USA
 permalink: /usa-ohio-butler/since_march/usa-ohio-preble-since_march.html
-last_updated: Nov 14, 2020
+last_updated: Nov 15, 2020
 keywords: ["Preble, Ohio, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---

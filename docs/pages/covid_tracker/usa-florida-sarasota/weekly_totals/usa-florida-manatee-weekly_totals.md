@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/weekly_totals/usa-florida-manatee-weekly_totals.html
-last_updated: Nov 14, 2020
+last_updated: Nov 15, 2020
 keywords: ["Manatee, Florida, USA", "weekly totals"]
 sidebar: usa-florida-sarasota_sidebar
 ---
