@@ -1,7 +1,7 @@
 ---
 title: Leon, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-leon-7_days.html
-last_updated: Nov 15, 2020
+last_updated: Nov 18, 2020
 keywords: ["Leon, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---

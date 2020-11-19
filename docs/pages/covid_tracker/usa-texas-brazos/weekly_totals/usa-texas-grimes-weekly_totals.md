@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-grimes-weekly_totals.html
-last_updated: Nov 15, 2020
+last_updated: Nov 18, 2020
 keywords: ["Grimes, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---

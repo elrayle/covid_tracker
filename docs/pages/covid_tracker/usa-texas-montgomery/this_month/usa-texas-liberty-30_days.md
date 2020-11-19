@@ -1,7 +1,7 @@
 ---
 title: Liberty, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-liberty-30_days.html
-last_updated: Nov 15, 2020
+last_updated: Nov 18, 2020
 keywords: ["Liberty, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---
