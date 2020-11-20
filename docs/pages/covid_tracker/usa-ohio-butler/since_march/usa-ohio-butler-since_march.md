@@ -1,7 +1,7 @@
 ---
 title: Butler, Ohio, USA
 permalink: /usa-ohio-butler/since_march/usa-ohio-butler-since_march.html
-last_updated: Nov 18, 2020
+last_updated: Nov 20, 2020
 keywords: ["Butler, Ohio, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---
