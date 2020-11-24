@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/since_march/usa-indiana-dearborn-since_march.html
-last_updated: Nov 20, 2020
+last_updated: Nov 24, 2020
 keywords: ["Dearborn, Indiana, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---

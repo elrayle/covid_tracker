@@ -1,7 +1,7 @@
 ---
 title: Waller, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-waller-weekly_totals.html
-last_updated: Nov 20, 2020
+last_updated: Nov 24, 2020
 keywords: ["Waller, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---

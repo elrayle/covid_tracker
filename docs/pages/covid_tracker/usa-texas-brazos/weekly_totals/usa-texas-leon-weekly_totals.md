@@ -1,7 +1,7 @@
 ---
 title: Leon, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-leon-weekly_totals.html
-last_updated: Nov 20, 2020
+last_updated: Nov 24, 2020
 keywords: ["Leon, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---
