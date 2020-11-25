@@ -1,7 +1,7 @@
 ---
 title: Burke, Georgia, USA
 permalink: /usa-georgia-columbia/by_region/usa-georgia-burke-by_region.html
-last_updated: Nov 24, 2020
+last_updated: Nov 25, 2020
 keywords: ["Burke, Georgia, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---
