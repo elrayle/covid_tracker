@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-missouri-cole/this_month/all_regions-30_days.html
-last_updated: Nov 25, 2020
+last_updated: Nov 30, 2020
 keywords: ["All Regions", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---

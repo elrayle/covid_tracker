@@ -1,7 +1,7 @@
 ---
 title: Burleson, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-burleson-7_days.html
-last_updated: Nov 25, 2020
+last_updated: Nov 30, 2020
 keywords: ["Burleson, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
