@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/this_week/usa-florida-sarasota-7_days.html
-last_updated: Nov 30, 2020
+last_updated: Dec 1, 2020
 keywords: ["Sarasota, Florida, USA", "This Week"]
 sidebar: usa-florida-sarasota_sidebar
 ---

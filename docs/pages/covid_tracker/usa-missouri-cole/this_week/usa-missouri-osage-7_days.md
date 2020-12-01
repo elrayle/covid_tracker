@@ -1,7 +1,7 @@
 ---
 title: Osage, Missouri, USA
 permalink: /usa-missouri-cole/this_week/usa-missouri-osage-7_days.html
-last_updated: Nov 30, 2020
+last_updated: Dec 1, 2020
 keywords: ["Osage, Missouri, USA", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---
