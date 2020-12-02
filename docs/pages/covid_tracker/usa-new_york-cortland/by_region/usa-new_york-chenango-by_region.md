@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-chenango-by_region.html
-last_updated: Dec 1, 2020
+last_updated: Dec 2, 2020
 keywords: ["Chenango, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---
