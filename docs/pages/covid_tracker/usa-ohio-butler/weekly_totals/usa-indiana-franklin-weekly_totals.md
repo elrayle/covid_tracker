@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-indiana-franklin-weekly_totals.html
-last_updated: Dec 2, 2020
+last_updated: Dec 4, 2020
 keywords: ["Franklin, Indiana, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---
