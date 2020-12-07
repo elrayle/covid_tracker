@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-grimes-30_days.html
-last_updated: Dec 4, 2020
+last_updated: Dec 7, 2020
 keywords: ["Grimes, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---

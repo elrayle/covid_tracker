@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/this_month/usa-south_carolina-edgefield-30_days.html
-last_updated: Dec 4, 2020
+last_updated: Dec 7, 2020
 keywords: ["Edgefield, South Carolina, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---
