@@ -1,7 +1,7 @@
 ---
 title: Harris, Texas, USA
 permalink: /usa-texas-montgomery/this_week/usa-texas-harris-7_days.html
-last_updated: Dec 10, 2020
+last_updated: Dec 11, 2020
 keywords: ["Harris, Texas, USA", "This Week"]
 sidebar: usa-texas-montgomery_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Lincoln, Georgia, USA
 permalink: /usa-georgia-columbia/since_march/usa-georgia-lincoln-since_march.html
-last_updated: Dec 10, 2020
+last_updated: Dec 11, 2020
 keywords: ["Lincoln, Georgia, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Broome, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-broome-7_days.html
-last_updated: Dec 10, 2020
+last_updated: Dec 11, 2020
 keywords: ["Broome, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---
