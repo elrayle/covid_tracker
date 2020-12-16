@@ -1,7 +1,7 @@
 ---
 title: Hamilton, Ohio, USA
 permalink: /usa-ohio-butler/this_month/usa-ohio-hamilton-30_days.html
-last_updated: Dec 15, 2020
+last_updated: Dec 16, 2020
 keywords: ["Hamilton, Ohio, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

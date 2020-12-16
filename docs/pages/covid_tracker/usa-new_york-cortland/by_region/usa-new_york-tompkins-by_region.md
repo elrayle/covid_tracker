@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-tompkins-by_region.html
-last_updated: Dec 15, 2020
+last_updated: Dec 16, 2020
 keywords: ["Tompkins, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---
