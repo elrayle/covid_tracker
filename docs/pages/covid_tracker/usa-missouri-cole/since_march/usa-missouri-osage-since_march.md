@@ -1,7 +1,7 @@
 ---
 title: Osage, Missouri, USA
 permalink: /usa-missouri-cole/since_march/usa-missouri-osage-since_march.html
-last_updated: Dec 16, 2020
+last_updated: Dec 17, 2020
 keywords: ["Osage, Missouri, USA", "Since March"]
 sidebar: usa-missouri-cole_sidebar
 ---

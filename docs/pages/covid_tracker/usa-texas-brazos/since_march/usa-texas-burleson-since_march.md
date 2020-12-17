@@ -1,7 +1,7 @@
 ---
 title: Burleson, Texas, USA
 permalink: /usa-texas-brazos/since_march/usa-texas-burleson-since_march.html
-last_updated: Dec 16, 2020
+last_updated: Dec 17, 2020
 keywords: ["Burleson, Texas, USA", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---

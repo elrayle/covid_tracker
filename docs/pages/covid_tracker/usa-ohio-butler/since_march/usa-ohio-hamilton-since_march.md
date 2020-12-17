@@ -1,7 +1,7 @@
 ---
 title: Hamilton, Ohio, USA
 permalink: /usa-ohio-butler/since_march/usa-ohio-hamilton-since_march.html
-last_updated: Dec 16, 2020
+last_updated: Dec 17, 2020
 keywords: ["Hamilton, Ohio, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---
