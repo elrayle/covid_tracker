@@ -1,7 +1,7 @@
 ---
 title: Aiken, South Carolina, USA
 permalink: /usa-georgia-columbia/this_week/usa-south_carolina-aiken-7_days.html
-last_updated: Dec 17, 2020
+last_updated: Dec 19, 2020
 keywords: ["Aiken, South Carolina, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---

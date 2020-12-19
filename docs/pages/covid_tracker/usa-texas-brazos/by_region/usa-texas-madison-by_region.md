@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-madison-by_region.html
-last_updated: Dec 17, 2020
+last_updated: Dec 19, 2020
 keywords: ["Madison, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---
