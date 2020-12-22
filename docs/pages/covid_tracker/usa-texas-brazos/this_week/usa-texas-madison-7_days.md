@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-madison-7_days.html
-last_updated: Dec 19, 2020
+last_updated: Dec 22, 2020
 keywords: ["Madison, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
