@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/by_region/usa-florida-sarasota-by_region.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["Sarasota, Florida, USA", "by region"]
 sidebar: usa-florida-sarasota_sidebar
 ---

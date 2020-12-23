@@ -1,7 +1,7 @@
 ---
 title: Brazos, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-brazos-weekly_totals.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["Brazos, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---

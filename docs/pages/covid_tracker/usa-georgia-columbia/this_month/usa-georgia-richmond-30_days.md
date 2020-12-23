@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/this_month/usa-georgia-richmond-30_days.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["Richmond, Georgia, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---

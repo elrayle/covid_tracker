@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-georgia-richmond-weekly_totals.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["Richmond, Georgia, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---

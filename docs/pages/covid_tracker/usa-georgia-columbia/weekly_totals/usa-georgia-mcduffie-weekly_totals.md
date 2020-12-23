@@ -1,7 +1,7 @@
 ---
 title: McDuffie, Georgia, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-georgia-mcduffie-weekly_totals.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["McDuffie, Georgia, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---

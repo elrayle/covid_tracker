@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/by_region/usa-georgia-richmond-by_region.html
-last_updated: Dec 22, 2020
+last_updated: Dec 23, 2020
 keywords: ["Richmond, Georgia, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---
