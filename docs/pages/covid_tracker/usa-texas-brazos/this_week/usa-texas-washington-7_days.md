@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-washington-7_days.html
-last_updated: Dec 23, 2020
+last_updated: Dec 25, 2020
 keywords: ["Washington, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
