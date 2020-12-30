@@ -1,7 +1,7 @@
 ---
 title: Leon, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-leon-by_region.html
-last_updated: Dec 25, 2020
+last_updated: Dec 30, 2020
 keywords: ["Leon, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---

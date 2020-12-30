@@ -1,7 +1,7 @@
 ---
 title: Cortland, New York, USA
 permalink: /usa-new_york-cortland/weekly_totals/usa-new_york-cortland-weekly_totals.html
-last_updated: Dec 25, 2020
+last_updated: Dec 30, 2020
 keywords: ["Cortland, New York, USA", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---
