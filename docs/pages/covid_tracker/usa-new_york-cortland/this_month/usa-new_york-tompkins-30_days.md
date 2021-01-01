@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-tompkins-30_days.html
-last_updated: Dec 31, 2020
+last_updated: Jan 1, 2021
 keywords: ["Tompkins, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---

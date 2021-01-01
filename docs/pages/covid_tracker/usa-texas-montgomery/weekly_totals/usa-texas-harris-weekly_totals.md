@@ -1,7 +1,7 @@
 ---
 title: Harris, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-harris-weekly_totals.html
-last_updated: Dec 31, 2020
+last_updated: Jan 1, 2021
 keywords: ["Harris, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
