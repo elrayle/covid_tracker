@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-chenango-30_days.html
-last_updated: Jan 1, 2021
+last_updated: Jan 3, 2021
 keywords: ["Chenango, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---
