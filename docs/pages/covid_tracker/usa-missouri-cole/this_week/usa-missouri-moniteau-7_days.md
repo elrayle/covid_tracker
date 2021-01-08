@@ -1,7 +1,7 @@
 ---
 title: Moniteau, Missouri, USA
 permalink: /usa-missouri-cole/this_week/usa-missouri-moniteau-7_days.html
-last_updated: Jan 6, 2021
+last_updated: Jan 8, 2021
 keywords: ["Moniteau, Missouri, USA", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---
