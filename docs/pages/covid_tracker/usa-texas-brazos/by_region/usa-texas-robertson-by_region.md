@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-robertson-by_region.html
-last_updated: Jan 10, 2021
+last_updated: Jan 11, 2021
 keywords: ["Robertson, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---

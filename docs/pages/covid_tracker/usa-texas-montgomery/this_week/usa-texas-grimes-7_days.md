@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-montgomery/this_week/usa-texas-grimes-7_days.html
-last_updated: Jan 10, 2021
+last_updated: Jan 11, 2021
 keywords: ["Grimes, Texas, USA", "This Week"]
 sidebar: usa-texas-montgomery_sidebar
 ---
