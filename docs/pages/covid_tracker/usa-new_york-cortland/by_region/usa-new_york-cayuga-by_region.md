@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-cayuga-by_region.html
-last_updated: Jan 11, 2021
+last_updated: Jan 12, 2021
 keywords: ["Cayuga, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---

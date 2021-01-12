@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-ohio-butler/weekly_totals/all_regions-weekly_totals.html
-last_updated: Jan 11, 2021
+last_updated: Jan 12, 2021
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---
