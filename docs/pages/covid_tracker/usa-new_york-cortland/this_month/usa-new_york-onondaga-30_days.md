@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-onondaga-30_days.html
-last_updated: Jan 13, 2021
+last_updated: Jan 14, 2021
 keywords: ["Onondaga, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---
