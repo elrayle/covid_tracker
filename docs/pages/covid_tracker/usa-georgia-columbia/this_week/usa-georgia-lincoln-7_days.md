@@ -1,7 +1,7 @@
 ---
 title: Lincoln, Georgia, USA
 permalink: /usa-georgia-columbia/this_week/usa-georgia-lincoln-7_days.html
-last_updated: Jan 16, 2021
+last_updated: Jan 18, 2021
 keywords: ["Lincoln, Georgia, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---
