@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/since_march/usa-indiana-franklin-since_march.html
-last_updated: Jan 18, 2021
+last_updated: Jan 20, 2021
 keywords: ["Franklin, Indiana, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---
