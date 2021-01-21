@@ -40,12 +40,16 @@ module CovidTracker
     def update_time_period_graphs(time_period:)
       days = time_period_service.days(time_period)
       registered_regions.each do |region_registration|
-        region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
+        begin
+          region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
 
-        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED, time_period: time_period)
-        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED, time_period: time_period)
-        # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS, time_period: time_period)
-        generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS, time_period: time_period)
+          # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED, time_period: time_period)
+          generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED, time_period: time_period)
+          # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS, time_period: time_period)
+          generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS, time_period: time_period)
+        rescue Exception => e
+          puts "Unable to generate #{time_period_service.text_form(time_period)} graph for #{region_registration.label} -- cause: #{e.message}"
+        end
       end
       registered_regions.empty? ? puts("Unable to retrieve data for daily graphs") : puts("#{days}-days Graph Generation Complete for #{registered_regions.count} regions!") # rubocop:disable Rails/Output, Metrics/LineLength
     end

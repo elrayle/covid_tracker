@@ -34,37 +34,51 @@ module CovidTracker
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::SidebarGeneratorService.new(area: area).update_sidebar }
         CovidTracker::SidebarconfigsGeneratorService.new(areas: areas).update_sidebarconfigs
+      rescue Exception => e
+        puts "Unable to generate sidebar for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_homepages(central_area_code: nil)
         areas = areas(central_area_code)
         CovidTracker::SiteHomepageGeneratorService.new(areas: areas).update_homepage
         CovidTracker::CentralAreaHomepageGeneratorService.new(areas: areas).update_homepages
+      rescue Exception => e
+        puts "Unable to generate homepage for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_daily_pages(central_area_code: nil)
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::DailyPagesGeneratorService.new(area: area).update_pages }
+      rescue Exception => e
+        puts "Unable to generate daily pages for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_weekly_pages(central_area_code: nil)
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::WeeklyPagesGeneratorService.new(area: area).update_pages }
+      rescue Exception => e
+        puts "Unable to generate weekly pages for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_by_region_pages(central_area_code: nil)
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::ByRegionPagesGeneratorService.new(area: area).update_pages }
+      rescue Exception => e
+        puts "Unable to generate region pages for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_daily_graphs(central_area_code: nil)
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::DailyGraphsGeneratorService.new(area: area).update_graphs }
+      rescue Exception => e
+        puts "Unable to generate daily graph for #{central_area_code} -- cause: #{e.message}"
       end
 
       def update_weekly_graphs(central_area_code: nil)
         areas = areas(central_area_code)
         areas.each { |area| CovidTracker::WeeklyGraphsGeneratorService.new(area: area).update_graphs }
+      rescue Exception => e
+        puts "Unable to generate weekly graph for #{central_area_code} -- cause: #{e.message}"
       end
 
     private
