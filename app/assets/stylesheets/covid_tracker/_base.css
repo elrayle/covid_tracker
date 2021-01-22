@@ -23,3 +23,10 @@ td.critical {
     background: #d77d7d;
     text-align: center;
 }
+
+hr.area-list-footer-top {
+    color: #bac9c2;
+    width: 100%;
+    padding-right: 30px;
+    margin-left: -10px;
+}
