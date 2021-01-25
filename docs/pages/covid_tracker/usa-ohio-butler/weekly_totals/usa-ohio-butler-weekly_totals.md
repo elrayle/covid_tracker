@@ -1,7 +1,7 @@
 ---
 title: Butler, Ohio, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-ohio-butler-weekly_totals.html
-last_updated: Jan 22, 2021
+last_updated: Jan 24, 2021
 keywords: ["Butler, Ohio, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---
