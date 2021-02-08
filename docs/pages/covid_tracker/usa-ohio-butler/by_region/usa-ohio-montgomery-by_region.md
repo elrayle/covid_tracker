@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Ohio, USA
 permalink: /usa-ohio-butler/by_region/usa-ohio-montgomery-by_region.html
-last_updated: Feb 5, 2021
+last_updated: Feb 8, 2021
 keywords: ["Montgomery, Ohio, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---
