@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-montgomery-weekly_totals.html
-last_updated: Feb 9, 2021
+last_updated: Feb 10, 2021
 keywords: ["Montgomery, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
