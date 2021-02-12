@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-washington-by_region.html
-last_updated: Feb 10, 2021
+last_updated: Feb 12, 2021
 keywords: ["Washington, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---
