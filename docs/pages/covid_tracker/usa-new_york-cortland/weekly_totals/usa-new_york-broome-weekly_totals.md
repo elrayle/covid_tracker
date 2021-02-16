@@ -1,7 +1,7 @@
 ---
 title: Broome, New York, USA
 permalink: /usa-new_york-cortland/weekly_totals/usa-new_york-broome-weekly_totals.html
-last_updated: Feb 15, 2021
+last_updated: Feb 16, 2021
 keywords: ["Broome, New York, USA", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---

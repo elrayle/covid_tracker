@@ -1,7 +1,7 @@
 ---
 title: Burke, Georgia, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-georgia-burke-weekly_totals.html
-last_updated: Feb 15, 2021
+last_updated: Feb 16, 2021
 keywords: ["Burke, Georgia, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---
