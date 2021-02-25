@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-missouri-cole/weekly_totals/all_regions-weekly_totals.html
-last_updated: Feb 17, 2021
+last_updated: Feb 25, 2021
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
