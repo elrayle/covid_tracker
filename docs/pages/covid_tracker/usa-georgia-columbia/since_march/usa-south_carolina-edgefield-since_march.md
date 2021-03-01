@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/since_march/usa-south_carolina-edgefield-since_march.html
-last_updated: Feb 25, 2021
+last_updated: Mar 1, 2021
 keywords: ["Edgefield, South Carolina, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Boone, Missouri, USA
 permalink: /usa-missouri-cole/since_march/usa-missouri-boone-since_march.html
-last_updated: Feb 25, 2021
+last_updated: Mar 1, 2021
 keywords: ["Boone, Missouri, USA", "Since March"]
 sidebar: usa-missouri-cole_sidebar
 ---
