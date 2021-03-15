@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-indiana-dearborn-weekly_totals.html
-last_updated: Mar 1, 2021
+last_updated: Mar 15, 2021
 keywords: ["Dearborn, Indiana, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---

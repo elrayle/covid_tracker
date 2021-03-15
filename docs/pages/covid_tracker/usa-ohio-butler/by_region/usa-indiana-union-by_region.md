@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/by_region/usa-indiana-union-by_region.html
-last_updated: Mar 1, 2021
+last_updated: Mar 15, 2021
 keywords: ["Union, Indiana, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---

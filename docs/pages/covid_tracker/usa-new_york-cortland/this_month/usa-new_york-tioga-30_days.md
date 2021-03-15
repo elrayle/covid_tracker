@@ -1,7 +1,7 @@
 ---
 title: Tioga, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-tioga-30_days.html
-last_updated: Mar 1, 2021
+last_updated: Mar 15, 2021
 keywords: ["Tioga, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---

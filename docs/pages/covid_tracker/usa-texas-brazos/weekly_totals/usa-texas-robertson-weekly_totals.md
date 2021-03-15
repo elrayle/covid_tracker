@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-robertson-weekly_totals.html
-last_updated: Mar 1, 2021
+last_updated: Mar 15, 2021
 keywords: ["Robertson, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---
