@@ -1,7 +1,7 @@
 ---
 title: Osage, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-osage-weekly_totals.html
-last_updated: Mar 15, 2021
+last_updated: Mar 17, 2021
 keywords: ["Osage, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
