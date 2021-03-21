@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/by_region/usa-south_carolina-edgefield-by_region.html
-last_updated: Mar 19, 2021
+last_updated: Mar 21, 2021
 keywords: ["Edgefield, South Carolina, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Cole, Missouri, USA
 permalink: /usa-missouri-cole/this_month/usa-missouri-cole-30_days.html
-last_updated: Mar 19, 2021
+last_updated: Mar 21, 2021
 keywords: ["Cole, Missouri, USA", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: McDuffie, Georgia, USA
 permalink: /usa-georgia-columbia/by_region/usa-georgia-mcduffie-by_region.html
-last_updated: Mar 19, 2021
+last_updated: Mar 21, 2021
 keywords: ["McDuffie, Georgia, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Miller, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-miller-weekly_totals.html
-last_updated: Mar 19, 2021
+last_updated: Mar 21, 2021
 keywords: ["Miller, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
