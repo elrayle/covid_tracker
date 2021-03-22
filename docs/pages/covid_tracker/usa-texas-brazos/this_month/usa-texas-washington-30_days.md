@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-washington-30_days.html
-last_updated: Mar 21, 2021
+last_updated: Mar 22, 2021
 keywords: ["Washington, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---

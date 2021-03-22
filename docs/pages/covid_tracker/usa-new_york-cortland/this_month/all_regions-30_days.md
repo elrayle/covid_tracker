@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-new_york-cortland/this_month/all_regions-30_days.html
-last_updated: Mar 21, 2021
+last_updated: Mar 22, 2021
 keywords: ["All Regions", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---

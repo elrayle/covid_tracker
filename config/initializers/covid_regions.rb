@@ -88,6 +88,18 @@ CovidTracker::CentralAreaRegistry.register_usa(state: 'Ohio', county: 'Butler',
   ]
 end
 
+CovidTracker::CentralAreaRegistry.register_usa(state: 'Arizona', county: 'Pima',
+                                               sidebar_label: "Tucson, AZ Area",
+                                               homepage_title: "Tucson, AZ and Surrounding Counties") do
+  [
+    CovidTracker::RegionRegistration.for_usa(state: 'Arizona', county: 'Pima'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Arizona', county: 'Pinal'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Arizona', county: 'Graham'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Arizona', county: 'Cochise'),
+    CovidTracker::RegionRegistration.for_usa(state: 'Arizona', county: 'Santa Cruz')
+  ]
+end
+
 CovidTracker::CentralAreaRegistry.register_usa(state: 'Florida', county: 'Sarasota',
                                                sidebar_label: "Sarasota, FL Area",
                                                homepage_title: "Sarasota, FL and Surrounding Counties") do
