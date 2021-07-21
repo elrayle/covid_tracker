@@ -1,0 +1,141 @@
+entries:
+- title: Tucson, AZ Area
+  area_url: "usa-arizona-pima"
+  folders:
+
+  - title: Weekly Totals
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/all_regions-weekly_totals.html"
+      output: web, pdf
+
+    - title: Pima, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/usa-arizona-pima-weekly_totals.html"
+      output: web, pdf
+
+    - title: Pinal, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/usa-arizona-pinal-weekly_totals.html"
+      output: web, pdf
+
+    - title: Graham, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/usa-arizona-graham-weekly_totals.html"
+      output: web, pdf
+
+    - title: Cochise, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/usa-arizona-cochise-weekly_totals.html"
+      output: web, pdf
+
+    - title: Santa Cruz, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/weekly_totals/usa-arizona-santa_cruz-weekly_totals.html"
+      output: web, pdf
+
+  - title: This Month
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-arizona-pima/this_month/all_regions-30_days.html"
+      output: web, pdf
+
+    - title: Pima, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_month/usa-arizona-pima-30_days.html"
+      output: web, pdf
+
+    - title: Pinal, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_month/usa-arizona-pinal-30_days.html"
+      output: web, pdf
+
+    - title: Graham, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_month/usa-arizona-graham-30_days.html"
+      output: web, pdf
+
+    - title: Cochise, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_month/usa-arizona-cochise-30_days.html"
+      output: web, pdf
+
+    - title: Santa Cruz, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_month/usa-arizona-santa_cruz-30_days.html"
+      output: web, pdf
+
+  - title: This Week
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-arizona-pima/this_week/all_regions-7_days.html"
+      output: web, pdf
+
+    - title: Pima, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_week/usa-arizona-pima-7_days.html"
+      output: web, pdf
+
+    - title: Pinal, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_week/usa-arizona-pinal-7_days.html"
+      output: web, pdf
+
+    - title: Graham, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_week/usa-arizona-graham-7_days.html"
+      output: web, pdf
+
+    - title: Cochise, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_week/usa-arizona-cochise-7_days.html"
+      output: web, pdf
+
+    - title: Santa Cruz, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/this_week/usa-arizona-santa_cruz-7_days.html"
+      output: web, pdf
+
+  - title: Since March
+    output: web, pdf
+    folderitems:
+
+    - title: All Regions
+      url: "/covid_tracker/usa-arizona-pima/since_march/all_regions-since_march.html"
+      output: web, pdf
+
+    - title: Pima, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/since_march/usa-arizona-pima-since_march.html"
+      output: web, pdf
+
+    - title: Pinal, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/since_march/usa-arizona-pinal-since_march.html"
+      output: web, pdf
+
+    - title: Graham, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/since_march/usa-arizona-graham-since_march.html"
+      output: web, pdf
+
+    - title: Cochise, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/since_march/usa-arizona-cochise-since_march.html"
+      output: web, pdf
+
+    - title: Santa Cruz, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/since_march/usa-arizona-santa_cruz-since_march.html"
+      output: web, pdf
+
+  - title: By Region
+    output: web, pdf
+    folderitems:
+
+    - title: Pima, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/by_region/usa-arizona-pima-by_region.html"
+      output: web, pdf
+
+    - title: Pinal, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/by_region/usa-arizona-pinal-by_region.html"
+      output: web, pdf
+
+    - title: Graham, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/by_region/usa-arizona-graham-by_region.html"
+      output: web, pdf
+
+    - title: Cochise, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/by_region/usa-arizona-cochise-by_region.html"
+      output: web, pdf
+
+    - title: Santa Cruz, Arizona, USA
+      url: "/covid_tracker/usa-arizona-pima/by_region/usa-arizona-santa_cruz-by_region.html"
+      output: web, pdf
+

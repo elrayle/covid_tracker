@@ -9,7 +9,7 @@ It also generates graphs with weekly totals for each region.
 
 ## Prerequisites:
 
-* ruby 2.5
+* ruby 2.7
 * rails 5.2
 * imagemagick - used for graph generation
 
