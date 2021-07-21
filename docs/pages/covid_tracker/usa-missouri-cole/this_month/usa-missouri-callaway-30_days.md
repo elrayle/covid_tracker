@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/this_month/usa-missouri-callaway-30_days.html
-last_updated: Jul 20, 2021
+last_updated: Jul 21, 2021
 keywords: ["Callaway, Missouri, USA", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---

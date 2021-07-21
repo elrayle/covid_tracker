@@ -1,7 +1,7 @@
 ---
 title: McDuffie, Georgia, USA
 permalink: /usa-georgia-columbia/this_week/usa-georgia-mcduffie-7_days.html
-last_updated: Jul 20, 2021
+last_updated: Jul 21, 2021
 keywords: ["McDuffie, Georgia, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---

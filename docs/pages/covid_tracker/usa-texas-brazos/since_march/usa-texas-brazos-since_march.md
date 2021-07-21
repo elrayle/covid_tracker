@@ -1,7 +1,7 @@
 ---
 title: Brazos, Texas, USA
 permalink: /usa-texas-brazos/since_march/usa-texas-brazos-since_march.html
-last_updated: Jul 20, 2021
+last_updated: Jul 21, 2021
 keywords: ["Brazos, Texas, USA", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---
