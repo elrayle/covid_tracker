@@ -1,7 +1,7 @@
 ---
 title: Pima, Arizona, USA
 permalink: /usa-arizona-pima/since_march/usa-arizona-pima-since_march.html
-last_updated: Jul 22, 2021
+last_updated: Jul 26, 2021
 keywords: ["Pima, Arizona, USA", "Since March"]
 sidebar: usa-arizona-pima_sidebar
 ---
