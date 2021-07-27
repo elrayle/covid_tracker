@@ -1,7 +1,7 @@
 ---
 title: Preble, Ohio, USA
 permalink: /usa-ohio-butler/this_month/usa-ohio-preble-30_days.html
-last_updated: Jul 26, 2021
+last_updated: Jul 27, 2021
 keywords: ["Preble, Ohio, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---
