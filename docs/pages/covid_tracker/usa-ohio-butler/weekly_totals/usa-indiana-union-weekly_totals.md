@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-indiana-union-weekly_totals.html
-last_updated: Jul 30, 2021
+last_updated: Jul 31, 2021
 keywords: ["Union, Indiana, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---

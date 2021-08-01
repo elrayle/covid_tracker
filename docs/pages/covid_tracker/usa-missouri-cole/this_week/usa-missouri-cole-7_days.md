@@ -1,7 +1,7 @@
 ---
 title: Cole, Missouri, USA
 permalink: /usa-missouri-cole/this_week/usa-missouri-cole-7_days.html
-last_updated: Jul 30, 2021
+last_updated: Jul 31, 2021
 keywords: ["Cole, Missouri, USA", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---

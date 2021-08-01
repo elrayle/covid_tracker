@@ -1,7 +1,7 @@
 ---
 title: Cortland, New York, USA
 permalink: /usa-new_york-cortland/since_march/usa-new_york-cortland-since_march.html
-last_updated: Jul 30, 2021
+last_updated: Jul 31, 2021
 keywords: ["Cortland, New York, USA", "Since March"]
 sidebar: usa-new_york-cortland_sidebar
 ---
