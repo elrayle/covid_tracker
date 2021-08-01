@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Ohio, USA
 permalink: /usa-ohio-butler/this_week/usa-ohio-montgomery-7_days.html
-last_updated: Jul 31, 2021
+last_updated: Aug 1, 2021
 keywords: ["Montgomery, Ohio, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---
