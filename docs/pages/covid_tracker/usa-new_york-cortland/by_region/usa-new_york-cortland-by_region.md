@@ -1,7 +1,7 @@
 ---
 title: Cortland, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-cortland-by_region.html
-last_updated: Aug 1, 2021
+last_updated: Aug 2, 2021
 keywords: ["Cortland, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---

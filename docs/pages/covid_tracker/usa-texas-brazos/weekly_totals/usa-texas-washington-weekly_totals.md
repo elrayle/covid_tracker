@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-washington-weekly_totals.html
-last_updated: Aug 1, 2021
+last_updated: Aug 2, 2021
 keywords: ["Washington, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---

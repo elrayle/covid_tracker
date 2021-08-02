@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/this_week/usa-georgia-columbia-7_days.html
-last_updated: Aug 1, 2021
+last_updated: Aug 2, 2021
 keywords: ["Columbia, Georgia, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---

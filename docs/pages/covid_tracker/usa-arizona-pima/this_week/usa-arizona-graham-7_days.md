@@ -1,7 +1,7 @@
 ---
 title: Graham, Arizona, USA
 permalink: /usa-arizona-pima/this_week/usa-arizona-graham-7_days.html
-last_updated: Aug 1, 2021
+last_updated: Aug 2, 2021
 keywords: ["Graham, Arizona, USA", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---
