@@ -1,7 +1,7 @@
 ---
 title: Brazos, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-brazos-7_days.html
-last_updated: Aug 3, 2021
+last_updated: Aug 4, 2021
 keywords: ["Brazos, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
