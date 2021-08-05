@@ -1,7 +1,7 @@
 ---
 title: Miller, Missouri, USA
 permalink: /usa-missouri-cole/this_month/usa-missouri-miller-30_days.html
-last_updated: Aug 4, 2021
+last_updated: Aug 5, 2021
 keywords: ["Miller, Missouri, USA", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---
