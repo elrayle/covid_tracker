@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-callaway-by_region.html
-last_updated: Aug 6, 2021
+last_updated: Aug 7, 2021
 keywords: ["Callaway, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---

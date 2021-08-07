@@ -1,7 +1,7 @@
 ---
 title: Graham, Arizona, USA
 permalink: /usa-arizona-pima/weekly_totals/usa-arizona-graham-weekly_totals.html
-last_updated: Aug 6, 2021
+last_updated: Aug 7, 2021
 keywords: ["Graham, Arizona, USA", "weekly totals"]
 sidebar: usa-arizona-pima_sidebar
 ---
