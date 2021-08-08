@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/this_week/usa-florida-manatee-7_days.html
-last_updated: Aug 7, 2021
+last_updated: Aug 8, 2021
 keywords: ["Manatee, Florida, USA", "This Week"]
 sidebar: usa-florida-sarasota_sidebar
 ---

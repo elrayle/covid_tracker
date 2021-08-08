@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-georgia-columbia/this_week/all_regions-7_days.html
-last_updated: Aug 7, 2021
+last_updated: Aug 8, 2021
 keywords: ["All Regions", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Leon, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-leon-30_days.html
-last_updated: Aug 7, 2021
+last_updated: Aug 8, 2021
 keywords: ["Leon, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---

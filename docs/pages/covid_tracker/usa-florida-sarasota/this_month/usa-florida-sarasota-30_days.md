@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/this_month/usa-florida-sarasota-30_days.html
-last_updated: Aug 7, 2021
+last_updated: Aug 8, 2021
 keywords: ["Sarasota, Florida, USA", "This Month"]
 sidebar: usa-florida-sarasota_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Pinal, Arizona, USA
 permalink: /usa-arizona-pima/this_week/usa-arizona-pinal-7_days.html
-last_updated: Aug 7, 2021
+last_updated: Aug 8, 2021
 keywords: ["Pinal, Arizona, USA", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---
