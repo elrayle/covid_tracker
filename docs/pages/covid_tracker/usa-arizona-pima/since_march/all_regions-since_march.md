@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-arizona-pima/since_march/all_regions-since_march.html
-last_updated: Aug 8, 2021
+last_updated: Aug 9, 2021
 keywords: ["All Regions", "Since March"]
 sidebar: usa-arizona-pima_sidebar
 ---

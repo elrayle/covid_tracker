@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/since_march/usa-florida-manatee-since_march.html
-last_updated: Aug 8, 2021
+last_updated: Aug 9, 2021
 keywords: ["Manatee, Florida, USA", "Since March"]
 sidebar: usa-florida-sarasota_sidebar
 ---
