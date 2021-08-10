@@ -1,7 +1,7 @@
 ---
 title: Lincoln, Georgia, USA
 permalink: /usa-georgia-columbia/by_region/usa-georgia-lincoln-by_region.html
-last_updated: Aug 9, 2021
+last_updated: Aug 10, 2021
 keywords: ["Lincoln, Georgia, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---
