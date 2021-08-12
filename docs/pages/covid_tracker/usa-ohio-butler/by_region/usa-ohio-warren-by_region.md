@@ -1,7 +1,7 @@
 ---
 title: Warren, Ohio, USA
 permalink: /usa-ohio-butler/by_region/usa-ohio-warren-by_region.html
-last_updated: Aug 11, 2021
+last_updated: Aug 12, 2021
 keywords: ["Warren, Ohio, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---
