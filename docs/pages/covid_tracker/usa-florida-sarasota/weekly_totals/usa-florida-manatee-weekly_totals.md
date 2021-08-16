@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/weekly_totals/usa-florida-manatee-weekly_totals.html
-last_updated: Aug 15, 2021
+last_updated: Aug 16, 2021
 keywords: ["Manatee, Florida, USA", "weekly totals"]
 sidebar: usa-florida-sarasota_sidebar
 ---
