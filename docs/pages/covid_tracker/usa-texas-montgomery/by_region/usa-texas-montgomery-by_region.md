@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-montgomery-by_region.html
-last_updated: Aug 17, 2021
+last_updated: Aug 18, 2021
 keywords: ["Montgomery, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---

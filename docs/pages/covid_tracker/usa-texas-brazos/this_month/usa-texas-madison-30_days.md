@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-madison-30_days.html
-last_updated: Aug 17, 2021
+last_updated: Aug 18, 2021
 keywords: ["Madison, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---
