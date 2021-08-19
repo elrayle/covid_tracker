@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-brazos/weekly_totals/all_regions-weekly_totals.html
-last_updated: Aug 18, 2021
+last_updated: Aug 19, 2021
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---
