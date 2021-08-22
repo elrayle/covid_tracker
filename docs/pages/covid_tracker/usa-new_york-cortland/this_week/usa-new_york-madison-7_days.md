@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-madison-7_days.html
-last_updated: Aug 21, 2021
+last_updated: Aug 22, 2021
 keywords: ["Madison, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---
