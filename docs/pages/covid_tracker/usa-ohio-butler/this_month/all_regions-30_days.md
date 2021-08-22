@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-ohio-butler/this_month/all_regions-30_days.html
-last_updated: Aug 20, 2021
+last_updated: Aug 21, 2021
 keywords: ["All Regions", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

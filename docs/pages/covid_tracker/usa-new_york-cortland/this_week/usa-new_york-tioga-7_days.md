@@ -1,7 +1,7 @@
 ---
 title: Tioga, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-tioga-7_days.html
-last_updated: Aug 20, 2021
+last_updated: Aug 21, 2021
 keywords: ["Tioga, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---
