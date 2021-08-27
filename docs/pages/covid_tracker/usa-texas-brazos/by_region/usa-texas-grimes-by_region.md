@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-brazos/by_region/usa-texas-grimes-by_region.html
-last_updated: Aug 26, 2021
+last_updated: Aug 27, 2021
 keywords: ["Grimes, Texas, USA", "by region"]
 sidebar: usa-texas-brazos_sidebar
 ---
