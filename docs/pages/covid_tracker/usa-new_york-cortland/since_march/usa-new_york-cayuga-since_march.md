@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/since_march/usa-new_york-cayuga-since_march.html
-last_updated: Aug 31, 2021
+last_updated: Sep 1, 2021
 keywords: ["Cayuga, New York, USA", "Since March"]
 sidebar: usa-new_york-cortland_sidebar
 ---
