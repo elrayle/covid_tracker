@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/since_march/usa-texas-robertson-since_march.html
-last_updated: Sep 2, 2021
+last_updated: Sep 3, 2021
 keywords: ["Robertson, Texas, USA", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---

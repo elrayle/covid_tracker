@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/this_month/usa-arizona-santa_cruz-30_days.html
-last_updated: Sep 2, 2021
+last_updated: Sep 3, 2021
 keywords: ["Santa Cruz, Arizona, USA", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---
