@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/this_month/usa-indiana-dearborn-30_days.html
-last_updated: Sep 3, 2021
+last_updated: Sep 4, 2021
 keywords: ["Dearborn, Indiana, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

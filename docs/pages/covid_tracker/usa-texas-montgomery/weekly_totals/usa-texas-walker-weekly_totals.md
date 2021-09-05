@@ -1,7 +1,7 @@
 ---
 title: Walker, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-walker-weekly_totals.html
-last_updated: Sep 3, 2021
+last_updated: Sep 4, 2021
 keywords: ["Walker, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
