@@ -1,7 +1,7 @@
 ---
 title: McCormick, South Carolina, USA
 permalink: /usa-georgia-columbia/this_month/usa-south_carolina-mccormick-30_days.html
-last_updated: Sep 4, 2021
+last_updated: Sep 5, 2021
 keywords: ["McCormick, South Carolina, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---
