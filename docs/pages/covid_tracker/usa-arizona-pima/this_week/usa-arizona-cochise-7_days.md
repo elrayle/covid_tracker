@@ -1,7 +1,7 @@
 ---
 title: Cochise, Arizona, USA
 permalink: /usa-arizona-pima/this_week/usa-arizona-cochise-7_days.html
-last_updated: Sep 5, 2021
+last_updated: Sep 6, 2021
 keywords: ["Cochise, Arizona, USA", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Waller, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-waller-30_days.html
-last_updated: Sep 5, 2021
+last_updated: Sep 6, 2021
 keywords: ["Waller, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---
