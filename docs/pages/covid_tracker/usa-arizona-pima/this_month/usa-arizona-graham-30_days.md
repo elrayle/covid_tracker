@@ -1,7 +1,7 @@
 ---
 title: Graham, Arizona, USA
 permalink: /usa-arizona-pima/this_month/usa-arizona-graham-30_days.html
-last_updated: Sep 8, 2021
+last_updated: Sep 9, 2021
 keywords: ["Graham, Arizona, USA", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---
