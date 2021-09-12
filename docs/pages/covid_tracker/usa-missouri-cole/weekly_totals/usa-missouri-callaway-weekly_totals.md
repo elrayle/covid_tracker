@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-callaway-weekly_totals.html
-last_updated: Sep 10, 2021
+last_updated: Sep 12, 2021
 keywords: ["Callaway, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
