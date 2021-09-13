@@ -1,7 +1,7 @@
 ---
 title: Liberty, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-liberty-by_region.html
-last_updated: Sep 12, 2021
+last_updated: Sep 13, 2021
 keywords: ["Liberty, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---

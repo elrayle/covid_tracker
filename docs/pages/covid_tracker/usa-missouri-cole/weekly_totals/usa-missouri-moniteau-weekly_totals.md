@@ -1,7 +1,7 @@
 ---
 title: Moniteau, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-moniteau-weekly_totals.html
-last_updated: Sep 12, 2021
+last_updated: Sep 13, 2021
 keywords: ["Moniteau, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
