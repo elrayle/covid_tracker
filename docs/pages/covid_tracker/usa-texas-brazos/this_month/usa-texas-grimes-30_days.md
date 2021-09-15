@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-grimes-30_days.html
-last_updated: Sep 14, 2021
+last_updated: Sep 15, 2021
 keywords: ["Grimes, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---
