@@ -1,7 +1,7 @@
 ---
 title: Preble, Ohio, USA
 permalink: /usa-ohio-butler/by_region/usa-ohio-preble-by_region.html
-last_updated: Sep 16, 2021
+last_updated: Sep 17, 2021
 keywords: ["Preble, Ohio, USA", "by region"]
 sidebar: usa-ohio-butler_sidebar
 ---
