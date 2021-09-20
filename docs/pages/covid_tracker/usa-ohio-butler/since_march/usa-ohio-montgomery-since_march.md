@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Ohio, USA
 permalink: /usa-ohio-butler/since_march/usa-ohio-montgomery-since_march.html
-last_updated: Sep 19, 2021
+last_updated: Sep 20, 2021
 keywords: ["Montgomery, Ohio, USA", "Since March"]
 sidebar: usa-ohio-butler_sidebar
 ---

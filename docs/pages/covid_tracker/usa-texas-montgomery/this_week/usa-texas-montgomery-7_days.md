@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Texas, USA
 permalink: /usa-texas-montgomery/this_week/usa-texas-montgomery-7_days.html
-last_updated: Sep 19, 2021
+last_updated: Sep 20, 2021
 keywords: ["Montgomery, Texas, USA", "This Week"]
 sidebar: usa-texas-montgomery_sidebar
 ---
