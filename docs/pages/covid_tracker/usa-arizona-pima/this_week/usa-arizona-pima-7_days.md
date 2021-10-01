@@ -1,7 +1,7 @@
 ---
 title: Pima, Arizona, USA
 permalink: /usa-arizona-pima/this_week/usa-arizona-pima-7_days.html
-last_updated: Sep 22, 2021
+last_updated: Sep 30, 2021
 keywords: ["Pima, Arizona, USA", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---
