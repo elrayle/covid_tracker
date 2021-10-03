@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-brazos/since_march/all_regions-since_march.html
-last_updated: Sep 30, 2021
+last_updated: Oct 3, 2021
 keywords: ["All Regions", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---

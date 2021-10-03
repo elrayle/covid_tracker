@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-georgia-columbia-weekly_totals.html
-last_updated: Sep 30, 2021
+last_updated: Oct 3, 2021
 keywords: ["Columbia, Georgia, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---
