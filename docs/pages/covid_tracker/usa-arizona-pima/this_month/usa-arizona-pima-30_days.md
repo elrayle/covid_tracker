@@ -1,7 +1,7 @@
 ---
 title: Pima, Arizona, USA
 permalink: /usa-arizona-pima/this_month/usa-arizona-pima-30_days.html
-last_updated: Oct 3, 2021
+last_updated: Oct 4, 2021
 keywords: ["Pima, Arizona, USA", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Burke, Georgia, USA
 permalink: /usa-georgia-columbia/since_march/usa-georgia-burke-since_march.html
-last_updated: Oct 3, 2021
+last_updated: Oct 4, 2021
 keywords: ["Burke, Georgia, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---
