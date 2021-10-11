@@ -1,7 +1,7 @@
 ---
 title: San Jacinto, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-san_jacinto-weekly_totals.html
-last_updated: Oct 9, 2021
+last_updated: Oct 11, 2021
 keywords: ["San Jacinto, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
