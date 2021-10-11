@@ -1,7 +1,7 @@
 ---
 title: Cochise, Arizona, USA
 permalink: /usa-arizona-pima/since_march/usa-arizona-cochise-since_march.html
-last_updated: Oct 4, 2021
+last_updated: Oct 9, 2021
 keywords: ["Cochise, Arizona, USA", "Since March"]
 sidebar: usa-arizona-pima_sidebar
 ---

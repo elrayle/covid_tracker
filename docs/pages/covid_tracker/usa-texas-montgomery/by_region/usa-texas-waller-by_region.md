@@ -1,7 +1,7 @@
 ---
 title: Waller, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-waller-by_region.html
-last_updated: Oct 4, 2021
+last_updated: Oct 9, 2021
 keywords: ["Waller, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---

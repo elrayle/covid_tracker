@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: /usa-new_york-cortland/weekly_totals/usa-new_york-tompkins-weekly_totals.html
-last_updated: Oct 4, 2021
+last_updated: Oct 9, 2021
 keywords: ["Tompkins, New York, USA", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---
