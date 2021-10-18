@@ -1,7 +1,7 @@
 ---
 title: Madison, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-madison-by_region.html
-last_updated: Oct 16, 2021
+last_updated: Oct 18, 2021
 keywords: ["Madison, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---
