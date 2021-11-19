@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-arizona-pima/this_week/all_regions-7_days.html
-last_updated: Nov 18, 2021
+last_updated: Nov 19, 2021
 keywords: ["All Regions", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---
