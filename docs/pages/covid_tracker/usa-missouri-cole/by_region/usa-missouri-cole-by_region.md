@@ -1,7 +1,7 @@
 ---
 title: Cole, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-cole-by_region.html
-last_updated: Nov 29, 2021
+last_updated: Nov 30, 2021
 keywords: ["Cole, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---
