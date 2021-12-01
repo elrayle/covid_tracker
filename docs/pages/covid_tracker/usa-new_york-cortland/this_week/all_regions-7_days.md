@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-new_york-cortland/this_week/all_regions-7_days.html
-last_updated: Nov 30, 2021
+last_updated: Dec 1, 2021
 keywords: ["All Regions", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---

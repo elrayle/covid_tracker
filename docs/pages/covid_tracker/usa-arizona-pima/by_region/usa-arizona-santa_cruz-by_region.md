@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/by_region/usa-arizona-santa_cruz-by_region.html
-last_updated: Nov 30, 2021
+last_updated: Dec 1, 2021
 keywords: ["Santa Cruz, Arizona, USA", "by region"]
 sidebar: usa-arizona-pima_sidebar
 ---

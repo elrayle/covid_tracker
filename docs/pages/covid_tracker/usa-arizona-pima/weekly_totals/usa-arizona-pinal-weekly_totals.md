@@ -1,7 +1,7 @@
 ---
 title: Pinal, Arizona, USA
 permalink: /usa-arizona-pima/weekly_totals/usa-arizona-pinal-weekly_totals.html
-last_updated: Nov 30, 2021
+last_updated: Dec 1, 2021
 keywords: ["Pinal, Arizona, USA", "weekly totals"]
 sidebar: usa-arizona-pima_sidebar
 ---

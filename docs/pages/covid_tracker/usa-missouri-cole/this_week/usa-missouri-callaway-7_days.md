@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/this_week/usa-missouri-callaway-7_days.html
-last_updated: Nov 30, 2021
+last_updated: Dec 1, 2021
 keywords: ["Callaway, Missouri, USA", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---
