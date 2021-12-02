@@ -1,7 +1,7 @@
 ---
 title: Graham, Arizona, USA
 permalink: /usa-arizona-pima/since_march/usa-arizona-graham-since_march.html
-last_updated: Dec 1, 2021
+last_updated: Dec 2, 2021
 keywords: ["Graham, Arizona, USA", "Since March"]
 sidebar: usa-arizona-pima_sidebar
 ---

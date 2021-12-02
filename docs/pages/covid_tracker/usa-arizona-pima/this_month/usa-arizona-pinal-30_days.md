@@ -1,7 +1,7 @@
 ---
 title: Pinal, Arizona, USA
 permalink: /usa-arizona-pima/this_month/usa-arizona-pinal-30_days.html
-last_updated: Dec 1, 2021
+last_updated: Dec 2, 2021
 keywords: ["Pinal, Arizona, USA", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---
