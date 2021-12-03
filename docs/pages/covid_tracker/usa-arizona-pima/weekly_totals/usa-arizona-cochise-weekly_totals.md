@@ -1,7 +1,7 @@
 ---
 title: Cochise, Arizona, USA
 permalink: /usa-arizona-pima/weekly_totals/usa-arizona-cochise-weekly_totals.html
-last_updated: Dec 2, 2021
+last_updated: Dec 3, 2021
 keywords: ["Cochise, Arizona, USA", "weekly totals"]
 sidebar: usa-arizona-pima_sidebar
 ---

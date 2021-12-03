@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-robertson-30_days.html
-last_updated: Dec 2, 2021
+last_updated: Dec 3, 2021
 keywords: ["Robertson, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---
