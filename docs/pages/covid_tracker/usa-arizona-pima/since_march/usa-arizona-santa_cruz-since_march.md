@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/since_march/usa-arizona-santa_cruz-since_march.html
-last_updated: Dec 3, 2021
+last_updated: Dec 6, 2021
 keywords: ["Santa Cruz, Arizona, USA", "Since March"]
 sidebar: usa-arizona-pima_sidebar
 ---
