@@ -1,7 +1,7 @@
 ---
 title: Graham, Arizona, USA
 permalink: /usa-arizona-pima/by_region/usa-arizona-graham-by_region.html
-last_updated: Dec 13, 2021
+last_updated: Dec 14, 2021
 keywords: ["Graham, Arizona, USA", "by region"]
 sidebar: usa-arizona-pima_sidebar
 ---
