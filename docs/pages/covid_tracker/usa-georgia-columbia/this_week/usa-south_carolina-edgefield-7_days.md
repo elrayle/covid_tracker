@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/this_week/usa-south_carolina-edgefield-7_days.html
-last_updated: Dec 8, 2021
+last_updated: Dec 13, 2021
 keywords: ["Edgefield, South Carolina, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---
