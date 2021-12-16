@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/this_week/usa-georgia-richmond-7_days.html
-last_updated: Dec 15, 2021
+last_updated: Dec 16, 2021
 keywords: ["Richmond, Georgia, USA", "This Week"]
 sidebar: usa-georgia-columbia_sidebar
 ---
