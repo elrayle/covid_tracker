@@ -1,7 +1,7 @@
 ---
 title: Pinal, Arizona, USA
 permalink: /usa-arizona-pima/by_region/usa-arizona-pinal-by_region.html
-last_updated: Dec 17, 2021
+last_updated: Dec 18, 2021
 keywords: ["Pinal, Arizona, USA", "by region"]
 sidebar: usa-arizona-pima_sidebar
 ---
