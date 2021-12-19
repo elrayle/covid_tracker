@@ -1,7 +1,7 @@
 ---
 title: Hamilton, Ohio, USA
 permalink: /usa-ohio-butler/this_week/usa-ohio-hamilton-7_days.html
-last_updated: Dec 18, 2021
+last_updated: Dec 19, 2021
 keywords: ["Hamilton, Ohio, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-south_carolina-edgefield-weekly_totals.html
-last_updated: Dec 18, 2021
+last_updated: Dec 19, 2021
 keywords: ["Edgefield, South Carolina, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---
