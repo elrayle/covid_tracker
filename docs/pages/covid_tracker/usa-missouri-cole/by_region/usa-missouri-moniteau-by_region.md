@@ -1,7 +1,7 @@
 ---
 title: Moniteau, Missouri, USA
 permalink: /usa-missouri-cole/by_region/usa-missouri-moniteau-by_region.html
-last_updated: Dec 20, 2021
+last_updated: Dec 21, 2021
 keywords: ["Moniteau, Missouri, USA", "by region"]
 sidebar: usa-missouri-cole_sidebar
 ---
