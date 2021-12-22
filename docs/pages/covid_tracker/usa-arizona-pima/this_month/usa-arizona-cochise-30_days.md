@@ -1,7 +1,7 @@
 ---
 title: Cochise, Arizona, USA
 permalink: /usa-arizona-pima/this_month/usa-arizona-cochise-30_days.html
-last_updated: Dec 21, 2021
+last_updated: Dec 22, 2021
 keywords: ["Cochise, Arizona, USA", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---
