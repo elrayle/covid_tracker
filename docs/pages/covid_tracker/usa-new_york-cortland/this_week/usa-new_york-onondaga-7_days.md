@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: /usa-new_york-cortland/this_week/usa-new_york-onondaga-7_days.html
-last_updated: Dec 22, 2021
+last_updated: Dec 23, 2021
 keywords: ["Onondaga, New York, USA", "This Week"]
 sidebar: usa-new_york-cortland_sidebar
 ---
