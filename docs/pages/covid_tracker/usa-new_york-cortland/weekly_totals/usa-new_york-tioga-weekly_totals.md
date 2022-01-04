@@ -1,7 +1,7 @@
 ---
 title: Tioga, New York, USA
 permalink: /usa-new_york-cortland/weekly_totals/usa-new_york-tioga-weekly_totals.html
-last_updated: Dec 23, 2021
+last_updated: Jan 4, 2022
 keywords: ["Tioga, New York, USA", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---

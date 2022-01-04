@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Ohio, USA
 permalink: /usa-ohio-butler/weekly_totals/usa-ohio-montgomery-weekly_totals.html
-last_updated: Dec 23, 2021
+last_updated: Jan 4, 2022
 keywords: ["Montgomery, Ohio, USA", "weekly totals"]
 sidebar: usa-ohio-butler_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/since_march/usa-texas-madison-since_march.html
-last_updated: Dec 23, 2021
+last_updated: Jan 4, 2022
 keywords: ["Madison, Texas, USA", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---
