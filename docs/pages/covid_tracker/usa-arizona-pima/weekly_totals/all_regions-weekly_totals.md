@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-arizona-pima/weekly_totals/all_regions-weekly_totals.html
-last_updated: Jan 5, 2022
+last_updated: Jan 6, 2022
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-arizona-pima_sidebar
 ---

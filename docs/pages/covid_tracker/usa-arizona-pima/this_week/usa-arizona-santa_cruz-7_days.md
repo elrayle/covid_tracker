@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/this_week/usa-arizona-santa_cruz-7_days.html
-last_updated: Jan 5, 2022
+last_updated: Jan 6, 2022
 keywords: ["Santa Cruz, Arizona, USA", "This Week"]
 sidebar: usa-arizona-pima_sidebar
 ---

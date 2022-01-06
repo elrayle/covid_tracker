@@ -1,7 +1,7 @@
 ---
 title: Pima, Arizona, USA
 permalink: /usa-arizona-pima/by_region/usa-arizona-pima-by_region.html
-last_updated: Jan 5, 2022
+last_updated: Jan 6, 2022
 keywords: ["Pima, Arizona, USA", "by region"]
 sidebar: usa-arizona-pima_sidebar
 ---

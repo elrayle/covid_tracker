@@ -1,7 +1,7 @@
 ---
 title: Boone, Missouri, USA
 permalink: /usa-missouri-cole/weekly_totals/usa-missouri-boone-weekly_totals.html
-last_updated: Jan 5, 2022
+last_updated: Jan 6, 2022
 keywords: ["Boone, Missouri, USA", "weekly totals"]
 sidebar: usa-missouri-cole_sidebar
 ---
