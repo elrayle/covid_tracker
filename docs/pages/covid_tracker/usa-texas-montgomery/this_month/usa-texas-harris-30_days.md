@@ -1,7 +1,7 @@
 ---
 title: Harris, Texas, USA
 permalink: /usa-texas-montgomery/this_month/usa-texas-harris-30_days.html
-last_updated: Jan 4, 2022
+last_updated: Jan 5, 2022
 keywords: ["Harris, Texas, USA", "This Month"]
 sidebar: usa-texas-montgomery_sidebar
 ---

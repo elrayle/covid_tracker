@@ -1,7 +1,7 @@
 ---
 title: Boone, Missouri, USA
 permalink: /usa-missouri-cole/this_month/usa-missouri-boone-30_days.html
-last_updated: Jan 4, 2022
+last_updated: Jan 5, 2022
 keywords: ["Boone, Missouri, USA", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Preble, Ohio, USA
 permalink: /usa-ohio-butler/this_week/usa-ohio-preble-7_days.html
-last_updated: Jan 4, 2022
+last_updated: Jan 5, 2022
 keywords: ["Preble, Ohio, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---

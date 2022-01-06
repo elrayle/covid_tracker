@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-ohio-butler/this_week/all_regions-7_days.html
-last_updated: Jan 4, 2022
+last_updated: Jan 5, 2022
 keywords: ["All Regions", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---
