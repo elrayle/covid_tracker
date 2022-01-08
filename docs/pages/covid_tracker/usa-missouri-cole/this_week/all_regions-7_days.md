@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-missouri-cole/this_week/all_regions-7_days.html
-last_updated: Jan 6, 2022
+last_updated: Jan 7, 2022
 keywords: ["All Regions", "This Week"]
 sidebar: usa-missouri-cole_sidebar
 ---

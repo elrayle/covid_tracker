@@ -1,7 +1,7 @@
 ---
 title: Walker, Texas, USA
 permalink: /usa-texas-montgomery/this_week/usa-texas-walker-7_days.html
-last_updated: Jan 6, 2022
+last_updated: Jan 7, 2022
 keywords: ["Walker, Texas, USA", "This Week"]
 sidebar: usa-texas-montgomery_sidebar
 ---
