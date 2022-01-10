@@ -1,7 +1,7 @@
 ---
 title: Tompkins, New York, USA
 permalink: /usa-new_york-cortland/since_march/usa-new_york-tompkins-since_march.html
-last_updated: Jan 7, 2022
+last_updated: Jan 10, 2022
 keywords: ["Tompkins, New York, USA", "Since March"]
 sidebar: usa-new_york-cortland_sidebar
 ---

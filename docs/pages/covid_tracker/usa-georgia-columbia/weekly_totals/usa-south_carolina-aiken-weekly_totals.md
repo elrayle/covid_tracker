@@ -1,7 +1,7 @@
 ---
 title: Aiken, South Carolina, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-south_carolina-aiken-weekly_totals.html
-last_updated: Jan 7, 2022
+last_updated: Jan 10, 2022
 keywords: ["Aiken, South Carolina, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---
