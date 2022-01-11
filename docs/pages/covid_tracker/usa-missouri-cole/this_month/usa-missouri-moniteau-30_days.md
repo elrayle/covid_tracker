@@ -1,7 +1,7 @@
 ---
 title: Moniteau, Missouri, USA
 permalink: /usa-missouri-cole/this_month/usa-missouri-moniteau-30_days.html
-last_updated: Jan 10, 2022
+last_updated: Jan 11, 2022
 keywords: ["Moniteau, Missouri, USA", "This Month"]
 sidebar: usa-missouri-cole_sidebar
 ---

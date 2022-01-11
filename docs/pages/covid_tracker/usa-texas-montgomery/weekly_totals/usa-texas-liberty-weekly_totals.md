@@ -1,7 +1,7 @@
 ---
 title: Liberty, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-liberty-weekly_totals.html
-last_updated: Jan 10, 2022
+last_updated: Jan 11, 2022
 keywords: ["Liberty, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
