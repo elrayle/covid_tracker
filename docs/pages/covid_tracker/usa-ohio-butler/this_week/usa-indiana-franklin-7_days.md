@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/this_week/usa-indiana-franklin-7_days.html
-last_updated: Jan 12, 2022
+last_updated: Jan 13, 2022
 keywords: ["Franklin, Indiana, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---
