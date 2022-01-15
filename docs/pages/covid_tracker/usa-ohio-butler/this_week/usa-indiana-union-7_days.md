@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/this_week/usa-indiana-union-7_days.html
-last_updated: Jan 14, 2022
+last_updated: Jan 15, 2022
 keywords: ["Union, Indiana, USA", "This Week"]
 sidebar: usa-ohio-butler_sidebar
 ---

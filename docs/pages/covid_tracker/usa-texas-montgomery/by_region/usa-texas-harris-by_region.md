@@ -1,7 +1,7 @@
 ---
 title: Harris, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-harris-by_region.html
-last_updated: Jan 14, 2022
+last_updated: Jan 15, 2022
 keywords: ["Harris, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---

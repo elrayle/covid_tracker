@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/weekly_totals/usa-arizona-santa_cruz-weekly_totals.html
-last_updated: Jan 14, 2022
+last_updated: Jan 15, 2022
 keywords: ["Santa Cruz, Arizona, USA", "weekly totals"]
 sidebar: usa-arizona-pima_sidebar
 ---

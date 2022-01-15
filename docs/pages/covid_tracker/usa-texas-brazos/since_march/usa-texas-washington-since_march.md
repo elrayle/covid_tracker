@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/since_march/usa-texas-washington-since_march.html
-last_updated: Jan 14, 2022
+last_updated: Jan 15, 2022
 keywords: ["Washington, Texas, USA", "Since March"]
 sidebar: usa-texas-brazos_sidebar
 ---
