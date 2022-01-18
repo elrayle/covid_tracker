@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-montgomery/weekly_totals/all_regions-weekly_totals.html
-last_updated: Jan 15, 2022
+last_updated: Jan 18, 2022
 keywords: ["All Regions", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---

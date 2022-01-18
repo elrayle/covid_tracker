@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-georgia-columbia/this_month/all_regions-30_days.html
-last_updated: Jan 15, 2022
+last_updated: Jan 18, 2022
 keywords: ["All Regions", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---
