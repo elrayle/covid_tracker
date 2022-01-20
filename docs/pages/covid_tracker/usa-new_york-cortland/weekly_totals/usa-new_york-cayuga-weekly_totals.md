@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/weekly_totals/usa-new_york-cayuga-weekly_totals.html
-last_updated: Jan 18, 2022
+last_updated: Jan 20, 2022
 keywords: ["Cayuga, New York, USA", "weekly totals"]
 sidebar: usa-new_york-cortland_sidebar
 ---

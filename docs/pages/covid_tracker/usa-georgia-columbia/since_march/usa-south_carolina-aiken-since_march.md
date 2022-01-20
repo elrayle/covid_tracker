@@ -1,7 +1,7 @@
 ---
 title: Aiken, South Carolina, USA
 permalink: /usa-georgia-columbia/since_march/usa-south_carolina-aiken-since_march.html
-last_updated: Jan 18, 2022
+last_updated: Jan 20, 2022
 keywords: ["Aiken, South Carolina, USA", "Since March"]
 sidebar: usa-georgia-columbia_sidebar
 ---

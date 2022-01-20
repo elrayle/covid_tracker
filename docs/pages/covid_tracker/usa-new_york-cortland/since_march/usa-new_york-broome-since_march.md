@@ -1,7 +1,7 @@
 ---
 title: Broome, New York, USA
 permalink: /usa-new_york-cortland/since_march/usa-new_york-broome-since_march.html
-last_updated: Jan 18, 2022
+last_updated: Jan 20, 2022
 keywords: ["Broome, New York, USA", "Since March"]
 sidebar: usa-new_york-cortland_sidebar
 ---
