@@ -1,7 +1,7 @@
 ---
 title: McCormick, South Carolina, USA
 permalink: /usa-georgia-columbia/weekly_totals/usa-south_carolina-mccormick-weekly_totals.html
-last_updated: Jan 25, 2022
+last_updated: Feb 27, 2022
 keywords: ["McCormick, South Carolina, USA", "weekly totals"]
 sidebar: usa-georgia-columbia_sidebar
 ---

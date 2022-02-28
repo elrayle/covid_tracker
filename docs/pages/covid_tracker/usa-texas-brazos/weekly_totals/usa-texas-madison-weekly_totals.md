@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/weekly_totals/usa-texas-madison-weekly_totals.html
-last_updated: Jan 25, 2022
+last_updated: Feb 27, 2022
 keywords: ["Madison, Texas, USA", "weekly totals"]
 sidebar: usa-texas-brazos_sidebar
 ---
