@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-brazos/this_month/all_regions-30_days.html
-last_updated: Feb 27, 2022
+last_updated: Mar 7, 2022
 keywords: ["All Regions", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---
