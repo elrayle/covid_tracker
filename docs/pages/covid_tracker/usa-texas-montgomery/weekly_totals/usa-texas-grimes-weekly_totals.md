@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-montgomery/weekly_totals/usa-texas-grimes-weekly_totals.html
-last_updated: Mar 7, 2022
+last_updated: Mar 11, 2022
 keywords: ["Grimes, Texas, USA", "weekly totals"]
 sidebar: usa-texas-montgomery_sidebar
 ---
