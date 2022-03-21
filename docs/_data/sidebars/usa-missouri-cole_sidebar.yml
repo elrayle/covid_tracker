@@ -3,36 +3,36 @@ entries:
   area_url: "usa-missouri-cole"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Cole, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-cole-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-cole-365_days.html"
       output: web, pdf
 
     - title: Boone, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-boone-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-boone-365_days.html"
       output: web, pdf
 
     - title: Callaway, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-callaway-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-callaway-365_days.html"
       output: web, pdf
 
     - title: Osage, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-osage-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-osage-365_days.html"
       output: web, pdf
 
     - title: Miller, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-miller-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-miller-365_days.html"
       output: web, pdf
 
     - title: Moniteau, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/weekly_totals/usa-missouri-moniteau-weekly_totals.html"
+      url: "/covid_tracker/usa-missouri-cole/this_year/usa-missouri-moniteau-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -99,36 +99,36 @@ entries:
       url: "/covid_tracker/usa-missouri-cole/this_week/usa-missouri-moniteau-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-missouri-cole/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Cole, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-cole-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-cole-since_beginning.html"
       output: web, pdf
 
     - title: Boone, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-boone-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-boone-since_beginning.html"
       output: web, pdf
 
     - title: Callaway, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-callaway-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-callaway-since_beginning.html"
       output: web, pdf
 
     - title: Osage, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-osage-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-osage-since_beginning.html"
       output: web, pdf
 
     - title: Miller, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-miller-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-miller-since_beginning.html"
       output: web, pdf
 
     - title: Moniteau, Missouri, USA
-      url: "/covid_tracker/usa-missouri-cole/since_march/usa-missouri-moniteau-since_march.html"
+      url: "/covid_tracker/usa-missouri-cole/since_beginning/usa-missouri-moniteau-since_beginning.html"
       output: web, pdf
 
   - title: By Region

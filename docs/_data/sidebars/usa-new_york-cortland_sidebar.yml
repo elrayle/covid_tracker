@@ -3,44 +3,44 @@ entries:
   area_url: "usa-new_york-cortland"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Cortland, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-cortland-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-cortland-365_days.html"
       output: web, pdf
 
     - title: Tompkins, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-tompkins-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-tompkins-365_days.html"
       output: web, pdf
 
     - title: Broome, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-broome-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-broome-365_days.html"
       output: web, pdf
 
     - title: Onondaga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-onondaga-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-onondaga-365_days.html"
       output: web, pdf
 
     - title: Cayuga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-cayuga-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-cayuga-365_days.html"
       output: web, pdf
 
     - title: Madison, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-madison-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-madison-365_days.html"
       output: web, pdf
 
     - title: Chenango, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-chenango-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-chenango-365_days.html"
       output: web, pdf
 
     - title: Tioga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/weekly_totals/usa-new_york-tioga-weekly_totals.html"
+      url: "/covid_tracker/usa-new_york-cortland/this_year/usa-new_york-tioga-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -123,44 +123,44 @@ entries:
       url: "/covid_tracker/usa-new_york-cortland/this_week/usa-new_york-tioga-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-new_york-cortland/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Cortland, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-cortland-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-cortland-since_beginning.html"
       output: web, pdf
 
     - title: Tompkins, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-tompkins-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-tompkins-since_beginning.html"
       output: web, pdf
 
     - title: Broome, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-broome-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-broome-since_beginning.html"
       output: web, pdf
 
     - title: Onondaga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-onondaga-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-onondaga-since_beginning.html"
       output: web, pdf
 
     - title: Cayuga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-cayuga-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-cayuga-since_beginning.html"
       output: web, pdf
 
     - title: Madison, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-madison-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-madison-since_beginning.html"
       output: web, pdf
 
     - title: Chenango, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-chenango-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-chenango-since_beginning.html"
       output: web, pdf
 
     - title: Tioga, New York, USA
-      url: "/covid_tracker/usa-new_york-cortland/since_march/usa-new_york-tioga-since_march.html"
+      url: "/covid_tracker/usa-new_york-cortland/since_beginning/usa-new_york-tioga-since_beginning.html"
       output: web, pdf
 
   - title: By Region

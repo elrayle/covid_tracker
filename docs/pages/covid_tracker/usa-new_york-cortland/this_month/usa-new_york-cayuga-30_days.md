@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/this_month/usa-new_york-cayuga-30_days.html
-last_updated: Mar 19, 2022
+last_updated: Mar 20, 2022
 keywords: ["Cayuga, New York, USA", "This Month"]
 sidebar: usa-new_york-cortland_sidebar
 ---
