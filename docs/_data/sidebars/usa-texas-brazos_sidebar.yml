@@ -3,44 +3,44 @@ entries:
   area_url: "usa-texas-brazos"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Brazos, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-brazos-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-brazos-365_days.html"
       output: web, pdf
 
     - title: Robertson, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-robertson-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-robertson-365_days.html"
       output: web, pdf
 
     - title: Leon, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-leon-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-leon-365_days.html"
       output: web, pdf
 
     - title: Madison, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-madison-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-madison-365_days.html"
       output: web, pdf
 
     - title: Grimes, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-grimes-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-grimes-365_days.html"
       output: web, pdf
 
     - title: Washington, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-washington-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-washington-365_days.html"
       output: web, pdf
 
     - title: Burleson, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-burleson-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-burleson-365_days.html"
       output: web, pdf
 
     - title: Milam, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/weekly_totals/usa-texas-milam-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-brazos/this_year/usa-texas-milam-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -123,44 +123,44 @@ entries:
       url: "/covid_tracker/usa-texas-brazos/this_week/usa-texas-milam-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-texas-brazos/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Brazos, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-brazos-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-brazos-since_beginning.html"
       output: web, pdf
 
     - title: Robertson, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-robertson-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-robertson-since_beginning.html"
       output: web, pdf
 
     - title: Leon, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-leon-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-leon-since_beginning.html"
       output: web, pdf
 
     - title: Madison, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-madison-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-madison-since_beginning.html"
       output: web, pdf
 
     - title: Grimes, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-grimes-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-grimes-since_beginning.html"
       output: web, pdf
 
     - title: Washington, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-washington-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-washington-since_beginning.html"
       output: web, pdf
 
     - title: Burleson, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-burleson-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-burleson-since_beginning.html"
       output: web, pdf
 
     - title: Milam, Texas, USA
-      url: "/covid_tracker/usa-texas-brazos/since_march/usa-texas-milam-since_march.html"
+      url: "/covid_tracker/usa-texas-brazos/since_beginning/usa-texas-milam-since_beginning.html"
       output: web, pdf
 
   - title: By Region

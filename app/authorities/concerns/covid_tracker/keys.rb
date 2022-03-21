@@ -24,7 +24,8 @@ module CovidTracker
     DELTA_CONFIRMED = :delta_confirmed
     CUMULATIVE_DEATHS = :cumulative_deaths
     DELTA_DEATHS = :delta_deaths
-    CUMULATIVE_7_DAYS_CONFIRMED = :cumulative_7_days_confirmed
+    ROLLING_7_DAYS_CONFIRMED = :rolling_7_days_confirmed
+    ROLLING_7_DAYS_DEATHS = :rolling_7_days_deaths
   end
 end
 

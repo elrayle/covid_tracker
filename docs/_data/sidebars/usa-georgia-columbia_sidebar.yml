@@ -3,44 +3,44 @@ entries:
   area_url: "usa-georgia-columbia"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Columbia, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-georgia-columbia-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-georgia-columbia-365_days.html"
       output: web, pdf
 
     - title: Richmond, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-georgia-richmond-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-georgia-richmond-365_days.html"
       output: web, pdf
 
     - title: Burke, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-georgia-burke-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-georgia-burke-365_days.html"
       output: web, pdf
 
     - title: Lincoln, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-georgia-lincoln-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-georgia-lincoln-365_days.html"
       output: web, pdf
 
     - title: McDuffie, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-georgia-mcduffie-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-georgia-mcduffie-365_days.html"
       output: web, pdf
 
     - title: Aiken, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-south_carolina-aiken-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-south_carolina-aiken-365_days.html"
       output: web, pdf
 
     - title: Edgefield, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-south_carolina-edgefield-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-south_carolina-edgefield-365_days.html"
       output: web, pdf
 
     - title: McCormick, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/weekly_totals/usa-south_carolina-mccormick-weekly_totals.html"
+      url: "/covid_tracker/usa-georgia-columbia/this_year/usa-south_carolina-mccormick-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -123,44 +123,44 @@ entries:
       url: "/covid_tracker/usa-georgia-columbia/this_week/usa-south_carolina-mccormick-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-georgia-columbia/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Columbia, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-georgia-columbia-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-georgia-columbia-since_beginning.html"
       output: web, pdf
 
     - title: Richmond, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-georgia-richmond-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-georgia-richmond-since_beginning.html"
       output: web, pdf
 
     - title: Burke, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-georgia-burke-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-georgia-burke-since_beginning.html"
       output: web, pdf
 
     - title: Lincoln, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-georgia-lincoln-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-georgia-lincoln-since_beginning.html"
       output: web, pdf
 
     - title: McDuffie, Georgia, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-georgia-mcduffie-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-georgia-mcduffie-since_beginning.html"
       output: web, pdf
 
     - title: Aiken, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-south_carolina-aiken-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-south_carolina-aiken-since_beginning.html"
       output: web, pdf
 
     - title: Edgefield, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-south_carolina-edgefield-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-south_carolina-edgefield-since_beginning.html"
       output: web, pdf
 
     - title: McCormick, South Carolina, USA
-      url: "/covid_tracker/usa-georgia-columbia/since_march/usa-south_carolina-mccormick-since_march.html"
+      url: "/covid_tracker/usa-georgia-columbia/since_beginning/usa-south_carolina-mccormick-since_beginning.html"
       output: web, pdf
 
   - title: By Region

@@ -5,19 +5,22 @@ require 'covid_tracker/keys'
 # This class creates fetches the data from the cache if available, otherwise from through the API
 module CovidTracker
   class DataRetrievalService
-    class_attribute :registry_class, :authority_class, :time_period_service
+    class_attribute :area_registry_class, :registry_class, :authority_class, :time_period_service
+    self.area_registry_class = CovidTracker::CentralAreaRegistry
     self.registry_class = CovidTracker::RegionRegistry
     self.authority_class = CovidTracker::CovidApi
     self.time_period_service = CovidTracker::TimePeriodService
 
     DEFAULT_DAYS_TO_TRACK = 2
+    DEFAULT_AREA = "usa-new_york-cortland"
 
     class << self
       # TODO: Perhaps this should return an Array instead of a Hash
       # @param days [Integer] number of days of data to fetch
       # @param last_day [String] most recent day for which to collect data (e.g. "2020-09-22"); defaults to default_last_day (typically yesterday)
       # @return [Hash<String, CovidTracker::RegionResults] results for all registered regions across a range of dates
-      def all_regions_data(days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day)
+      def all_regions_data(days: DEFAULT_DAYS_TO_TRACK, last_day: default_last_day, area: DEFAULT_AREA)
+        area_data = area_registry_class.find_by(code: area)
         all_results = {}
         registered_regions = registry_class.registry
         registered_regions.each do |region_registration|

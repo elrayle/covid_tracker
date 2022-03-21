@@ -9,8 +9,9 @@ module CovidTracker
     CUMULATIVE_DEATHS = CovidTracker::ResultKeys::CUMULATIVE_DEATHS
     DELTA_DEATHS = CovidTracker::ResultKeys::DELTA_DEATHS
 
-    attr_accessor :id, :result_code, :result_label, :date, :cumulative_confirmed, :delta_confirmed,
-                  :cumulative_deaths, :delta_deaths, :cumulative_7_days_confirmed, :error
+    attr_accessor :id, :result_code, :result_label, :date, :cumulative_confirmed,
+                  :delta_confirmed, :cumulative_deaths, :delta_deaths,
+                  :rolling_7_days_confirmed, :rolling_7_days_deaths, :error
 
     # @param raw_result [Hash] raw result to convert into a model for easy access
     # @see CovidTracker::CovidApi#find_for for full example of returned json hash
@@ -39,7 +40,8 @@ module CovidTracker
       result.delta_confirmed = raw_result[DELTA_CONFIRMED]
       result.cumulative_deaths = raw_result[CUMULATIVE_DEATHS]
       result.delta_deaths = raw_result[DELTA_DEATHS]
-      result.cumulative_7_days_confirmed = -1
+      result.rolling_7_days_confirmed = -1
+      result.rolling_7_days_deaths = -1
       result
     end
 
@@ -53,7 +55,8 @@ module CovidTracker
       result.delta_confirmed = count_data.delta_confirmed
       result.cumulative_deaths = count_data.cumulative_deaths
       result.delta_deaths = count_data.delta_deaths
-      result.cumulative_7_days_confirmed = count_data.cumulative_7_days
+      result.rolling_7_days_confirmed = count_data.rolling_7_days_confirmed
+      result.rolling_7_days_deaths = count_data.rolling_7_days_deaths
       result
     end
 

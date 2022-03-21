@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-robertson-7_days.html
-last_updated: Mar 19, 2022
+last_updated: Mar 20, 2022
 keywords: ["Robertson, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---

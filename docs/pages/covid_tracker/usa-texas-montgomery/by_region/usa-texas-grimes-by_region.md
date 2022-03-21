@@ -1,14 +1,14 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-grimes-by_region.html
-last_updated: Mar 19, 2022
+last_updated: Mar 20, 2022
 keywords: ["Grimes, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---
 
-<h3>Weekly Totals Since March</h3>
+<h3>Last 365 Days</h3>
 
-![Weekly Totals of Confirmed Cases for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-weekly_totals_graph.png)
+![Rolling 7-day Confirmed Cases last 365 days for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-weekly_totals_graph.png)
 
 <h3>Last 30 Days</h3>
 
@@ -22,8 +22,8 @@ sidebar: usa-texas-montgomery_sidebar
 
 ![Change in Confirmed Deaths This Week for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-delta_deaths-7_days_graph.png)
 
-<h3>Since March</h3>
+<h3>Since Beginning</h3>
 
-![Change in Confirmed Cases Since March for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-delta_confirmed-since_march_graph.png)
+![Change in Confirmed Cases Since Beginning for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-delta_confirmed-since_beginning_graph.png)
 
-![Change in Confirmed Deaths Since March for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-delta_deaths-since_march_graph.png)
+![Change in Confirmed Deaths Since Beginning for Grimes, Texas, USA](/covid_tracker/images/graphs/usa-texas-grimes-delta_deaths-since_beginning_graph.png)

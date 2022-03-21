@@ -8,6 +8,7 @@ module CovidTracker
 
     THIS_WEEK = :this_week
     THIS_MONTH = :this_month
+    THIS_YEAR = :this_year
     SINCE_MARCH = :since_march
 
     # @param time_period [Symbol] one of THIS_WEEK, THIS_MONTH, or SINCE_MARCH
@@ -18,8 +19,10 @@ module CovidTracker
         "This Week"
       when THIS_MONTH
         "This Month"
+      when THIS_YEAR
+        "This Year"
       when SINCE_MARCH
-        "Since March"
+        "Since Beginning"
       end
     end
 
@@ -31,8 +34,10 @@ module CovidTracker
         "this_week"
       when THIS_MONTH
         "this_month"
+      when THIS_YEAR
+        "this_year"
       when SINCE_MARCH
-        "since_march"
+        "since_beginning"
       end
     end
 
@@ -44,8 +49,10 @@ module CovidTracker
         "7_days"
       when THIS_MONTH
         "30_days"
+      when THIS_YEAR
+        "365_days"
       when SINCE_MARCH
-        "since_march"
+        "since_beginning"
       end
     end
 
@@ -57,6 +64,8 @@ module CovidTracker
         7
       when THIS_MONTH
         30
+      when THIS_YEAR
+        365
       when SINCE_MARCH
         latest_dt = DateTime.now.in_time_zone("Eastern Time (US & Canada)") - 1.day
         march01 = DateTime.strptime("03-01-2020 22:00:00 Eastern Time (US & Canada)", '%m-%d-%Y %H:%M:%S %Z')

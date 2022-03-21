@@ -3,20 +3,20 @@ entries:
   area_url: "usa-florida-sarasota"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-florida-sarasota/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Sarasota, Florida, USA
-      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/usa-florida-sarasota-weekly_totals.html"
+      url: "/covid_tracker/usa-florida-sarasota/this_year/usa-florida-sarasota-365_days.html"
       output: web, pdf
 
     - title: Manatee, Florida, USA
-      url: "/covid_tracker/usa-florida-sarasota/weekly_totals/usa-florida-manatee-weekly_totals.html"
+      url: "/covid_tracker/usa-florida-sarasota/this_year/usa-florida-manatee-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -51,20 +51,20 @@ entries:
       url: "/covid_tracker/usa-florida-sarasota/this_week/usa-florida-manatee-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-florida-sarasota/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-florida-sarasota/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Sarasota, Florida, USA
-      url: "/covid_tracker/usa-florida-sarasota/since_march/usa-florida-sarasota-since_march.html"
+      url: "/covid_tracker/usa-florida-sarasota/since_beginning/usa-florida-sarasota-since_beginning.html"
       output: web, pdf
 
     - title: Manatee, Florida, USA
-      url: "/covid_tracker/usa-florida-sarasota/since_march/usa-florida-manatee-since_march.html"
+      url: "/covid_tracker/usa-florida-sarasota/since_beginning/usa-florida-manatee-since_beginning.html"
       output: web, pdf
 
   - title: By Region

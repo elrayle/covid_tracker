@@ -8,7 +8,8 @@ module CovidTracker
     DEFAULT_MAX_VALUE = 10
     DEFAULT_CASES_BAR_COLOR = "#cc8b0e"
     DEFAULT_DEATHS_BAR_COLOR = "#cc4d0e"
-    DEFAULT_WEEKLY_BAR_COLOR = "#bc2c1d"
+    DEFAULT_ROLLING_7_CONFIRMED_BAR_COLOR = "#b3801d"
+    DEFAULT_ROLLING_7_DEATHS_BAR_COLOR = "#bc2c1d"
 
     SMALL_FONT = 15
     LARGE_FONT = 20
@@ -27,7 +28,7 @@ module CovidTracker
       graph_service.graph_info(options: options)
     end
 
-    def weekly_graph_info(extracted_data:, region_results:, stat_key:)
+    def weekly_graph_info(extracted_data:, region_results:, stat_key:, days:)
       options = {
         title: title(region_results: region_results, stat_key: stat_key),
         labels: extracted_data[:labels],
@@ -72,8 +73,9 @@ module CovidTracker
     end
 
     # @param region_data [Array<CovidTracker::RegionDatum>] data for building the graph
+    # @param days [Integer] number of days in the graph
     # @param stat_key [Symbol] the name of the data field in region_data that holds the data to graph
-    def extract_weekly_graph_data(region_data:, stat_key:) # rubocop:disable Metrics/MethodLength
+    def extract_weekly_graph_data(region_data:, days:, stat_key:) # rubocop:disable Metrics/MethodLength
       labels = {}
       bar_data = []
       max_value = 0
@@ -82,9 +84,9 @@ module CovidTracker
       region_data.each_with_index do |datum, idx|
         next unless weekly_data_point?(count, idx)
         result = datum.result
-        labels[graph_idx] = weekly_graph_label(count, result, idx)
+        labels[graph_idx] = weekly_graph_label(count, result, idx, days)
         stat_value = result.send(stat_key)
-        next unless stat_value&.positive?
+        stat_value = 0 unless stat_value&.positive?
         bar_data << stat_value
         max_value = stat_value if stat_value > max_value
         graph_idx += 1
@@ -97,21 +99,30 @@ module CovidTracker
       }
     end
 
+    def weekly_data_point?(count, idx)
+      at_interval?(count, idx + 1, 7)
+    end
+
     def at_interval?(count, idx, interval)
       offset = interval - (count % interval)
       ((idx + offset) % interval).zero?
     end
 
-    def weekly_data_point?(count, idx)
-      at_interval?(count, idx + 1, 7)
+    def mid_month?(dt)
+      (12..18).include? dt.day
     end
 
-    def display_weekly_label?(count, idx)
-      at_interval?(count, idx + 1, 28)
+    def bi_annual?(dt)
+      mid_month?(dt) && [6, 12].include?(dt.month)
     end
 
-    def weekly_graph_label(count, result, idx)
-      return " " unless display_weekly_label?(count, idx)
+    def display_weekly_label?(date, days)
+      dt = Date.parse date
+      days <= 365 ? mid_month?(dt) : bi_annual?(dt)
+    end
+
+    def weekly_graph_label(count, result, idx, days)
+      return " " unless display_weekly_label?(result.date, days)
       time_period_service.date_to_label(result.date)
     end
 
@@ -126,8 +137,10 @@ module CovidTracker
         I18n.t('covid_tracker.graphing_service.cumulative_deaths_graph_title', region_label: region_label)
       when CovidTracker::ResultKeys::DELTA_DEATHS
         I18n.t('covid_tracker.graphing_service.delta_deaths_graph_title', region_label: region_label)
-      when CovidTracker::ResultKeys::CUMULATIVE_7_DAYS_CONFIRMED
-        I18n.t('covid_tracker.graphing_service.cumulative_7_days_confirmed_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::ROLLING_7_DAYS_CONFIRMED
+        I18n.t('covid_tracker.graphing_service.rolling_7_days_confirmed_graph_title', region_label: region_label)
+      when CovidTracker::ResultKeys::ROLLING_7_DAYS_DEATHS
+        I18n.t('covid_tracker.graphing_service.rolling_7_days_deaths_graph_title', region_label: region_label)
       end
     end
 
@@ -141,8 +154,10 @@ module CovidTracker
         DEFAULT_DEATHS_BAR_COLOR
       when CovidTracker::ResultKeys::DELTA_DEATHS
         DEFAULT_DEATHS_BAR_COLOR
-      when CovidTracker::ResultKeys::CUMULATIVE_7_DAYS_CONFIRMED
-        DEFAULT_WEEKLY_BAR_COLOR
+      when CovidTracker::ResultKeys::ROLLING_7_DAYS_CONFIRMED
+        DEFAULT_ROLLING_7_CONFIRMED_BAR_COLOR
+      when CovidTracker::ResultKeys::ROLLING_7_DAYS_DEATHS
+        DEFAULT_ROLLING_7_DEATHS_BAR_COLOR
       end
     end
 

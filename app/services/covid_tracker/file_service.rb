@@ -42,8 +42,9 @@ module CovidTracker
       # @option file_postfix [String] last part of the filename (e.g. '-by_region', '-weekly_totals', '-7_days')
       # @param content [String] content to write to the file
       def write_to_file(parts, content)
-        full_filename = File.join(directory_for(parts), filename_for(parts))
-        puts "  --  Writing page to #{full_filename}" # rubocop:disable Rails/Output
+        filename = filename_for(parts)
+        full_filename = File.join(directory_for(parts), filename)
+        puts "  --  Writing page to #{filename}" # rubocop:disable Rails/Output
         file = File.new(full_filename, 'w')
         file << content
         file.close

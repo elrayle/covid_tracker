@@ -12,6 +12,7 @@ module CovidTracker
 
     THIS_WEEK = time_period_service::THIS_WEEK
     THIS_MONTH = time_period_service::THIS_MONTH
+    THIS_YEAR = time_period_service::THIS_YEAR
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
     attr_reader :central_area # CovidTracker::CentralAreaRegistration
@@ -89,7 +90,7 @@ sidebar: #{central_area.code}_sidebar
 
     def generate_body(region_label, region_code)
       "
-<h3>Weekly Totals Since March</h3>
+<h3>Last 365 Days</h3>
 
 ![#{graph_weekly_alttext(region_label)}](#{graph_weekly_path(region_code)})
 
@@ -105,7 +106,7 @@ sidebar: #{central_area.code}_sidebar
 
 ![#{graph_time_alttext(region_label, THIS_WEEK, 'Confirmed Deaths')}](#{graph_time_path(region_code, THIS_WEEK, 'delta_deaths')})
 
-<h3>Since March</h3>
+<h3>Since Beginning</h3>
 
 ![#{graph_time_alttext(region_label, SINCE_MARCH, 'Confirmed Cases')}](#{graph_time_path(region_code, SINCE_MARCH, 'delta_confirmed')})
 
@@ -114,7 +115,7 @@ sidebar: #{central_area.code}_sidebar
     end
 
     def graph_weekly_alttext(region_label)
-      "Weekly Totals of Confirmed Cases for #{region_label}"
+      "Rolling 7-day Confirmed Cases last 365 days for #{region_label}"
     end
 
     def graph_weekly_path(region_code)

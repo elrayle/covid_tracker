@@ -3,40 +3,40 @@ entries:
   area_url: "usa-texas-montgomery"
   folders:
 
-  - title: Weekly Totals
+  - title: This Year
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/all_regions-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/all_regions-365_days.html"
       output: web, pdf
 
     - title: Montgomery, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-montgomery-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-montgomery-365_days.html"
       output: web, pdf
 
     - title: Walker, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-walker-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-walker-365_days.html"
       output: web, pdf
 
     - title: San Jacinto, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-san_jacinto-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-san_jacinto-365_days.html"
       output: web, pdf
 
     - title: Liberty, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-liberty-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-liberty-365_days.html"
       output: web, pdf
 
     - title: Harris, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-harris-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-harris-365_days.html"
       output: web, pdf
 
     - title: Waller, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-waller-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-waller-365_days.html"
       output: web, pdf
 
     - title: Grimes, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/weekly_totals/usa-texas-grimes-weekly_totals.html"
+      url: "/covid_tracker/usa-texas-montgomery/this_year/usa-texas-grimes-365_days.html"
       output: web, pdf
 
   - title: This Month
@@ -111,40 +111,40 @@ entries:
       url: "/covid_tracker/usa-texas-montgomery/this_week/usa-texas-grimes-7_days.html"
       output: web, pdf
 
-  - title: Since March
+  - title: Since Beginning
     output: web, pdf
     folderitems:
 
     - title: All Regions
-      url: "/covid_tracker/usa-texas-montgomery/since_march/all_regions-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/all_regions-since_beginning.html"
       output: web, pdf
 
     - title: Montgomery, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-montgomery-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-montgomery-since_beginning.html"
       output: web, pdf
 
     - title: Walker, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-walker-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-walker-since_beginning.html"
       output: web, pdf
 
     - title: San Jacinto, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-san_jacinto-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-san_jacinto-since_beginning.html"
       output: web, pdf
 
     - title: Liberty, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-liberty-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-liberty-since_beginning.html"
       output: web, pdf
 
     - title: Harris, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-harris-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-harris-since_beginning.html"
       output: web, pdf
 
     - title: Waller, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-waller-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-waller-since_beginning.html"
       output: web, pdf
 
     - title: Grimes, Texas, USA
-      url: "/covid_tracker/usa-texas-montgomery/since_march/usa-texas-grimes-since_march.html"
+      url: "/covid_tracker/usa-texas-montgomery/since_beginning/usa-texas-grimes-since_beginning.html"
       output: web, pdf
 
   - title: By Region

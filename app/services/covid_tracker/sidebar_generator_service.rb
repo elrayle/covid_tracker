@@ -10,6 +10,7 @@ module CovidTracker
 
     THIS_WEEK = time_period_service::THIS_WEEK
     THIS_MONTH = time_period_service::THIS_MONTH
+    THIS_YEAR = time_period_service::THIS_YEAR
     SINCE_MARCH = time_period_service::SINCE_MARCH
 
     ALL_REGIONS_LABEL = CovidTracker::SiteGeneratorService::ALL_REGIONS_LABEL
@@ -57,10 +58,10 @@ module CovidTracker
 
     def generate_sidebar
       sidebar = generate_sidebar_header
-      sidebar += generate_weekly_totals_section
+      sidebar += generate_weekly_totals_section(THIS_YEAR)
       sidebar += generate_time_period_section(THIS_MONTH)
       sidebar += generate_time_period_section(THIS_WEEK)
-      sidebar += generate_time_period_section(SINCE_MARCH)
+      sidebar += generate_weekly_totals_section(SINCE_MARCH)
       sidebar += generate_by_region_section
       sidebar
     end
@@ -101,28 +102,28 @@ module CovidTracker
 "
     end
 
-    def generate_weekly_totals_section
-      body = generate_weekly_totals_header
-      body += generate_weekly_totals_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE)
+    def generate_weekly_totals_section(time_period)
+      body = generate_weekly_totals_header(time_period)
+      body += generate_weekly_totals_page(ALL_REGIONS_LABEL, ALL_REGIONS_CODE, time_period)
       central_area.regions.each do |region|
         region_label = region.label
         region_code = region.code
-        body += generate_weekly_totals_page(region_label, region_code)
+        body += generate_weekly_totals_page(region_label, region_code, time_period)
       end
       body
     end
 
-    def generate_weekly_totals_header
-      "  - title: Weekly Totals
+    def generate_weekly_totals_header(time_period)
+      "  - title: #{time_period_service.text_form(time_period)}
     output: web, pdf
     folderitems:
 
 "
     end
 
-    def generate_weekly_totals_page(region_label, region_code)
+    def generate_weekly_totals_page(region_label, region_code, time_period)
       "    - title: #{region_label}
-      url: \"/#{CovidTracker::WeeklyPagesGeneratorService.perma_link(central_area_code: central_area.code, region_code: region_code, include_app_dir: include_app_dir?)}\"
+      url: \"/#{CovidTracker::WeeklyPagesGeneratorService.perma_link(central_area_code: central_area.code, time_period: time_period, region_code: region_code, include_app_dir: include_app_dir?)}\"
       output: web, pdf
 
 "

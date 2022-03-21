@@ -8,14 +8,14 @@ module CovidTracker
     class_attribute :data_service
     self.data_service = CovidTracker::DataService
 
-    attr_reader :all_regions_data
+    attr_reader :region_results
 
-    delegate :result, :date, :cumulative_confirmed, :cumulative_7_days_confirmed,
+    delegate :result, :date, :cumulative_confirmed, :rolling_7_days_confirmed, :rolling_7_days_deaths,
              :cumulative_deaths, :region_label, :region_code, :region_data, to: data_service
 
-    # @param all_regions_data [Hash<String, CovidTracker::RegionResults] results for all registered regions across a range of dates
-    def initialize(all_regions_data:)
-      @all_regions_data = all_regions_data
+    # @param region_results [Hash<String, CovidTracker::RegionResults] results for all registered regions across a range of dates
+    def initialize(region_results:)
+      @region_results = region_results
     end
 
     # @param idx [Integer] row number
@@ -38,7 +38,7 @@ module CovidTracker
 
     # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
     # @returns [String] css for table cell
-    def cumulative_7_days_confirmed_class(_datum)
+    def rolling_7_days_confirmed_class(_datum)
       "neutral"
     end
 
@@ -58,6 +58,12 @@ module CovidTracker
     # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
     # @returns [String] css for table cell
     def cumulative_deaths_class(_datum)
+      "neutral"
+    end
+
+    # @param _datum [CovidTracker::RegionDatum] result and request info for a region on a date
+    # @returns [String] css for table cell
+    def rolling_7_days_deaths_class(_datum)
       "neutral"
     end
 
