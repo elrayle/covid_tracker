@@ -34,17 +34,19 @@ en:
     application_name: 'Covid Region Tracker'
     tag_line: 'Visualizations for the Regions You Want to Track'
     homepage:
+      title: Covid Tracker Data Access Endpoint
       date: Date
       cumulative_confirmed: All Cumulative Confirmed Cases
-      cumulative_7_days_confirmed: 7 Days of Cumulative Cases
+      rolling_7_days_confirmed: Rolling 7 Days of Confirmed Cases
       delta_confirmed: Change in Confirmed Cases
-      cumulative_deaths: Cumulative Confirmed Deaths
+      cumulative_deaths: All Cumulative Confirmed Deaths
       delta_deaths: Change in Confirmed Deaths
+      rolling_7_days_deaths: Rolling 7 Days of Deaths
     graphing_service:
       cumulative_confirmed_graph_title: Cumulative Confirmed Cases for %{region_label}
       delta_confirmed_graph_title: Change in Confirmed Cases for %{region_label}
       cumulative_deaths_graph_title: Cumulative Confirmed Deaths for %{region_label}
       delta_deaths_graph_title: Change in Confirmed Deaths for %{region_label}
-      cumulative_7_days_confirmed_graph_title: Weekly Totals of Confirmed Cases for %{region_label}
+      rolling_7_days_confirmed_graph_title: Rolling 7-day Totals of Confirmed Cases for %{region_label}
+      rolling_7_days_deaths_graph_title: Rolling 7-day Totals of Deaths for %{region_label}
       last_updated: Last updated on %{data}
-

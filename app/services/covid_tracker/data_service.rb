@@ -59,6 +59,12 @@ module CovidTracker
       end
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
+      # @returns [Integer] the cumulative count of confirmed cases for the last 7 days
+      def rolling_7_days_confirmed(region_datum)
+        result(region_datum).rolling_7_days_confirmed
+      end
+
+      # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
       # @returns [Integer] the cumulative count of confirmed deaths
       def cumulative_deaths(region_datum)
         result(region_datum).cumulative_deaths
@@ -72,8 +78,8 @@ module CovidTracker
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date
       # @returns [Integer] the cumulative count of confirmed cases for the last 7 days
-      def cumulative_7_days_confirmed(region_datum)
-        result(region_datum).cumulative_7_days_confirmed
+      def rolling_7_days_deaths(region_datum)
+        result(region_datum).rolling_7_days_deaths
       end
 
       # @param region_datum [CovidTracker::RegionDatum] result and request info for a region on a date

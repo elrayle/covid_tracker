@@ -22,7 +22,8 @@ module CovidTracker
         region_count.delta_confirmed = data_service.delta_confirmed(region_datum)
         region_count.cumulative_deaths = data_service.cumulative_deaths(region_datum)
         region_count.delta_deaths = data_service.delta_deaths(region_datum)
-        region_count.cumulative_7_days = calculate_cumulative_7_days(region_count.delta_confirmed, region_code, region_count.date)
+        region_count.rolling_7_days_confirmed = calculate_rolling_7_days_confirmed(region_count.delta_confirmed, region_code, region_count.date)
+        region_count.rolling_7_days_deaths = calculate_rolling_7_days_deaths(region_count.delta_deaths, region_code, region_count.date)
         region_count.save
         region_count
       end
@@ -36,7 +37,8 @@ module CovidTracker
         where_clause = { region_id: region_id }
         where_clause[:date] = date unless date.blank?
         count_data = where(where_clause)
-        count_data = update_each_cumulative_7_days(count_data, region_code) if update
+        count_data = update_each_rolling_7_days_confirmed(count_data, region_code) if update
+        count_data = update_each_rolling_7_days_deaths(count_data, region_code) if update
         count_data
       end
 
@@ -45,28 +47,57 @@ module CovidTracker
       # @param delta_confirmed [Integer] number of confirmed cases for date being calculated
       # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
       # @param date [String] date for which to retrieve the data
-      def calculate_cumulative_7_days(delta_confirmed, region_code, date)
-        cumulative_7_days = delta_confirmed
+      def calculate_rolling_7_days_confirmed(delta_confirmed, region_code, date)
+        rolling_7_days_confirmed = delta_confirmed
         1.upto(6) do |idx|
           dt = time_period_service.date_to_str(time_period_service.str_to_date(date) - idx.days)
           prev_day = find_by(region_code: region_code, date: dt, update: false)&.first
-          cumulative_7_days += prev_day.delta_confirmed if prev_day
+          rolling_7_days_confirmed += prev_day.delta_confirmed if prev_day
           return -1 unless prev_day # set to -1 if any of the days during the last 7 days do not have values
         end
-        cumulative_7_days
+        rolling_7_days_confirmed
       end
 
-      # @param count_data [Array<CovidTracker::RegionCounts>] the instances getting cumulative_7_days updated
+      # @param delta_deaths [Integer] number of deaths for date being calculated
       # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
-      def update_each_cumulative_7_days(count_data, region_code)
-        count_data.map { |count_datum| update_cumulative_7_days(count_datum, region_code) }
+      # @param date [String] date for which to retrieve the data
+      def calculate_rolling_7_days_deaths(delta_deaths, region_code, date)
+        rolling_7_days_deaths = delta_deaths
+        1.upto(6) do |idx|
+          dt = time_period_service.date_to_str(time_period_service.str_to_date(date) - idx.days)
+          prev_day = find_by(region_code: region_code, date: dt, update: false)&.first
+          rolling_7_days_deaths += prev_day.delta_deaths if prev_day
+          return -1 unless prev_day # set to -1 if any of the days during the last 7 days do not have values
+        end
+        rolling_7_days_deaths
       end
 
-      # @param count_datum [CovidTracker::RegionCounts] the instance getting cumulative_7_days updated
+      # @param count_data [Array<CovidTracker::RegionCounts>] the instances getting rolling_7_days updated
       # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
-      def update_cumulative_7_days(count_datum, region_code)
-        return count_datum if count_datum.cumulative_7_days&.positive? || count_datum.cumulative_7_days&.zero?
-        count_datum.cumulative_7_days = calculate_cumulative_7_days(count_datum.delta_confirmed, region_code, count_datum.date)
+      def update_each_rolling_7_days_confirmed(count_data, region_code)
+        count_data.map { |count_datum| update_rolling_7_days_confirmed(count_datum, region_code) }
+      end
+
+      # @param count_data [Array<CovidTracker::RegionCounts>] the instances getting rolling_7_days_deaths updated
+      # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
+      def update_each_rolling_7_days_deaths(count_data, region_code)
+        count_data.map { |count_datum| update_rolling_7_days_deaths(count_datum, region_code) }
+      end
+
+      # @param count_datum [CovidTracker::RegionCounts] the instance getting rolling_7_days_confirmed updated
+      # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
+      def update_rolling_7_days_confirmed(count_datum, region_code)
+        return count_datum if count_datum.rolling_7_days_confirmed&.positive? || count_datum.rolling_7_days_confirmed&.zero?
+        count_datum.rolling_7_days_confirmed = calculate_rolling_7_days_confirmed(count_datum.delta_confirmed, region_code, count_datum.date)
+        count_datum.save
+        count_datum
+      end
+
+      # @param count_datum [CovidTracker::RegionCounts] the instance getting rolling_7_days_deaths updated
+      # @param region_code [String] the region code for which the data is being retrieved  (e.g. 'usa-alabama-wilcox')
+      def update_rolling_7_days_deaths(count_datum, region_code)
+        return count_datum if count_datum.rolling_7_days_deaths&.positive? || count_datum.rolling_7_days_deaths&.zero?
+        count_datum.rolling_7_days_deaths = calculate_rolling_7_days_deaths(count_datum.delta_deaths, region_code, count_datum.date)
         count_datum.save
         count_datum
       end

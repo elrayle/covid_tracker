@@ -17,7 +17,6 @@ module CovidTracker
 
     THIS_WEEK = time_period_service::THIS_WEEK
     THIS_MONTH = time_period_service::THIS_MONTH
-    SINCE_MARCH = time_period_service::SINCE_MARCH
 
     attr_reader :registered_regions # [Array<CovidTracker::RegionRegistration>]
 
@@ -30,7 +29,6 @@ module CovidTracker
     def update_graphs
       update_time_period_graphs(time_period: THIS_WEEK)
       update_time_period_graphs(time_period: THIS_MONTH)
-      update_time_period_graphs(time_period: SINCE_MARCH)
     end
 
   private
@@ -42,10 +40,7 @@ module CovidTracker
       registered_regions.each do |region_registration|
         begin
           region_results = data_retrieval_service.region_results(region_registration: region_registration, days: days)
-
-          # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_CONFIRMED, time_period: time_period)
           generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_CONFIRMED, time_period: time_period)
-          # generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::CUMULATIVE_DEATHS, time_period: time_period)
           generate_graph_for_stat(region_results: region_results, days: days, stat_key: CovidTracker::ResultKeys::DELTA_DEATHS, time_period: time_period)
         rescue Exception => e
           puts "Unable to generate #{time_period_service.text_form(time_period)} graph for #{region_registration.label} -- cause: #{e.message}"
@@ -59,10 +54,9 @@ module CovidTracker
       extracted_data = extract_daily_graph_data(region_data: region_data, days: days, stat_key: stat_key)
       graph_info = daily_graph_info(extracted_data: extracted_data, region_results: region_results, stat_key: stat_key, days: days)
       bar_info = extracted_data[:bar_info]
-      graph_path = stat_graph_full_path(region_code: region_results.region_code,
-                                        stat_key: stat_key,
-                                        time_period: time_period)
-      puts "  --  Writing daily graph to #{graph_path}" # rubocop:disable Rails/Output
+      filename = graph_filename(region_code: region_results.region_code, stat_key: stat_key, time_period: time_period)
+      graph_path = graph_full_path(filename)
+      puts "  --  Writing daily graph to #{filename}" # rubocop:disable Rails/Output
       graph_service.create_gruff_graph(full_path: graph_path,
                                        graph_info: graph_info,
                                        bar_info: [bar_info])

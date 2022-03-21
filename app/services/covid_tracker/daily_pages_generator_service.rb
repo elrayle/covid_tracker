@@ -8,7 +8,6 @@ module CovidTracker
 
     THIS_WEEK = time_period_service::THIS_WEEK
     THIS_MONTH = time_period_service::THIS_MONTH
-    SINCE_MARCH = time_period_service::SINCE_MARCH
 
     ALL_REGIONS_LABEL = CovidTracker::SiteGeneratorService::ALL_REGIONS_LABEL
     ALL_REGIONS_CODE = CovidTracker::SiteGeneratorService::ALL_REGIONS_CODE
@@ -18,8 +17,8 @@ module CovidTracker
     class << self
       # @option central_area_code [String] code for the central area (e.g. 'usa-georgia-richmond')
       # @param region_code [String] code for a region near the central area (e.g. 'all_regions', 'usa-georgia-columbia')
-      # @param time_period [Symbol] the time period covered by the page (e.g. THIS_WEEK, THIS_MONTH, SINCE_MARCH)
-      # @returns [String] perma_link identifying path page in _site (e.g. 'covid_tracker/usa-georgia-richmond/weekly_totals')
+      # @param time_period [Symbol] the time period covered by the page (e.g. THIS_WEEK, THIS_MONTH)
+      # @returns [String] perma_link for page in _site (e.g. 'covid_tracker/usa-georgia-richmond/this_week')
       def perma_link(central_area_code:, region_code:, time_period:, include_app_dir: false)
         target_file_parts ||= file_parts(central_area_code: central_area_code,
                                          region_code: region_code,
@@ -61,14 +60,12 @@ module CovidTracker
       central_area.regions.each do |region_registration|
         write_page(region_registration, THIS_WEEK)
         write_page(region_registration, THIS_MONTH)
-        write_page(region_registration, SINCE_MARCH)
       end
     end
 
     def update_all_regions_pages
       write_all_regions_page(THIS_WEEK)
       write_all_regions_page(THIS_MONTH)
-      write_all_regions_page(SINCE_MARCH)
     end
 
     def write_page(region_registration, time_period)
@@ -103,7 +100,7 @@ module CovidTracker
       central_area.regions.each do |region_registration|
         region_label = region_registration.label
         region_code = region_registration.code
-        body += "\n<h3>#{region_code}</h3>\n"
+        body += "\n<h3>#{region_label}</h3>\n"
         body += generate_body(region_label, region_code, time_period)
       end
       front_matter + body
