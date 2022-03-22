@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+##
+# Generates the header for the homepage for each central area.  The body of the
+# page comes from the area_homepage.html layout.
 module CovidTracker
   class CentralAreaHomepageGeneratorService
     class_attribute :file_service
