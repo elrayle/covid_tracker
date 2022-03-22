@@ -1,7 +1,7 @@
 ---
 title: Miller, Missouri, USA
 permalink: /usa-missouri-cole/since_beginning/usa-missouri-miller-since_beginning.html
-last_updated: Mar 20, 2022
+last_updated: Mar 22, 2022
 keywords: ["Miller, Missouri, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-missouri-cole_sidebar
 ---

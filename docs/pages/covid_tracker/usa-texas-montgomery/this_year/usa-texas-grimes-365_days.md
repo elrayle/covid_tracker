@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-montgomery/this_year/usa-texas-grimes-365_days.html
-last_updated: Mar 20, 2022
+last_updated: Mar 22, 2022
 keywords: ["Grimes, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-montgomery_sidebar
 ---

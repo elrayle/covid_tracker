@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-montgomery/since_beginning/all_regions-since_beginning.html
-last_updated: Mar 20, 2022
+last_updated: Mar 22, 2022
 keywords: ["All Regions", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-montgomery_sidebar
 ---

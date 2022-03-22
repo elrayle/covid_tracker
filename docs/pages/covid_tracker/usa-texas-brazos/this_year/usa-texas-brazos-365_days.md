@@ -1,7 +1,7 @@
 ---
 title: Brazos, Texas, USA
 permalink: /usa-texas-brazos/this_year/usa-texas-brazos-365_days.html
-last_updated: Mar 20, 2022
+last_updated: Mar 22, 2022
 keywords: ["Brazos, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-brazos_sidebar
 ---
