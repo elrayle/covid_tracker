@@ -1,7 +1,7 @@
 ---
 title: McCormick, South Carolina, USA
 permalink: /usa-georgia-columbia/this_year/usa-south_carolina-mccormick-365_days.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["McCormick, South Carolina, USA", "weekly totals", "This Year"]
 sidebar: usa-georgia-columbia_sidebar
 ---

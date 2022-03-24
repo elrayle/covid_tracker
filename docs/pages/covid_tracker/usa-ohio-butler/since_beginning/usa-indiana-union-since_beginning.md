@@ -1,7 +1,7 @@
 ---
 title: Union, Indiana, USA
 permalink: /usa-ohio-butler/since_beginning/usa-indiana-union-since_beginning.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["Union, Indiana, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-ohio-butler_sidebar
 ---

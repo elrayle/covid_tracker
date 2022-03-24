@@ -1,7 +1,7 @@
 ---
 title: Madison, Texas, USA
 permalink: /usa-texas-brazos/this_year/usa-texas-madison-365_days.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["Madison, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-brazos_sidebar
 ---

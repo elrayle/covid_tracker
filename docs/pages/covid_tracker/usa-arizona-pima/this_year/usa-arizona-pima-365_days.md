@@ -1,7 +1,7 @@
 ---
 title: Pima, Arizona, USA
 permalink: /usa-arizona-pima/this_year/usa-arizona-pima-365_days.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["Pima, Arizona, USA", "weekly totals", "This Year"]
 sidebar: usa-arizona-pima_sidebar
 ---

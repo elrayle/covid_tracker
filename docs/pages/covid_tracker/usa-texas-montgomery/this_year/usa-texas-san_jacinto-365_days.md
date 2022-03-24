@@ -1,7 +1,7 @@
 ---
 title: San Jacinto, Texas, USA
 permalink: /usa-texas-montgomery/this_year/usa-texas-san_jacinto-365_days.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["San Jacinto, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-montgomery_sidebar
 ---

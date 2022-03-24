@@ -1,7 +1,7 @@
 ---
 title: McCormick, South Carolina, USA
 permalink: /usa-georgia-columbia/by_region/usa-south_carolina-mccormick-by_region.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["McCormick, South Carolina, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---

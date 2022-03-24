@@ -1,7 +1,7 @@
 ---
 title: Edgefield, South Carolina, USA
 permalink: /usa-georgia-columbia/this_year/usa-south_carolina-edgefield-365_days.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["Edgefield, South Carolina, USA", "weekly totals", "This Year"]
 sidebar: usa-georgia-columbia_sidebar
 ---

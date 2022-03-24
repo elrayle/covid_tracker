@@ -1,7 +1,7 @@
 ---
 title: San Jacinto, Texas, USA
 permalink: /usa-texas-montgomery/since_beginning/usa-texas-san_jacinto-since_beginning.html
-last_updated: Mar 23, 2022
+last_updated: Mar 24, 2022
 keywords: ["San Jacinto, Texas, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-montgomery_sidebar
 ---
