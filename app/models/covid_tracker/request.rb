@@ -37,6 +37,8 @@ module CovidTracker
       request
     end
 
+    # @param region_registration [CovidRegistration] data is being requested for this region
+    # @param date [?] data is being requested for this date (e.g. 2020-09-08)
     def self.parse_request(region_registration:, date:)
       request = CovidTracker::Request.new
       request.date = date

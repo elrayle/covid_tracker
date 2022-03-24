@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-texas-brazos/this_year/all_regions-365_days.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["All Regions", "weekly totals", "This Year"]
 sidebar: usa-texas-brazos_sidebar
 ---

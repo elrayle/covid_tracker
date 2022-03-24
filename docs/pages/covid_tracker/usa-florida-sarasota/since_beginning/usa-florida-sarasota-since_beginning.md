@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/since_beginning/usa-florida-sarasota-since_beginning.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Sarasota, Florida, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-florida-sarasota_sidebar
 ---

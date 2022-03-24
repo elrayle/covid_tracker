@@ -21,6 +21,8 @@ module CovidTracker
       datum
     end
 
+    # @param region_registration [Hash] info identifying the region (e.g. { country_iso: 'USA', province_state: 'New York', admin2_county: 'Broome' })
+    # @count_data [CovidTracker::RegionCount] region and stat data from database
     def self.parse_datum(region_registration:, count_data:)
       datum = new
       datum.result = CovidTracker::Result.parse_result(count_data: count_data)

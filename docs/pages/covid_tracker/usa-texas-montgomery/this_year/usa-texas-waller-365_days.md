@@ -1,7 +1,7 @@
 ---
 title: Waller, Texas, USA
 permalink: /usa-texas-montgomery/this_year/usa-texas-waller-365_days.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Waller, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-montgomery_sidebar
 ---

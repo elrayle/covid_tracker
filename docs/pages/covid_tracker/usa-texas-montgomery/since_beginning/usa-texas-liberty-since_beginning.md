@@ -1,7 +1,7 @@
 ---
 title: Liberty, Texas, USA
 permalink: /usa-texas-montgomery/since_beginning/usa-texas-liberty-since_beginning.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Liberty, Texas, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-montgomery_sidebar
 ---

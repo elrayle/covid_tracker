@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/this_year/usa-indiana-dearborn-365_days.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Dearborn, Indiana, USA", "weekly totals", "This Year"]
 sidebar: usa-ohio-butler_sidebar
 ---

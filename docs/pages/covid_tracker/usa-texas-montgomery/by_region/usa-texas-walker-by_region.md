@@ -1,7 +1,7 @@
 ---
 title: Walker, Texas, USA
 permalink: /usa-texas-montgomery/by_region/usa-texas-walker-by_region.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Walker, Texas, USA", "by region"]
 sidebar: usa-texas-montgomery_sidebar
 ---

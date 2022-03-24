@@ -6,7 +6,7 @@ require 'covid_tracker/keys'
 module CovidTracker
   class DailyGraphsGeneratorService
     class_attribute :data_service, :data_retrieval_service, :graph_service, :time_period_service
-    self.data_service = CovidTracker::DataService
+    self.data_service = CovidTracker::DataService # used by GraphDataService
     self.data_retrieval_service = CovidTracker::DataRetrievalService
     self.graph_service = CovidTracker::GruffGraphService
     self.time_period_service = CovidTracker::TimePeriodService

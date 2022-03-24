@@ -1,7 +1,7 @@
 ---
 title: Moniteau, Missouri, USA
 permalink: /usa-missouri-cole/this_year/usa-missouri-moniteau-365_days.html
-last_updated: Mar 22, 2022
+last_updated: Mar 23, 2022
 keywords: ["Moniteau, Missouri, USA", "weekly totals", "This Year"]
 sidebar: usa-missouri-cole_sidebar
 ---
