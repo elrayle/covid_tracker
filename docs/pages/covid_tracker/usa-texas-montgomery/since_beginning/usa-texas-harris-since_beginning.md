@@ -1,7 +1,7 @@
 ---
 title: Harris, Texas, USA
 permalink: /usa-texas-montgomery/since_beginning/usa-texas-harris-since_beginning.html
-last_updated: Mar 24, 2022
+last_updated: Mar 25, 2022
 keywords: ["Harris, Texas, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-montgomery_sidebar
 ---

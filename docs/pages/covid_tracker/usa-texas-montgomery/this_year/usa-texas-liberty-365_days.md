@@ -1,7 +1,7 @@
 ---
 title: Liberty, Texas, USA
 permalink: /usa-texas-montgomery/this_year/usa-texas-liberty-365_days.html
-last_updated: Mar 24, 2022
+last_updated: Mar 25, 2022
 keywords: ["Liberty, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-montgomery_sidebar
 ---

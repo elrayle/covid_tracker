@@ -1,7 +1,7 @@
 ---
 title: Callaway, Missouri, USA
 permalink: /usa-missouri-cole/this_year/usa-missouri-callaway-365_days.html
-last_updated: Mar 24, 2022
+last_updated: Mar 25, 2022
 keywords: ["Callaway, Missouri, USA", "weekly totals", "This Year"]
 sidebar: usa-missouri-cole_sidebar
 ---

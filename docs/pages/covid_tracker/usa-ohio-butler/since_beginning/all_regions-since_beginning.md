@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-ohio-butler/since_beginning/all_regions-since_beginning.html
-last_updated: Mar 24, 2022
+last_updated: Mar 25, 2022
 keywords: ["All Regions", "weekly totals", "Since Beginning"]
 sidebar: usa-ohio-butler_sidebar
 ---

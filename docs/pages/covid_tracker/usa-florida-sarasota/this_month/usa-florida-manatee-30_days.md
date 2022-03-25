@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/this_month/usa-florida-manatee-30_days.html
-last_updated: Mar 24, 2022
+last_updated: Mar 25, 2022
 keywords: ["Manatee, Florida, USA", "This Month"]
 sidebar: usa-florida-sarasota_sidebar
 ---
