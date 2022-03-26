@@ -1,7 +1,7 @@
 ---
 title: Pinal, Arizona, USA
 permalink: /usa-arizona-pima/this_year/usa-arizona-pinal-365_days.html
-last_updated: Mar 25, 2022
+last_updated: Mar 26, 2022
 keywords: ["Pinal, Arizona, USA", "weekly totals", "This Year"]
 sidebar: usa-arizona-pima_sidebar
 ---
