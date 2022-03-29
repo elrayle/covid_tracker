@@ -1,7 +1,7 @@
 ---
 title: Milam, Texas, USA
 permalink: /usa-texas-brazos/since_beginning/usa-texas-milam-since_beginning.html
-last_updated: Mar 26, 2022
+last_updated: Mar 27, 2022
 keywords: ["Milam, Texas, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-brazos_sidebar
 ---

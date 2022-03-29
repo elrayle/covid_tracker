@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-arizona-pima/this_month/all_regions-30_days.html
-last_updated: Mar 26, 2022
+last_updated: Mar 27, 2022
 keywords: ["All Regions", "This Month"]
 sidebar: usa-arizona-pima_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Cayuga, New York, USA
 permalink: /usa-new_york-cortland/this_year/usa-new_york-cayuga-365_days.html
-last_updated: Mar 26, 2022
+last_updated: Mar 27, 2022
 keywords: ["Cayuga, New York, USA", "weekly totals", "This Year"]
 sidebar: usa-new_york-cortland_sidebar
 ---

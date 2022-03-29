@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/this_year/usa-georgia-columbia-365_days.html
-last_updated: Mar 26, 2022
+last_updated: Mar 27, 2022
 keywords: ["Columbia, Georgia, USA", "weekly totals", "This Year"]
 sidebar: usa-georgia-columbia_sidebar
 ---

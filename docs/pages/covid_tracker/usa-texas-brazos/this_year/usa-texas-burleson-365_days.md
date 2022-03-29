@@ -1,7 +1,7 @@
 ---
 title: Burleson, Texas, USA
 permalink: /usa-texas-brazos/this_year/usa-texas-burleson-365_days.html
-last_updated: Mar 26, 2022
+last_updated: Mar 27, 2022
 keywords: ["Burleson, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-brazos_sidebar
 ---
