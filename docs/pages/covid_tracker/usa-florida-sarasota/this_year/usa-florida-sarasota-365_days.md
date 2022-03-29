@@ -1,7 +1,7 @@
 ---
 title: Sarasota, Florida, USA
 permalink: /usa-florida-sarasota/this_year/usa-florida-sarasota-365_days.html
-last_updated: Mar 27, 2022
+last_updated: Mar 29, 2022
 keywords: ["Sarasota, Florida, USA", "weekly totals", "This Year"]
 sidebar: usa-florida-sarasota_sidebar
 ---

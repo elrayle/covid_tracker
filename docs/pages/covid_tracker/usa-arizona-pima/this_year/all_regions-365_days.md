@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-arizona-pima/this_year/all_regions-365_days.html
-last_updated: Mar 27, 2022
+last_updated: Mar 29, 2022
 keywords: ["All Regions", "weekly totals", "This Year"]
 sidebar: usa-arizona-pima_sidebar
 ---
