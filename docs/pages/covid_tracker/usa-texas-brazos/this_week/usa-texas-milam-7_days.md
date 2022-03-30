@@ -1,7 +1,7 @@
 ---
 title: Milam, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-milam-7_days.html
-last_updated: Mar 29, 2022
+last_updated: Mar 30, 2022
 keywords: ["Milam, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---
