@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-georgia-columbia/since_beginning/all_regions-since_beginning.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["All Regions", "weekly totals", "Since Beginning"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Osage, Missouri, USA
 permalink: /usa-missouri-cole/this_year/usa-missouri-osage-365_days.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["Osage, Missouri, USA", "weekly totals", "This Year"]
 sidebar: usa-missouri-cole_sidebar
 ---

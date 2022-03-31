@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-new_york-cortland/this_year/all_regions-365_days.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["All Regions", "weekly totals", "This Year"]
 sidebar: usa-new_york-cortland_sidebar
 ---

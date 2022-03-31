@@ -1,7 +1,7 @@
 ---
 title: Warren, Ohio, USA
 permalink: /usa-ohio-butler/since_beginning/usa-ohio-warren-since_beginning.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["Warren, Ohio, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-ohio-butler_sidebar
 ---

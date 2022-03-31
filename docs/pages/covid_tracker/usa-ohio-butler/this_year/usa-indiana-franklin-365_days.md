@@ -1,7 +1,7 @@
 ---
 title: Franklin, Indiana, USA
 permalink: /usa-ohio-butler/this_year/usa-indiana-franklin-365_days.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["Franklin, Indiana, USA", "weekly totals", "This Year"]
 sidebar: usa-ohio-butler_sidebar
 ---

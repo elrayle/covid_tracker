@@ -1,7 +1,7 @@
 ---
 title: Richmond, Georgia, USA
 permalink: /usa-georgia-columbia/this_year/usa-georgia-richmond-365_days.html
-last_updated: Mar 30, 2022
+last_updated: Mar 31, 2022
 keywords: ["Richmond, Georgia, USA", "weekly totals", "This Year"]
 sidebar: usa-georgia-columbia_sidebar
 ---
