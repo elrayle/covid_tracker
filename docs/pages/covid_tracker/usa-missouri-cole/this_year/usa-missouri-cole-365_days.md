@@ -1,7 +1,7 @@
 ---
 title: Cole, Missouri, USA
 permalink: /usa-missouri-cole/this_year/usa-missouri-cole-365_days.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Cole, Missouri, USA", "weekly totals", "This Year"]
 sidebar: usa-missouri-cole_sidebar
 ---

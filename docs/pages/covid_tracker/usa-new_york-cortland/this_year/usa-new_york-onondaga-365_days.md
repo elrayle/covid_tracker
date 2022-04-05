@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: /usa-new_york-cortland/this_year/usa-new_york-onondaga-365_days.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Onondaga, New York, USA", "weekly totals", "This Year"]
 sidebar: usa-new_york-cortland_sidebar
 ---

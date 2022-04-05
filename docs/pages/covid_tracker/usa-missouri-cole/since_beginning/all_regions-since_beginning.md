@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-missouri-cole/since_beginning/all_regions-since_beginning.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["All Regions", "weekly totals", "Since Beginning"]
 sidebar: usa-missouri-cole_sidebar
 ---

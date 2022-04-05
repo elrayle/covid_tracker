@@ -1,7 +1,7 @@
 ---
 title: Dearborn, Indiana, USA
 permalink: /usa-ohio-butler/since_beginning/usa-indiana-dearborn-since_beginning.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Dearborn, Indiana, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-ohio-butler_sidebar
 ---

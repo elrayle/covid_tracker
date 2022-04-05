@@ -1,7 +1,7 @@
 ---
 title: Columbia, Georgia, USA
 permalink: /usa-georgia-columbia/by_region/usa-georgia-columbia-by_region.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Columbia, Georgia, USA", "by region"]
 sidebar: usa-georgia-columbia_sidebar
 ---

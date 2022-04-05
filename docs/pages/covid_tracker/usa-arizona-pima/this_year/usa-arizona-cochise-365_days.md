@@ -1,7 +1,7 @@
 ---
 title: Cochise, Arizona, USA
 permalink: /usa-arizona-pima/this_year/usa-arizona-cochise-365_days.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Cochise, Arizona, USA", "weekly totals", "This Year"]
 sidebar: usa-arizona-pima_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: /usa-new_york-cortland/since_beginning/usa-new_york-chenango-since_beginning.html
-last_updated: Mar 31, 2022
+last_updated: Apr 5, 2022
 keywords: ["Chenango, New York, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-new_york-cortland_sidebar
 ---
