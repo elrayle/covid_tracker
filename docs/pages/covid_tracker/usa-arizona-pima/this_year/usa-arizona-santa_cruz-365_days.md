@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz, Arizona, USA
 permalink: /usa-arizona-pima/this_year/usa-arizona-santa_cruz-365_days.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["Santa Cruz, Arizona, USA", "weekly totals", "This Year"]
 sidebar: usa-arizona-pima_sidebar
 ---

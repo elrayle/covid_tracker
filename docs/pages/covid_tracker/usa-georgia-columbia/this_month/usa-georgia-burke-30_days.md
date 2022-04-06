@@ -1,7 +1,7 @@
 ---
 title: Burke, Georgia, USA
 permalink: /usa-georgia-columbia/this_month/usa-georgia-burke-30_days.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["Burke, Georgia, USA", "This Month"]
 sidebar: usa-georgia-columbia_sidebar
 ---

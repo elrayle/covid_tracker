@@ -1,7 +1,7 @@
 ---
 title: Washington, Texas, USA
 permalink: /usa-texas-brazos/this_month/usa-texas-washington-30_days.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["Washington, Texas, USA", "This Month"]
 sidebar: usa-texas-brazos_sidebar
 ---

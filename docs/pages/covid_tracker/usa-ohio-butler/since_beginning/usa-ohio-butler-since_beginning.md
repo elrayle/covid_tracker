@@ -1,7 +1,7 @@
 ---
 title: Butler, Ohio, USA
 permalink: /usa-ohio-butler/since_beginning/usa-ohio-butler-since_beginning.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["Butler, Ohio, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-ohio-butler_sidebar
 ---

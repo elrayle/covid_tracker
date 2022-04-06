@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-georgia-columbia/this_year/all_regions-365_days.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["All Regions", "weekly totals", "This Year"]
 sidebar: usa-georgia-columbia_sidebar
 ---

@@ -1,7 +1,7 @@
 ---
 title: Montgomery, Ohio, USA
 permalink: /usa-ohio-butler/this_month/usa-ohio-montgomery-30_days.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["Montgomery, Ohio, USA", "This Month"]
 sidebar: usa-ohio-butler_sidebar
 ---

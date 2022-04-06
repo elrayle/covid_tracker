@@ -1,7 +1,7 @@
 ---
 title: McDuffie, Georgia, USA
 permalink: /usa-georgia-columbia/since_beginning/usa-georgia-mcduffie-since_beginning.html
-last_updated: Apr 5, 2022
+last_updated: Apr 6, 2022
 keywords: ["McDuffie, Georgia, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-georgia-columbia_sidebar
 ---
