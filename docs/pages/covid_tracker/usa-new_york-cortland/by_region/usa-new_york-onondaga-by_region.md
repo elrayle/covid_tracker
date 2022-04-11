@@ -1,7 +1,7 @@
 ---
 title: Onondaga, New York, USA
 permalink: /usa-new_york-cortland/by_region/usa-new_york-onondaga-by_region.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Onondaga, New York, USA", "by region"]
 sidebar: usa-new_york-cortland_sidebar
 ---

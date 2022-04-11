@@ -1,7 +1,7 @@
 ---
 title: Chenango, New York, USA
 permalink: /usa-new_york-cortland/this_year/usa-new_york-chenango-365_days.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Chenango, New York, USA", "weekly totals", "This Year"]
 sidebar: usa-new_york-cortland_sidebar
 ---

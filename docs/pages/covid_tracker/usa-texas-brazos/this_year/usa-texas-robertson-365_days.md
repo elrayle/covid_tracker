@@ -1,7 +1,7 @@
 ---
 title: Robertson, Texas, USA
 permalink: /usa-texas-brazos/this_year/usa-texas-robertson-365_days.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Robertson, Texas, USA", "weekly totals", "This Year"]
 sidebar: usa-texas-brazos_sidebar
 ---

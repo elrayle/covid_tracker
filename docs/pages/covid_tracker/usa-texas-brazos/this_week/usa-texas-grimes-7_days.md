@@ -1,7 +1,7 @@
 ---
 title: Grimes, Texas, USA
 permalink: /usa-texas-brazos/this_week/usa-texas-grimes-7_days.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Grimes, Texas, USA", "This Week"]
 sidebar: usa-texas-brazos_sidebar
 ---

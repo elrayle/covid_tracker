@@ -1,7 +1,7 @@
 ---
 title: Manatee, Florida, USA
 permalink: /usa-florida-sarasota/this_year/usa-florida-manatee-365_days.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Manatee, Florida, USA", "weekly totals", "This Year"]
 sidebar: usa-florida-sarasota_sidebar
 ---

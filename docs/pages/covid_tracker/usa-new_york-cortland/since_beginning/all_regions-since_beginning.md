@@ -1,7 +1,7 @@
 ---
 title: All Regions
 permalink: /usa-new_york-cortland/since_beginning/all_regions-since_beginning.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["All Regions", "weekly totals", "Since Beginning"]
 sidebar: usa-new_york-cortland_sidebar
 ---

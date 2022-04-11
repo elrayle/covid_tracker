@@ -1,7 +1,7 @@
 ---
 title: Leon, Texas, USA
 permalink: /usa-texas-brazos/since_beginning/usa-texas-leon-since_beginning.html
-last_updated: Apr 6, 2022
+last_updated: Apr 11, 2022
 keywords: ["Leon, Texas, USA", "weekly totals", "Since Beginning"]
 sidebar: usa-texas-brazos_sidebar
 ---
